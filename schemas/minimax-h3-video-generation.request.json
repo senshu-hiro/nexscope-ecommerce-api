@@ -1,0 +1,101 @@
+{
+  "type": "object",
+  "description": "Generate a MiniMax H3 video from 1 to 9 required reference images.",
+  "fields": [
+    {
+      "name": "videoTime",
+      "type": "integer",
+      "required": true,
+      "description": "Video duration in seconds. Supported values: 5, 10, 15.",
+      "example": 5,
+      "constraints": {
+        "allowedValues": [
+          5,
+          10,
+          15
+        ]
+      }
+    },
+    {
+      "name": "prompt",
+      "type": "string",
+      "required": true,
+      "description": "Video generation prompt describing motion, subject consistency, camera movement, and the ecommerce scene. Maximum 2000 characters.",
+      "example": "Keep the product consistent while the camera slowly orbits and highlights material details.",
+      "constraints": {
+        "maxLength": 2000
+      }
+    },
+    {
+      "name": "promptOptimizer",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether Nexscope should optimize the video prompt before generation. Defaults to false.",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "isPro",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to use the model's professional generation mode when supported. Defaults to false.",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "resolution",
+      "type": "string",
+      "required": true,
+      "description": "Output resolution. Supported values: 768p, 2k.",
+      "example": "768p",
+      "constraints": {
+        "allowedValues": [
+          "768p",
+          "2k"
+        ]
+      }
+    },
+    {
+      "name": "imageList",
+      "type": "array",
+      "required": true,
+      "description": "Public reference image URLs. Provide 1 to 9 images.",
+      "example": [
+        "https://example.com/product.jpg",
+        "https://example.com/ref-2.jpg"
+      ],
+      "constraints": {
+        "maxItems": 9,
+        "minItems": 1
+      }
+    },
+    {
+      "name": "aspectRatio",
+      "type": "string",
+      "required": false,
+      "description": "Target video aspect ratio supported by this model. Supported values: adaptive, 9:16, 16:9, 1:1, 4:3, 3:4, 21:9.",
+      "example": "adaptive",
+      "constraints": {
+        "allowedValues": [
+          "adaptive",
+          "9:16",
+          "16:9",
+          "1:1",
+          "4:3",
+          "3:4",
+          "21:9"
+        ]
+      }
+    }
+  ],
+  "example": {
+    "videoTime": 5,
+    "prompt": "Keep the product consistent while the camera slowly orbits and highlights material details.",
+    "imageList": [
+      "https://example.com/product.jpg",
+      "https://example.com/ref-2.jpg"
+    ],
+    "resolution": "768p"
+  },
+  "jsonSchema": null
+}

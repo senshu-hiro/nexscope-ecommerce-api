@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "osKey": {
+      "type": "string",
+      "description": "ossKey from a completed NexScope API Asset upload and confirmation; obtain this value before calling.",
+      "minLength": 1,
+      "example": "returned-key"
+    },
+    "country": {
+      "type": "string",
+      "description": "Uppercase two-letter market code.",
+      "default": "US",
+      "pattern": "^[A-Z]{2}$",
+      "example": "US"
+    }
+  },
+  "required": [
+    "osKey"
+  ]
+}

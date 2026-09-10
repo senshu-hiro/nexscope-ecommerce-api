@@ -1,0 +1,255 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.ozon-keyword-back-search.",
+  "fields": [
+    {
+      "name": "skuIds",
+      "type": "integer",
+      "required": true,
+      "description": "List of SKUs to back-search, max 20",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "hasVariant",
+      "type": "integer",
+      "required": true,
+      "description": "Whether to exclude variants: 0 do not exclude variants, 1 exclude variants",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "object",
+      "required": true,
+      "description": "Pagination & sorting: {page, pageSize, orders[]}",
+      "example": {
+        "pageSize": 10,
+        "page": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "page.page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, starting from 1, default 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "page.pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page, default 20",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "page.orders",
+      "type": "array",
+      "required": false,
+      "description": "Sort rules, elements {field, direction}; direction takes DESC (descending) / ASC (ascending)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "matchType",
+      "type": "integer",
+      "required": false,
+      "description": "Keyword match mode: 0 exact, 1 fuzzy",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "array",
+      "required": false,
+      "description": "Search term type filter, fixed options: 0 organic search terms, 1 ad search terms; no filtering if omitted",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "historyDate",
+      "type": "string",
+      "required": false,
+      "description": "Historical month yyyy-MM (e.g., 2026-02); can be left blank per docs to query current period",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "includeKeywords",
+      "type": "array",
+      "required": false,
+      "description": "Include keyword array (max 1000), only returns search terms containing the specified words",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "excludeKeywords",
+      "type": "array",
+      "required": false,
+      "description": "Exclude keyword array (max 1000), removes irrelevant terms",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "searchVolume",
+      "type": "string",
+      "required": false,
+      "description": "Monthly search volume range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "searchChange30",
+      "type": "string",
+      "required": false,
+      "description": "30-day search change range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "wordCount",
+      "type": "string",
+      "required": false,
+      "description": "Keyword word count range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "productViews",
+      "type": "string",
+      "required": false,
+      "description": "Product views range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "string",
+      "required": false,
+      "description": "Product count range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sellers",
+      "type": "string",
+      "required": false,
+      "description": "Seller count range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "marketSpace",
+      "type": "string",
+      "required": false,
+      "description": "Market space range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "conversionSharing",
+      "type": "string",
+      "required": false,
+      "description": "Conversion concentration range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "uniqQueriesWCa",
+      "type": "string",
+      "required": false,
+      "description": "Add-to-cart count range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "ca",
+      "type": "string",
+      "required": false,
+      "description": "Add-to-cart conversion rate range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "conversion",
+      "type": "string",
+      "required": false,
+      "description": "Conversion rate range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "titleDensity",
+      "type": "string",
+      "required": false,
+      "description": "Title density range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "adRivalCount",
+      "type": "string",
+      "required": false,
+      "description": "Ad competitor count range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "adRank",
+      "type": "string",
+      "required": false,
+      "description": "Ad ranking range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "naturalRank",
+      "type": "string",
+      "required": false,
+      "description": "Organic ranking range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "exposure",
+      "type": "string",
+      "required": false,
+      "description": "Exposure range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "uId",
+      "type": "string",
+      "required": false,
+      "description": "User ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "memberId",
+      "type": "string",
+      "required": false,
+      "description": "Member ID (a unique member identifier; data is attributed to memberId)",
+      "example": "example-id",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "historyDate": "2026-01-01",
+    "skuIds": [
+      "175924376"
+    ],
+    "page": {
+      "pageSize": 10,
+      "page": 1
+    },
+    "hasVariant": 1,
+    "matchType": 1,
+    "type": []
+  },
+  "jsonSchema": null
+}

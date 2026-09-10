@@ -1,0 +1,102 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-keyword-summary.",
+  "fields": [
+    {
+      "name": "searchKeyword",
+      "type": "string",
+      "required": true,
+      "description": "Search keyword, translate to the corresponding country's language whenever possible. Max length 1000 characters",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "country",
+      "type": "string",
+      "required": false,
+      "description": "Country site, default US. Options (13 total): US, UK, DE, CA, JP, FR, ES, IT, MX, AU, AE, BR, SA",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "asins",
+      "type": "string",
+      "required": false,
+      "description": "ASIN filter list, comma-separated; if not provided, returns all ASINs for this keyword. Max length 1000 characters",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "condition",
+      "type": "string",
+      "required": false,
+      "description": "Condition filter, only one at a time.<br>Flag type: nfPosition (natural traffic keyword), isSpAd (SP ad keyword), isVedioAd (video ad keyword), isBrandAd (brand ad keyword), isPPCAd (PPC ad keyword), isSearchRecommend (search recommendation keyword), acAd (SP recommendation)<br>Period count type: totalPeriod.in (new incoming traffic keywords), nfKeywordCnt.total / .in, adKeywordCnt.total / .in, allSpKeywordCnt.total / .in, spKeywordCnt.total / .in, recSpKeywordCnt.total / .in, allSbKeywordCnt.total / .in, sbKeywordCnt.total / .in, sbvKeywordCnt.total / .in",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "last7d",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to get last 7 days data, default true. When false, use startDate/endDate range",
+      "example": true,
+      "constraints": {}
+    },
+    {
+      "name": "startDate",
+      "type": "string",
+      "required": false,
+      "description": "Start date yyyy-MM-dd (effective when last7d=false; if omitted, the latest system full week is used)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "endDate",
+      "type": "string",
+      "required": false,
+      "description": "End date yyyy-MM-dd (paired with startDate)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "sortBy",
+      "type": "string",
+      "required": false,
+      "description": "Sort field. Options: totalKeywordNum (all traffic keywords), naturalKeywordNum (natural traffic keywords), brandKeywordNum (brand ad keywords), vedioKeywordNum (video ad keywords), acKeywordNum (AC recommended keywords), erKeywordNum (ER recommended keywords), trKeywordNum (TR recommended keywords), sumScore (total keyword exposure score), totalNfScore, totalSpSocre (note spelling), totalBrandScore, totalVedioScore, totalAcScore, totalTrScore, totalErScore",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageNum",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, default 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Results per page, min 10, max 100, default 100",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "desc",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to sort descending, default true",
+      "example": true,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "searchKeyword": "phone case",
+    "country": "US",
+    "pageNum": 1,
+    "last7d": true,
+    "pageSize": 10
+  },
+  "jsonSchema": null
+}

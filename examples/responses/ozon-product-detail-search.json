@@ -1,0 +1,71 @@
+{
+  "errcode": 1,
+  "total": 1,
+  "totalSales": 1,
+  "dailySales": 1,
+  "totalRevenue": 1,
+  "stock": 1,
+  "startDate": "2026-01-01",
+  "endDate": "2026-01-01",
+  "salesTrendVOList": [],
+  "categoryRanks": [],
+  "products": [
+    {
+      "sku": 1,
+      "productId": 1,
+      "price": 1,
+      "reviewRating": 1,
+      "rating": 1,
+      "reviewCount": 1,
+      "questionsAndAnswers": 1,
+      "brandId": 1,
+      "brandUrl": "https://example.com/image.jpg",
+      "sellerId": 1,
+      "fulfillment": [],
+      "upTime": 1,
+      "upDays": 1,
+      "upMonths": 1,
+      "imageUrl": "https://example.com/image.jpg",
+      "imageUrls": [],
+      "productUrl": "https://example.com/image.jpg",
+      "productPageUrl": "https://example.com/image.jpg",
+      "categoryInfo": {},
+      "monthlySalesUnits": 1,
+      "monthlySalesRevenue": 1,
+      "weight": 1,
+      "grossMargin": 1
+    }
+  ],
+  "data": [],
+  "columns": [
+    {
+      "category": {},
+      "fullCategoryId": [],
+      "level": 1,
+      "id": "example-id",
+      "pid": "example-id",
+      "crossBorderSellable": false,
+      "disabled": false
+    }
+  ],
+  "costTime": 1,
+  "costToken": 1,
+  "salestrendvolist": [
+    {
+      "date": "2026-01-01",
+      "sales": 1,
+      "revenue": 1,
+      "price": 1,
+      "stock": 1,
+      "reviewCount": 1,
+      "reviewRating": 1
+    }
+  ],
+  "categoryranks": [
+    {
+      "date": "2026-01-01",
+      "rank": 1,
+      "count": 1
+    }
+  ]
+}

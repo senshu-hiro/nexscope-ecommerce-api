@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-keyword-intelligence.",
+  "fields": [
+    {
+      "name": "analysisDescription",
+      "type": "string",
+      "required": true,
+      "description": "Natural language description that precisely expresses the query intent",
+      "example": "Analyze Amazon Brand Analytics search demand for phone case in the US marketplace",
+      "constraints": {}
+    },
+    {
+      "name": "region",
+      "type": "string",
+      "required": false,
+      "description": "Site code, default US. Options: US, DE, BR, CA, AU, JP, AE, ES, FR, IT, SA, TR, MX, SE, NL",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "createDownloadUrl",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to generate a CSV download link, default false",
+      "example": false,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "analysisDescription": "Find Amazon Brand Analytics search demand for phone case in the US marketplace",
+    "createDownloadUrl": false,
+    "region": "US"
+  },
+  "jsonSchema": null
+}

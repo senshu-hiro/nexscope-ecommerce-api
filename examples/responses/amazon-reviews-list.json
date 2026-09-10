@@ -1,0 +1,26 @@
+{
+  "total": 1,
+  "data": [],
+  "columns": [
+    {
+      "reviewId": "example-id",
+      "asin": "B072MQ5BRX",
+      "date": "2026-01-01",
+      "verified": false,
+      "vine": false,
+      "numberOfHelpful": 1,
+      "imageUrlList": [],
+      "videoUrlList": [],
+      "countRatings": 1,
+      "countReviews": 1,
+      "variationId": "example-id",
+      "variationList": [],
+      "currentPage": 1,
+      "statusCode": 1,
+      "locale": {},
+      "reviewSummary": {},
+      "filters": {}
+    }
+  ],
+  "costToken": 1
+}

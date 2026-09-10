@@ -1,0 +1,11 @@
+{
+  "total": 1,
+  "costToken": 1,
+  "categories": [
+    {
+      "categoryLevel": 1,
+      "id": "example-id",
+      "parentId": "example-id"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "properties": {
+    "parentCatId": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "type": "object",
+  "additionalProperties": false
+}

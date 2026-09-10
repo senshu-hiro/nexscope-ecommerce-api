@@ -1,0 +1,20 @@
+{
+  "total": 1,
+  "products": [
+    {
+      "productId": "example-id",
+      "price": 1,
+      "minPrice": 1,
+      "maxPrice": 1,
+      "oldPrice": 1,
+      "imageUrl": "https://example.com/image.jpg",
+      "sellerReviews": 1,
+      "positiveFeedbackInPercentage": 1,
+      "salesQuantity": 1,
+      "bidsCount": 1,
+      "sponsored": false
+    }
+  ],
+  "columns": [],
+  "costToken": 1
+}

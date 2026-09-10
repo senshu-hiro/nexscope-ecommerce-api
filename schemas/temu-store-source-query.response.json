@@ -1,0 +1,323 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of records on this page",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "storeNum",
+      "type": "integer",
+      "required": false,
+      "description": "Total number of stores matching criteria (upstream store_num)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "stores",
+      "type": "array",
+      "required": false,
+      "description": "Temu store list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Rendered columns",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Title (Temu Store Query)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Source type: temu",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Tool type: ehunt",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style: tableListWorkbenches",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].storeId",
+      "type": "string",
+      "required": false,
+      "description": "Store ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "stores[].siteId",
+      "type": "string",
+      "required": false,
+      "description": "Country site ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "stores[].storeName",
+      "type": "string",
+      "required": false,
+      "description": "Store name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].logoUrl",
+      "type": "string",
+      "required": false,
+      "description": "Store logo URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "stores[].orderTotal",
+      "type": "string",
+      "required": false,
+      "description": "Total sales",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].orderWeek",
+      "type": "string",
+      "required": false,
+      "description": "Weekly sales",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].orderMonth",
+      "type": "string",
+      "required": false,
+      "description": "Monthly sales",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].totalRevenue",
+      "type": "string",
+      "required": false,
+      "description": "Total revenue",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].weekRevenue",
+      "type": "string",
+      "required": false,
+      "description": "Weekly revenue",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].monthRevenue",
+      "type": "string",
+      "required": false,
+      "description": "Monthly revenue",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].rating",
+      "type": "string",
+      "required": false,
+      "description": "Rating",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].listedTime",
+      "type": "string",
+      "required": false,
+      "description": "Store opening time",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].reviewNum",
+      "type": "string",
+      "required": false,
+      "description": "Review count",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].followerNum",
+      "type": "string",
+      "required": false,
+      "description": "Follower count",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].productNum",
+      "type": "string",
+      "required": false,
+      "description": "Product count",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].categoriesCn",
+      "type": "string",
+      "required": false,
+      "description": "Chinese category list",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].categories",
+      "type": "string",
+      "required": false,
+      "description": "English category list",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].isLocal",
+      "type": "string",
+      "required": false,
+      "description": "Whether semi-managed: 0=fully managed, 1=semi-managed",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token cost reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "storeNum": 1,
+    "stores": [
+      {
+        "storeId": "example-id",
+        "siteId": "example-id",
+        "logoUrl": "https://example.com/image.jpg"
+      }
+    ],
+    "columns": []
+  },
+  "jsonSchema": null
+}

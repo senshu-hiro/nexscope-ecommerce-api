@@ -1,0 +1,13 @@
+{
+  "total": 1,
+  "data": [
+    {
+      "patentId": "patent-id",
+      "pn": "US10123456B2",
+      "citedPatents": [],
+      "citedOthers": []
+    }
+  ],
+  "columns": [],
+  "costToken": 6000
+}

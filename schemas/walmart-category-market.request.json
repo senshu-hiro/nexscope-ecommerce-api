@@ -1,0 +1,52 @@
+{
+  "type": "object",
+  "unevaluatedProperties": false,
+  "required": [
+    "operation"
+  ],
+  "discriminator": {
+    "propertyName": "operation"
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "operation": {
+          "const": "tree"
+        }
+      },
+      "required": [
+        "operation"
+      ]
+    },
+    {
+      "properties": {
+        "operation": {
+          "const": "searchByName"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "operation",
+        "name"
+      ]
+    },
+    {
+      "properties": {
+        "operation": {
+          "const": "marketReport"
+        },
+        "nodePath": {
+          "type": "string",
+          "pattern": "^\\d+(?:_\\d+)+$"
+        }
+      },
+      "required": [
+        "operation",
+        "nodePath"
+      ]
+    }
+  ]
+}

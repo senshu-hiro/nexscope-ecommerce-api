@@ -1,0 +1,60 @@
+{
+  "type": "object",
+  "description": "toolName must be one of the 24 documented values. Required argument fields depend on toolName.",
+  "fields": [
+    {
+      "name": "toolName",
+      "type": "string",
+      "required": true,
+      "description": "Exact Mercado tool name.",
+      "example": "categorySearch",
+      "constraints": {
+        "allowedValues": [
+          "catalogHistory",
+          "catalogInfo",
+          "catalogSearch",
+          "categorySearch",
+          "categorySmallSearch",
+          "itemHistory",
+          "itemInfo",
+          "itemSearch",
+          "keywordDateSearch",
+          "keywordMonthSearch",
+          "keywordReverse",
+          "myUsage",
+          "rateInfo",
+          "reviewSearch",
+          "sellerSearch",
+          "trendBrandTopBrand",
+          "trendBrandTopItem",
+          "trendBrandTopSeller",
+          "trendNewItems",
+          "trendPrice",
+          "trendSale",
+          "trendSoldHis",
+          "trendStatistical",
+          "trendStoreInventoryType"
+        ]
+      }
+    },
+    {
+      "name": "arguments",
+      "type": "object",
+      "required": true,
+      "description": "Arguments for the selected tool.",
+      "example": {
+        "searchText": "Auriculares",
+        "siteId": "MLM"
+      },
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "arguments": {
+      "searchText": "Auriculares",
+      "siteId": "MLM"
+    },
+    "toolName": "categorySearch"
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "description": "Remove selected objects or regions using a mask image.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the base image. The image must be between 300 and 4096 pixels in both width and height, and its width-to-height ratio must be between 0.4 and 2.5.",
+      "example": "https://example.com/product.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "maskImageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the mask image for the area to erase.",
+      "example": "https://example.com/mask.png",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/product.jpg",
+    "maskImageUrl": "https://example.com/mask.png"
+  },
+  "jsonSchema": null
+}

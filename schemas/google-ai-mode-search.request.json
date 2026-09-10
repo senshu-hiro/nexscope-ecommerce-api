@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.google-ai-mode-search.",
+  "fields": [
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": true,
+      "description": "Google search keyword, passed as the q= parameter to initiate a Google AI Mode search. Only supports single-turn conversation; follow-up prompts are not supported. To ask follow-up questions, the agent must independently summarize key information from the previous AI overview, concatenate the new question, and send it as a new keyword in a new request",
+      "example": "best phone case material for iPhone",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "keyword": "best phone case material for iPhone"
+  },
+  "jsonSchema": null
+}

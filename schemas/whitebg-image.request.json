@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "description": "Generate one square white-background product image from one or two references of the same product using GPT Image 2. Submit one approved target per request. Review product identity and listing suitability before use; this endpoint does not perform reference inspection, image-set planning, or marketplace compliance certification. Generation consumes Nexscope credits.",
+  "fields": [
+    {
+      "name": "imageList",
+      "type": "array",
+      "required": true,
+      "description": "Public reference image URLs of the same product. Provide up to 2 JPG, JPEG, PNG, or WEBP images; each image must be at most 10 MB and between 800 and 4096 pixels.",
+      "example": [
+        "https://example.com/product.jpg"
+      ],
+      "constraints": {
+        "maxItems": 2,
+        "minItems": 1
+      }
+    },
+    {
+      "name": "prompt",
+      "type": "string",
+      "required": true,
+      "description": "Describe one target supported by the references, up to 350 characters. Output is fixed to one 1:1 image.",
+      "example": "Show the complete product from the supplied front view.",
+      "constraints": {
+        "maxLength": 350
+      }
+    }
+  ],
+  "example": {
+    "imageList": [
+      "https://example.com/product.jpg"
+    ],
+    "prompt": "Show the complete product from the supplied front view."
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,107 @@
+{
+  "properties": {
+    "errcode": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "request_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "errmsg": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "Provider business records for Chuhaijiang TikTok Creator Agencies. Known row fields: avg_commission_rate, follower_count, has_email_address, has_phone, has_whats_app, id, partner_icon, partner_id, partner_name, partner_top3_category, partner_top3_category_list, total_30d_video_live_gmv, total_30d_video_live_sold_count, total_related_creator_count, total_related_product_count, total_related_seller_count, video_count. Missing and null fields remain unchanged; monetary values retain their original unit and runtime type.",
+          "items": {
+            "properties": {
+              "avg_commission_rate": {
+                "description": "Source-documented avg_commission_rate; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "follower_count": {
+                "description": "Source-documented follower_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "has_email_address": {
+                "description": "Source-documented has_email_address; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "has_phone": {
+                "description": "Source-documented has_phone; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "has_whats_app": {
+                "description": "Source-documented has_whats_app; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "id": {
+                "description": "Source-documented id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "partner_icon": {
+                "description": "Source-documented partner_icon; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "partner_id": {
+                "description": "Source-documented partner_id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "partner_name": {
+                "description": "Source-documented partner_name; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "partner_top3_category": {
+                "description": "Source-documented partner_top3_category; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "partner_top3_category_list": {
+                "description": "Source-documented partner_top3_category_list; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "total_30d_video_live_gmv": {
+                "description": "Source-documented total_30d_video_live_gmv; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "total_30d_video_live_sold_count": {
+                "description": "Source-documented total_30d_video_live_sold_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "total_related_creator_count": {
+                "description": "Source-documented total_related_creator_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "total_related_product_count": {
+                "description": "Source-documented total_related_product_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "total_related_seller_count": {
+                "description": "Source-documented total_related_seller_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "video_count": {
+                "description": "Source-documented video_count; may be absent or null. Preserve the provider value and original monetary units."
+              }
+            },
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": true
+          }
+        },
+        "total_count": {
+          "description": "Total matching records.",
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

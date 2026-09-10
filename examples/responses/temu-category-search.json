@@ -1,0 +1,13 @@
+{
+  "total": 1,
+  "categories": [
+    {
+      "id": "example-id",
+      "categoryId": "example-id",
+      "parentId": "example-id",
+      "level": 1,
+      "isDeleted": 1,
+      "hasChildren": false
+    }
+  ]
+}

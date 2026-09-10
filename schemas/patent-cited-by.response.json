@@ -1,0 +1,213 @@
+{
+  "type": "object",
+  "description": "Returns the PatSnap cited-by payload directly.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of returned patent records.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Cited-by results.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].patentId",
+      "type": "string",
+      "required": false,
+      "description": "Queried patent ID.",
+      "example": "patent-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].pn",
+      "type": "string",
+      "required": false,
+      "description": "Queried publication number.",
+      "example": "US10123456B2",
+      "constraints": {}
+    },
+    {
+      "name": "data[].citedBy3y",
+      "type": "integer",
+      "required": false,
+      "description": "Citations received within three years.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].citedBy5y",
+      "type": "integer",
+      "required": false,
+      "description": "Citations received within five years.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].citedByPatents",
+      "type": "array",
+      "required": false,
+      "description": "Patents that cite the queried patent.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Provider rendering columns.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Provider-reported token cost.",
+      "example": 6000,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "data": [
+      {
+        "patentId": "patent-id",
+        "pn": "US10123456B2",
+        "citedBy3y": 1,
+        "citedBy5y": 1,
+        "citedByPatents": []
+      }
+    ],
+    "columns": [],
+    "costToken": 6000
+  },
+  "jsonSchema": null
+}

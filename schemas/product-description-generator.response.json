@@ -1,0 +1,201 @@
+{
+  "type": "object",
+  "description": "Returns the provider task envelope without exposing credentials.",
+  "fields": [
+    {
+      "name": "taskId",
+      "type": "string",
+      "required": false,
+      "description": "Asynchronous generation task ID.",
+      "example": "123456789",
+      "constraints": {}
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "required": false,
+      "description": "Task status such as PROCESSING, SUCCESS, or FAILED.",
+      "example": "PROCESSING",
+      "constraints": {}
+    },
+    {
+      "name": "content",
+      "type": "string",
+      "required": false,
+      "description": "Generated product copy when the task succeeds.",
+      "example": "Example product description.",
+      "constraints": {}
+    },
+    {
+      "name": "promptTokens",
+      "type": "integer",
+      "required": false,
+      "description": "Input token count when the task succeeds.",
+      "example": 120,
+      "constraints": {}
+    },
+    {
+      "name": "completionTokens",
+      "type": "integer",
+      "required": false,
+      "description": "Output token count when the task succeeds.",
+      "example": 350,
+      "constraints": {}
+    },
+    {
+      "name": "totalTokens",
+      "type": "integer",
+      "required": false,
+      "description": "Total token count when the task succeeds.",
+      "example": 470,
+      "constraints": {}
+    },
+    {
+      "name": "errorMsg",
+      "type": "string",
+      "required": false,
+      "description": "Failure message when status is FAILED.",
+      "example": "Generation failed.",
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Provider-reported token cost.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "taskId": "123456789",
+    "status": "PROCESSING",
+    "content": "Example product description.",
+    "promptTokens": 120,
+    "completionTokens": 350,
+    "totalTokens": 470,
+    "errorMsg": "Generation failed.",
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

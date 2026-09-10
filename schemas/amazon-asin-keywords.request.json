@@ -1,0 +1,94 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-asin-keywords.",
+  "fields": [
+    {
+      "name": "asin",
+      "type": "string",
+      "required": true,
+      "description": "ASIN code, max length 1000 characters. This tool can only query one ASIN at a time",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "country",
+      "type": "string",
+      "required": false,
+      "description": "Country site, default US. Options (13 total): US, UK, DE, CA, JP, FR, ES, IT, MX, AU, AE, BR, SA",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": false,
+      "description": "Keyword, max length 1000. Translate to the corresponding country's language whenever possible",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "timePieceType",
+      "type": "string",
+      "required": false,
+      "description": "Time slice type, default latelyDay. Options: latelyDay (last N days), month (a specific month), week (a specific week)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "timePieceValue",
+      "type": "string",
+      "required": false,
+      "description": "Time slice value, default 7, max length 1000. For latelyDay only 7 or 30; for month format YYYY-MM (e.g. 2026-04); for week format week start date YYYY-MM-DD (e.g. 2026-04-13)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "conditions",
+      "type": "string",
+      "required": false,
+      "description": "Condition filters, comma-separated. Options:<br>Flag type: nfPosition (natural traffic keyword), isSpAd (SP ad keyword), isBrandAd (brand ad keyword), isVedioAd (video ad keyword), isAC (AC recommended keyword), isAccurateKw (precise traffic keyword), isAccurateTailKw (precise long-tail keyword), isPurchaseKw (converting keyword), isQualityKw (high-quality conversion keyword), isStableKw (stable conversion keyword), isLossKw (lost conversion keyword), isInvalidKw (invalid impression keyword), isMultiVariantKw (multi-variant natural rank keyword), isSearchVolUpKw (search volume YoY growth keyword), isSearchVolDownKw (search volume YoY decline keyword)<br>Period count type (.total all / .in new): totalPeriod.in, nfKeywordCnt.total, nfKeywordCnt.in, adKeywordCnt.total, adKeywordCnt.in, allSpKeywordCnt.total, allSpKeywordCnt.in, spKeywordCnt.total, spKeywordCnt.in, recSpKeywordCnt.total, recSpKeywordCnt.in, allSbKeywordCnt.total, allSbKeywordCnt.in, sbKeywordCnt.total, sbKeywordCnt.in, sbvKeywordCnt.total, sbvKeywordCnt.in",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sortBy",
+      "type": "string",
+      "required": false,
+      "description": "Sort field. Options: lastRank (natural rank), adLastRank (ad rank), updateTime (keyword crawl time), searchesRank (search rank), estSearchesNum (monthly search volume). Empty string means default system sort",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "desc",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to sort descending, default true",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "pageNum",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, default 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Results per page, min 10, max 100, default 100",
+      "example": 10,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "country": "US",
+    "pageNum": 1,
+    "desc": true,
+    "pageSize": 10,
+    "asin": "B072MQ5BRX"
+  },
+  "jsonSchema": null
+}

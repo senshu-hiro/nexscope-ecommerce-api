@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.patent-legal-status-data.",
+  "fields": [
+    {
+      "name": "patentId",
+      "type": "string",
+      "required": false,
+      "description": "Patent ID. At least one of patentId and patentNumber must be provided; if both are present, patentId takes priority. Only a single value is supported; multiple values separated by commas are not allowed. Max length: 60000 characters.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "patentNumber",
+      "type": "string",
+      "required": false,
+      "description": "Publication (grant) number. At least one of patentId and patentNumber must be provided; if both are present, patentId takes priority. Only a single value is supported; multiple values separated by commas are not allowed. Max length: 60000 characters.",
+      "example": "US11299876B2",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "patentNumber": "US11299876B2"
+  },
+  "jsonSchema": null
+}

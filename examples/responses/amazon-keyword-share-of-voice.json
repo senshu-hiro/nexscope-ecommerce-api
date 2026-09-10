@@ -1,0 +1,38 @@
+{
+  "costToken": 1,
+  "shareOfVoice": {},
+  "id": "example-id",
+  "estimated30DaySearchVolume": 1,
+  "exactSuggestedBidMedian": 1,
+  "productCount": 1,
+  "updatedAt": "2026-01-01",
+  "topAsinsModelStartDate": "B072MQ5BRX",
+  "topAsinsModelEndDate": "B072MQ5BRX",
+  "brands": [
+    {
+      "organicProducts": 1,
+      "sponsoredProducts": 1,
+      "combinedProducts": 1,
+      "organicBasicSov": 1,
+      "organicWeightedSov": 1,
+      "sponsoredBasicSov": 1,
+      "sponsoredWeightedSov": 1,
+      "combinedBasicSov": 1,
+      "combinedWeightedSov": 1,
+      "organicAveragePosition": 1,
+      "sponsoredAveragePosition": 1,
+      "combinedAveragePosition": 1,
+      "organicAveragePrice": 1,
+      "sponsoredAveragePrice": 1,
+      "combinedAveragePrice": 1
+    }
+  ],
+  "topAsins": [
+    {
+      "asin": "B072MQ5BRX",
+      "clicks": 1,
+      "conversions": 1,
+      "conversionRate": 1
+    }
+  ]
+}

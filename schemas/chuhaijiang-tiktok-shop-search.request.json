@@ -1,0 +1,88 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "country": {
+      "type": "string",
+      "description": "Lowercase TikTok market code.",
+      "enum": [
+        "br",
+        "de",
+        "es",
+        "fr",
+        "gb",
+        "id",
+        "it",
+        "jp",
+        "mx",
+        "my",
+        "ph",
+        "sg",
+        "th",
+        "us",
+        "vn"
+      ],
+      "example": "us"
+    },
+    "page": {
+      "type": "integer",
+      "description": "Page number, starting at 1.",
+      "minimum": 1,
+      "example": 1
+    },
+    "pageSize": {
+      "type": "integer",
+      "description": "Maximum records per page.",
+      "minimum": 1,
+      "maximum": 10,
+      "example": 5
+    },
+    "keyword": {
+      "type": "string",
+      "description": "Shop search keyword.",
+      "example": "beauty"
+    },
+    "category": {
+      "type": "string",
+      "description": "Product category ID."
+    },
+    "sellerType": {
+      "type": "string",
+      "description": "Provider-supported seller type."
+    },
+    "sort": {
+      "type": "string",
+      "description": "Provider sort field and direction (field:asc or field:desc).",
+      "default": "gmv_7d:desc",
+      "pattern": "^[A-Za-z0-9_]+:(asc|desc)$",
+      "example": "gmv_7d:desc"
+    },
+    "minRating": {
+      "type": "number",
+      "description": "Minimum shop rating."
+    },
+    "maxRating": {
+      "type": "number",
+      "description": "Maximum shop rating."
+    },
+    "minSold7d": {
+      "type": "number",
+      "description": "Minimum 7-day sales."
+    },
+    "maxSold7d": {
+      "type": "number",
+      "description": "Maximum 7-day sales."
+    },
+    "minGmv7d": {
+      "type": "number",
+      "description": "Minimum 7-day GMV."
+    },
+    "maxGmv7d": {
+      "type": "number",
+      "description": "Maximum 7-day GMV."
+    }
+  },
+  "required": [
+    "country"
+  ]
+}

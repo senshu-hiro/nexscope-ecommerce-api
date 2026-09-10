@@ -1,0 +1,79 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.tiktok-video-analytics.",
+  "fields": [
+    {
+      "name": "region",
+      "type": "string",
+      "required": false,
+      "description": "Region/market code, e.g., US",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "dateRange",
+      "type": "string",
+      "required": false,
+      "description": "Time range, e.g., last7Day, last30Day",
+      "example": "last30Day",
+      "constraints": {}
+    },
+    {
+      "name": "pageNumber",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, value range 1-5",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page, value range 5-100",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "language",
+      "type": "string",
+      "required": false,
+      "description": "Return language, e.g., zh-CN, en-US",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency unit, e.g., USD",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sortField",
+      "type": "object",
+      "required": false,
+      "description": "Sort criteria; omitted to use default rank order",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "videoId",
+      "type": "string",
+      "required": false,
+      "description": "TikTok video ID, e.g., 7659161409279806734, obtainable from the video_id in the video rank response",
+      "example": "6768504823336815877",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "dateRange": "last30Day",
+    "sortField": {},
+    "videoId": "6768504823336815877",
+    "region": "US",
+    "pageNumber": 1,
+    "pageSize": 10
+  },
+  "jsonSchema": null
+}

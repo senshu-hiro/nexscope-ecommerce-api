@@ -1,0 +1,68 @@
+{
+  "type": "object",
+  "description": "The API key owner must own connectionId. Raw provider method, path, content type, and workspace are not accepted.",
+  "fields": [
+    {
+      "name": "operationId",
+      "type": "string",
+      "required": true,
+      "description": "Exact catalog operation ID, for example sp.list_campaigns.",
+      "example": "sp.list_campaigns",
+      "constraints": {}
+    },
+    {
+      "name": "connectionId",
+      "type": "integer",
+      "required": true,
+      "description": "Owned Amazon Ads connection ID.",
+      "example": 123,
+      "constraints": {}
+    },
+    {
+      "name": "payload",
+      "type": "object",
+      "required": false,
+      "description": "Documented fields for the selected operation; required by create/update operations.",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "queryString",
+      "type": "string",
+      "required": false,
+      "description": "Optional operation-specific query string without a leading ?.",
+      "example": "",
+      "constraints": {}
+    },
+    {
+      "name": "adType",
+      "type": "string",
+      "required": false,
+      "description": "Required only by sb.create_ads.",
+      "example": "video",
+      "constraints": {}
+    },
+    {
+      "name": "action",
+      "type": "string",
+      "required": false,
+      "description": "preview (default) or confirm for mutations; ignored for reads.",
+      "example": "preview",
+      "constraints": {}
+    },
+    {
+      "name": "confirmationToken",
+      "type": "string",
+      "required": false,
+      "description": "Single-use token required when action is confirm.",
+      "example": "opaque-token",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "connectionId": 123,
+    "operationId": "sp.list_campaigns",
+    "payload": {}
+  },
+  "jsonSchema": null
+}

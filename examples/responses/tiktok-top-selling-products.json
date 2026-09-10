@@ -1,0 +1,27 @@
+{
+  "total": 1,
+  "products": [
+    {
+      "productId": "example-id",
+      "region": "US",
+      "price": 1,
+      "minPrice": 1,
+      "maxPrice": 1,
+      "totalSaleCnt": 1,
+      "totalSale1dCnt": 1,
+      "totalSale7dCnt": 1,
+      "totalSale30dCnt": 1,
+      "totalSaleGmvAmt": 1,
+      "totalSaleGmv1dAmt": 1,
+      "totalSaleGmv7dAmt": 1,
+      "totalSaleGmv30dAmt": 1,
+      "growthRate": 1,
+      "shopTotalUnitsSold": 1,
+      "shopSellerId": "example-id",
+      "productCommissionRate": 1,
+      "imageUrl": "https://example.com/image.jpg"
+    }
+  ],
+  "columns": [],
+  "costToken": 1
+}

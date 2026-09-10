@@ -1,0 +1,43 @@
+{
+  "errcode": 1,
+  "total": 1,
+  "data": [
+    {
+      "query": "phone case",
+      "queryCn": "phone case",
+      "platform": 1,
+      "searchVolume": 1,
+      "count30GrowthRate": 1,
+      "productCount": 1,
+      "competingProducts": 1,
+      "sellers": 1,
+      "avgPrice": 1,
+      "itemsViews": 1,
+      "viewSharing": 1,
+      "conversionSharing": 1,
+      "marketSpace": 1,
+      "returnCancellationRate": 1,
+      "uniqQueriesWCa": 1,
+      "ca": 1,
+      "categories": [],
+      "categoryInfos": [
+        {
+          "id": "example-id",
+          "crossBorderSellable": false
+        }
+      ],
+      "products": [
+        {
+          "ozonId": 1,
+          "sku": 1,
+          "imageUrl": "https://example.com/image.jpg",
+          "advert": 1
+        }
+      ],
+      "id": "example-id"
+    }
+  ],
+  "columns": [],
+  "costTime": 1,
+  "costToken": 1
+}

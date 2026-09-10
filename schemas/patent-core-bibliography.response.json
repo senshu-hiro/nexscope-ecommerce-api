@@ -1,0 +1,258 @@
+{
+  "type": "object",
+  "description": "Returns the PatSnap bibliography payload directly.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of returned records.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "allRecordsCount",
+      "type": "integer",
+      "required": false,
+      "description": "Total matching record count.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Bibliographic patent records.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].patentId",
+      "type": "string",
+      "required": false,
+      "description": "Patent ID.",
+      "example": "patent-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].title",
+      "type": "string",
+      "required": false,
+      "description": "Patent title.",
+      "example": "Wireless speaker system",
+      "constraints": {}
+    },
+    {
+      "name": "data[].abstractContent",
+      "type": "string",
+      "required": false,
+      "description": "Patent abstract.",
+      "example": "A wireless speaker system...",
+      "constraints": {}
+    },
+    {
+      "name": "data[].publicationNumber",
+      "type": "string",
+      "required": false,
+      "description": "Publication number.",
+      "example": "US10123456B2",
+      "constraints": {}
+    },
+    {
+      "name": "data[].applicationNo",
+      "type": "string",
+      "required": false,
+      "description": "Application number.",
+      "example": "US15/123456",
+      "constraints": {}
+    },
+    {
+      "name": "data[].applicants",
+      "type": "array",
+      "required": false,
+      "description": "Applicants.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].inventors",
+      "type": "array",
+      "required": false,
+      "description": "Inventors.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].assignees",
+      "type": "array",
+      "required": false,
+      "description": "Assignees.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].ipcFurther",
+      "type": "array",
+      "required": false,
+      "description": "IPC classifications.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Provider rendering columns.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Provider-reported token cost.",
+      "example": 6000,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "allRecordsCount": 1,
+    "data": [
+      {
+        "patentId": "patent-id",
+        "title": "Wireless speaker system",
+        "abstractContent": "A wireless speaker system...",
+        "publicationNumber": "US10123456B2",
+        "applicationNo": "US15/123456",
+        "applicants": [],
+        "inventors": [],
+        "assignees": [],
+        "ipcFurther": []
+      }
+    ],
+    "columns": [],
+    "costToken": 6000
+  },
+  "jsonSchema": null
+}

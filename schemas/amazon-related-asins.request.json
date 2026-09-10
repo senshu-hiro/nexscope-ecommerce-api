@@ -1,0 +1,293 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-related-asins.",
+  "fields": [
+    {
+      "name": "asin",
+      "type": "string",
+      "required": true,
+      "description": "Reference ASIN, used to query competitor listings that belong to the same niche as this ASIN, max length 1000 characters",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "countryCode",
+      "type": "string",
+      "required": false,
+      "description": "Country code, options: US (United States), JP (Japan), DE (Germany)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number (starting from 1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items returned per page (10-100)",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "sortField",
+      "type": "string",
+      "required": false,
+      "description": "Sort field (see sort options below)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sortType",
+      "type": "string",
+      "required": false,
+      "description": "Sort direction: desc (descending) or asc (ascending)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "priceMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum product price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum product price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "fbaFeeMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum FBA fee",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "fbaFeeMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum FBA fee",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "grossProfitMarginMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum gross profit margin",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "grossProfitMarginMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum gross profit margin",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "totalReviewsMin",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "totalReviewsMax",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "customerRatingMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum rating, range 0.0-5.0",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "customerRatingMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum rating, range 0.0-5.0",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "clickCountT7Min",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum weekly click count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "clickCountT7Max",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum weekly click count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "clickCountGrowthT7Min",
+      "type": "number",
+      "required": false,
+      "description": "Minimum weekly click growth rate, range 0-1, e.g., 0.1 means 10%",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "clickCountGrowthT7Max",
+      "type": "number",
+      "required": false,
+      "description": "Maximum weekly click growth rate, range 0-1, e.g., 0.1 means 10%",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "clickConversionRateMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum click conversion rate, range 0-1, e.g., 0.1 means 10%",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "clickConversionRateMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum click conversion rate, range 0-1, e.g., 0.1 means 10%",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "clickCountT30Min",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum monthly click count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "clickCountT30Max",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum monthly click count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "clickCountGrowthT30Min",
+      "type": "number",
+      "required": false,
+      "description": "Minimum monthly click growth rate, range 0-1, e.g., 0.1 means 10%",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "clickCountGrowthT30Max",
+      "type": "number",
+      "required": false,
+      "description": "Maximum monthly click growth rate, range 0-1, e.g., 0.1 means 10%",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "clickConversionRateCompositeMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum composite click conversion rate, range 0-1, e.g., 0.1 means 10%",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "clickConversionRateCompositeMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum composite click conversion rate, range 0-1, e.g., 0.1 means 10%",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salesVolumeT360Min",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum annual sales volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salesVolumeT360Max",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum annual sales volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "launchDateMin",
+      "type": "string",
+      "required": false,
+      "description": "Earliest listing time, format yyyyMMdd000000",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "launchDateMax",
+      "type": "string",
+      "required": false,
+      "description": "Latest listing time, format yyyyMMdd000000",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "nicheCountMin",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum number of niche markets",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheCountMax",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum number of niche markets",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "sellerCountry",
+      "type": "string",
+      "required": false,
+      "description": "Seller country code, comma-separated for multiple countries, e.g.: CN,US",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "asin": "B072MQ5BRX",
+    "page": 1,
+    "pageSize": 10,
+    "countryCode": "US"
+  },
+  "jsonSchema": null
+}

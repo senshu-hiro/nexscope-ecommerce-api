@@ -1,0 +1,74 @@
+{
+  "properties": {
+    "errcode": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "request_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "errmsg": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "Provider business records for Chuhaijiang TikTok Product New Arrivals. Known row fields: id, product_id, product_name, shop_name, total_gmv, total_sold_count. Missing and null fields remain unchanged; monetary values retain their original unit and runtime type.",
+          "items": {
+            "properties": {
+              "id": {
+                "description": "Source-documented id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "product_id": {
+                "description": "Source-documented product_id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "product_name": {
+                "description": "Source-documented product_name; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "shop_name": {
+                "description": "Source-documented shop_name; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "total_gmv": {
+                "description": "Source-documented total_gmv; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "total_sold_count": {
+                "description": "Source-documented total_sold_count; may be absent or null. Preserve the provider value and original monetary units."
+              }
+            },
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": true
+          }
+        },
+        "total_count": {
+          "description": "Total matching records.",
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

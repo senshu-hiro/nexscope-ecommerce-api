@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.ruiguan-copyright-detection.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "URL of the copyrighted image to inspect (maximum 1,000 characters)",
+      "example": "https://m.media-amazon.com/images/I/719mRAn2VrL._AC_SL1500_.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "topNumber",
+      "type": "integer",
+      "required": true,
+      "description": "Maximum number of matches to return (default 100, minimum 10, maximum 200)",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "enableRadar",
+      "type": "boolean",
+      "required": true,
+      "description": "Whether to enable radar detection (default true)",
+      "example": false,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://m.media-amazon.com/images/I/719mRAn2VrL._AC_SL1500_.jpg",
+    "enableRadar": false,
+    "topNumber": 10
+  },
+  "jsonSchema": null
+}

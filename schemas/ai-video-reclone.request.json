@@ -1,0 +1,184 @@
+{
+  "type": "object",
+  "description": "Generate a product marketing video using a reference video, reference images, and model-specific generation settings.",
+  "fields": [
+    {
+      "name": "refVideoUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the reference video.",
+      "example": "https://example.com/reference-video.mp4",
+      "constraints": {}
+    },
+    {
+      "name": "refImageList",
+      "type": "array",
+      "required": true,
+      "description": "Public image URLs for product or visual references.",
+      "example": [
+        "https://example.com/product.jpg"
+      ],
+      "constraints": {}
+    },
+    {
+      "name": "videoType",
+      "type": "string",
+      "required": true,
+      "description": "Video model. Supported values: seedance-2-0, seedance-2-0-fast, seedance-2-0-mini, seedance-2-5, or happyhorse-v2.",
+      "example": "seedance-2-0-fast",
+      "constraints": {}
+    },
+    {
+      "name": "videoTime",
+      "type": "integer",
+      "required": false,
+      "description": "Optional target video duration in seconds. Seedance 2.0, Fast, Mini, and HappyHorse V2 support any integer from 5 through 15; Seedance 2.5 supports 5, 10, 15, 20, 25, or 30.",
+      "example": 10,
+      "constraints": {
+        "allowedValuesBy": {
+          "videoType": {
+            "seedance-2-0": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "seedance-2-0-mini": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "seedance-2-0-fast": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "happyhorse-v2": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "seedance-2-5": [
+              5,
+              10,
+              15,
+              20,
+              25,
+              30
+            ]
+          }
+        },
+        "allowedValues": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          20,
+          25,
+          30
+        ]
+      }
+    },
+    {
+      "name": "resolution",
+      "type": "string",
+      "required": true,
+      "description": "Target video resolution supported by the selected model, such as 720p or 1080p.",
+      "example": "720p",
+      "constraints": {}
+    },
+    {
+      "name": "aspectRatio",
+      "type": "string",
+      "required": false,
+      "description": "Target video aspect ratio supported by the selected model.",
+      "example": "9:16",
+      "constraints": {}
+    },
+    {
+      "name": "saleCountry",
+      "type": "string",
+      "required": true,
+      "description": "Target market country code used to localize the recreated video.",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "targetLanguage",
+      "type": "string",
+      "required": true,
+      "description": "Target spoken and on-screen language for the recreated video.",
+      "example": "English",
+      "constraints": {}
+    },
+    {
+      "name": "productInfo",
+      "type": "string",
+      "required": false,
+      "description": "Concise product information used to guide the recreation. Maximum 2500 characters.",
+      "example": "Slim shockproof phone case with a clear finish.",
+      "constraints": {}
+    },
+    {
+      "name": "prompt",
+      "type": "string",
+      "required": false,
+      "description": "Optional creative direction prompt.",
+      "example": "highlight the slim protective design",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "refVideoUrl": "https://example.com/reference-video.mp4",
+    "refImageList": [
+      "https://example.com/product.jpg"
+    ],
+    "videoType": "seedance-2-0-fast",
+    "videoTime": 10,
+    "resolution": "720p",
+    "aspectRatio": "9:16",
+    "saleCountry": "US",
+    "targetLanguage": "English",
+    "productInfo": "Slim shockproof phone case with a clear finish.",
+    "prompt": "highlight the slim protective design"
+  },
+  "jsonSchema": null
+}

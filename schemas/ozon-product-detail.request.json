@@ -1,0 +1,52 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.ozon-product-detail.",
+  "fields": [
+    {
+      "name": "productIds",
+      "type": "array",
+      "required": true,
+      "description": "Exactly one Ozon product ID (integer or string); multiple IDs are currently unsupported",
+      "example": [
+        1786874757
+      ],
+      "constraints": {
+        "maxItems": 1,
+        "minItems": 1
+      }
+    },
+    {
+      "name": "startDate",
+      "type": "string",
+      "required": false,
+      "description": "Statistics start date, format YYYY-MM-DD; latest is yesterday",
+      "example": "2025-03-01",
+      "constraints": {}
+    },
+    {
+      "name": "endDate",
+      "type": "string",
+      "required": false,
+      "description": "Statistics end date, format YYYY-MM-DD; latest is yesterday",
+      "example": "2025-03-31",
+      "constraints": {}
+    },
+    {
+      "name": "includeFbs",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to include FBS data for the requested SKU",
+      "example": false,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "includeFbs": false,
+    "startDate": "2025-03-01",
+    "productIds": [
+      1786874757
+    ],
+    "endDate": "2025-03-31"
+  },
+  "jsonSchema": null
+}

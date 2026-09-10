@@ -1,0 +1,100 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.1688-search-by-image.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Valid, publicly accessible image URL (maximum 1,000 characters). Supported formats: PNG, JPG, and JPEG; WEBP and GIF are not supported. Provide exactly one of imageUrl, imageBase64, or imageId",
+      "example": "https://m.media-amazon.com/images/I/61v6nYvQ7+L._AC_SL1500_.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "imageBase64",
+      "type": "string",
+      "required": false,
+      "description": "Raw Base64-encoded image content without a data:image/jpeg;base64, prefix. Supported formats: PNG, JPG, and JPEG.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "imageId",
+      "type": "string",
+      "required": false,
+      "description": "1688 image ID. Image-search results also return this value; include it when page is greater than 1 to improve response time",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number starting from 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Number of products per page, maximum 50",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "priceStart",
+      "type": "string",
+      "required": false,
+      "description": "Minimum price in CNY, for example 10",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "priceEnd",
+      "type": "string",
+      "required": false,
+      "description": "Maximum price in CNY, for example 100",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "filter",
+      "type": "string",
+      "required": false,
+      "description": "Comma-separated filter conditions. Use the supported filter values documented for this endpoint",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sort",
+      "type": "string",
+      "required": false,
+      "description": "Sort condition as JSON in the form {field: direction}. Fields: price, rePurchaseRate, or monthSold. Directions: asc or desc",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": false,
+      "description": "Keyword used to search within the results",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "productCollectionId",
+      "type": "string",
+      "required": false,
+      "description": "Single product-collection ID. Use a supported collection ID documented for this endpoint",
+      "example": "example-id",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "page": 1,
+    "imageUrl": "https://m.media-amazon.com/images/I/61v6nYvQ7+L._AC_SL1500_.jpg",
+    "pageSize": 10
+  },
+  "jsonSchema": null
+}

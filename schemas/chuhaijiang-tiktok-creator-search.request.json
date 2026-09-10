@@ -1,0 +1,97 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "country": {
+      "type": "string",
+      "description": "Lowercase TikTok market code.",
+      "enum": [
+        "br",
+        "de",
+        "es",
+        "fr",
+        "gb",
+        "id",
+        "it",
+        "jp",
+        "mx",
+        "my",
+        "ph",
+        "sg",
+        "th",
+        "us",
+        "vn"
+      ],
+      "example": "us"
+    },
+    "page": {
+      "type": "integer",
+      "description": "Page number, starting at 1.",
+      "minimum": 1,
+      "example": 1
+    },
+    "pageSize": {
+      "type": "integer",
+      "description": "Maximum records per page.",
+      "minimum": 1,
+      "maximum": 10,
+      "example": 5
+    },
+    "keyword": {
+      "type": "string",
+      "description": "Creator search keyword.",
+      "example": "beauty"
+    },
+    "category": {
+      "type": "string",
+      "description": "Creator category."
+    },
+    "hasContact": {
+      "type": "boolean",
+      "description": "Filter by availability of public contact information.",
+      "example": true
+    },
+    "sort": {
+      "type": "string",
+      "description": "Provider sort field and direction (field:asc or field:desc).",
+      "default": "gmv_30d:desc",
+      "pattern": "^[A-Za-z0-9_]+:(asc|desc)$",
+      "example": "gmv_30d:desc"
+    },
+    "minFollowers": {
+      "type": "number",
+      "description": "Minimum follower count."
+    },
+    "maxFollowers": {
+      "type": "number",
+      "description": "Maximum follower count."
+    },
+    "minGmv30d": {
+      "type": "number",
+      "description": "Minimum 30-day GMV."
+    },
+    "maxGmv30d": {
+      "type": "number",
+      "description": "Maximum 30-day GMV."
+    },
+    "minAvgViews": {
+      "type": "number",
+      "description": "Minimum average view count."
+    },
+    "maxAvgViews": {
+      "type": "number",
+      "description": "Maximum average view count."
+    },
+    "minEngagement": {
+      "type": "number",
+      "description": "Minimum engagement rate."
+    },
+    "maxEngagement": {
+      "type": "number",
+      "description": "Maximum engagement rate."
+    }
+  },
+  "required": [
+    "country"
+  ]
+}

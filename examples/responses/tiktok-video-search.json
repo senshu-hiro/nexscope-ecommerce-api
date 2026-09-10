@@ -1,0 +1,31 @@
+{
+  "errcode": 1,
+  "total": 1,
+  "data": [],
+  "columns": [
+    {
+      "videoId": "example-id",
+      "officialUrl": "https://example.com/image.jpg",
+      "coverUrl": "https://example.com/image.jpg",
+      "duration": 1,
+      "createDate": "2026-01-01",
+      "userId": "example-id",
+      "uniqueId": "example-id",
+      "totalViewsCnt": 1,
+      "totalViews1dCnt": 1,
+      "totalViews7dCnt": 1,
+      "totalViews30dCnt": 1,
+      "totalDiggCnt": 1,
+      "totalDigg1dCnt": 1,
+      "totalDigg7dCnt": 1,
+      "totalDigg30dCnt": 1,
+      "totalCommentsCnt": 1,
+      "totalSharesCnt": 1,
+      "totalFavoritesCnt": 1,
+      "totalVideoSaleCnt": 1,
+      "totalVideoSaleGmvAmt": 1,
+      "region": "US"
+    }
+  ],
+  "costToken": 1
+}

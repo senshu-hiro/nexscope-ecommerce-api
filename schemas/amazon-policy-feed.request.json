@@ -1,0 +1,60 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-policy-feed.",
+  "fields": [
+    {
+      "name": "site",
+      "type": "string",
+      "required": false,
+      "description": "Amazon site code, uppercase. Defaults to US.",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "publishedAtGte",
+      "type": "string",
+      "required": false,
+      "description": "Publication or change time lower bound, inclusive, format yyyy-MM-dd HH:mm:ss.",
+      "example": "2026-01-01 00:00:00",
+      "constraints": {}
+    },
+    {
+      "name": "publishedAtLte",
+      "type": "string",
+      "required": false,
+      "description": "Publication or change time upper bound, inclusive, format yyyy-MM-dd HH:mm:ss.",
+      "example": "2026-01-07 23:59:59",
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, starting from 1.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page, range 1-100.",
+      "example": 20,
+      "constraints": {}
+    },
+    {
+      "name": "id",
+      "type": "string",
+      "required": false,
+      "description": "News record ID from data[].id. Required when calling the policy detail endpoint.",
+      "example": "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "site": "US",
+    "page": 1,
+    "pageSize": 20
+  },
+  "jsonSchema": null
+}

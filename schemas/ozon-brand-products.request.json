@@ -1,0 +1,104 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.ozon-brand-products.",
+  "fields": [
+    {
+      "name": "brandName",
+      "type": "string",
+      "required": true,
+      "description": "Ozon brand display name (Russian or Latin)",
+      "example": "COMMO",
+      "constraints": {}
+    },
+    {
+      "name": "startDate",
+      "type": "string",
+      "required": false,
+      "description": "Statistics start date, YYYY-MM-DD; latest is yesterday",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "endDate",
+      "type": "string",
+      "required": false,
+      "description": "Statistics end date, YYYY-MM-DD; latest is yesterday",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, starting from 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Rows per page, 1-100, default 100",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "sortField",
+      "type": "string",
+      "required": false,
+      "description": "Sort column name (snake_case), e.g., sales, revenue, final_price, balance, rating",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sortDirection",
+      "type": "string",
+      "required": false,
+      "description": "asc ascending / desc descending",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency code for result amounts, default RUB, e.g., USD / EUR / CNY",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "currencyRate",
+      "type": "integer",
+      "required": false,
+      "description": "Custom exchange rate (for non-default currency)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "includeFbs",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to include FBS data",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "filters",
+      "type": "array",
+      "required": false,
+      "description": "List of numeric filter conditions, each {field, op, value, value2?}, multiple conditions AND",
+      "example": [],
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "startDate": "2026-01-01",
+    "includeFbs": false,
+    "pageSize": 10,
+    "endDate": "2026-01-31",
+    "page": 1,
+    "brandName": "COMMO",
+    "currencyRate": 1
+  },
+  "jsonSchema": null
+}

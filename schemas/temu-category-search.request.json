@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.temu-category-search.",
+  "fields": [
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": true,
+      "description": "Keyword: matches against category Chinese name, English name, category ID (substring)",
+      "example": "home",
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number (starting from 1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Results per page, max 200",
+      "example": 10,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "page": 1,
+    "pageSize": 10,
+    "keyword": "home"
+  },
+  "jsonSchema": null
+}

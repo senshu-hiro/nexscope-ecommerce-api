@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "description": "Run the Nexscope interactive cutout create/info flow as one API API call. The point list marks foreground/background guidance points.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the image to cut out.",
+      "example": "https://example.com/product.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "pointList",
+      "type": "array",
+      "required": true,
+      "description": "Selection points. Each item should include x, y, and isSelect.",
+      "example": [
+        {
+          "x": 120,
+          "y": 180,
+          "isSelect": true
+        }
+      ],
+      "constraints": {}
+    },
+    {
+      "name": "scoreUrl",
+      "type": "string",
+      "required": false,
+      "description": "Optional score map URL returned by a previous step.",
+      "example": "https://example.com/score.png",
+      "constraints": {}
+    },
+    {
+      "name": "featureUrl",
+      "type": "string",
+      "required": false,
+      "description": "Optional feature map URL returned by a previous step.",
+      "example": "https://example.com/feature.bin",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/product.jpg",
+    "pointList": [
+      {
+        "x": 120,
+        "y": 180,
+        "isSelect": true
+      }
+    ],
+    "scoreUrl": "https://example.com/score.png",
+    "featureUrl": "https://example.com/feature.bin"
+  },
+  "jsonSchema": null
+}

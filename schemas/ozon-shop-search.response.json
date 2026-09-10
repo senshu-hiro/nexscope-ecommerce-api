@@ -1,0 +1,338 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Return code, \"200\" indicates success (returned on success)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Error code, 200 indicates success; only returned on business errors (coexists with code on success)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Message; ok for success",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Error message; ok for success, reason description on business error",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of records returned on this page (equals the current page data count, not total shop product count)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "totalSales",
+      "type": "integer",
+      "required": false,
+      "description": "Total shop sales in the last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Shop product list (see details below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "required": false,
+      "description": "Shop product list, content identical to data",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "hasNextPage",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether there is a next page",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Column definitions, elements contain {field, title, cellType, sortable, filterable}",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Response display type, e.g., productWorkbenches",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "API latency (milliseconds)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].productId",
+      "type": "integer",
+      "required": false,
+      "description": "Unified product ID, mapped from sku",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sku",
+      "type": "integer",
+      "required": false,
+      "description": "Product SKU",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].rating",
+      "type": "number",
+      "required": false,
+      "description": "Unified rating, mapped from reviewRating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].reviewRating",
+      "type": "number",
+      "required": false,
+      "description": "Product rating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].weight",
+      "type": "number",
+      "required": false,
+      "description": "Product weight, in grams",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sales",
+      "type": "integer",
+      "required": false,
+      "description": "Product sales in the last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].monthlySalesUnits",
+      "type": "integer",
+      "required": false,
+      "description": "Unified monthly sales, mapped from sales",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].upTime",
+      "type": "integer",
+      "required": false,
+      "description": "Product listing time, millisecond timestamp",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].price",
+      "type": "number",
+      "required": false,
+      "description": "Product price (RUB)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency, always ₽",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Unified main image URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "data[].fulfillment",
+      "type": "array",
+      "required": false,
+      "description": "Product fulfillment methods, e.g., [\"FBO\"], may contain multiple values",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].sellerType",
+      "type": "integer",
+      "required": false,
+      "description": "Seller type: 0 domestic, 1 cross-border",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].returnCancellationRate",
+      "type": "number",
+      "required": false,
+      "description": "Product return/cancellation rate (%)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Data source, always ozon",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Source tool identifier for the Ozon shop endpoint",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "errcode": 1,
+    "total": 1,
+    "totalSales": 1,
+    "data": [
+      {
+        "productId": 1,
+        "sku": 1,
+        "rating": 1,
+        "reviewRating": 1,
+        "weight": 1,
+        "sales": 1,
+        "monthlySalesUnits": 1,
+        "upTime": 1,
+        "price": 1,
+        "imageUrl": "https://example.com/image.jpg",
+        "fulfillment": [],
+        "sellerType": 1,
+        "returnCancellationRate": 1
+      }
+    ],
+    "products": [],
+    "hasNextPage": false,
+    "columns": [],
+    "costTime": 1,
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

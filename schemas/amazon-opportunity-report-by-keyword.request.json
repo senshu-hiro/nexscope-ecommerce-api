@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-opportunity-report-by-keyword.",
+  "fields": [
+    {
+      "name": "site",
+      "type": "string",
+      "required": true,
+      "description": "Amazon site code, currently only supports US",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": true,
+      "description": "Search keyword for the insight report",
+      "example": "phone case",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "keyword": "phone case",
+    "site": "US"
+  },
+  "jsonSchema": null
+}

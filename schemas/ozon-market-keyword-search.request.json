@@ -1,0 +1,247 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.ozon-market-keyword-search.",
+  "fields": [
+    {
+      "name": "page",
+      "type": "object",
+      "required": true,
+      "description": "Pagination & sorting: {page, pageSize, orders[]}",
+      "example": {
+        "pageSize": 10,
+        "page": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "page.page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, starting from 1, default 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "page.pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page, default 20",
+      "example": 20,
+      "constraints": {}
+    },
+    {
+      "name": "page.orders",
+      "type": "array",
+      "required": false,
+      "description": "Sort rules, elements {field, direction}; direction takes DESC (descending) / ASC (ascending)",
+      "example": [
+        {
+          "field": "searchVolume",
+          "direction": "DESC"
+        }
+      ],
+      "constraints": {}
+    },
+    {
+      "name": "keywords",
+      "type": "array",
+      "required": false,
+      "description": "Keyword array (max 1000), used with matchType",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "matchType",
+      "type": "integer",
+      "required": false,
+      "description": "Keyword match mode: 0 exact, 1 fuzzy",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "searchDate",
+      "type": "string",
+      "required": false,
+      "description": "Query date yyyy-MM-dd (e.g., 2026-04-01); defaults to last 30 days if omitted; passing 2026-04-01 queries March 2026 data",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "categories",
+      "type": "array",
+      "required": false,
+      "description": "Category ID array (max 1000)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "searchVolume",
+      "type": "object",
+      "required": false,
+      "description": "Search volume range {min,max}",
+      "example": {
+        "min": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "searchChange30",
+      "type": "object",
+      "required": false,
+      "description": "30-day search change range {min,max}",
+      "example": {
+        "min": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "monthlySales",
+      "type": "object",
+      "required": false,
+      "description": "Monthly sales range {min,max}",
+      "example": {
+        "min": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "monthlyRevenue",
+      "type": "object",
+      "required": false,
+      "description": "Monthly revenue range {min,max}",
+      "example": {
+        "min": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "price",
+      "type": "object",
+      "required": false,
+      "description": "Price range {min,max}",
+      "example": {
+        "min": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "productViews",
+      "type": "object",
+      "required": false,
+      "description": "Product views range {min,max}",
+      "example": {
+        "min": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "object",
+      "required": false,
+      "description": "Product count range {min,max}",
+      "example": {
+        "min": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "volume",
+      "type": "object",
+      "required": false,
+      "description": "Volume range {min,max}",
+      "example": {
+        "min": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "marketSpace",
+      "type": "object",
+      "required": false,
+      "description": "Market space range {min,max}",
+      "example": {
+        "min": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "conversionSharing",
+      "type": "object",
+      "required": false,
+      "description": "Conversion concentration range {min,max}",
+      "example": {
+        "min": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "reviews",
+      "type": "object",
+      "required": false,
+      "description": "Review count range {min,max}",
+      "example": {
+        "min": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "ratings",
+      "type": "object",
+      "required": false,
+      "description": "Rating range {min,max}",
+      "example": {
+        "min": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "sellers",
+      "type": "object",
+      "required": false,
+      "description": "Seller count range {min,max}",
+      "example": {
+        "min": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "weight",
+      "type": "object",
+      "required": false,
+      "description": "Weight range {min,max}",
+      "example": {
+        "min": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "uId",
+      "type": "string",
+      "required": false,
+      "description": "User ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "memberId",
+      "type": "string",
+      "required": false,
+      "description": "Member ID (a unique member identifier; data is attributed to memberId)",
+      "example": "example-id",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "page": {
+      "page": 1,
+      "pageSize": 10,
+      "orders": [
+        {
+          "field": "searchVolume",
+          "direction": "DESC"
+        }
+      ]
+    }
+  },
+  "jsonSchema": null
+}

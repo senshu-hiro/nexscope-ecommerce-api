@@ -1,0 +1,26 @@
+{
+  "errmsg": "ok",
+  "data": {
+    "items": [
+      {
+        "id": null,
+        "product_id": null,
+        "product_name": null
+      }
+    ],
+    "channel": {
+      "items": [
+        {}
+      ]
+    },
+    "core": {
+      "items": [
+        {
+          "product_gmv": null,
+          "product_sold_count": null
+        }
+      ]
+    }
+  },
+  "errcode": 200
+}

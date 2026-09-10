@@ -1,0 +1,186 @@
+{
+  "type": "object",
+  "description": "Returns the category gateway payload directly.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of returned category nodes.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Amazon category node records.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].nodeId",
+      "type": "string",
+      "required": false,
+      "description": "Category node identifier.",
+      "example": "172282",
+      "constraints": {}
+    },
+    {
+      "name": "data[].nodeLabel",
+      "type": "string",
+      "required": false,
+      "description": "Category label.",
+      "example": "Electronics",
+      "constraints": {}
+    },
+    {
+      "name": "data[].parentNodeId",
+      "type": "string",
+      "required": false,
+      "description": "Parent node identifier.",
+      "example": "0",
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Provider-reported token cost.",
+      "example": 150,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "data": [
+      {
+        "nodeId": "172282",
+        "nodeLabel": "Electronics",
+        "parentNodeId": "0"
+      }
+    ],
+    "costToken": 150
+  },
+  "jsonSchema": null
+}

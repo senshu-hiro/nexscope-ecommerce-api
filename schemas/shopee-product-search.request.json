@@ -1,0 +1,406 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.shopee-product-search.",
+  "fields": [
+    {
+      "name": "station",
+      "type": "string",
+      "required": true,
+      "description": "Required. Shopee site, accepts name or code. See site mapping table below",
+      "example": "SG",
+      "constraints": {}
+    },
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": false,
+      "description": "Product title keyword",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "keywordType",
+      "type": "integer",
+      "required": false,
+      "description": "Match mode: 1=Exact phrase (default), 2=Multi-word AND, 3=Multi-word OR",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "notExistKeyword",
+      "type": "string",
+      "required": false,
+      "description": "Exclude products containing this keyword",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "notExistKeywordType",
+      "type": "integer",
+      "required": false,
+      "description": "Exclusion match mode: 1=Exact phrase (default), 2=Multi-word AND, 3=Multi-word OR",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum total product price (local currency)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum total product price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "soldMin",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum units sold in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "soldMax",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum units sold in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "estimateSoldStart",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum estimated units sold in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "estimateSoldEnd",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum estimated units sold in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "historicalSoldStart",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum total historical units sold",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "historicalSoldEnd",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum total historical units sold",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "paymentStart",
+      "type": "number",
+      "required": false,
+      "description": "Minimum sales revenue in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "paymentEnd",
+      "type": "number",
+      "required": false,
+      "description": "Maximum sales revenue in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "ratingMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum product rating (0-5)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "ratingMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum product rating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "ratingsMin",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum number of ratings",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "ratingsMax",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum number of ratings",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "favoriteMin",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum number of favorites",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "favoriteMax",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum number of favorites",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "skuNumberStart",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum total SKU count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "skuNumberEnd",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum total SKU count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "listingDateFrom",
+      "type": "string",
+      "required": false,
+      "description": "Product listing date range start (format: yyyy-MM-dd)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "listingDateTo",
+      "type": "string",
+      "required": false,
+      "description": "Product listing date range end (format: yyyy-MM-dd)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "statTimeStart",
+      "type": "string",
+      "required": false,
+      "description": "Statistics time range start (format: yyyy-MM-dd HH:mm:ss)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "statTimeEnd",
+      "type": "string",
+      "required": false,
+      "description": "Statistics time range end (format: yyyy-MM-dd HH:mm:ss)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "lastModiTimeStart",
+      "type": "string",
+      "required": false,
+      "description": "Latest crawl time range start (format: yyyy-MM-dd)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "lastModiTimeEnd",
+      "type": "string",
+      "required": false,
+      "description": "Latest crawl time range end (format: yyyy-MM-dd)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "approvedDateStart",
+      "type": "string",
+      "required": false,
+      "description": "Store opening time range start (format: yyyy-MM-dd)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "approvedDateEnd",
+      "type": "string",
+      "required": false,
+      "description": "Store opening time range end (format: yyyy-MM-dd)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "pL1Id",
+      "type": "string",
+      "required": false,
+      "description": "Level 1 category ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "pL2Id",
+      "type": "string",
+      "required": false,
+      "description": "Level 2 category ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "pL3Id",
+      "type": "string",
+      "required": false,
+      "description": "Level 3 category ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "cidList",
+      "type": "string",
+      "required": false,
+      "description": "Category ID list, full path, multiple groups separated by",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "shopIdList",
+      "type": "string",
+      "required": false,
+      "description": "Specific store ID list, comma-separated",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "notExistShopIdList",
+      "type": "string",
+      "required": false,
+      "description": "Excluded store ID list, comma-separated",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "merchant",
+      "type": "string",
+      "required": false,
+      "description": "Store name or username",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "shopLocation",
+      "type": "string",
+      "required": false,
+      "description": "Store location",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "shippingIconType",
+      "type": "integer",
+      "required": false,
+      "description": "Store location type: 0=Local, 1=Overseas",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "cbOption",
+      "type": "integer",
+      "required": false,
+      "description": "Shipping origin: 0=Local, 1=Cross-border",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "isShopeeVerified",
+      "type": "integer",
+      "required": false,
+      "description": "Shopee Preferred: 0=Not preferred, 1=Preferred",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "isOfficialShop",
+      "type": "integer",
+      "required": false,
+      "description": "Official store: 0=No, 1=Yes",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "isHotSales",
+      "type": "integer",
+      "required": false,
+      "description": "Hot selling: 0=Not hot, 1=Hot",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pids",
+      "type": "string",
+      "required": false,
+      "description": "Product ID list (max 500), comma-separated",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "orderBy",
+      "type": "string",
+      "required": false,
+      "description": "Sort field: rating, price, historical_sold (total sales), sold (30-day sales), payment (30-day revenue), favorite, ratings, gen_time (listing time), estimate_sold (estimated sales)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "orderByType",
+      "type": "string",
+      "required": false,
+      "description": "Sort direction: ASC (ascending), DESC (descending)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number (starting from 1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Products per page (range 1-1000)",
+      "example": 10,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "station": "SG",
+    "page": 1,
+    "keyword": "phone case",
+    "keywordType": 1,
+    "pageSize": 10
+  },
+  "jsonSchema": null
+}

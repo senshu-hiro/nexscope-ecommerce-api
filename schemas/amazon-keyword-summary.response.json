@@ -1,0 +1,582 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Response code",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Message",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of data records actually returned",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Return data, array of product keyword traffic data objects",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Render columns",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Latency (ms)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].asin",
+      "type": "string",
+      "required": false,
+      "description": "ASIN code",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "data[].productTitle",
+      "type": "string",
+      "required": false,
+      "description": "Product title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].productImageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product main image URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "data[].productPrice",
+      "type": "number",
+      "required": false,
+      "description": "Product price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].customerRatingCount",
+      "type": "integer",
+      "required": false,
+      "description": "Total customer rating count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].productStarRating",
+      "type": "number",
+      "required": false,
+      "description": "Product star rating (0-5 stars)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].productRatingScore",
+      "type": "number",
+      "required": false,
+      "description": "Product rating score value",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].productUpdateTime",
+      "type": "string",
+      "required": false,
+      "description": "Product update time (yyyy-MM-dd HH:mm:ss)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "data[].dataPeriodStartDate",
+      "type": "string",
+      "required": false,
+      "description": "Data period start date (yyyy-MM-dd)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "data[].totalExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "Total exposure score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].totalExposureRatio",
+      "type": "number",
+      "required": false,
+      "description": "Total traffic share",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].naturalSearchExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "Natural search exposure total score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].naturalSearchExposureRatio",
+      "type": "number",
+      "required": false,
+      "description": "Natural search exposure ratio",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sponsoredProductsExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "SP ad exposure total score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sponsoredProductsExposureRatio",
+      "type": "number",
+      "required": false,
+      "description": "SP ad exposure ratio",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].brandAdExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "Brand ad exposure total score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].brandAdExposureRatio",
+      "type": "number",
+      "required": false,
+      "description": "Brand ad exposure ratio",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].videoAdExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "Video ad exposure total score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].videoAdExposureRatio",
+      "type": "number",
+      "required": false,
+      "description": "Video ad exposure ratio",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].amazonsChoiceExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "AC exposure total score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].amazonsChoiceExposureRatio",
+      "type": "number",
+      "required": false,
+      "description": "AC exposure ratio",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].editorialRecommendationsExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "ER exposure total score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].editorialRecommendationsExposureRatio",
+      "type": "number",
+      "required": false,
+      "description": "ER exposure ratio",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].topRatedExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "TR exposure total score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].topRatedExposureRatio",
+      "type": "number",
+      "required": false,
+      "description": "TR exposure ratio",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].recommendPositionExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "Recommendation position exposure total score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].recommendAdExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "Recommendation position ad exposure score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].recommendAdExposureRatio",
+      "type": "number",
+      "required": false,
+      "description": "Recommendation position ad traffic share",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].recommendNonadExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "Recommendation position non-ad exposure score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].recommendNonadExposureRatio",
+      "type": "number",
+      "required": false,
+      "description": "Recommendation position non-ad traffic share",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].comprehensiveNaturalExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "Comprehensive natural traffic score (natural search + recommendation non-ad)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].comprehensiveNaturalExposureRatio",
+      "type": "number",
+      "required": false,
+      "description": "Comprehensive natural traffic share",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].keywordTotalExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "Keyword total score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].keywordNaturalExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "Keyword natural score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].keywordSponsoredProductsExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "Keyword SP ad score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].keywordBrandAdExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "Keyword brand ad score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].keywordVideoAdExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "Keyword video ad score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].keywordAmazonsChoiceExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "Keyword AC score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].keywordRecommendExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "Keyword recommendation position score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].keywordRecommendAdExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "Keyword recommendation position ad score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].keywordRecommendNonadExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "Keyword recommendation position non-ad score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].keywordComprehensiveNaturalExposureScore",
+      "type": "number",
+      "required": false,
+      "description": "Keyword comprehensive natural score (natural + recommendation non-ad)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].ppcTrafficSources",
+      "type": "array",
+      "required": false,
+      "description": "PPC paid ad traffic source markers. Contains: SP ads, top brand ads, bottom brand ads, video ads",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].naturalSearchTrafficSources",
+      "type": "array",
+      "required": false,
+      "description": "Natural search traffic source markers",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].amazonRecommendationSources",
+      "type": "array",
+      "required": false,
+      "description": "Amazon recommendation traffic source markers. Contains: Best Seller, AC, ER, TR, TRFOB, etc.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].promotionalDealSources",
+      "type": "array",
+      "required": false,
+      "description": "Promotional deal traffic source markers. Contains: Coupon, Limited Time Deal, Lowest Price in 30 Days, etc.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "data": [
+      {
+        "asin": "B072MQ5BRX",
+        "productImageUrl": "https://example.com/image.jpg",
+        "productPrice": 1,
+        "customerRatingCount": 1,
+        "productStarRating": 1,
+        "productRatingScore": 1,
+        "productUpdateTime": "2026-01-01",
+        "dataPeriodStartDate": "2026-01-01",
+        "totalExposureScore": 1,
+        "totalExposureRatio": 1,
+        "naturalSearchExposureScore": 1,
+        "naturalSearchExposureRatio": 1,
+        "sponsoredProductsExposureScore": 1,
+        "sponsoredProductsExposureRatio": 1,
+        "brandAdExposureScore": 1,
+        "brandAdExposureRatio": 1,
+        "videoAdExposureScore": 1,
+        "videoAdExposureRatio": 1,
+        "amazonsChoiceExposureScore": 1,
+        "amazonsChoiceExposureRatio": 1,
+        "editorialRecommendationsExposureScore": 1,
+        "editorialRecommendationsExposureRatio": 1,
+        "topRatedExposureScore": 1,
+        "topRatedExposureRatio": 1,
+        "recommendPositionExposureScore": 1,
+        "recommendAdExposureScore": 1,
+        "recommendAdExposureRatio": 1,
+        "recommendNonadExposureScore": 1,
+        "recommendNonadExposureRatio": 1,
+        "comprehensiveNaturalExposureScore": 1,
+        "comprehensiveNaturalExposureRatio": 1,
+        "keywordTotalExposureScore": 1,
+        "keywordNaturalExposureScore": 1,
+        "keywordSponsoredProductsExposureScore": 1,
+        "keywordBrandAdExposureScore": 1,
+        "keywordVideoAdExposureScore": 1,
+        "keywordAmazonsChoiceExposureScore": 1,
+        "keywordRecommendExposureScore": 1,
+        "keywordRecommendAdExposureScore": 1,
+        "keywordRecommendNonadExposureScore": 1,
+        "keywordComprehensiveNaturalExposureScore": 1,
+        "ppcTrafficSources": [],
+        "naturalSearchTrafficSources": [],
+        "amazonRecommendationSources": [],
+        "promotionalDealSources": []
+      }
+    ],
+    "columns": [],
+    "costTime": 1,
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

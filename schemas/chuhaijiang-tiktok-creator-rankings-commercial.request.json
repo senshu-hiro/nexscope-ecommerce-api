@@ -1,0 +1,80 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "country": {
+      "type": "string",
+      "description": "Lowercase TikTok market code.",
+      "enum": [
+        "br",
+        "de",
+        "es",
+        "fr",
+        "gb",
+        "id",
+        "it",
+        "jp",
+        "mx",
+        "my",
+        "ph",
+        "sg",
+        "th",
+        "us",
+        "vn"
+      ],
+      "example": "us"
+    },
+    "page": {
+      "type": "integer",
+      "description": "Page number, starting at 1.",
+      "minimum": 1,
+      "example": 1
+    },
+    "pageSize": {
+      "type": "integer",
+      "description": "Maximum records per page.",
+      "minimum": 1,
+      "maximum": 20,
+      "example": 5
+    },
+    "date": {
+      "type": "string",
+      "description": "Ranking date in YYYYMMDD format.",
+      "pattern": "^[0-9]{8}$",
+      "example": "20260824"
+    },
+    "granularity": {
+      "type": "string",
+      "description": "Ranking period.",
+      "enum": [
+        "daily",
+        "weekly",
+        "monthly",
+        "0",
+        "1",
+        "2"
+      ],
+      "example": "daily"
+    },
+    "sort": {
+      "type": "string",
+      "description": "Provider sort field and direction (field:asc or field:desc).",
+      "default": "total_gmv:desc",
+      "pattern": "^[A-Za-z0-9_]+:(asc|desc)$",
+      "example": "total_gmv:desc"
+    },
+    "creatorCategory": {
+      "type": "string",
+      "description": "Creator category."
+    },
+    "productCategory": {
+      "type": "string",
+      "description": "Product category."
+    }
+  },
+  "required": [
+    "country",
+    "date",
+    "granularity"
+  ]
+}

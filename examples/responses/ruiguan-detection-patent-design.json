@@ -1,0 +1,27 @@
+{
+  "total": 1,
+  "data": [
+    {
+      "patentImageUrl": "https://example.com/image.jpg",
+      "images": [],
+      "inventors": [],
+      "applicants": [],
+      "applicantAddresses": [],
+      "troCase": false,
+      "troHolder": false,
+      "radarResult": {},
+      "applicationDate": "2026-01-01",
+      "publicationDate": "2026-01-01",
+      "grantDate": "2026-01-01",
+      "estimatedDueDate": "2026-01-01",
+      "patentFamily": [],
+      "globalPatentId": "example-id",
+      "globalImageId": "example-id"
+    }
+  ],
+  "columns": [],
+  "costToken": 1,
+  "radarResult": {
+    "same": false
+  }
+}

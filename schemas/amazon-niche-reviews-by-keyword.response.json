@@ -1,0 +1,227 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Total count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Niche market review list (see data item fields below for details)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Render columns",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].nicheId",
+      "type": "string",
+      "required": false,
+      "description": "Niche market ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].nicheName",
+      "type": "string",
+      "required": false,
+      "description": "Niche market name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].keyword",
+      "type": "string",
+      "required": false,
+      "description": "Keyword",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "data[].reviewType",
+      "type": "string",
+      "required": false,
+      "description": "Review type (values: [Positive Reviews], [Negative Reviews])",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].topic",
+      "type": "string",
+      "required": false,
+      "description": "Review topic",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].percentOfMentions",
+      "type": "number",
+      "required": false,
+      "description": "Share (range 0-1, representing 0%-100%)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].reviewExample",
+      "type": "string",
+      "required": false,
+      "description": "Review example",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "data": [
+      {
+        "nicheId": "example-id",
+        "keyword": "phone case",
+        "percentOfMentions": 1
+      }
+    ],
+    "columns": [],
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

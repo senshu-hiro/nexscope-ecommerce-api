@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-keyword-search-history.",
+  "fields": [
+    {
+      "name": "marketplace",
+      "type": "string",
+      "required": true,
+      "description": "Target marketplace code. Options: us, uk, de, in, ca, fr, it, es, mx, jp",
+      "example": "us",
+      "constraints": {}
+    },
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": true,
+      "description": "Keyword to query",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "startDate",
+      "type": "string",
+      "required": true,
+      "description": "Start date (format: YYYY-MM-DD)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "endDate",
+      "type": "string",
+      "required": true,
+      "description": "End date (format: YYYY-MM-DD); max interval from startDate is 366 days",
+      "example": "2026-01-01",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "startDate": "2026-01-01",
+    "keyword": "phone case",
+    "endDate": "2026-01-31",
+    "marketplace": "us"
+  },
+  "jsonSchema": null
+}

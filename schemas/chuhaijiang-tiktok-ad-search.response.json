@@ -1,0 +1,158 @@
+{
+  "properties": {
+    "errcode": {
+      "type": "integer"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "errmsg": {
+      "type": "string"
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Ad identity and copy: id.",
+                "nullable": true
+              },
+              "video_id": {
+                "type": "string",
+                "description": "Ad identity and copy: video id.",
+                "nullable": true
+              },
+              "product_id": {
+                "type": "string",
+                "description": "Ad identity and copy: product id.",
+                "nullable": true
+              },
+              "advertiser_id": {
+                "type": "string",
+                "description": "Ad identity and copy: advertiser id.",
+                "nullable": true
+              },
+              "ad_url": {
+                "type": "string",
+                "description": "Ad identity and copy: ad url.",
+                "nullable": true
+              },
+              "web_url": {
+                "type": "string",
+                "description": "Ad identity and copy: web url.",
+                "nullable": true
+              },
+              "advertiser_url": {
+                "type": "string",
+                "description": "Ad identity and copy: advertiser url.",
+                "nullable": true
+              },
+              "ad_title": {
+                "type": "string",
+                "description": "Ad identity and copy: ad title.",
+                "nullable": true
+              },
+              "advertiser_name": {
+                "type": "string",
+                "description": "Ad identity and copy: advertiser name.",
+                "nullable": true
+              },
+              "button_text": {
+                "type": "string",
+                "description": "Ad identity and copy: button text.",
+                "nullable": true
+              },
+              "product_title": {
+                "type": "string",
+                "description": "Ad identity and copy: product title.",
+                "nullable": true
+              },
+              "video_play_count": {
+                "type": "integer",
+                "description": "Ad delivery count: video play count.",
+                "nullable": true
+              },
+              "video_like_count": {
+                "type": "integer",
+                "description": "Ad delivery count: video like count.",
+                "nullable": true
+              },
+              "ad_day_count": {
+                "type": "integer",
+                "description": "Ad delivery count: ad day count.",
+                "nullable": true
+              },
+              "video_like_rate": {
+                "type": "number",
+                "description": "Provider engagement ratio: video like rate.",
+                "nullable": true
+              },
+              "video_engagement_rate": {
+                "type": "number",
+                "description": "Provider engagement ratio: video engagement rate.",
+                "nullable": true
+              },
+              "total_gmv": {
+                "type": "object",
+                "description": "Monetary metric with original unit and value: total gmv.",
+                "nullable": true
+              },
+              "video_gpm_30d": {
+                "type": "object",
+                "description": "Monetary metric with original unit and value: video gpm 30d.",
+                "nullable": true
+              },
+              "product_l3_category": {
+                "description": "Provider product l3 category. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "product_l2_category": {
+                "description": "Provider product l2 category. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "product_l1_category": {
+                "description": "Provider product l1 category. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "create_time": {
+                "description": "Provider create time. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "duration": {
+                "description": "Provider duration. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "ad_roas": {
+                "description": "Provider return on ad spend; preserve the runtime JSON type and metric definition."
+              },
+              "video_popularity": {
+                "description": "Provider video popularity. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "last_update_time": {
+                "description": "Provider last update time. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "total_sc": {
+                "description": "Provider total sc. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "ad_create_time": {
+                "description": "Provider ad create time. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "ad_maximum_cost": {
+                "description": "Maximum ad spend as returned; preserve monetary units and the runtime JSON type."
+              }
+            },
+            "type": "object",
+            "additionalProperties": true
+          },
+          "nullable": true
+        },
+        "total_count": {
+          "nullable": true,
+          "type": "integer"
+        }
+      },
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

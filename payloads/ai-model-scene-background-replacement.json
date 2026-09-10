@@ -1,0 +1,8 @@
+{
+  "imageUrl": "https://example.com/model-reference.jpg",
+  "scenePrompt": "bright studio showroom",
+  "sceneStrength": 0.7,
+  "genOriRes": false,
+  "realModel": true,
+  "outputNum": 1
+}

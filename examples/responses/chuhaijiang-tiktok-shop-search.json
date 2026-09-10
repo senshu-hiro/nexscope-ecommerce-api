@@ -1,0 +1,13 @@
+{
+  "errmsg": "ok",
+  "data": {
+    "items": [
+      {
+        "id": null,
+        "shop_name": null,
+        "region": null
+      }
+    ]
+  },
+  "errcode": 200
+}

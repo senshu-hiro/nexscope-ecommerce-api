@@ -1,0 +1,261 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of records",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Detection results; see the fields below",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "detectId",
+      "type": "string",
+      "required": false,
+      "description": "Detection ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Column definitions used for rendering",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Rendering style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].path",
+      "type": "string",
+      "required": false,
+      "description": "Path to the copyrighted artwork",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].pathThumb",
+      "type": "string",
+      "required": false,
+      "description": "Thumbnail path for the copyrighted artwork",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].similarity",
+      "type": "string",
+      "required": false,
+      "description": "Similarity score",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].subRadarResult",
+      "type": "integer",
+      "required": false,
+      "description": "Radar result: 1 means infringement, 0 means no infringement, and null means radar detection was not performed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].copyrightUrl",
+      "type": "string",
+      "required": false,
+      "description": "Source URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "data[].copyrightCode",
+      "type": "string",
+      "required": false,
+      "description": "Copyright identifier",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].rightsOwner",
+      "type": "string",
+      "required": false,
+      "description": "Rights owner",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].link",
+      "type": "string",
+      "required": false,
+      "description": "Official copyright website URL",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].troCase",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether the copyright has a history of TRO enforcement",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "data[].troHolder",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether the copyright belongs to a TRO rights holder",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "data": [
+      {
+        "subRadarResult": 1,
+        "copyrightUrl": "https://example.com/image.jpg",
+        "troCase": false,
+        "troHolder": false
+      }
+    ],
+    "detectId": "example-id",
+    "columns": [],
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,10 @@
+{
+  "taskId": "123456789",
+  "status": "PROCESSING",
+  "content": "Example product description.",
+  "promptTokens": 120,
+  "completionTokens": 350,
+  "totalTokens": 470,
+  "errorMsg": "Generation failed.",
+  "costToken": 1
+}

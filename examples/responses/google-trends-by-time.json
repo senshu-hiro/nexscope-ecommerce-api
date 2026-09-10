@@ -1,0 +1,14 @@
+{
+  "costToken": 1,
+  "chartOption": {
+    "data": [],
+    "fieldY": []
+  },
+  "trendValues": [
+    {
+      "query": "phone case",
+      "searchVolume": 1,
+      "increasePercentage": 1
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "type": "object",
+  "description": "Create requires startDate/endDate plus configuration, or startDate/endDate plus reportTypeId/adProduct/groupBy/columns. Poll requires reportId. Download requires documentToken.",
+  "fields": [
+    {
+      "name": "connectionId",
+      "type": "integer",
+      "required": true,
+      "description": "Owned Amazon Ads connection ID.",
+      "example": 123,
+      "constraints": {}
+    },
+    {
+      "name": "reportId",
+      "type": "string",
+      "required": false,
+      "description": "Existing report ID; when present the API polls that report.",
+      "example": "report-id",
+      "constraints": {}
+    },
+    {
+      "name": "reportTypeId",
+      "type": "string",
+      "required": false,
+      "description": "Report type required by a new report unless configuration supplies it.",
+      "example": "spCampaigns",
+      "constraints": {}
+    },
+    {
+      "name": "adProduct",
+      "type": "string",
+      "required": false,
+      "description": "Ad product required by a new report unless configuration supplies it.",
+      "example": "SPONSORED_PRODUCTS",
+      "constraints": {}
+    },
+    {
+      "name": "groupBy",
+      "type": "array",
+      "required": false,
+      "description": "Report grouping fields.",
+      "example": [
+        "campaign"
+      ],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Requested report columns.",
+      "example": [
+        "campaignId",
+        "impressions",
+        "clicks"
+      ],
+      "constraints": {}
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": false,
+      "description": "Optional report name.",
+      "example": "Campaign report",
+      "constraints": {}
+    },
+    {
+      "name": "startDate",
+      "type": "string",
+      "required": false,
+      "description": "Inclusive report start date for a new report.",
+      "example": "2026-07-01",
+      "constraints": {}
+    },
+    {
+      "name": "endDate",
+      "type": "string",
+      "required": false,
+      "description": "Inclusive report end date for a new report.",
+      "example": "2026-07-31",
+      "constraints": {}
+    },
+    {
+      "name": "timeUnit",
+      "type": "string",
+      "required": false,
+      "description": "Optional report time unit.",
+      "example": "DAILY",
+      "constraints": {}
+    },
+    {
+      "name": "format",
+      "type": "string",
+      "required": false,
+      "description": "Optional report format.",
+      "example": "GZIP_JSON",
+      "constraints": {}
+    },
+    {
+      "name": "filters",
+      "type": "array",
+      "required": false,
+      "description": "Optional report filters.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "configuration",
+      "type": "object",
+      "required": false,
+      "description": "Complete Amazon Ads reporting configuration; may replace reportTypeId/adProduct/groupBy/columns.",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "documentToken",
+      "type": "string",
+      "required": false,
+      "description": "Backend-issued token for downloading a completed report.",
+      "example": "opaque-document-token",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "reportTypeId": "spCampaigns",
+    "startDate": "2026-07-01",
+    "columns": [
+      "campaignId",
+      "impressions"
+    ],
+    "endDate": "2026-07-31",
+    "groupBy": [
+      "campaign"
+    ],
+    "connectionId": 123,
+    "adProduct": "SPONSORED_PRODUCTS"
+  },
+  "jsonSchema": null
+}

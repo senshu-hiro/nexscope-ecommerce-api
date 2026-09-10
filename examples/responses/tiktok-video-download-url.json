@@ -1,0 +1,11 @@
+{
+  "noWatermarkDownloadUrl": "https://example.com/image.jpg",
+  "downloadUrl": "https://example.com/image.jpg",
+  "playUrl": "https://example.com/image.jpg",
+  "coverUrl": "https://example.com/image.jpg",
+  "dynamicCoverUrl": "https://example.com/image.jpg",
+  "videoId": "example-id",
+  "columns": [],
+  "costToken": 1,
+  "errcode": 1
+}

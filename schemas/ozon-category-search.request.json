@@ -1,0 +1,90 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.ozon-category-search.",
+  "fields": [
+    {
+      "name": "categoryId",
+      "type": "string",
+      "required": true,
+      "description": "Ozon category ID, obtained from Ozon category documentation or other Seerfar Ozon tools. Format like 15621032_15621049_115951147 (multi-level categories joined by _)",
+      "example": "15621042_17028650_97011",
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "object",
+      "required": true,
+      "description": "Pagination & sorting: {page, pageSize, orders[]}",
+      "example": {
+        "pageSize": 10,
+        "page": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "page.page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, starting from 1, default 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "page.pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page, default 20, maximum 20 (exceeding returns errcode 1002)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "page.orders",
+      "type": "array",
+      "required": false,
+      "description": "Sort rules, elements {field, direction} (both required); direction takes DESC (descending) / ASC (ascending). Common sort fields: sales, price, revenue, reviewRating",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "date",
+      "type": "string",
+      "required": false,
+      "description": "Query historical month, format yyyy-MM (e.g., 2026-02); defaults to last 30 days if omitted",
+      "example": "2026-01",
+      "constraints": {}
+    },
+    {
+      "name": "fulfillment",
+      "type": "string",
+      "required": false,
+      "description": "Fulfillment method filter, fixed options: FBO, FBS, RFBS, FBP, OZON; queries all if omitted. Note: single string, not an array",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "uId",
+      "type": "string",
+      "required": false,
+      "description": "User ID (max 1000)",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "memberId",
+      "type": "string",
+      "required": false,
+      "description": "Member ID (a unique member identifier; a user can belong to multiple teams; data is attributed to memberId, max 1000)",
+      "example": "example-id",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "page": {
+      "pageSize": 10,
+      "page": 1
+    },
+    "date": "2026-01",
+    "categoryId": "15621042_17028650_97011"
+  },
+  "jsonSchema": null
+}

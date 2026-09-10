@@ -1,0 +1,380 @@
+{
+  "type": "object",
+  "unevaluatedProperties": false,
+  "required": [
+    "toolName",
+    "arguments"
+  ],
+  "discriminator": {
+    "propertyName": "toolName"
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "toolName": {
+          "const": "search_categories"
+        },
+        "arguments": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "market_code": {
+              "$ref": "#/$defs/marketCode"
+            },
+            "query": {
+              "type": "string"
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 100
+            }
+          }
+        }
+      },
+      "required": [
+        "toolName",
+        "arguments"
+      ]
+    },
+    {
+      "properties": {
+        "toolName": {
+          "const": "industry_overview"
+        },
+        "arguments": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "category_id"
+          ],
+          "properties": {
+            "category_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "market_code": {
+              "$ref": "#/$defs/marketCode"
+            }
+          }
+        }
+      },
+      "required": [
+        "toolName",
+        "arguments"
+      ]
+    },
+    {
+      "properties": {
+        "toolName": {
+          "const": "search_product_snapshots"
+        },
+        "arguments": {
+          "$ref": "#/$defs/snapshots"
+        }
+      },
+      "required": [
+        "toolName",
+        "arguments"
+      ]
+    },
+    {
+      "properties": {
+        "toolName": {
+          "const": "product_sales_trend"
+        },
+        "arguments": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "sku_id"
+          ],
+          "properties": {
+            "sku_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "market_code": {
+              "$ref": "#/$defs/marketCode"
+            },
+            "days": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 731,
+              "default": 730
+            }
+          }
+        }
+      },
+      "required": [
+        "toolName",
+        "arguments"
+      ]
+    },
+    {
+      "properties": {
+        "toolName": {
+          "const": "image_search_products"
+        },
+        "arguments": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "image_url": {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https?://"
+            },
+            "image_base64": {
+              "type": "string",
+              "minLength": 1
+            },
+            "market_code": {
+              "$ref": "#/$defs/marketCode"
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 50
+            }
+          },
+          "anyOf": [
+            {
+              "required": [
+                "image_url"
+              ]
+            },
+            {
+              "required": [
+                "image_base64"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "toolName",
+        "arguments"
+      ]
+    },
+    {
+      "properties": {
+        "toolName": {
+          "const": "review_search"
+        },
+        "arguments": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "sku_id"
+          ],
+          "properties": {
+            "sku_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "market_code": {
+              "$ref": "#/$defs/marketCode"
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20
+            }
+          }
+        }
+      },
+      "required": [
+        "toolName",
+        "arguments"
+      ]
+    }
+  ],
+  "$defs": {
+    "marketCode": {
+      "type": "string",
+      "enum": [
+        "MLM",
+        "MLB",
+        "MLA",
+        "MLC",
+        "MCO"
+      ],
+      "default": "MLM"
+    },
+    "snapshots": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "market_code": {
+          "$ref": "#/$defs/marketCode"
+        },
+        "keyword": {
+          "type": "string"
+        },
+        "category_id": {
+          "type": "string"
+        },
+        "sku_id": {
+          "type": "string"
+        },
+        "product_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
+        },
+        "shop_id": {
+          "type": "string"
+        },
+        "shop_query": {
+          "type": "string"
+        },
+        "price_min": {
+          "type": "number",
+          "minimum": 0
+        },
+        "price_max": {
+          "type": "number",
+          "minimum": 0
+        },
+        "sales_30d_min": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sales_30d_max": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "historical_total_sales_min": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "historical_total_sales_max": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "review_count_min": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "review_count_max": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rating_min": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "rating_max": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "listing_date_min": {
+          "type": "string",
+          "pattern": "^\\d{8}$|^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "listing_date_max": {
+          "type": "string",
+          "pattern": "^\\d{8}$|^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "stock_type": {
+          "type": "string"
+        },
+        "shop_type": {
+          "type": "string",
+          "enum": [
+            "cross_border",
+            "local"
+          ]
+        },
+        "product_status": {
+          "type": [
+            "string",
+            "integer"
+          ]
+        },
+        "sort_by": {
+          "type": "string",
+          "enum": [
+            "sales_30d",
+            "historical_total_sales",
+            "price",
+            "listing_date",
+            "rating",
+            "review_count",
+            "title"
+          ],
+          "default": "sales_30d"
+        },
+        "sort_order": {
+          "type": "string",
+          "enum": [
+            "asc",
+            "desc"
+          ],
+          "default": "desc"
+        },
+        "page": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 100
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "keyword"
+          ]
+        },
+        {
+          "required": [
+            "category_id"
+          ]
+        },
+        {
+          "required": [
+            "sku_id"
+          ]
+        },
+        {
+          "required": [
+            "product_url"
+          ]
+        },
+        {
+          "required": [
+            "shop_id"
+          ]
+        },
+        {
+          "required": [
+            "shop_query"
+          ]
+        }
+      ],
+      "x-relations": [
+        "each *_min <= matching *_max"
+      ]
+    }
+  }
+}

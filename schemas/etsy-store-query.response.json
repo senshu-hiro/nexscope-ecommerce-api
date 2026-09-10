@@ -1,0 +1,276 @@
+{
+  "type": "object",
+  "description": "Returns the Etsy store gateway payload directly.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Records returned on the current page.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "storeNum",
+      "type": "integer",
+      "required": false,
+      "description": "Total matching stores.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "stores",
+      "type": "array",
+      "required": false,
+      "description": "Etsy stores.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "stores[].storeId",
+      "type": "string",
+      "required": false,
+      "description": "Store identifier.",
+      "example": "123456",
+      "constraints": {}
+    },
+    {
+      "name": "stores[].storeName",
+      "type": "string",
+      "required": false,
+      "description": "Store name.",
+      "example": "Lewshop1",
+      "constraints": {}
+    },
+    {
+      "name": "stores[].storeUrl",
+      "type": "string",
+      "required": false,
+      "description": "Etsy store URL.",
+      "example": "https://www.etsy.com/shop/Lewshop1",
+      "constraints": {}
+    },
+    {
+      "name": "stores[].country",
+      "type": "array",
+      "required": false,
+      "description": "Store countries or regions.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "stores[].category",
+      "type": "array",
+      "required": false,
+      "description": "Primary categories.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "stores[].salesTotal",
+      "type": "integer",
+      "required": false,
+      "description": "Total sales.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].salesWeekly",
+      "type": "integer",
+      "required": false,
+      "description": "Weekly sales.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].reviews",
+      "type": "integer",
+      "required": false,
+      "description": "Review count.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].favorites",
+      "type": "integer",
+      "required": false,
+      "description": "Favorite count.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].rating",
+      "type": "number",
+      "required": false,
+      "description": "Store rating.",
+      "example": 4.8,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].status",
+      "type": "integer",
+      "required": false,
+      "description": "Store status.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Provider rendering columns.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Provider-reported token cost.",
+      "example": 3600,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "storeNum": 1,
+    "stores": [
+      {
+        "storeId": "123456",
+        "storeName": "Lewshop1",
+        "storeUrl": "https://www.etsy.com/shop/Lewshop1",
+        "country": [],
+        "category": [],
+        "salesTotal": 1,
+        "salesWeekly": 1,
+        "reviews": 1,
+        "favorites": 1,
+        "rating": 4.8,
+        "status": 1
+      }
+    ],
+    "columns": [],
+    "costToken": 3600
+  },
+  "jsonSchema": null
+}

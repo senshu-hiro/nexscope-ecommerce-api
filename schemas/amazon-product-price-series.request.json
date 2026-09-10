@@ -1,0 +1,112 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-product-price-series.",
+  "fields": [
+    {
+      "name": "asin",
+      "type": "string",
+      "required": true,
+      "description": "Amazon Standard Identification Number (ASIN), single ASIN only, max length 1000",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "domain",
+      "type": "string",
+      "required": true,
+      "description": "Amazon domain ID. Options: 1 (United States), 2 (United Kingdom), 3 (Germany), 4 (France), 5 (Japan), 6 (Canada), 8 (Italy), 9 (Spain), 10 (India), 11 (Mexico), 12 (Brazil)",
+      "example": "1",
+      "constraints": {}
+    },
+    {
+      "name": "days",
+      "type": "integer",
+      "required": false,
+      "description": "Limit historical data to this many days, default 90, max 365",
+      "example": 30,
+      "constraints": {}
+    },
+    {
+      "name": "showPrice",
+      "type": "integer",
+      "required": false,
+      "description": "Set to 1 to return the lowest new price curve in the market",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "showPriceList",
+      "type": "integer",
+      "required": false,
+      "description": "Set to 1 to return the list/strikethrough price curve",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "showPriceDeal",
+      "type": "integer",
+      "required": false,
+      "description": "Set to 1 to return the deal/flash sale price curve",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "showPricePrime",
+      "type": "integer",
+      "required": false,
+      "description": "Set to 1 to return the Prime-exclusive new price curve",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "showPriceFba",
+      "type": "integer",
+      "required": false,
+      "description": "Set to 1 to return the third-party FBA new price curve",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "showPriceFbm",
+      "type": "integer",
+      "required": false,
+      "description": "Set to 1 to return the third-party FBM new price curve",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "showPriceCoupon",
+      "type": "integer",
+      "required": false,
+      "description": "Set to 1 to return the coupon-applied Buy Box price curve",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "showBsrMain",
+      "type": "integer",
+      "required": false,
+      "description": "Set to 1 to return the main category BSR curve",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "showSellerCount",
+      "type": "integer",
+      "required": false,
+      "description": "Set to 1 to return the seller count curve",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "showPrice": 1,
+    "asin": "B072MQ5BRX",
+    "days": 30,
+    "showPriceDeal": 1,
+    "domain": "1",
+    "showPriceList": 1,
+    "showPricePrime": 1
+  },
+  "jsonSchema": null
+}

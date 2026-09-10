@@ -1,0 +1,119 @@
+{
+  "type": "object",
+  "description": "Perform general image editing with provider, prompt, resolution, aspect ratio, and quality controls.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the image to edit. The image must be between 300 and 4096 pixels in both width and height, and its width-to-height ratio must be between 0.4 and 2.5.",
+      "example": "https://example.com/product.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "prompt",
+      "type": "string",
+      "required": true,
+      "description": "Editing instruction.",
+      "example": "make the background pure white and keep the product unchanged",
+      "constraints": {}
+    },
+    {
+      "name": "provider",
+      "type": "string",
+      "required": true,
+      "description": "Image model. Supported values: BANANA, BANANA_2, BANANA_PRO, WAN2_7, QWEN_IMAGE_3_PRO, SEEDREAM5, GPT_2_IMAGE, or AIDRAW_EDIT.",
+      "example": "BANANA_PRO",
+      "constraints": {
+        "allowedValues": [
+          "BANANA",
+          "BANANA_2",
+          "BANANA_PRO",
+          "WAN2_7",
+          "QWEN_IMAGE_3_PRO",
+          "SEEDREAM5",
+          "GPT_2_IMAGE",
+          "AIDRAW_EDIT"
+        ]
+      }
+    },
+    {
+      "name": "outputNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of images to generate, from 1 to 4.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "resolution",
+      "type": "string",
+      "required": false,
+      "description": "Target resolution preset.",
+      "example": "1K",
+      "constraints": {}
+    },
+    {
+      "name": "aspectRatio",
+      "type": "string",
+      "required": false,
+      "description": "Target aspect ratio.",
+      "example": "1:1",
+      "constraints": {}
+    },
+    {
+      "name": "supplyType",
+      "type": "string",
+      "required": false,
+      "description": "Generation route. Supported values: eco or stable. Defaults to stable.",
+      "example": "stable",
+      "constraints": {}
+    },
+    {
+      "name": "needOptimize",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether the prompt should be optimized upstream.",
+      "example": true,
+      "constraints": {}
+    },
+    {
+      "name": "template",
+      "type": "string",
+      "required": false,
+      "description": "Optional Nexscope editing template. Supported values: white-background, product-main-image-retouching, scene-generation, poster-design, add-person-or-object, change-animal, flat-lay-apparel, 3d-apparel, mannequin-to-model, cartoon-illustration, body-reshape, change-style, remove-element, remove-text, remove-watermark, add-watermark.",
+      "example": "white-background",
+      "constraints": {}
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "required": false,
+      "description": "Optional traffic or product source code.",
+      "example": "api",
+      "constraints": {}
+    },
+    {
+      "name": "quality",
+      "type": "string",
+      "required": false,
+      "description": "GPT Image quality only. Supported values: low, medium, or high. Defaults to medium.",
+      "example": "medium",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/product.jpg",
+    "prompt": "make the background pure white and keep the product unchanged",
+    "provider": "BANANA_PRO",
+    "outputNum": 1,
+    "resolution": "1K",
+    "aspectRatio": "1:1",
+    "supplyType": "stable",
+    "needOptimize": true,
+    "template": "white-background",
+    "source": "api",
+    "quality": "medium"
+  },
+  "jsonSchema": null
+}

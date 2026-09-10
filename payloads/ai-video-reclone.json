@@ -1,0 +1,14 @@
+{
+  "refVideoUrl": "https://example.com/reference-video.mp4",
+  "refImageList": [
+    "https://example.com/product.jpg"
+  ],
+  "videoType": "seedance-2-0-fast",
+  "videoTime": 10,
+  "resolution": "720p",
+  "aspectRatio": "9:16",
+  "saleCountry": "US",
+  "targetLanguage": "English",
+  "productInfo": "Slim shockproof phone case with a clear finish.",
+  "prompt": "highlight the slim protective design"
+}

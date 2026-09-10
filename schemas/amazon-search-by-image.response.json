@@ -1,0 +1,638 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Total rows",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "totalCount",
+      "type": "integer",
+      "required": false,
+      "description": "Total count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "perPage",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "currentPage",
+      "type": "integer",
+      "required": false,
+      "description": "Current page",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Rendering style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Source type",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Column definitions used for rendering",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "required": false,
+      "description": "Product list; see the product fields below",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "asin",
+      "type": "string",
+      "required": false,
+      "description": "ASIN",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Product title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Image URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "asinUrl",
+      "type": "string",
+      "required": false,
+      "description": "Amazon ASIN detail URL",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "price",
+      "type": "number",
+      "required": false,
+      "description": "Current price in the marketplace currency",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "oldPrice",
+      "type": "number",
+      "required": false,
+      "description": "List price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "rating",
+      "type": "number",
+      "required": false,
+      "description": "Current rating from 0.0 to 5.0",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "ratings",
+      "type": "integer",
+      "required": false,
+      "description": "Rating count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].brand",
+      "type": "string",
+      "required": false,
+      "description": "Brand",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Source tool",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "salesRank",
+      "type": "integer",
+      "required": false,
+      "description": "Sales rank from Keepa",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salesRank30",
+      "type": "integer",
+      "required": false,
+      "description": "Average sales rank over the past 30 days from Keepa",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salesRank90",
+      "type": "integer",
+      "required": false,
+      "description": "Average sales rank over the past 90 days from Keepa",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salesRank180",
+      "type": "integer",
+      "required": false,
+      "description": "Average sales rank over the past 180 days from Keepa",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "monthlySalesUnits",
+      "type": "integer",
+      "required": false,
+      "description": "Monthly units sold from Keepa",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "monthlySalesRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Monthly sales revenue from Keepa",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "monthlySalesUnits1MonthAgo~monthlySalesUnits12MonthsAgo",
+      "type": "integer",
+      "required": false,
+      "description": "Monthly sales from 1 through 12 months ago, from Keepa",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "reviewCount",
+      "type": "integer",
+      "required": false,
+      "description": "Review count from Keepa",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "fbaFees",
+      "type": "number",
+      "required": false,
+      "description": "FBA fulfillment fee in the marketplace currency from Keepa",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "profit",
+      "type": "number",
+      "required": false,
+      "description": "Profit margin percentage from Keepa; for example, 25.5 means 25.5%",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "referralFeePercentage",
+      "type": "number",
+      "required": false,
+      "description": "Referral fee percentage from Keepa",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].fulfillment",
+      "type": "string",
+      "required": false,
+      "description": "Fulfillment method from Keepa: AMZ, FBA, or FBM",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "primePrice",
+      "type": "number",
+      "required": false,
+      "description": "Prime price from Keepa",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "buyBoxSellerId",
+      "type": "string",
+      "required": false,
+      "description": "Buy Box seller ID from Keepa",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "sellerNum",
+      "type": "integer",
+      "required": false,
+      "description": "Seller count from Keepa",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "variationNum",
+      "type": "integer",
+      "required": false,
+      "description": "Variation count from Keepa",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "parentAsin",
+      "type": "string",
+      "required": false,
+      "description": "Parent ASIN from Keepa",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "availableDate",
+      "type": "string",
+      "required": false,
+      "description": "Listing date from Keepa in yyyy-MM-dd HH:mm:ss format",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "lastUpdate",
+      "type": "string",
+      "required": false,
+      "description": "Last update time from Keepa in yyyy-MM-dd HH:mm:ss format",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "products[].manufacturer",
+      "type": "string",
+      "required": false,
+      "description": "Manufacturer from Keepa",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].model",
+      "type": "string",
+      "required": false,
+      "description": "Model from Keepa",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].color",
+      "type": "string",
+      "required": false,
+      "description": "Color from Keepa",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].material",
+      "type": "string",
+      "required": false,
+      "description": "Primary materials used in the product construction, from Keepa",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].weight",
+      "type": "string",
+      "required": false,
+      "description": "Weight in grams from Keepa",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].dimension",
+      "type": "string",
+      "required": false,
+      "description": "Dimensions from Keepa",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "itemLength",
+      "type": "integer",
+      "required": false,
+      "description": "Product length in millimeters from Keepa; 0 or -1 when unavailable",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "itemWidth",
+      "type": "integer",
+      "required": false,
+      "description": "Product width in millimeters from Keepa; 0 or -1 when unavailable",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "itemHeight",
+      "type": "integer",
+      "required": false,
+      "description": "Product height in millimeters from Keepa; 0 or -1 when unavailable",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "packageLength",
+      "type": "integer",
+      "required": false,
+      "description": "Package length in millimeters from Keepa",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "packageWidth",
+      "type": "integer",
+      "required": false,
+      "description": "Package width in millimeters from Keepa",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "packageHeight",
+      "type": "integer",
+      "required": false,
+      "description": "Package height in millimeters from Keepa",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].packageWeight",
+      "type": "string",
+      "required": false,
+      "description": "Package weight in grams from Keepa",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].packageDimensions",
+      "type": "string",
+      "required": false,
+      "description": "Package dimensions from Keepa",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "packageQuantity",
+      "type": "integer",
+      "required": false,
+      "description": "Number of items in the package from Keepa; 0 or -1 when unavailable",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].dimensionsType",
+      "type": "string",
+      "required": false,
+      "description": "Dimension type from Keepa",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].categoryTree",
+      "type": "string",
+      "required": false,
+      "description": "Category tree from Keepa",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "categoryTreeId",
+      "type": "string",
+      "required": false,
+      "description": "Category tree ID from Keepa",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "rootCategory",
+      "type": "integer",
+      "required": false,
+      "description": "Root category ID from Keepa",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "isAdultProduct",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether the product is classified as adult content by Keepa",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "isHazmat",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether the product is classified as hazardous by Keepa",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "urlSlug",
+      "type": "string",
+      "required": false,
+      "description": "URL slug from Keepa",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "productImageUrls",
+      "type": "array",
+      "required": false,
+      "description": "Product image URLs from Keepa",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "totalCount": 1,
+    "perPage": 1,
+    "currentPage": 1,
+    "columns": [],
+    "costToken": 1,
+    "products": [],
+    "asin": "B072MQ5BRX",
+    "imageUrl": "https://example.com/image.jpg",
+    "asinUrl": "B072MQ5BRX",
+    "price": 1,
+    "oldPrice": 1,
+    "rating": 1,
+    "ratings": 1,
+    "salesRank": 1,
+    "salesRank30": 1,
+    "salesRank90": 1,
+    "salesRank180": 1,
+    "monthlySalesUnits": 1,
+    "monthlySalesRevenue": 1,
+    "monthlySalesUnits1MonthAgo~monthlySalesUnits12MonthsAgo": 1,
+    "reviewCount": 1,
+    "fbaFees": 1,
+    "profit": 1,
+    "referralFeePercentage": 1,
+    "primePrice": 1,
+    "buyBoxSellerId": "example-id",
+    "sellerNum": 1,
+    "variationNum": 1,
+    "parentAsin": "B072MQ5BRX",
+    "availableDate": "2026-01-01",
+    "lastUpdate": "2026-01-01",
+    "itemLength": 1,
+    "itemWidth": 1,
+    "itemHeight": 1,
+    "packageLength": 1,
+    "packageWidth": 1,
+    "packageHeight": 1,
+    "packageQuantity": 1,
+    "categoryTreeId": "example-id",
+    "rootCategory": 1,
+    "isAdultProduct": false,
+    "isHazmat": false,
+    "urlSlug": "https://example.com/image.jpg",
+    "productImageUrls": []
+  },
+  "jsonSchema": null
+}

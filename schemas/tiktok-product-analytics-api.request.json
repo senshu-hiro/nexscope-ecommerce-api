@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "description": "Kalodata product-detail query.",
+  "fields": [
+    {
+      "name": "productId",
+      "type": "string",
+      "required": true,
+      "description": "TikTok product ID.",
+      "example": "1732505564636812173",
+      "constraints": {}
+    },
+    {
+      "name": "region",
+      "type": "string",
+      "required": false,
+      "description": "TikTok Shop market region.",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency code.",
+      "example": "USD",
+      "constraints": {}
+    },
+    {
+      "name": "language",
+      "type": "string",
+      "required": false,
+      "description": "Response language.",
+      "example": "en-US",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "region": "US",
+    "productId": "1732505564636812173"
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,95 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-asin-traffic-summary.",
+  "fields": [
+    {
+      "name": "searchValue",
+      "type": "string",
+      "required": true,
+      "description": "Search value, ASIN codes, comma-separated, max 10 ASINs, max length 1000 characters",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "country",
+      "type": "string",
+      "required": false,
+      "description": "Country site, default US. Options (13 total): US, UK, DE, CA, JP, FR, ES, IT, MX, AU, AE, BR, SA",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "last7d",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to get last 7 days data, default true. When false, use startDate/endDate range",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "startDate",
+      "type": "string",
+      "required": false,
+      "description": "Start date yyyy-MM-dd (effective when last7d=false; if omitted, the latest system week is used)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "endDate",
+      "type": "string",
+      "required": false,
+      "description": "End date yyyy-MM-dd (paired with startDate)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "conditions",
+      "type": "string",
+      "required": false,
+      "description": "Condition filters, comma-separated. Options: nf (natural traffic), sp (SP ads), sb (SB regular), sbv (video ads), ad (ad traffic), acAd (SP recommendation), totalPeriod.in (new incoming traffic keywords)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sortBy",
+      "type": "string",
+      "required": false,
+      "description": "Sort field. Options: totalKeywordNum (all traffic keywords), naturalKeywordNum (natural traffic keywords), brandKeywordNum (brand ad keywords), vedioKeywordNum (video ad keywords), acKeywordNum (AC recommended keywords), erKeywordNum (ER recommended keywords), trKeywordNum (TR recommended keywords), sumScore (total keyword exposure score), totalNfScore (total natural rank exposure score), totalSpSocre (total SP ad exposure score, note spelling), totalBrandScore (total brand ad exposure score), totalVedioScore (total video ad exposure score), totalAcScore (total AC recommendation exposure score), totalTrScore (total TR recommendation exposure score), totalErScore (total ER recommendation exposure score)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageNum",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, default 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Results per page, min 10, max 10000, default 10000",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "desc",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to sort descending, default true",
+      "example": false,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "last7d": true,
+    "searchValue": "B072MQ5BRX",
+    "country": "US",
+    "pageNum": 1,
+    "desc": true,
+    "pageSize": 10
+  },
+  "jsonSchema": null
+}

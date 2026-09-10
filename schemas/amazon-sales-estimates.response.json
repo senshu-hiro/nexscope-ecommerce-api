@@ -1,0 +1,257 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token consumption",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salesEstimateList",
+      "type": "array",
+      "required": false,
+      "description": "Sales estimate result list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "salesEstimateList[].asin",
+      "type": "string",
+      "required": false,
+      "description": "Queried ASIN",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "salesEstimateList[].id",
+      "type": "string",
+      "required": false,
+      "description": "Data point identifier",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "salesEstimateList[].type",
+      "type": "string",
+      "required": false,
+      "description": "Resource type, fixed value sales_estimate_result",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "salesEstimateList[].parentAsin",
+      "type": "string",
+      "required": false,
+      "description": "Parent ASIN (returned for variant scenarios)",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "salesEstimateList[].isParent",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether it is a parent listing",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "salesEstimateList[].isVariant",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether it is a variant listing",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "salesEstimateList[].isStandalone",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether it is a standalone listing (non-variant)",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "salesEstimateList[].variants",
+      "type": "array",
+      "required": false,
+      "description": "Array of variant ASINs under this parent",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "salesEstimateList[].dailyEstimates",
+      "type": "array",
+      "required": false,
+      "description": "Array of daily estimate data",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "salesEstimateList[].date",
+      "type": "string",
+      "required": false,
+      "description": "Data date (YYYY-MM-DD)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "salesEstimateList[].estimatedUnitsSold",
+      "type": "integer",
+      "required": false,
+      "description": "Estimated units sold on that day",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salesEstimateList[].lastKnownPrice",
+      "type": "number",
+      "required": false,
+      "description": "Last known price (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "costToken": 1,
+    "salesEstimateList": [
+      {
+        "asin": "B072MQ5BRX",
+        "id": "example-id",
+        "parentAsin": "B072MQ5BRX",
+        "isParent": false,
+        "isVariant": false,
+        "isStandalone": false,
+        "variants": [],
+        "dailyEstimates": [],
+        "date": "2026-01-01",
+        "estimatedUnitsSold": 1,
+        "lastKnownPrice": 1
+      }
+    ]
+  },
+  "jsonSchema": null
+}

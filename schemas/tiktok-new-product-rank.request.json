@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.tiktok-new-product-rank.",
+  "fields": [
+    {
+      "name": "date",
+      "type": "string",
+      "required": true,
+      "description": "Date in YYYY-MM-DD format",
+      "example": "2026-08-01",
+      "constraints": {}
+    },
+    {
+      "name": "region",
+      "type": "string",
+      "required": false,
+      "description": "Region, default US. Options: US (United States), ID (Indonesia), TH (Thailand), PH (Philippines), MY (Malaysia), VN (Vietnam), GB (United Kingdom), MX (Mexico), SG (Singapore), SA (Saudi Arabia), BR (Brazil), ES (Spain), JP (Japan), DE (Germany), IT (Italy), FR (France)",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "pageNum",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, default 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page, default 50",
+      "example": 10,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "pageNum": 1,
+    "pageSize": 10,
+    "region": "US",
+    "date": "2026-08-01"
+  },
+  "jsonSchema": null
+}

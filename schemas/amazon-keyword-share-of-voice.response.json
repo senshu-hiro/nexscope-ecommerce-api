@@ -1,0 +1,429 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "shareOfVoice",
+      "type": "object",
+      "required": false,
+      "description": "Share of Voice data body",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "id",
+      "type": "string",
+      "required": false,
+      "description": "Resource identifier",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Fixed value share_of_voice",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "estimated30DaySearchVolume",
+      "type": "integer",
+      "required": false,
+      "description": "Exact match search volume over the past 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "exactSuggestedBidMedian",
+      "type": "number",
+      "required": false,
+      "description": "PPC bid median (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productCount",
+      "type": "integer",
+      "required": false,
+      "description": "Total product count in the first 3 pages of search results",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "updatedAt",
+      "type": "string",
+      "required": false,
+      "description": "Data update time",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "topAsinsModelStartDate",
+      "type": "string",
+      "required": false,
+      "description": "TOP ASIN click/conversion data window start date",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "topAsinsModelEndDate",
+      "type": "string",
+      "required": false,
+      "description": "TOP ASIN click/conversion data window end date",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "brands",
+      "type": "array",
+      "required": false,
+      "description": "Brand SOV detail list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "topAsins",
+      "type": "array",
+      "required": false,
+      "description": "TOP 3 ASIN click and conversion list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "brands[].brand",
+      "type": "string",
+      "required": false,
+      "description": "Brand name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "brands[].organicProducts",
+      "type": "integer",
+      "required": false,
+      "description": "Number of products in organic search results",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "brands[].sponsoredProducts",
+      "type": "integer",
+      "required": false,
+      "description": "Number of products in ad placements",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "brands[].combinedProducts",
+      "type": "integer",
+      "required": false,
+      "description": "Combined product count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "brands[].organicBasicSov",
+      "type": "number",
+      "required": false,
+      "description": "Organic basic SOV (0-1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "brands[].organicWeightedSov",
+      "type": "number",
+      "required": false,
+      "description": "Organic weighted SOV (0-1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "brands[].sponsoredBasicSov",
+      "type": "number",
+      "required": false,
+      "description": "Sponsored basic SOV (0-1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "brands[].sponsoredWeightedSov",
+      "type": "number",
+      "required": false,
+      "description": "Sponsored weighted SOV (0-1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "brands[].combinedBasicSov",
+      "type": "number",
+      "required": false,
+      "description": "Combined basic SOV (0-1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "brands[].combinedWeightedSov",
+      "type": "number",
+      "required": false,
+      "description": "Combined weighted SOV (0-1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "brands[].organicAveragePosition",
+      "type": "number",
+      "required": false,
+      "description": "Average organic search rank position",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "brands[].sponsoredAveragePosition",
+      "type": "number",
+      "required": false,
+      "description": "Average sponsored search rank position",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "brands[].combinedAveragePosition",
+      "type": "number",
+      "required": false,
+      "description": "Combined average rank position",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "brands[].organicAveragePrice",
+      "type": "number",
+      "required": false,
+      "description": "Average organic search product price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "brands[].sponsoredAveragePrice",
+      "type": "number",
+      "required": false,
+      "description": "Average sponsored search product price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "brands[].combinedAveragePrice",
+      "type": "number",
+      "required": false,
+      "description": "Combined average product price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "topAsins[].asin",
+      "type": "string",
+      "required": false,
+      "description": "ASIN number",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "topAsins[].name",
+      "type": "string",
+      "required": false,
+      "description": "Product name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "topAsins[].brand",
+      "type": "string",
+      "required": false,
+      "description": "Brand name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "topAsins[].clicks",
+      "type": "integer",
+      "required": false,
+      "description": "Click volume (30-day window)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "topAsins[].conversions",
+      "type": "integer",
+      "required": false,
+      "description": "Conversion volume (30-day window)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "topAsins[].conversionRate",
+      "type": "number",
+      "required": false,
+      "description": "Conversion rate (0-1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "costToken": 1,
+    "shareOfVoice": {},
+    "id": "example-id",
+    "estimated30DaySearchVolume": 1,
+    "exactSuggestedBidMedian": 1,
+    "productCount": 1,
+    "updatedAt": "2026-01-01",
+    "topAsinsModelStartDate": "B072MQ5BRX",
+    "topAsinsModelEndDate": "B072MQ5BRX",
+    "brands": [
+      {
+        "organicProducts": 1,
+        "sponsoredProducts": 1,
+        "combinedProducts": 1,
+        "organicBasicSov": 1,
+        "organicWeightedSov": 1,
+        "sponsoredBasicSov": 1,
+        "sponsoredWeightedSov": 1,
+        "combinedBasicSov": 1,
+        "combinedWeightedSov": 1,
+        "organicAveragePosition": 1,
+        "sponsoredAveragePosition": 1,
+        "combinedAveragePosition": 1,
+        "organicAveragePrice": 1,
+        "sponsoredAveragePrice": 1,
+        "combinedAveragePrice": 1
+      }
+    ],
+    "topAsins": [
+      {
+        "asin": "B072MQ5BRX",
+        "clicks": 1,
+        "conversions": 1,
+        "conversionRate": 1
+      }
+    ]
+  },
+  "jsonSchema": null
+}

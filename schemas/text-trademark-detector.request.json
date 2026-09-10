@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.text-trademark-detector.",
+  "fields": [
+    {
+      "name": "productTitle",
+      "type": "string",
+      "required": true,
+      "description": "Product title, used for trademark detection (max 1000 characters)",
+      "example": "MagSafe Phone Case for iPhone",
+      "constraints": {}
+    },
+    {
+      "name": "regions",
+      "type": "string",
+      "required": false,
+      "description": "Country/region codes, multiple separated by commas. Supported values: US, EM, GB, DE, FR, IT, ES, AU, CA, MX, JP, CN, WO, TR, BX",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "limit",
+      "type": "integer",
+      "required": true,
+      "description": "Limit on the number of returned results (default 100, max 500)",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "productText",
+      "type": "string",
+      "required": false,
+      "description": "Other product text information, such as bullet points or product description (max 1000 characters)",
+      "example": "Protective magnetic phone case with shockproof corners.",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "regions": "US",
+    "productTitle": "MagSafe Phone Case for iPhone",
+    "limit": 10,
+    "productText": "Protective magnetic phone case with shockproof corners."
+  },
+  "jsonSchema": null
+}

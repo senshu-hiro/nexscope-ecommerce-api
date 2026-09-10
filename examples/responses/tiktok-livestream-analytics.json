@@ -1,0 +1,17 @@
+{
+  "errcode": 1,
+  "data": [
+    {
+      "livestream_start_time": 1,
+      "livestream_end_time": 1,
+      "livestream_duration": 1,
+      "livestream_id": "example-id",
+      "creator_id": "example-id",
+      "views": 1,
+      "viewers": 1,
+      "gpm": 1,
+      "product_number": 1
+    }
+  ],
+  "costToken": 1
+}

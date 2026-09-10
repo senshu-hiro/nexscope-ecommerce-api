@@ -1,0 +1,373 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-niche-reviews-by-keyword.",
+  "fields": [
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": true,
+      "description": "Keyword (required, use the language of the corresponding site, e.g. English for the US site, German for the Germany site), max length 1000 characters",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "countryCode",
+      "type": "string",
+      "required": false,
+      "description": "Country code, options: US (United States), JP (Japan), DE (Germany)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number (starting from 1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Results per page (10-100)",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "sortField",
+      "type": "string",
+      "required": false,
+      "description": "Sort field, options: clickConversionRateT7 (7-day click conversion rate), demand (demand score), avgPrice (average product price), maximumPrice (highest product price), minimumPrice (lowest product price), productCount (product count), searchConversionRateT7 (7-day search conversion rate), searchVolumeT7 (7-day search volume), unitsSoldT7 (7-day sales volume), searchVolumeGrowthT7 (search growth rate), clickCountT90 (90-day click volume), clickCountT7 (weekly click volume), brandCount (brand count), top5BrandsClickShare (TOP5 brand share), newProductsLaunchedT180 (180-day new product success rate - launch count), successfulLaunchesT180 (180-day new product success rate - new product count), launchRateT180 (180-day new product success rate - launch rate), top5ProductsClickShare (top 5 product click share), returnRateT360 (return rate), clickConversionRateT90 (90-day click conversion rate), searchConversionRateT90 (90-day search conversion rate), searchVolumeT90 (90-day search volume), unitsSoldT90 (90-day sales volume), unitsSoldGrowthT90 (90-day sales growth rate), searchVolumeGrowthT90 (90-day search growth rate), acos, profitRate50 (profit rate for 50% natural orders)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sortType",
+      "type": "string",
+      "required": false,
+      "description": "Sort direction, options: desc (descending), asc (ascending)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "productCountMin",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum product count (current)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productCountMax",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum product count (current)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "brandCountMin",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum brand count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "brandCountMax",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum brand count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgPriceMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum average price (current)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgPriceMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum average price (current)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "unitsSoldT7Min",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum sales volume (7-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "unitsSoldT7Max",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum sales volume (7-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "searchVolumeT7Min",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum search volume (7-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "searchVolumeT7Max",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum search volume (7-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "clickCountT7Min",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum click volume (7-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "clickCountT7Max",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum click volume (7-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "clickConversionRateT7Min",
+      "type": "number",
+      "required": false,
+      "description": "Minimum click conversion rate (7-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "clickConversionRateT7Max",
+      "type": "number",
+      "required": false,
+      "description": "Maximum click conversion rate (7-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "top5BrandsClickShareMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum top 5 brands' click share in the niche market",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "top5BrandsClickShareMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum top 5 brands' click share in the niche market",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "top5ProductsClickShareMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum top 5 products click share (current)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "top5ProductsClickShareMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum top 5 products click share (current)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "sponsoredProductsPercentageMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum SP ad share",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "sponsoredProductsPercentageMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum SP ad share",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgBrandAgeMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum average brand age (current)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgBrandAgeMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum average brand age (current)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgBrandAgeQoqMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum average brand age (90-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgBrandAgeQoqMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum average brand age (90-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgBrandAgeYoyMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum average brand age (360-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgBrandAgeYoyMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum average brand age (360-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgSellingPartnerAgeMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum average selling partner age",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgSellingPartnerAgeMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum average selling partner age",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgSellingPartnerAgeQoqMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum average selling partner age (90-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgSellingPartnerAgeQoqMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum average selling partner age (90-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgSellingPartnerAgeYoyMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum average selling partner age (360-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgSellingPartnerAgeYoyMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum average selling partner age (360-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "launchRateT180Min",
+      "type": "number",
+      "required": false,
+      "description": "Minimum product launch success rate (180-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "launchRateT180Max",
+      "type": "number",
+      "required": false,
+      "description": "Maximum product launch success rate (180-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "newProductRateT180",
+      "type": "number",
+      "required": false,
+      "description": "Minimum new product share (180-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "returnRateT360Min",
+      "type": "number",
+      "required": false,
+      "description": "Minimum return rate (360-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "returnRateT360Max",
+      "type": "number",
+      "required": false,
+      "description": "Maximum return rate (360-day stats)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "cpcMediumMin",
+      "type": "number",
+      "required": false,
+      "description": "Minimum CPC (current)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "cpcMediumMax",
+      "type": "number",
+      "required": false,
+      "description": "Maximum CPC (current)",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "page": 1,
+    "pageSize": 10,
+    "keyword": "phone case",
+    "countryCode": "US"
+  },
+  "jsonSchema": null
+}

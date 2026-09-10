@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "description": "Translate image text from a source language to a target language for ecommerce localization.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of a JPG, JPEG, PNG, or WEBP image up to 4 MB and between 385 and 3000 pixels.",
+      "example": "https://example.com/product.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "translationPlatform",
+      "type": "string",
+      "required": true,
+      "description": "Translation platform. Supported values: deepl (DeepL), chatgpt (ChatGPT).",
+      "example": "deepl",
+      "constraints": {}
+    },
+    {
+      "name": "sourceLanguage",
+      "type": "string",
+      "required": true,
+      "description": "Source language code. Supported values: CHS (Simplified Chinese), ENG (English), CHT (Traditional Chinese), ESP (Spanish), JPN (Japanese), KOR (Korean), PT (Portuguese), ROM (Romanian), RUS (Russian), VIN (Vietnamese), DEU (German).",
+      "example": "CHS",
+      "constraints": {}
+    },
+    {
+      "name": "targetLanguage",
+      "type": "string",
+      "required": true,
+      "description": "Target language code. Supported values: AR, BG, BN, CHS, CHT, CKB, CSY, DA, DEU, EL, ENG, ESP, ET, FA, FI, FIL, FRA, GU, HE, HI, HR, HUN, ID, ITA, JPN, JW, KOR, LO, LT, LV, MR, MS, MY, NLD, NO, PLK, PT, PTB, ROM, RUS, SK, SL, SV, SW, TA, TE, TG, TH, TL, TRK, UK, UR, VIN.",
+      "example": "ENG",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/product.jpg",
+    "translationPlatform": "deepl",
+    "sourceLanguage": "CHS",
+    "targetLanguage": "ENG"
+  },
+  "jsonSchema": null
+}

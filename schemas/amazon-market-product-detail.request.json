@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-market-product-detail.",
+  "fields": [
+    {
+      "name": "asin",
+      "type": "string",
+      "required": true,
+      "description": "Amazon Standard Identification Number (ASIN), supports multiple (max 10), comma-separated. Example: B0088PUEPK or B0088PUEPK,B00U26V4VQ",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "marketplace",
+      "type": "string",
+      "required": true,
+      "description": "Amazon site code: us, gb, de, fr, in, ca, jp, es, it, mx, ae, au, br, sa",
+      "example": "us",
+      "constraints": {}
+    },
+    {
+      "name": "includeTrend",
+      "type": "integer",
+      "required": false,
+      "description": "Whether to include trend data. 1: include (default); 2: exclude",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "queryTrendStartDate",
+      "type": "string",
+      "required": false,
+      "description": "Trend start date, format yyyy-MM-dd. Default returns only the last 15 days; querying more than 15 days doubles the cost",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "queryTrendEndDate",
+      "type": "string",
+      "required": false,
+      "description": "Trend end date, format yyyy-MM-dd",
+      "example": "2026-01-15",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "marketplace": "us",
+    "queryTrendEndDate": "2026-01-15",
+    "queryTrendStartDate": "2026-01-01",
+    "includeTrend": 1,
+    "asin": "B072MQ5BRX"
+  },
+  "jsonSchema": null
+}

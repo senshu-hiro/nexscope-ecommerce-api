@@ -1,0 +1,15 @@
+{
+  "total": 1,
+  "products": [
+    {
+      "productId": 1,
+      "productPageUrl": "https://example.com/image.jpg",
+      "imageUrl": "https://example.com/image.jpg",
+      "brandId": 1,
+      "sellerId": 1
+    }
+  ],
+  "columns": [],
+  "costTime": 1,
+  "costToken": 1
+}

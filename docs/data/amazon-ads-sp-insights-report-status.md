@@ -1,0 +1,75 @@
+# Amazon Ads SP Insights Report Status API
+
+Amazon Ads SP Insights Report Status using an owned Amazon Ads connection.
+
+[All APIs](../../README.md#complete-api-catalog) · [Official documentation](https://www.nexscope.ai/api-docs/amazon-ads-sp-insights-report-status?view=api&co-from=github-ecommerce-api)
+
+Category: Amazon Advertising · Data API
+
+Uses existing Amazon Ads authorization and tokenized download handling. Create once, poll by reportId, then download using a documentToken.
+
+## Endpoint
+
+`POST https://api.nexscope.ai/api/skill-api/v1/skills/amazon-ads-sp-insights-report-status/run`
+
+Headers: `Authorization: Bearer YOUR_API_KEY` and `Content-Type: application/json`.
+
+Execution: synchronous; inspect the direct API-specific response body.
+
+## Request parameters
+
+| Name | Type | Required | Description | Constraints |
+|---|---|---|---|---|
+| `connectionId` | integer | Yes | Owned Amazon Ads connection ID; profile and region are resolved by the backend. | {} |
+| `reportId` | string | Yes | Existing report ID; polling never creates another report. | {} |
+
+The table summarizes the published fields. Consult the full request definition for nested objects, alternatives, and conditional requirements.
+
+## Call this API
+
+Run these commands from the repository root after [setting your API key](../../README.md#1-get-and-configure-your-api-key). Copy the sample to a separate file and replace illustrative URLs, IDs, search terms, and required values before submitting. Sample responses are documentation fixtures, not live results.
+
+```bash
+cp payloads/amazon-ads-sp-insights-report-status.json request.json
+# Edit request.json for your inputs.
+bash examples/curl/run.sh amazon-ads-sp-insights-report-status request.json
+# Or: node examples/javascript/run.mjs amazon-ads-sp-insights-report-status request.json
+# Or: python3 examples/python/run.py amazon-ads-sp-insights-report-status request.json
+```
+
+### Published request example
+
+```json
+{
+  "connectionId": 123,
+  "reportId": "report-id"
+}
+```
+
+## Response
+
+The run endpoint returns its API-specific payload directly. Do not assume a `data` or `result` wrapper. For asynchronous APIs, the run response is a task receipt, not the final generated asset.
+
+### Published response example
+
+```json
+{
+  "status": "PENDING",
+  "reportId": "report-id"
+}
+```
+
+## Full definitions
+
+- [Request definition](../../schemas/amazon-ads-sp-insights-report-status.request.json) — json-schema
+- [Response definition](../../schemas/amazon-ads-sp-insights-report-status.response.json) — field-descriptors
+- [Editable request sample](../../payloads/amazon-ads-sp-insights-report-status.json)
+- [Response fixture](../../examples/responses/amazon-ads-sp-insights-report-status.json)
+
+Some source definitions use field descriptors rather than JSON Schema; these are preserved and labeled rather than presented as strict validation schemas.
+
+## MCP
+
+Tool name: `nexscope_amazon_ads_sp_insights_report_status`. See [MCP integration](../calling-apis.md#mcp).
+
+Source retrieved: 2026-09-10. See [source and validation notes](../source-notes.md).

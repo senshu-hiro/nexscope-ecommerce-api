@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "description": "Create decorative linked-word imagery using font, size, and prompt controls.",
+  "fields": [
+    {
+      "name": "fontname",
+      "type": "string",
+      "required": true,
+      "description": "Font name. Allowed values: Caitlyn, ItaliannoRob, Alison, ALSScript, WhiteAngelica, Milkshake, ScriptMTBold, PassionsConflictROB, Sacramento, Cervanttis, Notera 2 PERSONAL USE ONLY, UyghurMerdane, OldEnglishText, Halimun, AlexBrush, Scriptina, CounselorScript, EliannaBoldItalic, AutumnChant, MagnoliaScript.",
+      "example": "UyghurMerdane",
+      "constraints": {}
+    },
+    {
+      "name": "fontSize",
+      "type": "integer",
+      "required": true,
+      "description": "Output font size.",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "left",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to add a ring on the left side. Defaults to false.",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "right",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to add a ring on the right side. Defaults to false.",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "prompt",
+      "type": "string",
+      "required": true,
+      "description": "Jewelry text content.",
+      "example": "hello",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "fontname": "UyghurMerdane",
+    "fontSize": 10,
+    "left": false,
+    "right": false,
+    "prompt": "hello"
+  },
+  "jsonSchema": null
+}

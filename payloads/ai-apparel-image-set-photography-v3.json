@@ -1,0 +1,44 @@
+{
+  "imageList": [
+    "https://example.com/product.jpg"
+  ],
+  "provider": "BANANA_2",
+  "sellerPoint": "Lightweight breathable summer dress",
+  "isExtractPrePoint": false,
+  "resolution": "2K",
+  "aspectRatio": "1:1",
+  "noText": false,
+  "brandKey": "{\"brandColor\":\"#0775FA\",\"fontStyle\":\"sans serif\",\"salesRegion\":\"North America\",\"language\":\"English\",\"platform\":\"Amazon\"}",
+  "quality": "medium",
+  "sensitiveLibraryId": 1001,
+  "replaceLibraryId": 1002,
+  "modelImageUrl": "https://example.com/model-reference.jpg",
+  "sceneImageUrl": "https://example.com/scene.jpg",
+  "isExactScene": true,
+  "modelAndSceneInfo": "{\"model\":\"female adult\",\"scene\":\"studio\"}",
+  "aPlusNum": 0,
+  "aPlusProNum": 0,
+  "aPlusHasPhone": false,
+  "aPlusAspectRatio": "1:1",
+  "modelTypeNum": 0,
+  "insTypeNum": 0,
+  "sellerTypeNum": 0,
+  "sizeTypeNum": 0,
+  "whiteTypeNum": 0,
+  "aPlusStyles": [
+    {
+      "id": 1
+    },
+    {
+      "prompt": "clean editorial layout"
+    }
+  ],
+  "pointStyles": [
+    {
+      "id": 2
+    },
+    {
+      "prompt": "minimal feature callouts"
+    }
+  ]
+}

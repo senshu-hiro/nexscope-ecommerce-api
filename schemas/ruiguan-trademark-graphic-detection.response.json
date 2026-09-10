@@ -1,0 +1,320 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "boundingBoxCount",
+      "type": "integer",
+      "required": false,
+      "description": "Number of detection results",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].radarResult",
+      "type": "string",
+      "required": false,
+      "description": "Radar detection result",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of records",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Detection results; see the fields below",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "detectId",
+      "type": "string",
+      "required": false,
+      "description": "Detection ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Column definitions used for rendering",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Rendering style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].image",
+      "type": "string",
+      "required": false,
+      "description": "URL of the matched trademark image",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "data[].boundingBox",
+      "type": "string",
+      "required": false,
+      "description": "Comma-separated YOLO coordinates",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].subRadarResult",
+      "type": "string",
+      "required": false,
+      "description": "Sub-radar detection result",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].applicationNumber",
+      "type": "string",
+      "required": false,
+      "description": "Application number",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].niceClassName",
+      "type": "string",
+      "required": false,
+      "description": "Comma-separated Nice Classification names",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].applicantName",
+      "type": "string",
+      "required": false,
+      "description": "Comma-separated rights-holder names",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].tradeMarkStatus",
+      "type": "string",
+      "required": false,
+      "description": "Trademark status. Values: \"DEL\", \"ended\", \"registered\", \"act\", \"pend\", \"filed\", or an empty string",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].niceClass",
+      "type": "array",
+      "required": false,
+      "description": "Nice Classification details",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].similarity",
+      "type": "number",
+      "required": false,
+      "description": "Similarity score from 0 to 1; higher values indicate greater similarity",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].registrationNumber",
+      "type": "string",
+      "required": false,
+      "description": "Registration number",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].registrationOfficeCode",
+      "type": "string",
+      "required": false,
+      "description": "Trademark registration office",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].registrationDate",
+      "type": "string",
+      "required": false,
+      "description": "Registration date",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "data[].bid",
+      "type": "string",
+      "required": false,
+      "description": "Logo identifier",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].trademarkName",
+      "type": "string",
+      "required": false,
+      "description": "Text trademark name found in the image",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].applicationDate",
+      "type": "string",
+      "required": false,
+      "description": "Application date",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "boundingBoxCount": 1,
+    "total": 1,
+    "data": [
+      {
+        "image": "https://example.com/image.jpg",
+        "niceClass": [],
+        "similarity": 1,
+        "registrationDate": "2026-01-01",
+        "bid": "example-id",
+        "applicationDate": "2026-01-01"
+      }
+    ],
+    "detectId": "example-id",
+    "columns": [],
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

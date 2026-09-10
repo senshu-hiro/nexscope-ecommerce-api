@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.ozon-product-trend.",
+  "fields": [
+    {
+      "name": "productId",
+      "type": "integer",
+      "required": true,
+      "description": "Ozon product SKU",
+      "example": 1664362124,
+      "constraints": {}
+    },
+    {
+      "name": "startDate",
+      "type": "string",
+      "required": false,
+      "description": "Statistics start date, YYYY-MM-DD; data delayed by T-1, latest is yesterday",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "endDate",
+      "type": "string",
+      "required": false,
+      "description": "Statistics end date, YYYY-MM-DD; data delayed by T-1, latest is yesterday",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "includeFbs",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to include FBS data",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "includeSearchStats",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to include search position / visibility; not supported for some niches",
+      "example": false,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "includeSearchStats": false,
+    "endDate": "2026-01-31",
+    "productId": 1664362124,
+    "startDate": "2026-01-01",
+    "includeFbs": false
+  },
+  "jsonSchema": null
+}

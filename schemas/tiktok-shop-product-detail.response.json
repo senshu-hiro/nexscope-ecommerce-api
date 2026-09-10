@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "product"
+  ],
+  "properties": {
+    "product": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "productId"
+      ],
+      "properties": {
+        "productId": {
+          "type": "string",
+          "pattern": "^\\d{19}$"
+        },
+        "title": {
+          "type": "string"
+        },
+        "seller": {
+          "type": "object"
+        },
+        "pricing": {
+          "type": "object"
+        },
+        "sales": {
+          "type": "object"
+        },
+        "inventory": {
+          "type": "object"
+        },
+        "media": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

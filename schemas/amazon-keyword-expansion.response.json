@@ -1,0 +1,282 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "keywordInfoList",
+      "type": "array",
+      "required": false,
+      "description": "Keyword information list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "keywordInfoList[].name",
+      "type": "string",
+      "required": false,
+      "description": "Keyword name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "keywordInfoList[].country",
+      "type": "string",
+      "required": false,
+      "description": "Marketplace code",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "keywordInfoList[].monthlySearchVolumeExact",
+      "type": "integer",
+      "required": false,
+      "description": "Monthly average exact match search volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "keywordInfoList[].monthlySearchVolumeBroad",
+      "type": "integer",
+      "required": false,
+      "description": "Monthly average broad match search volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "keywordInfoList[].monthlyTrend",
+      "type": "number",
+      "required": false,
+      "description": "Monthly search volume change percentage",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "keywordInfoList[].quarterlyTrend",
+      "type": "number",
+      "required": false,
+      "description": "Quarterly search volume change percentage",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "keywordInfoList[].dominantCategory",
+      "type": "string",
+      "required": false,
+      "description": "Category with the highest share in search results",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "keywordInfoList[].relevancyScore",
+      "type": "integer",
+      "required": false,
+      "description": "Relative relevance score to the seed keyword. Higher values indicate a closer match; the upstream provider does not document a fixed 0-100 range",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "keywordInfoList[].easeOfRankingScore",
+      "type": "integer",
+      "required": false,
+      "description": "Ease of ranking score (higher means easier to rank)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "keywordInfoList[].organicProductCount",
+      "type": "integer",
+      "required": false,
+      "description": "Number of organic ranking products",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "keywordInfoList[].sponsoredProductCount",
+      "type": "integer",
+      "required": false,
+      "description": "Number of sponsored products",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "keywordInfoList[].ppcBidExact",
+      "type": "number",
+      "required": false,
+      "description": "Exact match PPC suggested bid (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "keywordInfoList[].ppcBidBroad",
+      "type": "number",
+      "required": false,
+      "description": "Broad match PPC suggested bid (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "keywordInfoList[].spBrandAdBid",
+      "type": "number",
+      "required": false,
+      "description": "Sponsored Brand ad suggested bid (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "keywordInfoList[].recommendedPromotions",
+      "type": "integer",
+      "required": false,
+      "description": "Number of recommended promotion giveaways",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "costToken": 1,
+    "keywordInfoList": [
+      {
+        "monthlySearchVolumeExact": 1,
+        "monthlySearchVolumeBroad": 1,
+        "monthlyTrend": 1,
+        "quarterlyTrend": 1,
+        "relevancyScore": 1,
+        "easeOfRankingScore": 1,
+        "organicProductCount": 1,
+        "sponsoredProductCount": 1,
+        "ppcBidExact": 1,
+        "ppcBidBroad": 1,
+        "spBrandAdBid": 1,
+        "recommendedPromotions": 1
+      }
+    ]
+  },
+  "jsonSchema": null
+}

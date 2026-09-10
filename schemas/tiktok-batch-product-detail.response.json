@@ -1,0 +1,911 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Record count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "required": false,
+      "description": "Product detail list (see product object below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Rendered columns",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token cost",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].productId",
+      "type": "string",
+      "required": false,
+      "description": "Product ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "products[].productName",
+      "type": "string",
+      "required": false,
+      "description": "Product name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product image",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].productImageUrls",
+      "type": "array",
+      "required": false,
+      "description": "Product image URL list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].region",
+      "type": "string",
+      "required": false,
+      "description": "Region code",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "products[].sellerId",
+      "type": "string",
+      "required": false,
+      "description": "Seller ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "products[].categoryId",
+      "type": "string",
+      "required": false,
+      "description": "Primary category ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "products[].categoryL2Id",
+      "type": "string",
+      "required": false,
+      "description": "Secondary category ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "products[].categoryL3Id",
+      "type": "string",
+      "required": false,
+      "description": "Tertiary category ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "products[].minPrice",
+      "type": "number",
+      "required": false,
+      "description": "Minimum SKU price (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].maxPrice",
+      "type": "number",
+      "required": false,
+      "description": "Maximum SKU price (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].spuAvgPrice",
+      "type": "number",
+      "required": false,
+      "description": "SPU average price (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].productRating",
+      "type": "number",
+      "required": false,
+      "description": "Product rating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].reviewCount",
+      "type": "integer",
+      "required": false,
+      "description": "Review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].productCommissionRate",
+      "type": "number",
+      "required": false,
+      "description": "Product commission rate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSaleCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Total sales",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSale1dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Sales in last 1 day",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSale7dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Sales in last 7 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSale15dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Sales in last 15 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSale30dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Sales in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSale60dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Sales in last 60 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSale90dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Sales in last 90 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSaleGmvAmt",
+      "type": "number",
+      "required": false,
+      "description": "Total GMV",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSaleGmv1dAmt",
+      "type": "number",
+      "required": false,
+      "description": "GMV in last 1 day",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSaleGmv7dAmt",
+      "type": "number",
+      "required": false,
+      "description": "GMV in last 7 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSaleGmv15dAmt",
+      "type": "number",
+      "required": false,
+      "description": "GMV in last 15 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSaleGmv30dAmt",
+      "type": "number",
+      "required": false,
+      "description": "GMV in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSaleGmv60dAmt",
+      "type": "number",
+      "required": false,
+      "description": "GMV in last 60 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSaleGmv90dAmt",
+      "type": "number",
+      "required": false,
+      "description": "GMV in last 90 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLiveCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Total livestream count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLive1dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream count in last 1 day",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLive7dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream count in last 7 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLive15dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream count in last 15 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLive30dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream count in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLive60dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream count in last 60 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLive90dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream count in last 90 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLiveSale1dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream sales in last 1 day",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLiveSale7dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream sales in last 7 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLiveSale15dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream sales in last 15 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLiveSale30dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream sales in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLiveSale60dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream sales in last 60 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLiveSale90dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream sales in last 90 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLiveSaleGmv1dAmt",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream GMV in last 1 day",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLiveSaleGmv7dAmt",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream GMV in last 7 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLiveSaleGmv15dAmt",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream GMV in last 15 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLiveSaleGmv30dAmt",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream GMV in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLiveSaleGmv60dAmt",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream GMV in last 60 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalLiveSaleGmv90dAmt",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream GMV in last 90 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalVideoCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Total video count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalVideo1dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Video count in last 1 day",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalVideo7dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Video count in last 7 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalVideo15dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Video count in last 15 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalVideo30dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Video count in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalVideo60dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Video count in last 60 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalVideo90dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Video count in last 90 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalIflCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Total creator count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalIflVideo1dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Creator video count in last 1 day",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalIflVideo7dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Creator video count in last 7 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalIflVideo15dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Creator video count in last 15 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalIflVideo30dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Creator video count in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalIflVideo60dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Creator video count in last 60 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalIflVideo90dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Creator video count in last 90 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalIflLive1dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Creator livestream count in last 1 day",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalIflLive7dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Creator livestream count in last 7 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalIflLive15dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Creator livestream count in last 15 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalIflLive30dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Creator livestream count in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalIflLive60dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Creator livestream count in last 60 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalIflLive90dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Creator livestream count in last 90 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalViewsCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Total view count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalViews1dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Views in last 1 day",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalViews7dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Views in last 7 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalViews15dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Views in last 15 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalViews30dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Views in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalViews60dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Views in last 60 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalViews90dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Views in last 90 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].discount",
+      "type": "string",
+      "required": false,
+      "description": "Discount info",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].freeShipping",
+      "type": "integer",
+      "required": false,
+      "description": "Whether free shipping",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].salesFlag",
+      "type": "integer",
+      "required": false,
+      "description": "Primary shipping method",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].salesTrendFlag",
+      "type": "integer",
+      "required": false,
+      "description": "Sales trend indicator: 0=stable, 1=rising, 2=falling",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].isSShop",
+      "type": "integer",
+      "required": false,
+      "description": "Whether fully managed store",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].offMark",
+      "type": "integer",
+      "required": false,
+      "description": "Product delisting indicator",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].firstCrawlDt",
+      "type": "string",
+      "required": false,
+      "description": "First crawl date",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].descDetail",
+      "type": "string",
+      "required": false,
+      "description": "Product detail description",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "products": [
+      {
+        "productId": "example-id",
+        "imageUrl": "https://example.com/image.jpg",
+        "productImageUrls": [],
+        "region": "US",
+        "sellerId": "example-id",
+        "categoryId": "example-id",
+        "categoryL2Id": "example-id",
+        "categoryL3Id": "example-id",
+        "minPrice": 1,
+        "maxPrice": 1,
+        "spuAvgPrice": 1,
+        "productRating": 1,
+        "reviewCount": 1,
+        "productCommissionRate": 1,
+        "totalSaleCnt": 1,
+        "totalSale1dCnt": 1,
+        "totalSale7dCnt": 1,
+        "totalSale15dCnt": 1,
+        "totalSale30dCnt": 1,
+        "totalSale60dCnt": 1,
+        "totalSale90dCnt": 1,
+        "totalSaleGmvAmt": 1,
+        "totalSaleGmv1dAmt": 1,
+        "totalSaleGmv7dAmt": 1,
+        "totalSaleGmv15dAmt": 1,
+        "totalSaleGmv30dAmt": 1,
+        "totalSaleGmv60dAmt": 1,
+        "totalSaleGmv90dAmt": 1,
+        "totalLiveCnt": 1,
+        "totalLive1dCnt": 1,
+        "totalLive7dCnt": 1,
+        "totalLive15dCnt": 1,
+        "totalLive30dCnt": 1,
+        "totalLive60dCnt": 1,
+        "totalLive90dCnt": 1,
+        "totalLiveSale1dCnt": 1,
+        "totalLiveSale7dCnt": 1,
+        "totalLiveSale15dCnt": 1,
+        "totalLiveSale30dCnt": 1,
+        "totalLiveSale60dCnt": 1,
+        "totalLiveSale90dCnt": 1,
+        "totalLiveSaleGmv1dAmt": 1,
+        "totalLiveSaleGmv7dAmt": 1,
+        "totalLiveSaleGmv15dAmt": 1,
+        "totalLiveSaleGmv30dAmt": 1,
+        "totalLiveSaleGmv60dAmt": 1,
+        "totalLiveSaleGmv90dAmt": 1,
+        "totalVideoCnt": 1,
+        "totalVideo1dCnt": 1,
+        "totalVideo7dCnt": 1,
+        "totalVideo15dCnt": 1,
+        "totalVideo30dCnt": 1,
+        "totalVideo60dCnt": 1,
+        "totalVideo90dCnt": 1,
+        "totalIflCnt": 1,
+        "totalIflVideo1dCnt": 1,
+        "totalIflVideo7dCnt": 1,
+        "totalIflVideo15dCnt": 1,
+        "totalIflVideo30dCnt": 1,
+        "totalIflVideo60dCnt": 1,
+        "totalIflVideo90dCnt": 1,
+        "totalIflLive1dCnt": 1,
+        "totalIflLive7dCnt": 1,
+        "totalIflLive15dCnt": 1,
+        "totalIflLive30dCnt": 1,
+        "totalIflLive60dCnt": 1,
+        "totalIflLive90dCnt": 1,
+        "totalViewsCnt": 1,
+        "totalViews1dCnt": 1,
+        "totalViews7dCnt": 1,
+        "totalViews15dCnt": 1,
+        "totalViews30dCnt": 1,
+        "totalViews60dCnt": 1,
+        "totalViews90dCnt": 1,
+        "freeShipping": 1,
+        "salesFlag": 1,
+        "salesTrendFlag": 1,
+        "isSShop": 1,
+        "offMark": 1
+      }
+    ],
+    "columns": [],
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

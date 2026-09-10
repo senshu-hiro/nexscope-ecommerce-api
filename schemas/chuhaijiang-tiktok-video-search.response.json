@@ -1,0 +1,133 @@
+{
+  "properties": {
+    "errcode": {
+      "type": "integer"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "errmsg": {
+      "type": "string"
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Video identity: id.",
+                "nullable": true
+              },
+              "video_desc": {
+                "type": "string",
+                "description": "Video identity: video desc.",
+                "nullable": true
+              },
+              "share_url": {
+                "type": "string",
+                "description": "Video identity: share url.",
+                "nullable": true
+              },
+              "author_id": {
+                "type": "string",
+                "description": "Video identity: author id.",
+                "nullable": true
+              },
+              "author_unique_id": {
+                "type": "string",
+                "description": "Video identity: author unique id.",
+                "nullable": true
+              },
+              "author_nickname": {
+                "type": "string",
+                "description": "Video identity: author nickname.",
+                "nullable": true
+              },
+              "country_code": {
+                "type": "string",
+                "description": "Video identity: country code.",
+                "nullable": true
+              },
+              "video_play_count": {
+                "type": "integer",
+                "description": "Engagement count: video play count.",
+                "nullable": true
+              },
+              "video_like_count": {
+                "type": "integer",
+                "description": "Engagement count: video like count.",
+                "nullable": true
+              },
+              "video_comment_count": {
+                "type": "integer",
+                "description": "Engagement count: video comment count.",
+                "nullable": true
+              },
+              "video_share_count": {
+                "type": "integer",
+                "description": "Engagement count: video share count.",
+                "nullable": true
+              },
+              "video_collect_count": {
+                "type": "integer",
+                "description": "Engagement count: video collect count.",
+                "nullable": true
+              },
+              "video_engagement_rate": {
+                "type": "number",
+                "description": "Decimal engagement ratio: video engagement rate.",
+                "nullable": true
+              },
+              "video_launch_time": {
+                "type": "integer",
+                "description": "Provider video metadata: video launch time.",
+                "nullable": true
+              },
+              "video_duration": {
+                "type": "integer",
+                "description": "Provider video metadata: video duration.",
+                "nullable": true
+              },
+              "account_type": {
+                "type": "integer",
+                "description": "Provider video metadata: account type.",
+                "nullable": true
+              },
+              "video_30d_gpm": {
+                "type": "object",
+                "description": "Thirty-day GPM with original unit and value: video 30d gpm.",
+                "nullable": true
+              },
+              "is_ad": {
+                "type": "boolean",
+                "description": "Optional provider flag: is ad.",
+                "nullable": true
+              },
+              "is_aigc_video": {
+                "type": "boolean",
+                "description": "Optional provider flag: is aigc video.",
+                "nullable": true
+              },
+              "video_total_like_count_to_follower_count_ratio": {
+                "description": "Provider video total like count to follower count ratio. The source establishes this field name; preserve its runtime JSON type and missing values."
+              }
+            },
+            "type": "object",
+            "additionalProperties": true
+          },
+          "nullable": true
+        },
+        "total_count": {
+          "nullable": true,
+          "type": "integer"
+        }
+      },
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

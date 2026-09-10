@@ -1,0 +1,222 @@
+{
+  "properties": {
+    "errcode": {
+      "type": "integer"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "errmsg": {
+      "type": "string"
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Creative author and product identity: id.",
+                "nullable": true
+              },
+              "video_id": {
+                "type": "string",
+                "description": "Creative author and product identity: video id.",
+                "nullable": true
+              },
+              "uid": {
+                "type": "string",
+                "description": "Creative author and product identity: uid.",
+                "nullable": true
+              },
+              "unique_id": {
+                "type": "string",
+                "description": "Creative author and product identity: unique id.",
+                "nullable": true
+              },
+              "nickname": {
+                "type": "string",
+                "description": "Creative author and product identity: nickname.",
+                "nullable": true
+              },
+              "share_url": {
+                "type": "string",
+                "description": "Creative author and product identity: share url.",
+                "nullable": true
+              },
+              "product_id": {
+                "type": "string",
+                "description": "Creative author and product identity: product id.",
+                "nullable": true
+              },
+              "product_name": {
+                "type": "string",
+                "description": "Creative author and product identity: product name.",
+                "nullable": true
+              },
+              "follower_count": {
+                "type": "integer",
+                "description": "Author follower count: follower count.",
+                "nullable": true
+              },
+              "product_images": {
+                "description": "Provider product images. The source establishes this field name; preserve its runtime JSON type and missing values."
+              }
+            },
+            "type": "object",
+            "additionalProperties": true
+          },
+          "nullable": true
+        },
+        "analysis": {
+          "nullable": true,
+          "type": "object",
+          "properties": {
+            "items": {
+              "items": {
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Creative analysis identifier or classification: id."
+                  },
+                  "video_id": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Creative analysis identifier or classification: video id."
+                  },
+                  "video_uri": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Creative analysis identifier or classification: video uri."
+                  },
+                  "country_code": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Creative analysis identifier or classification: country code."
+                  },
+                  "platform": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Creative analysis identifier or classification: platform."
+                  },
+                  "hook_type": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Creative analysis identifier or classification: hook type."
+                  },
+                  "hook_subtype": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Creative analysis identifier or classification: hook subtype."
+                  },
+                  "formula_type": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Creative analysis identifier or classification: formula type."
+                  },
+                  "formula_subtype": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Creative analysis identifier or classification: formula subtype."
+                  },
+                  "angle_type": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Creative analysis identifier or classification: angle type."
+                  },
+                  "angle_subtype": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Creative analysis identifier or classification: angle subtype."
+                  },
+                  "is_aigc_video": {
+                    "type": "boolean",
+                    "nullable": true,
+                    "description": "Provider AIGC flag: is aigc video."
+                  },
+                  "transcription_with_structure": {
+                    "description": "Creative transcription with provider structural annotations; preserve its original JSON representation."
+                  },
+                  "storyboards": {
+                    "description": "Creative storyboard and scene analysis; preserve the returned structure."
+                  },
+                  "video_cover": {
+                    "description": "Creative video cover media; preserve the provider representation."
+                  }
+                },
+                "type": "object",
+                "additionalProperties": true
+              },
+              "type": "array"
+            }
+          },
+          "additionalProperties": true
+        },
+        "embedding": {
+          "nullable": true,
+          "type": "object",
+          "properties": {
+            "items": {
+              "items": {
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Creative embedding identity: id."
+                  },
+                  "video_id": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Creative embedding identity: video id."
+                  },
+                  "video_uri": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Creative embedding identity: video uri."
+                  },
+                  "country_code": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Creative embedding identity: country code."
+                  },
+                  "platform": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Creative embedding identity: platform."
+                  },
+                  "embedding": {
+                    "type": "array",
+                    "nullable": true,
+                    "description": "Numeric embedding vector; returned only when requested. Avoid inlining the vector in summaries.",
+                    "items": {
+                      "type": "number"
+                    }
+                  },
+                  "video_cover": {
+                    "description": "Creative video cover media; preserve the provider representation."
+                  },
+                  "extracted_content": {
+                    "description": "Content extracted for creative similarity analysis; preserve the provider representation."
+                  },
+                  "matched_tags": {
+                    "description": "Tags matched during creative embedding analysis; preserve the provider representation."
+                  }
+                },
+                "type": "object",
+                "additionalProperties": true
+              },
+              "type": "array"
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

@@ -1,0 +1,74 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "date",
+    "rankType",
+    "region",
+    "videoRankField"
+  ],
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "rankType": {
+      "type": "integer",
+      "enum": [
+        1,
+        2,
+        3
+      ]
+    },
+    "region": {
+      "type": "string",
+      "enum": [
+        "US",
+        "ID",
+        "TH",
+        "PH",
+        "MY",
+        "VN",
+        "GB",
+        "MX",
+        "SG",
+        "SA",
+        "BR",
+        "ES",
+        "JP",
+        "DE",
+        "IT",
+        "FR"
+      ]
+    },
+    "videoRankField": {
+      "type": "integer",
+      "enum": [
+        1,
+        2
+      ]
+    },
+    "productCategoryId": {
+      "type": "string"
+    },
+    "createdByAi": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ]
+    },
+    "pageNum": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
+    },
+    "pageSize": {
+      "type": "integer",
+      "minimum": 10,
+      "maximum": 100,
+      "multipleOf": 10,
+      "default": 50
+    }
+  }
+}

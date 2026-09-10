@@ -1,0 +1,269 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.tiktok-product-search.",
+  "fields": [
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": false,
+      "description": "Product keyword (please translate to the local language). Max length 1000",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "region",
+      "type": "string",
+      "required": false,
+      "description": "Region, default US. Options: US (United States), ID (Indonesia), TH (Thailand), PH (Philippines), MY (Malaysia), VN (Vietnam), GB (United Kingdom), MX (Mexico), SG (Singapore), SA (Saudi Arabia), BR (Brazil), ES (Spain), JP (Japan), DE (Germany), IT (Italy), FR (France)",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "categoryKeywordCN",
+      "type": "string",
+      "required": false,
+      "description": "Product category (please enter in Chinese). Max length 1000",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "minTotalSaleCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Total sales (minimum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxTotalSaleCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Total sales (maximum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minTotalSale30dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "30-day sales (minimum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxTotalSale30dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "30-day sales (maximum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minTotalSaleGmvAmt",
+      "type": "string",
+      "required": false,
+      "description": "Product total GMV (minimum). Max length 1000",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "maxTotalSaleGmvAmt",
+      "type": "string",
+      "required": false,
+      "description": "Product total GMV (maximum). Max length 1000",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "minTotalSaleGmv30dAmt",
+      "type": "string",
+      "required": false,
+      "description": "Product total GMV (30-day) (minimum). Max length 1000",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "maxTotalSaleGmv30dAmt",
+      "type": "string",
+      "required": false,
+      "description": "Product total GMV (30-day) (maximum). Max length 1000",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "minSpuAvgPrice",
+      "type": "number",
+      "required": false,
+      "description": "SPU average price (minimum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxSpuAvgPrice",
+      "type": "number",
+      "required": false,
+      "description": "SPU average price (maximum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minProductRating",
+      "type": "number",
+      "required": false,
+      "description": "Product rating (minimum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxProductRating",
+      "type": "number",
+      "required": false,
+      "description": "Product rating (maximum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minReviewCount",
+      "type": "integer",
+      "required": false,
+      "description": "Review count (minimum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxReviewCount",
+      "type": "integer",
+      "required": false,
+      "description": "Review count (maximum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minProductCommissionRate",
+      "type": "number",
+      "required": false,
+      "description": "Product commission rate (minimum). Input as percentage will be automatically converted to decimal, e.g., 5%->0.05",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxProductCommissionRate",
+      "type": "number",
+      "required": false,
+      "description": "Product commission rate (maximum). Input as percentage will be automatically converted to decimal, e.g., 5%->0.05",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minTotalIflCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Promoting creator count (minimum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxTotalIflCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Promoting creator count (maximum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minTotalVideoCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Promotional video count (minimum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxTotalVideoCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Promotional video count (maximum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minTotalViewsCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Promotional view count (minimum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxTotalViewsCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Promotional view count (maximum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minFirstCrawlDt",
+      "type": "integer",
+      "required": false,
+      "description": "Product listing time (minimum), format YYYYMMDD (e.g., 20200101 represents 2020-01-01)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxFirstCrawlDt",
+      "type": "integer",
+      "required": false,
+      "description": "Product listing time (maximum), format YYYYMMDD",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "saleDays",
+      "type": "integer",
+      "required": false,
+      "description": "Days the product has been on sale, unit is days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productSortField",
+      "type": "integer",
+      "required": false,
+      "description": "Sort field: 1=total sales, 2=total GMV, 3=SPU average price, 4=7-day sales, 5=30-day sales, 6=7-day GMV, 7=30-day GMV. Default 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "sortType",
+      "type": "integer",
+      "required": false,
+      "description": "Sort direction: 0=ascending, 1=descending. Default 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageNum",
+      "type": "integer",
+      "required": false,
+      "description": "Page number. Default 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page. Default 50",
+      "example": 10,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "pageNumber": 1,
+    "keyword": "phone case",
+    "pageSize": 10,
+    "region": "US"
+  },
+  "jsonSchema": null
+}

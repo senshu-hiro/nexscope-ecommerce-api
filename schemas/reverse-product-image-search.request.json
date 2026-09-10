@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "description": "The backend manages intermediate workflow data; do not send local file paths.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Publicly accessible product image URL.",
+      "example": "https://m.media-amazon.com/images/I/31SkgVLWSuL._SL75_.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "amazonDomain",
+      "type": "string",
+      "required": true,
+      "description": "Amazon marketplace domain.",
+      "example": "amazon.com",
+      "constraints": {}
+    },
+    {
+      "name": "topN",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum number of ranked matches to return after enrichment.",
+      "example": 20,
+      "constraints": {}
+    },
+    {
+      "name": "sort",
+      "type": "string",
+      "required": false,
+      "description": "Optional provider sort mode.",
+      "example": "rating-desc-rank",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://m.media-amazon.com/images/I/31SkgVLWSuL._SL75_.jpg",
+    "amazonDomain": "amazon.com",
+    "topN": 20
+  },
+  "jsonSchema": null
+}

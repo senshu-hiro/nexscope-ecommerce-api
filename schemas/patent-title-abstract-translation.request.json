@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.patent-title-abstract-translation.",
+  "fields": [
+    {
+      "name": "patentId",
+      "type": "string",
+      "required": false,
+      "description": "Zhihuiya internal patent ID. Only a single value is supported; multiple values separated by commas are not allowed. Max length: 60,000 characters",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "patentNumber",
+      "type": "string",
+      "required": false,
+      "description": "Publication (grant) number. Only a single value is supported; multiple values separated by commas are not allowed. Max length: 60,000 characters",
+      "example": "CN115000000A",
+      "constraints": {}
+    },
+    {
+      "name": "replaceByRelated",
+      "type": "integer",
+      "required": false,
+      "description": "Whether to substitute with a family patent's abstract when the abstract is unavailable: 1 Yes, 0 No. Default 0",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "lang",
+      "type": "string",
+      "required": false,
+      "description": "Target translation language. Options: en (English, default), cn (Chinese), jp (Japanese). Max length: 1,000 characters",
+      "example": "en",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "patentNumber": "CN115000000A",
+    "replaceByRelated": 1,
+    "lang": "en"
+  },
+  "jsonSchema": null
+}

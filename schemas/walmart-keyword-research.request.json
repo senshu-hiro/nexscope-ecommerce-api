@@ -1,0 +1,194 @@
+{
+  "type": "object",
+  "unevaluatedProperties": false,
+  "required": [
+    "operation"
+  ],
+  "discriminator": {
+    "propertyName": "operation"
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "operation": {
+          "const": "marketQuery"
+        },
+        "pattern": {
+          "$ref": "#/$defs/pattern"
+        },
+        "pageIndex": {
+          "$ref": "#/$defs/page"
+        },
+        "pageSize": {
+          "$ref": "#/$defs/pageSize"
+        }
+      },
+      "required": [
+        "operation"
+      ]
+    },
+    {
+      "properties": {
+        "operation": {
+          "const": "searchByName"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pageIndex": {
+          "$ref": "#/$defs/page"
+        }
+      },
+      "required": [
+        "operation",
+        "name"
+      ]
+    },
+    {
+      "properties": {
+        "operation": {
+          "const": "searchProducts"
+        },
+        "keyword": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pageIndex": {
+          "$ref": "#/$defs/page"
+        },
+        "pageSize": {
+          "$ref": "#/$defs/pageSize"
+        }
+      },
+      "required": [
+        "operation",
+        "keyword"
+      ]
+    },
+    {
+      "properties": {
+        "operation": {
+          "const": "detail"
+        },
+        "keyword": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "operation",
+        "keyword"
+      ]
+    },
+    {
+      "properties": {
+        "operation": {
+          "const": "productKeywords"
+        },
+        "productId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pageIndex": {
+          "$ref": "#/$defs/page"
+        },
+        "pageSize": {
+          "$ref": "#/$defs/pageSize"
+        }
+      },
+      "required": [
+        "operation",
+        "productId"
+      ]
+    },
+    {
+      "properties": {
+        "operation": {
+          "const": "relatedKeywords"
+        },
+        "keyword": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pageIndex": {
+          "$ref": "#/$defs/page"
+        },
+        "pageSize": {
+          "$ref": "#/$defs/pageSize"
+        }
+      },
+      "required": [
+        "operation",
+        "keyword"
+      ]
+    },
+    {
+      "properties": {
+        "operation": {
+          "const": "favoriteList"
+        },
+        "command": {
+          "oneOf": [
+            {
+              "enum": [
+                "all",
+                "dict"
+              ]
+            },
+            {
+              "type": "string",
+              "pattern": "^dict=.+$"
+            }
+          ]
+        },
+        "pageIndex": {
+          "$ref": "#/$defs/page"
+        }
+      },
+      "required": [
+        "operation",
+        "command"
+      ]
+    }
+  ],
+  "$defs": {
+    "page": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
+    },
+    "pageSize": {
+      "type": "integer",
+      "minimum": 20,
+      "maximum": 200,
+      "default": 20
+    },
+    "range": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "minItems": 1,
+      "maxItems": 2,
+      "x-relation": "first <= second"
+    },
+    "pattern": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "keyword": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rankCondition": {
+          "$ref": "#/$defs/range"
+        },
+        "searchVolumeCondition": {
+          "$ref": "#/$defs/range"
+        }
+      }
+    }
+  }
+}

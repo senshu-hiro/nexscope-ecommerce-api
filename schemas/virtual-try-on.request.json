@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "description": "Generate wearable-product imagery from a source person image and target product image.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the wearable product image. The image must be between 300 and 4096 pixels in both width and height. The width-to-height ratio must be between 0.4 and 2.5.",
+      "example": "https://example.com/product.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "targetOriginUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the person or model image.",
+      "example": "https://example.com/model-reference.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "targetMaskUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the black-and-white target wear-area mask. Required because this API accepts custom target images rather than saved upstream materials.",
+      "example": "https://example.com/mask.png",
+      "constraints": {}
+    },
+    {
+      "name": "productCategory",
+      "type": "string",
+      "required": false,
+      "description": "Product category. Supported values: footwear (shoes), luggage (bags), eyewear (glasses), necklace, hat, earring, ring, wristband, watch, headwear, belt, other.",
+      "example": "hat",
+      "constraints": {}
+    },
+    {
+      "name": "outputNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of images to generate, from 1 to 4. Defaults to 1.",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/product.jpg",
+    "targetOriginUrl": "https://example.com/model-reference.jpg",
+    "targetMaskUrl": "https://example.com/mask.png",
+    "productCategory": "hat",
+    "outputNum": 1
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,137 @@
+{
+  "properties": {
+    "errcode": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "request_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "errmsg": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "Provider business records for Chuhaijiang TikTok Creator Related Products. Known row fields: id, tiktok_creator_detail_by_live, tiktok_creator_detail_by_shop, tiktok_creator_detail_by_video, tiktok_creator_detail_live_30d_gmv, tiktok_creator_detail_live_30d_sold_count, tiktok_creator_detail_product_country_code, tiktok_creator_detail_product_id, tiktok_creator_detail_product_launch_time, tiktok_creator_detail_total_video_live_30d_gmv, tiktok_creator_detail_total_video_live_30d_sold_count, tiktok_creator_detail_user_id, tiktok_creator_detail_video_30d_gmv, tiktok_creator_detail_video_30d_sold_count, tiktok_product_detail_ceiling_price, tiktok_product_detail_commission_rate, tiktok_product_detail_floor_price, tiktok_product_detail_l1_category, tiktok_product_detail_l2_category, tiktok_product_detail_l3_category, tiktok_product_detail_product_images, tiktok_product_detail_product_name, tiktok_product_detail_product_rating, tiktok_product_detail_product_sku_props, tiktok_product_detail_product_skus, tiktok_product_detail_product_status, tiktok_product_detail_region. Missing and null fields remain unchanged; monetary values retain their original unit and runtime type.",
+          "items": {
+            "properties": {
+              "id": {
+                "description": "Source-documented id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_by_live": {
+                "description": "Source-documented tiktok_creator_detail_by_live; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_by_shop": {
+                "description": "Source-documented tiktok_creator_detail_by_shop; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_by_video": {
+                "description": "Source-documented tiktok_creator_detail_by_video; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_30d_gmv": {
+                "description": "Source-documented tiktok_creator_detail_live_30d_gmv; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_30d_sold_count": {
+                "description": "Source-documented tiktok_creator_detail_live_30d_sold_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_product_country_code": {
+                "description": "Source-documented tiktok_creator_detail_product_country_code; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_product_id": {
+                "description": "Source-documented tiktok_creator_detail_product_id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_product_launch_time": {
+                "description": "Source-documented tiktok_creator_detail_product_launch_time; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_total_video_live_30d_gmv": {
+                "description": "Source-documented tiktok_creator_detail_total_video_live_30d_gmv; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_total_video_live_30d_sold_count": {
+                "description": "Source-documented tiktok_creator_detail_total_video_live_30d_sold_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_user_id": {
+                "description": "Source-documented tiktok_creator_detail_user_id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_30d_gmv": {
+                "description": "Source-documented tiktok_creator_detail_video_30d_gmv; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_30d_sold_count": {
+                "description": "Source-documented tiktok_creator_detail_video_30d_sold_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_product_detail_ceiling_price": {
+                "description": "Source-documented tiktok_product_detail_ceiling_price; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_product_detail_commission_rate": {
+                "description": "Source-documented tiktok_product_detail_commission_rate; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_product_detail_floor_price": {
+                "description": "Source-documented tiktok_product_detail_floor_price; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_product_detail_l1_category": {
+                "description": "Source-documented tiktok_product_detail_l1_category; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_product_detail_l2_category": {
+                "description": "Source-documented tiktok_product_detail_l2_category; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_product_detail_l3_category": {
+                "description": "Source-documented tiktok_product_detail_l3_category; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_product_detail_product_images": {
+                "description": "Source-documented tiktok_product_detail_product_images; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_product_detail_product_name": {
+                "description": "Source-documented tiktok_product_detail_product_name; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_product_detail_product_rating": {
+                "description": "Source-documented tiktok_product_detail_product_rating; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_product_detail_product_sku_props": {
+                "description": "Source-documented tiktok_product_detail_product_sku_props; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_product_detail_product_skus": {
+                "description": "Source-documented tiktok_product_detail_product_skus; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_product_detail_product_status": {
+                "description": "Source-documented tiktok_product_detail_product_status; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_product_detail_region": {
+                "description": "Source-documented tiktok_product_detail_region; may be absent or null. Preserve the provider value and original monetary units."
+              }
+            },
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": true
+          }
+        },
+        "total_count": {
+          "description": "Total matching records.",
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

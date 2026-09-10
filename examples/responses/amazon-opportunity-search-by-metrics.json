@@ -1,0 +1,22 @@
+{
+  "data": [],
+  "keyword": "phone case",
+  "nicheRevenue360dMinUsdAtLeast/nicheRevenue360dMaxUsdAtLeast": 1,
+  "nichePeakSearchVolumeAtLeast": 1,
+  "nichePeakMonth": 1,
+  "nicheSearchVolumeYoyChangePctAtLeast": 1,
+  "nicheBrandCount/nicheBrandCountYoyChangePctAtLeast": 1,
+  "nicheTop5ProductClickSharePctAtLeast": 1,
+  "featureTop5BrandSharePctAtLeast": 1,
+  "featureTopBrands": [],
+  "priceMinUsd/priceMaxUsd": 1,
+  "priceSweetSpotMinUsd/priceSweetSpotMaxUsd": 1,
+  "priceEntryClickSharePctAtLeast/priceMidClickSharePctAtLeast/priceHighClickSharePctAtLeast": 1,
+  "demoPrimaryAgeMin/demoPrimaryAgeMax": 1,
+  "demoLifeStageTags": [],
+  "featureNewAvgReviewCountAtLeast/featureEstablishedAvgReviewCountAtLeast": 1,
+  "featureEmergingTrendTags/featureUncommonFeatureTags": [],
+  "reviewPositiveTop1Topic/reviewPositiveTop1PctAtLeast": 1,
+  "reviewNegativeTop1Topic/reviewNegativeTop1PctAtLeast/reviewNegativeTop2Topic": 1,
+  "reviewStrategicInsightTags": []
+}

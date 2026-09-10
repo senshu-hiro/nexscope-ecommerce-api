@@ -1,0 +1,15 @@
+{
+  "code": "200",
+  "msg": "ok",
+  "errcode": 200,
+  "errmsg": "ok",
+  "type": "rawMcpToolResult",
+  "toolName": "categorySearch",
+  "charged": false,
+  "data": {},
+  "contentText": "Category results...",
+  "textParsedAsJson": true,
+  "total": 1,
+  "costToken": 0,
+  "costTime": 308
+}

@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "country": {
+      "type": "string",
+      "description": "Lowercase TikTok market code.",
+      "enum": [
+        "br",
+        "de",
+        "es",
+        "fr",
+        "gb",
+        "id",
+        "it",
+        "jp",
+        "mx",
+        "my",
+        "ph",
+        "sg",
+        "th",
+        "us",
+        "vn"
+      ],
+      "example": "us"
+    },
+    "id": {
+      "type": "string",
+      "description": "Shop ID, preserved as a string.",
+      "minLength": 1,
+      "example": "7495205878591949358"
+    },
+    "include": {
+      "type": "string",
+      "description": "Comma-separated optional detail sections: core, channel.",
+      "pattern": "^(core|channel)(,(core|channel))*$",
+      "example": "core,channel"
+    }
+  },
+  "required": [
+    "country",
+    "id"
+  ]
+}

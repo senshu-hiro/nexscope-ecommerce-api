@@ -1,0 +1,25 @@
+{
+  "errcode": 1,
+  "data": [
+    {
+      "rank": 1,
+      "shop_id": "example-id",
+      "revenue": 1,
+      "sales_volumn": 1,
+      "on_sell_product_count": 1,
+      "unit_price": 1,
+      "revenue_growth_rate": 1,
+      "self_promotion_revenue": 1,
+      "affiliate_revenue": 1,
+      "shopping_mall_revenue": 1,
+      "region": "US",
+      "product_number": 1,
+      "self_account_revenue": 1,
+      "shoppingmall_revenue": 1,
+      "creator_number": 1,
+      "video_number": 1,
+      "live_number": 1
+    }
+  ],
+  "costToken": 1
+}

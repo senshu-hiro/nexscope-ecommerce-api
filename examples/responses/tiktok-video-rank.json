@@ -1,0 +1,10 @@
+{
+  "videos": [
+    {
+      "totalViewsCnt": 1,
+      "videoId": "example-video-id",
+      "region": "US"
+    }
+  ],
+  "total": 1
+}

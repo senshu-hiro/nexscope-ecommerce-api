@@ -1,0 +1,292 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "regionId": {
+      "type": "integer",
+      "description": "Temu region from sites[].regionId; never siteId.",
+      "minimum": 1,
+      "default": 211
+    },
+    "page": {
+      "type": "integer",
+      "description": "Page number.",
+      "minimum": 1,
+      "default": 1
+    },
+    "size": {
+      "type": "integer",
+      "description": "Items per page; page times size must not exceed 10000.",
+      "minimum": 1,
+      "maximum": 200,
+      "default": 20
+    },
+    "keyword": {
+      "type": "string",
+      "description": "User keyword; preserve the supplied language.",
+      "maxLength": 300
+    },
+    "sort": {
+      "type": "string",
+      "description": "Confirmed provider sort field; omit when unnecessary.",
+      "maxLength": 100
+    },
+    "order": {
+      "type": "string",
+      "description": "Sort direction, case-insensitive.",
+      "pattern": "^([aA][sS][cC]|[dD][eE][sS][cC])$"
+    },
+    "catIds": {
+      "type": "array",
+      "description": "Category identifiers obtained from category lookup.",
+      "items": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "matchMode": {
+      "type": "integer",
+      "description": "1 strict matching, 2 fuzzy matching.",
+      "enum": [
+        1,
+        2
+      ],
+      "default": 2
+    },
+    "status": {
+      "type": "array",
+      "description": "1 normal, 2 out of stock, 3 delisted.",
+      "items": {
+        "type": "integer",
+        "enum": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "hostingMode": {
+      "type": "integer",
+      "description": "1 fully managed, 2 semi-managed.",
+      "enum": [
+        1,
+        2
+      ]
+    },
+    "soldMin": {
+      "type": "integer",
+      "description": "Lower bound for sold; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "soldMax": {
+      "type": "integer",
+      "description": "Upper bound for sold; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "daySoldMin": {
+      "type": "integer",
+      "description": "Lower bound for daySold; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "daySoldMax": {
+      "type": "integer",
+      "description": "Upper bound for daySold; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "weekSoldMin": {
+      "type": "integer",
+      "description": "Lower bound for weekSold; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "weekSoldMax": {
+      "type": "integer",
+      "description": "Upper bound for weekSold; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "monthSoldMin": {
+      "type": "integer",
+      "description": "Lower bound for monthSold; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "monthSoldMax": {
+      "type": "integer",
+      "description": "Upper bound for monthSold; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "quantityMin": {
+      "type": "integer",
+      "description": "Lower bound for quantity; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "quantityMax": {
+      "type": "integer",
+      "description": "Upper bound for quantity; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "mallSoldMin": {
+      "type": "integer",
+      "description": "Lower bound for mallSold; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "mallSoldMax": {
+      "type": "integer",
+      "description": "Upper bound for mallSold; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "reviewNumMin": {
+      "type": "integer",
+      "description": "Lower bound for reviewNum; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "reviewNumMax": {
+      "type": "integer",
+      "description": "Upper bound for reviewNum; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "salesMin": {
+      "type": "number",
+      "description": "Lower bound for sales; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "salesMax": {
+      "type": "number",
+      "description": "Upper bound for sales; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "daySalesMin": {
+      "type": "number",
+      "description": "Lower bound for daySales; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "daySalesMax": {
+      "type": "number",
+      "description": "Upper bound for daySales; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "weekSalesMin": {
+      "type": "number",
+      "description": "Lower bound for weekSales; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "weekSalesMax": {
+      "type": "number",
+      "description": "Upper bound for weekSales; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "monthSalesMin": {
+      "type": "number",
+      "description": "Lower bound for monthSales; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "monthSalesMax": {
+      "type": "number",
+      "description": "Upper bound for monthSales; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "priceMin": {
+      "type": "number",
+      "description": "Lower bound for price; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "priceMax": {
+      "type": "number",
+      "description": "Upper bound for price; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "supplyPriceMin": {
+      "type": "number",
+      "description": "Lower bound for supplyPrice; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "supplyPriceMax": {
+      "type": "number",
+      "description": "Upper bound for supplyPrice; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "daySoldRateMin": {
+      "type": "number",
+      "description": "Lower bound for daySoldRate; minimum must not exceed maximum."
+    },
+    "daySoldRateMax": {
+      "type": "number",
+      "description": "Upper bound for daySoldRate; minimum must not exceed maximum."
+    },
+    "weekSoldRateMin": {
+      "type": "number",
+      "description": "Lower bound for weekSoldRate; minimum must not exceed maximum."
+    },
+    "weekSoldRateMax": {
+      "type": "number",
+      "description": "Upper bound for weekSoldRate; minimum must not exceed maximum."
+    },
+    "monthSoldRateMin": {
+      "type": "number",
+      "description": "Lower bound for monthSoldRate; minimum must not exceed maximum."
+    },
+    "monthSoldRateMax": {
+      "type": "number",
+      "description": "Upper bound for monthSoldRate; minimum must not exceed maximum."
+    },
+    "daySalesRateMin": {
+      "type": "number",
+      "description": "Lower bound for daySalesRate; minimum must not exceed maximum."
+    },
+    "daySalesRateMax": {
+      "type": "number",
+      "description": "Upper bound for daySalesRate; minimum must not exceed maximum."
+    },
+    "weekSalesRateMin": {
+      "type": "number",
+      "description": "Lower bound for weekSalesRate; minimum must not exceed maximum."
+    },
+    "weekSalesRateMax": {
+      "type": "number",
+      "description": "Upper bound for weekSalesRate; minimum must not exceed maximum."
+    },
+    "monthSalesRateMin": {
+      "type": "number",
+      "description": "Lower bound for monthSalesRate; minimum must not exceed maximum."
+    },
+    "monthSalesRateMax": {
+      "type": "number",
+      "description": "Upper bound for monthSalesRate; minimum must not exceed maximum."
+    },
+    "goodsScoreMin": {
+      "type": "number",
+      "description": "Lower bound for goodsScore; minimum must not exceed maximum.",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "goodsScoreMax": {
+      "type": "number",
+      "description": "Upper bound for goodsScore; minimum must not exceed maximum.",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "onSaleTimeMin": {
+      "type": "string",
+      "description": "Earliest onSaleTime in ISO-8601 date-time; minimum must not exceed maximum.",
+      "maxLength": 40,
+      "format": "date-time"
+    },
+    "onSaleTimeMax": {
+      "type": "string",
+      "description": "Latest onSaleTime in ISO-8601 date-time; minimum must not exceed maximum.",
+      "maxLength": 40,
+      "format": "date-time"
+    },
+    "mallOpenTimeMin": {
+      "type": "string",
+      "description": "Earliest mallOpenTime in ISO-8601 date-time; minimum must not exceed maximum.",
+      "maxLength": 40,
+      "format": "date-time"
+    },
+    "mallOpenTimeMax": {
+      "type": "string",
+      "description": "Latest mallOpenTime in ISO-8601 date-time; minimum must not exceed maximum.",
+      "maxLength": 40,
+      "format": "date-time"
+    }
+  },
+  "required": []
+}

@@ -1,0 +1,13 @@
+{
+  "errmsg": "ok",
+  "data": {
+    "items": [
+      {
+        "id": null,
+        "tiktok_creator_detail_is_ad": null,
+        "tiktok_creator_detail_is_aigc_video": null
+      }
+    ]
+  },
+  "errcode": 200
+}

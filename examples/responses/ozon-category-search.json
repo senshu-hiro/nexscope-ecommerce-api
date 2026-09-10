@@ -1,0 +1,42 @@
+{
+  "errcode": 1,
+  "id": "example-id",
+  "total": 1,
+  "totalSales": 1,
+  "totalRevenue": 1,
+  "avgPrice": 1,
+  "rating": 1,
+  "startDate": "2026-01-01",
+  "endDate": "2026-01-01",
+  "sellerType": {},
+  "categoryInfo": {},
+  "data": [
+    {
+      "sku": 1,
+      "productId": 1,
+      "price": 1,
+      "sales": 1,
+      "monthlySalesUnits": 1,
+      "revenue": 1,
+      "monthlySalesRevenue": 1,
+      "reviewRating": 1,
+      "rating": 1,
+      "reviewCount": 1,
+      "fulfillment": [],
+      "imageUrl": "https://example.com/image.jpg",
+      "productUrl": "https://example.com/image.jpg",
+      "productPageUrl": "https://example.com/image.jpg",
+      "categoryInfo": {}
+    }
+  ],
+  "products": [
+    {
+      "fullCategoryId": [],
+      "category": {}
+    }
+  ],
+  "hasNextPage": false,
+  "columns": [],
+  "costTime": 1,
+  "costToken": 1
+}

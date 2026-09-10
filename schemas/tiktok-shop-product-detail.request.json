@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "productInput"
+  ],
+  "properties": {
+    "productInput": {
+      "type": "string",
+      "oneOf": [
+        {
+          "pattern": "^\\d{19}$"
+        },
+        {
+          "format": "uri",
+          "pattern": "^https://(?:[A-Za-z0-9-]+\\.)*tiktok\\.com(?::443)?/(?:.*/)?product/\\d{19}(?:[/?#].*)?$"
+        }
+      ]
+    },
+    "region": {
+      "type": "string",
+      "enum": [
+        "US",
+        "GB",
+        "ID",
+        "MY",
+        "TH",
+        "VN",
+        "PH",
+        "SG",
+        "DE",
+        "FR",
+        "IT",
+        "ES"
+      ],
+      "default": "US"
+    }
+  }
+}

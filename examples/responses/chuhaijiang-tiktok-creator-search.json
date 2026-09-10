@@ -1,0 +1,13 @@
+{
+  "errmsg": "ok",
+  "data": {
+    "items": [
+      {
+        "account_type": null,
+        "author_avg_engagement_rate": null,
+        "bio_email": null
+      }
+    ]
+  },
+  "errcode": 200
+}

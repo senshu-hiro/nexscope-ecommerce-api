@@ -1,0 +1,183 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "stdout",
+      "type": "string",
+      "required": false,
+      "description": "AI overview content in Markdown format; outputs key points and reference source links for each question's AI overview in order",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceUrl",
+      "type": "string",
+      "required": false,
+      "description": "Target URL that was crawled, the final Google search page URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "resultsNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of AI overview blocks; >0 indicates the page rendered an AI Overview, 0 indicates the keyword did not trigger an AI Overview",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Business status code, success is \"200\" (same as the numeric errcode)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Business status code (HTTP layer is generally 200; business success/failure is determined by this field)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "msg/errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Response message, ok on success",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "API latency in milliseconds",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token consumption for this call; billed only when upstream returns success",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "taskId",
+      "type": "string",
+      "required": false,
+      "description": "Upstream capture task identifier for this request",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style, fixed stdoutWorkbenches, used with the stdout field for Markdown rendering",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "sourceUrl": "https://example.com/image.jpg",
+    "resultsNum": 1,
+    "errcode": 1,
+    "costTime": 1,
+    "costToken": 1,
+    "taskId": "example-id"
+  },
+  "jsonSchema": null
+}

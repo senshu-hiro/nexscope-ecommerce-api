@@ -1,0 +1,40 @@
+{
+  "errmsg": "ok",
+  "data": {
+    "items": [
+      {
+        "id": null,
+        "nickname": null,
+        "unique_id": null
+      }
+    ],
+    "core": {
+      "items": [
+        {
+          "core_author_avg_engagement_rate": null,
+          "core_follower_count": null,
+          "core_product_count": null
+        }
+      ]
+    },
+    "channel": {
+      "items": [
+        {
+          "channel_country_code": null,
+          "channel_ec_video_30d_avg_engagement_rate": null,
+          "channel_ec_video_30d_avg_play_count": null
+        }
+      ]
+    },
+    "portrait": {
+      "items": [
+        {
+          "id": null,
+          "portrait_age_distribution": null,
+          "portrait_follower_count": null
+        }
+      ]
+    }
+  },
+  "errcode": 200
+}

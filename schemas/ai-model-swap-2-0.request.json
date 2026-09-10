@@ -1,0 +1,81 @@
+{
+  "type": "object",
+  "description": "Generate model images from a product image and a full model reference image with optional segmentation and scene controls.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the source product or outfit image. The image must be up to 20 MB and between 385 and 8192 pixels in both width and height.",
+      "example": "https://example.com/source-image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "modelImageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the full model reference image.",
+      "example": "https://example.com/model-reference.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "outputNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of images to generate, from 1 to 4. Defaults to 1.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "imageSegUrl",
+      "type": "string",
+      "required": false,
+      "description": "Optional segmentation mask URL for the source image.",
+      "example": "https://example.com/mask.png",
+      "constraints": {}
+    },
+    {
+      "name": "sceneImgUrl",
+      "type": "string",
+      "required": false,
+      "description": "Optional scene reference image URL.",
+      "example": "https://example.com/scene.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "sceneStrength",
+      "type": "number",
+      "required": false,
+      "description": "Scene reference strength from 0 to 1. Defaults to 0.7.",
+      "example": 0.7,
+      "constraints": {}
+    },
+    {
+      "name": "genOriRes",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to generate the original resolution. Defaults to false.",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "realModel",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to prefer a realistic model style.",
+      "example": true,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/source-image.jpg",
+    "modelImageUrl": "https://example.com/model-reference.jpg",
+    "outputNum": 1,
+    "imageSegUrl": "https://example.com/mask.png",
+    "sceneImgUrl": "https://example.com/scene.jpg",
+    "sceneStrength": 0.7,
+    "genOriRes": false,
+    "realModel": true
+  },
+  "jsonSchema": null
+}

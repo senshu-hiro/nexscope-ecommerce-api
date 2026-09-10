@@ -1,0 +1,370 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Record count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "required": false,
+      "description": "Hot selling product list (see product object below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Rendered columns",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token cost",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].title",
+      "type": "string",
+      "required": false,
+      "description": "Product name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].productId",
+      "type": "string",
+      "required": false,
+      "description": "Product ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "products[].region",
+      "type": "string",
+      "required": false,
+      "description": "Region code",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "products[].price",
+      "type": "number",
+      "required": false,
+      "description": "Product price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].minPrice",
+      "type": "number",
+      "required": false,
+      "description": "Minimum price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].maxPrice",
+      "type": "number",
+      "required": false,
+      "description": "Maximum price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSaleCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Total sales",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSale1dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Sales in last 1 day (returned when dateType=day)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSale7dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Sales in last 7 days (returned when dateType=week)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSale30dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Sales in last 30 days (returned when dateType=month)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSaleGmvAmt",
+      "type": "number",
+      "required": false,
+      "description": "Total GMV",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSaleGmv1dAmt",
+      "type": "number",
+      "required": false,
+      "description": "GMV in last 1 day (returned when dateType=day)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSaleGmv7dAmt",
+      "type": "number",
+      "required": false,
+      "description": "GMV in last 7 days (returned when dateType=week)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].totalSaleGmv30dAmt",
+      "type": "number",
+      "required": false,
+      "description": "GMV in last 30 days (returned when dateType=month)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].growthRate",
+      "type": "number",
+      "required": false,
+      "description": "Growth rate (percentage)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].shopName",
+      "type": "string",
+      "required": false,
+      "description": "Store name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].shopTotalUnitsSold",
+      "type": "integer",
+      "required": false,
+      "description": "Store total sales",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].shopSellerId",
+      "type": "string",
+      "required": false,
+      "description": "Store seller ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "products[].categoryName",
+      "type": "string",
+      "required": false,
+      "description": "Product category",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].productCommissionRate",
+      "type": "number",
+      "required": false,
+      "description": "Product commission rate (basis points, 1000=10%)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product image URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].offShelvesText",
+      "type": "string",
+      "required": false,
+      "description": "Whether delisted (\"Yes\"=delisted, \"No\"=on sale)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "products": [
+      {
+        "productId": "example-id",
+        "region": "US",
+        "price": 1,
+        "minPrice": 1,
+        "maxPrice": 1,
+        "totalSaleCnt": 1,
+        "totalSale1dCnt": 1,
+        "totalSale7dCnt": 1,
+        "totalSale30dCnt": 1,
+        "totalSaleGmvAmt": 1,
+        "totalSaleGmv1dAmt": 1,
+        "totalSaleGmv7dAmt": 1,
+        "totalSaleGmv30dAmt": 1,
+        "growthRate": 1,
+        "shopTotalUnitsSold": 1,
+        "shopSellerId": "example-id",
+        "productCommissionRate": 1,
+        "imageUrl": "https://example.com/image.jpg"
+      }
+    ],
+    "columns": [],
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

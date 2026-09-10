@@ -1,0 +1,88 @@
+{
+  "required": [
+    "country"
+  ],
+  "type": "object",
+  "properties": {
+    "country": {
+      "enum": [
+        "br",
+        "de",
+        "es",
+        "fr",
+        "gb",
+        "id",
+        "it",
+        "jp",
+        "mx",
+        "my",
+        "ph",
+        "sg",
+        "th",
+        "us",
+        "vn"
+      ],
+      "type": "string",
+      "description": "Lowercase request market. Returned country_code may differ; preserve both."
+    },
+    "page": {
+      "default": 1,
+      "minimum": 1,
+      "type": "integer",
+      "description": "Page number, starting at 1. No automatic pagination."
+    },
+    "pageSize": {
+      "maximum": 10,
+      "minimum": 1,
+      "type": "integer",
+      "description": "Items per page, from 1 to 10. Omission preserves the upstream default."
+    },
+    "keyword": {
+      "type": "string",
+      "description": "Ad search keyword."
+    },
+    "category": {
+      "type": "string",
+      "description": "Provider-approved product category."
+    },
+    "adType": {
+      "type": "string",
+      "description": "Provider-approved ad type value; no enum is published."
+    },
+    "excludeSparkAds": {
+      "type": "boolean",
+      "description": "Whether to exclude Spark Ads."
+    },
+    "minViews": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "maxViews": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "minGmv": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "maxGmv": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "minDays": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "maxDays": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "sort": {
+      "pattern": "^[^:]+:(asc|desc)$",
+      "default": "gmv:desc",
+      "type": "string",
+      "description": "Provider-approved field followed by :asc or :desc. No complete field enum is published."
+    }
+  },
+  "additionalProperties": false
+}

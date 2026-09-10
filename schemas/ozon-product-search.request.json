@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.ozon-product-search.",
+  "fields": [
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": false,
+      "description": "Russian search keyword, e.g., кроссовки (running shoes)",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "productIds",
+      "type": "array",
+      "required": false,
+      "description": "List of Ozon product SKUs (integer or string)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "startDate",
+      "type": "string",
+      "required": false,
+      "description": "Statistics start date, format YYYY-MM-DD; defaults to one year ago if empty; latest is yesterday",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "endDate",
+      "type": "string",
+      "required": false,
+      "description": "Statistics end date, format YYYY-MM-DD; defaults to yesterday if empty; latest is yesterday",
+      "example": "2026-01-01",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "endDate": "2026-01-31",
+    "keyword": "phone case",
+    "startDate": "2026-01-01"
+  },
+  "jsonSchema": null
+}

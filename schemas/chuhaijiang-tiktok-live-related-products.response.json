@@ -1,0 +1,120 @@
+{
+  "properties": {
+    "errcode": {
+      "type": "integer"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "errmsg": {
+      "type": "string"
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Livestream product identity: id.",
+                "nullable": true
+              },
+              "tiktok_live_detail_product_id": {
+                "type": "string",
+                "description": "Livestream product identity: tiktok live detail product id.",
+                "nullable": true
+              },
+              "tiktok_live_detail_product_title": {
+                "type": "string",
+                "description": "Livestream product identity: tiktok live detail product title.",
+                "nullable": true
+              },
+              "tiktok_live_detail_product_country_code": {
+                "type": "string",
+                "description": "Livestream product identity: tiktok live detail product country code.",
+                "nullable": true
+              },
+              "tiktok_live_detail_product_seller_id": {
+                "type": "string",
+                "description": "Livestream product identity: tiktok live detail product seller id.",
+                "nullable": true
+              },
+              "tiktok_live_detail_product_seller_name": {
+                "type": "string",
+                "description": "Livestream product identity: tiktok live detail product seller name.",
+                "nullable": true
+              },
+              "tiktok_live_detail_product_floor_price": {
+                "type": "object",
+                "description": "Monetary metric with original unit and value: tiktok live detail product floor price.",
+                "nullable": true
+              },
+              "tiktok_live_detail_product_ceiling_price": {
+                "type": "object",
+                "description": "Monetary metric with original unit and value: tiktok live detail product ceiling price.",
+                "nullable": true
+              },
+              "tiktok_live_detail_product_gmv": {
+                "type": "object",
+                "description": "Monetary metric with original unit and value: tiktok live detail product gmv.",
+                "nullable": true
+              },
+              "tiktok_live_detail_product_images": {
+                "type": "object",
+                "description": "Image with url and thumb_url: tiktok live detail product images.",
+                "nullable": true
+              },
+              "tiktok_live_detail_product_seller_avatar": {
+                "type": "object",
+                "description": "Image with url and thumb_url: tiktok live detail product seller avatar.",
+                "nullable": true
+              },
+              "tiktok_live_detail_product_sold_count": {
+                "type": "integer",
+                "description": "Livestream attributed sold units: tiktok live detail product sold count.",
+                "nullable": true
+              },
+              "tiktok_live_detail_product_commission_rate_num": {
+                "type": "number",
+                "description": "Decimal ratio, which may be absent: tiktok live detail product commission rate num.",
+                "nullable": true
+              },
+              "tiktok_live_detail_product_conversion_rate": {
+                "type": "number",
+                "description": "Decimal ratio, which may be absent: tiktok live detail product conversion rate.",
+                "nullable": true
+              },
+              "tiktok_live_detail_product_l1_category": {
+                "description": "Provider tiktok live detail product l1 category. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "tiktok_live_detail_product_l3_category": {
+                "description": "Provider tiktok live detail product l3 category. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "tiktok_live_detail_product_seller_info": {
+                "description": "Provider tiktok live detail product seller info. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "tiktok_live_detail_product_l2_category": {
+                "description": "Provider tiktok live detail product l2 category. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "tiktok_live_detail_product_seller_category_name_label": {
+                "description": "Provider tiktok live detail product seller category name label. The source establishes this field name; preserve its runtime JSON type and missing values."
+              }
+            },
+            "type": "object",
+            "additionalProperties": true
+          },
+          "nullable": true
+        },
+        "total_count": {
+          "nullable": true,
+          "type": "integer"
+        }
+      },
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

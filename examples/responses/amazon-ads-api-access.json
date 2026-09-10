@@ -1,0 +1,13 @@
+{
+  "authorizationUrl": "https://example.com/authorize",
+  "state": "opaque-state",
+  "expiresAt": "1760000000000",
+  "connections": [],
+  "profiles": [
+    {
+      "profileId": "123456789",
+      "countryCode": "US",
+      "currencyCode": "USD"
+    }
+  ]
+}

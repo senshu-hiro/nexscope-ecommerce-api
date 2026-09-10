@@ -1,0 +1,41 @@
+{
+  "required": [
+    "country",
+    "id"
+  ],
+  "type": "object",
+  "properties": {
+    "country": {
+      "enum": [
+        "br",
+        "de",
+        "es",
+        "fr",
+        "gb",
+        "id",
+        "it",
+        "jp",
+        "mx",
+        "my",
+        "ph",
+        "sg",
+        "th",
+        "us",
+        "vn"
+      ],
+      "type": "string",
+      "description": "Lowercase request market. Returned country_code may differ; preserve both."
+    },
+    "id": {
+      "minLength": 1,
+      "type": "string",
+      "description": "Ad ID returned by its search operation. Keep identifiers as strings to avoid precision loss."
+    },
+    "include": {
+      "pattern": "^(core)(,(core))*$",
+      "type": "string",
+      "description": "Comma-separated expansions: core. Request only needed expansions."
+    }
+  },
+  "additionalProperties": false
+}

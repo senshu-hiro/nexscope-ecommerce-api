@@ -1,0 +1,119 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-competitor-lookup.",
+  "fields": [
+    {
+      "name": "marketplace",
+      "type": "string",
+      "required": false,
+      "description": "Amazon site code, default US. Options: US, UK, DE, FR, JP, CA, IT, ES, MX, AU, TR, IN",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": false,
+      "description": "Search keyword. Translate to the corresponding country's language whenever possible, e.g. use English keywords for the US, German keywords for Germany, etc.",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "asinList",
+      "type": "string",
+      "required": false,
+      "description": "ASINs, multiple ASINs comma-separated, max 40. Format: ^[A-Z0-9]+(,[A-Z0-9]+){0,39}$",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "sellerName",
+      "type": "string",
+      "required": false,
+      "description": "Seller name filter",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "brand",
+      "type": "string",
+      "required": false,
+      "description": "Brand name filter",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "nodeLabel",
+      "type": "string",
+      "required": false,
+      "description": "Amazon category name, supports multi-level category names, levels separated by colon :, e.g. Electronics:Headphones",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "nodeIdPath",
+      "type": "string",
+      "required": false,
+      "description": "Amazon category ID path",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "matchType",
+      "type": "integer",
+      "required": false,
+      "description": "Match type. 1 = phrase match (default), 2 = fuzzy match, 3 = exact match",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "showVariation",
+      "type": "string",
+      "required": false,
+      "description": "Whether to query variants. Y = yes, N = no (default)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Amazon product data snapshot month. Default nearly (queries last 30 days real-time data). Use yyyyMM format to query historical snapshots (e.g. 202412 for December 2024). Only supports existing historical snapshots, future dates are not supported. Recommended for seasonal analysis to query the same period last year's snapshot for comparison",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, starting from 1 (default 1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "size",
+      "type": "integer",
+      "required": false,
+      "description": "Results per page, returns 10-100 records (default 50)",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "order",
+      "type": "object",
+      "required": false,
+      "description": "Sort configuration (see below)",
+      "example": {},
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "page": 1,
+    "asinList": "B072MQ5BRX",
+    "matchType": 1,
+    "size": 10,
+    "marketplace": "US",
+    "keyword": "phone case"
+  },
+  "jsonSchema": null
+}

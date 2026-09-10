@@ -1,0 +1,8 @@
+{
+  "type": 71,
+  "imageUrlList": [
+    "https://example.com/product.jpg"
+  ],
+  "keyword": "phone case",
+  "provider": "API_PRE_POINT"
+}

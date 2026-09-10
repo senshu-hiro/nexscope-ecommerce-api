@@ -1,0 +1,31 @@
+{
+  "errmsg": "ok",
+  "data": {
+    "items": [
+      {
+        "id": null,
+        "seller_id": null,
+        "shop_name": null
+      }
+    ],
+    "channel": {
+      "items": [
+        {
+          "id": null,
+          "channel_seller_id": null,
+          "channel_seller_sold_count_for_last_30_days": null
+        }
+      ]
+    },
+    "core": {
+      "items": [
+        {
+          "id": null,
+          "core_seller_id": null,
+          "core_region": null
+        }
+      ]
+    }
+  },
+  "errcode": 200
+}

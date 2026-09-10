@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.walmart-product-detail.",
+  "fields": [
+    {
+      "name": "productId",
+      "type": "integer",
+      "required": true,
+      "description": "Product ID (ItemId), the numeric ID contained in the product detail link. For example: the 5169493923 in https://www.walmart.com/ip/5169493923",
+      "example": "5169493923",
+      "constraints": {}
+    },
+    {
+      "name": "includeStats",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to include historical price/historical sales, default true",
+      "example": false,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "productId": "5169493923",
+    "includeStats": false
+  },
+  "jsonSchema": null
+}

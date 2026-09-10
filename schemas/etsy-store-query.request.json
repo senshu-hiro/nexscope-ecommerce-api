@@ -1,0 +1,204 @@
+{
+  "type": "object",
+  "description": "All filters are optional. Use searchKey to query a specific store name or URL.",
+  "fields": [
+    {
+      "name": "searchKey",
+      "type": "string",
+      "required": false,
+      "description": "Store name, keyword, or Etsy store URL.",
+      "example": "Lewshop1",
+      "constraints": {}
+    },
+    {
+      "name": "category",
+      "type": "string",
+      "required": false,
+      "description": "Primary store category.",
+      "example": "Jewelry",
+      "constraints": {}
+    },
+    {
+      "name": "country",
+      "type": "string",
+      "required": false,
+      "description": "Store country or region.",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "status",
+      "type": "integer",
+      "required": false,
+      "description": "Store status: 1 active, 0 inactive.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "isRaving",
+      "type": "integer",
+      "required": false,
+      "description": "Raving store flag: 1 yes.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "isStar",
+      "type": "integer",
+      "required": false,
+      "description": "Star store flag: 1 yes.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "beginFavorites",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum total favorites.",
+      "example": 0,
+      "constraints": {}
+    },
+    {
+      "name": "endFavorites",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum total favorites.",
+      "example": 10000,
+      "constraints": {}
+    },
+    {
+      "name": "beginFavoritesWeekly",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum weekly favorites.",
+      "example": 0,
+      "constraints": {}
+    },
+    {
+      "name": "endFavoritesWeekly",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum weekly favorites.",
+      "example": 1000,
+      "constraints": {}
+    },
+    {
+      "name": "beginReviews",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum total reviews.",
+      "example": 0,
+      "constraints": {}
+    },
+    {
+      "name": "endReviews",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum total reviews.",
+      "example": 10000,
+      "constraints": {}
+    },
+    {
+      "name": "beginReviewsWeekly",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum weekly reviews.",
+      "example": 0,
+      "constraints": {}
+    },
+    {
+      "name": "endReviewsWeekly",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum weekly reviews.",
+      "example": 1000,
+      "constraints": {}
+    },
+    {
+      "name": "beginSales",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum total sales.",
+      "example": 0,
+      "constraints": {}
+    },
+    {
+      "name": "endSales",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum total sales.",
+      "example": 100000,
+      "constraints": {}
+    },
+    {
+      "name": "beginSalesWeekly",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum weekly sales.",
+      "example": 0,
+      "constraints": {}
+    },
+    {
+      "name": "endSalesWeekly",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum weekly sales.",
+      "example": 1000,
+      "constraints": {}
+    },
+    {
+      "name": "beginStoreOpenedAt",
+      "type": "string",
+      "required": false,
+      "description": "Opening date range start in YYYY-MM-DD format.",
+      "example": "2020-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "endStoreOpenedAt",
+      "type": "string",
+      "required": false,
+      "description": "Opening date range end in YYYY-MM-DD format.",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "sortBy",
+      "type": "integer",
+      "required": false,
+      "description": "Sort field: 8 total sales, 9 weekly sales, 10 reviews, 11 favorites.",
+      "example": 8,
+      "constraints": {}
+    },
+    {
+      "name": "sortDesc",
+      "type": "integer",
+      "required": false,
+      "description": "Sort direction: 1 descending, 0 ascending.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number starting from 1.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page from 1 to 100.",
+      "example": 20,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "page": 1,
+    "searchKey": "Lewshop1",
+    "pageSize": 20
+  },
+  "jsonSchema": null
+}

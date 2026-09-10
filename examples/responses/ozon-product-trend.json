@@ -1,0 +1,23 @@
+{
+  "errcode": 1,
+  "total": 1,
+  "data": [
+    {
+      "date": "2026-01-01",
+      "hasData": false,
+      "price": 1,
+      "oldPrice": 1,
+      "ozonCardPrice": 1,
+      "discount": 1,
+      "sales": 1,
+      "balance": 1,
+      "rating": 1,
+      "comments": 1,
+      "isBestseller": false,
+      "isNew": false
+    }
+  ],
+  "columns": [],
+  "costTime": 1,
+  "costToken": 1
+}

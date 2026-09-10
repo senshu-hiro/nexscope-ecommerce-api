@@ -1,0 +1,398 @@
+{
+  "properties": {
+    "errcode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Provider business status; observed success is 200."
+    },
+    "errmsg": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Provider business status message."
+    },
+    "columns": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Render column definitions; business records are separate.",
+      "items": {}
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Provider render/source metadata: title."
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Provider render/source metadata: type."
+    },
+    "sourceTool": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Provider render/source metadata: sourceTool."
+    },
+    "sourceType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Provider render/source metadata: sourceType."
+    },
+    "items": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Returned records, including valid empty results; preserve duplicate records and unknown fields.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "catName": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Provider catName; preserve identifier and timestamp strings."
+          },
+          "thumbnail": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Provider thumbnail; preserve identifier and timestamp strings."
+          },
+          "createTime": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Provider createTime; preserve identifier and timestamp strings."
+          },
+          "updateTime": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Provider updateTime; preserve identifier and timestamp strings."
+          },
+          "regionId": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider regionId; monetary values use the selected site's currency unless identified as supply prices."
+          },
+          "dsr": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider dsr; monetary values use the selected site's currency unless identified as supply prices."
+          },
+          "totalSold": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider totalSold; monetary values use the selected site's currency unless identified as supply prices."
+          },
+          "totalSales": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider totalSales; monetary values use the selected site's currency unless identified as supply prices."
+          },
+          "avgPrice": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider avgPrice; monetary values use the selected site's currency unless identified as supply prices."
+          },
+          "itemCount": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider itemCount; monetary values use the selected site's currency unless identified as supply prices."
+          },
+          "mallCount": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider mallCount; monetary values use the selected site's currency unless identified as supply prices."
+          },
+          "semiManagedItemCount": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider semiManagedItemCount; monetary values use the selected site's currency unless identified as supply prices."
+          },
+          "semiManagedMallCount": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider semiManagedMallCount; monetary values use the selected site's currency unless identified as supply prices."
+          },
+          "catId": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider catId; monetary values use the selected site's currency unless identified as supply prices."
+          },
+          "optId": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider optId; monetary values use the selected site's currency unless identified as supply prices."
+          },
+          "catLevel": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider catLevel; monetary values use the selected site's currency unless identified as supply prices."
+          },
+          "parentCatId": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider parentCatId; monetary values use the selected site's currency unless identified as supply prices."
+          },
+          "isLeaf": {
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "description": "Whether this category is a leaf."
+          },
+          "parentCatItems": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "description": "Full parent category path.",
+            "items": {}
+          },
+          "daySold": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider day Sold metric; sales revenue uses site currency."
+          },
+          "daySoldRate": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider growth rate for day Sold."
+          },
+          "daySales": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider day Sales metric; sales revenue uses site currency."
+          },
+          "daySalesRate": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider growth rate for day Sales."
+          },
+          "dayItemCount": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider day ItemCount metric; sales revenue uses site currency."
+          },
+          "dayItemCountRate": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider growth rate for day ItemCount."
+          },
+          "dayMallCount": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider day MallCount metric; sales revenue uses site currency."
+          },
+          "dayMallCountRate": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider growth rate for day MallCount."
+          },
+          "weekSold": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider week Sold metric; sales revenue uses site currency."
+          },
+          "weekSoldRate": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider growth rate for week Sold."
+          },
+          "weekSales": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider week Sales metric; sales revenue uses site currency."
+          },
+          "weekSalesRate": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider growth rate for week Sales."
+          },
+          "weekItemCount": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider week ItemCount metric; sales revenue uses site currency."
+          },
+          "weekItemCountRate": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider growth rate for week ItemCount."
+          },
+          "weekMallCount": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider week MallCount metric; sales revenue uses site currency."
+          },
+          "weekMallCountRate": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider growth rate for week MallCount."
+          },
+          "monthSold": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider month Sold metric; sales revenue uses site currency."
+          },
+          "monthSoldRate": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider growth rate for month Sold."
+          },
+          "monthSales": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider month Sales metric; sales revenue uses site currency."
+          },
+          "monthSalesRate": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider growth rate for month Sales."
+          },
+          "monthItemCount": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider month ItemCount metric; sales revenue uses site currency."
+          },
+          "monthItemCountRate": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider growth rate for month ItemCount."
+          },
+          "monthMallCount": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider month MallCount metric; sales revenue uses site currency."
+          },
+          "monthMallCountRate": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Provider growth rate for month MallCount."
+          }
+        }
+      }
+    },
+    "total": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Provider match count, possibly capped at 10000 for searches."
+    },
+    "regionId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Region used for the query."
+    },
+    "page": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Current page."
+    },
+    "size": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Items per page."
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

@@ -1,0 +1,197 @@
+{
+  "properties": {
+    "errcode": {
+      "type": "integer"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "errmsg": {
+      "type": "string"
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Ad identity and copy: id.",
+                "nullable": true
+              },
+              "ad_title": {
+                "type": "string",
+                "description": "Ad identity and copy: ad title.",
+                "nullable": true
+              },
+              "advertiser_id": {
+                "type": "string",
+                "description": "Ad identity and copy: advertiser id.",
+                "nullable": true
+              },
+              "advertiser_name": {
+                "type": "string",
+                "description": "Ad identity and copy: advertiser name.",
+                "nullable": true
+              },
+              "ad_url": {
+                "type": "string",
+                "description": "Ad identity and copy: ad url.",
+                "nullable": true
+              },
+              "web_url": {
+                "type": "string",
+                "description": "Ad identity and copy: web url.",
+                "nullable": true
+              },
+              "button_text": {
+                "type": "string",
+                "description": "Ad identity and copy: button text.",
+                "nullable": true
+              },
+              "advertiser_avatar": {
+                "type": "object",
+                "description": "Provider image object: advertiser avatar.",
+                "nullable": true
+              },
+              "ad_cover": {
+                "type": "object",
+                "description": "Provider image object: ad cover.",
+                "nullable": true
+              },
+              "duration": {
+                "type": "integer",
+                "description": "Provider time or duration; preserve original units: duration.",
+                "nullable": true
+              },
+              "ad_create_time": {
+                "type": "integer",
+                "description": "Provider time or duration; preserve original units: ad create time.",
+                "nullable": true
+              },
+              "create_time": {
+                "type": "integer",
+                "description": "Provider time or duration; preserve original units: create time.",
+                "nullable": true
+              },
+              "last_update_time": {
+                "type": "integer",
+                "description": "Provider time or duration; preserve original units: last update time.",
+                "nullable": true
+              }
+            },
+            "type": "object",
+            "additionalProperties": true
+          },
+          "nullable": true
+        },
+        "core": {
+          "nullable": true,
+          "type": "object",
+          "properties": {
+            "items": {
+              "items": {
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Core ad identity or provider ad type: id."
+                  },
+                  "core_creative_id": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Core ad identity or provider ad type: core creative id."
+                  },
+                  "core_ad_type": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Core ad identity or provider ad type: core ad type."
+                  },
+                  "core_ad_day_count": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Core ad performance count: core ad day count."
+                  },
+                  "core_total_sc": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Core ad performance count: core total sc."
+                  },
+                  "core_video_play_count": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Core ad performance count: core video play count."
+                  },
+                  "core_video_like_count": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Core ad performance count: core video like count."
+                  },
+                  "core_video_comment_count": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Core ad performance count: core video comment count."
+                  },
+                  "core_video_share_count": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Core ad performance count: core video share count."
+                  },
+                  "core_video_collect_count": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Core ad performance count: core video collect count."
+                  },
+                  "core_ad_play_ratio": {
+                    "type": "number",
+                    "nullable": true,
+                    "description": "Provider ratio or score; preserve original metric definition: core ad play ratio."
+                  },
+                  "core_ad_gmv_ratio": {
+                    "type": "number",
+                    "nullable": true,
+                    "description": "Provider ratio or score; preserve original metric definition: core ad gmv ratio."
+                  },
+                  "core_ad_roas": {
+                    "type": "number",
+                    "nullable": true,
+                    "description": "Provider ratio or score; preserve original metric definition: core ad roas."
+                  },
+                  "core_video_popularity": {
+                    "type": "number",
+                    "nullable": true,
+                    "description": "Provider ratio or score; preserve original metric definition: core video popularity."
+                  },
+                  "core_ad_maximum_cost": {
+                    "type": "object",
+                    "nullable": true,
+                    "description": "Provider monetary metric; preserve original unit and value: core ad maximum cost."
+                  },
+                  "core_total_gmv": {
+                    "type": "object",
+                    "nullable": true,
+                    "description": "Provider monetary metric; preserve original unit and value: core total gmv."
+                  },
+                  "core_video_gpm_30d": {
+                    "type": "object",
+                    "nullable": true,
+                    "description": "Provider monetary metric; preserve original unit and value: core video gpm 30d."
+                  }
+                },
+                "type": "object",
+                "additionalProperties": true
+              },
+              "type": "array"
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

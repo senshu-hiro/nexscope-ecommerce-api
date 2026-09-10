@@ -1,0 +1,12 @@
+{
+  "total": 1,
+  "storeNum": 1,
+  "stores": [
+    {
+      "storeId": "example-id",
+      "siteId": "example-id",
+      "logoUrl": "https://example.com/image.jpg"
+    }
+  ],
+  "columns": []
+}

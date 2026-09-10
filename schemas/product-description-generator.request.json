@@ -1,0 +1,122 @@
+{
+  "type": "object",
+  "description": "Use operation=query with the provider taskId returned by create. Query is sent to the API's /aigc/textTaskQuery endpoint; the system task-result endpoint is not used.",
+  "fields": [
+    {
+      "name": "operation",
+      "type": "string",
+      "required": false,
+      "description": "create (default) or query.",
+      "example": "create",
+      "constraints": {
+        "allowedValues": [
+          "create",
+          "query"
+        ]
+      }
+    },
+    {
+      "name": "prompt",
+      "type": "string",
+      "required": false,
+      "description": "Product-copy generation instruction; required by create.",
+      "example": "Write a product description for a wireless speaker.",
+      "constraints": {
+        "requiredWhen": {
+          "operation": [
+            "create"
+          ]
+        },
+        "maxLength": 100000
+      }
+    },
+    {
+      "name": "imageUrls",
+      "type": "array",
+      "required": false,
+      "description": "Media URLs used as context. Pass an empty array for text-only generation; use up to 10 images or typically one video.",
+      "example": [],
+      "constraints": {
+        "maxItems": 10
+      }
+    },
+    {
+      "name": "thinkingLevel",
+      "type": "string",
+      "required": false,
+      "description": "Reasoning level required by create. GEM_3_1_PRO does not support minimal.",
+      "example": "minimal",
+      "constraints": {
+        "requiredWhen": {
+          "operation": [
+            "create"
+          ]
+        },
+        "allowedValuesBy": {
+          "model": {
+            "GEM_3_FLASH": [
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ],
+            "GEM_3_1_PRO": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        },
+        "allowedValues": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ]
+      }
+    },
+    {
+      "name": "model",
+      "type": "string",
+      "required": false,
+      "description": "Text-generation model. GEM_3_FLASH is the default.",
+      "example": "GEM_3_FLASH",
+      "constraints": {
+        "allowedValues": [
+          "GEM_3_FLASH",
+          "GEM_3_1_PRO"
+        ]
+      }
+    },
+    {
+      "name": "memberId",
+      "type": "string",
+      "required": false,
+      "description": "Optional provider member identifier used by create and query.",
+      "example": "",
+      "constraints": {}
+    },
+    {
+      "name": "taskId",
+      "type": "string",
+      "required": false,
+      "description": "Provider task ID returned by create; required by operation=query.",
+      "example": "123456789",
+      "constraints": {
+        "requiredWhen": {
+          "operation": [
+            "query"
+          ]
+        }
+      }
+    }
+  ],
+  "example": {
+    "model": "GEM_3_FLASH",
+    "thinkingLevel": "minimal",
+    "operation": "create",
+    "imageUrls": [],
+    "prompt": "Write a product description for a wireless speaker."
+  },
+  "jsonSchema": null
+}

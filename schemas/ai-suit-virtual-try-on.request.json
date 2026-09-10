@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "description": "Dress a model image with a one-piece outfit or suit image, supporting optional garment and model masks.",
+  "fields": [
+    {
+      "name": "suitOriginUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the original one-piece garment image. The image must be up to 20 MB and between 385 and 4096 pixels in both width and height.",
+      "example": "https://example.com/suit.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "modelImageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the model image.",
+      "example": "https://example.com/model-reference.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "suitImageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Optional processed suit mask or crop URL.",
+      "example": "https://example.com/suit-mask.png",
+      "constraints": {}
+    },
+    {
+      "name": "modelMaskImageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Optional mask URL for the model body area.",
+      "example": "https://example.com/mask.png",
+      "constraints": {}
+    },
+    {
+      "name": "outputNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of images to generate, from 1 to 4. Defaults to 1.",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "suitOriginUrl": "https://example.com/suit.jpg",
+    "modelImageUrl": "https://example.com/model-reference.jpg",
+    "suitImageUrl": "https://example.com/suit-mask.png",
+    "modelMaskImageUrl": "https://example.com/mask.png",
+    "outputNum": 1
+  },
+  "jsonSchema": null
+}

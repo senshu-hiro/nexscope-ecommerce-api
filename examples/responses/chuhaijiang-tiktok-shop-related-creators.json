@@ -1,0 +1,13 @@
+{
+  "errmsg": "ok",
+  "data": {
+    "items": [
+      {
+        "id": null,
+        "tiktok_seller_detail_creator_user_id": null,
+        "tiktok_seller_detail_creator_unique_id": null
+      }
+    ]
+  },
+  "errcode": 200
+}

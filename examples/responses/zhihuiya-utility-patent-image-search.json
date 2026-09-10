@@ -1,0 +1,18 @@
+{
+  "total": 1,
+  "allRecordsCount": 1,
+  "data": [
+    {
+      "patentId": "example-id",
+      "url": "https://example.com/image.jpg",
+      "score": 1,
+      "loc": [],
+      "locMatch": 1,
+      "apdt": 1,
+      "pbdt": 1,
+      "imgId": "example-id"
+    }
+  ],
+  "columns": [],
+  "costToken": 1
+}

@@ -1,0 +1,464 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Business status code, 200 indicates success",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList",
+      "type": "array",
+      "required": false,
+      "description": "Niche market information list (see niche market object fields below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].nicheId",
+      "type": "string",
+      "required": false,
+      "description": "Niche market ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].nicheTitle",
+      "type": "string",
+      "required": false,
+      "description": "Niche market title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].translationZh",
+      "type": "string",
+      "required": false,
+      "description": "Niche market title (Chinese)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].demand",
+      "type": "integer",
+      "required": false,
+      "description": "Niche market score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].productCount",
+      "type": "integer",
+      "required": false,
+      "description": "Product count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].avgPrice",
+      "type": "number",
+      "required": false,
+      "description": "Average product price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].minimumPrice",
+      "type": "number",
+      "required": false,
+      "description": "Lowest product price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].maximumPrice",
+      "type": "number",
+      "required": false,
+      "description": "Highest product price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].searchVolumeWeekly",
+      "type": "integer",
+      "required": false,
+      "description": "Search volume (weekly data)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].searchVolumeQuarterly",
+      "type": "integer",
+      "required": false,
+      "description": "Search volume (quarterly data)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].searchVolumeGrowthWeekly",
+      "type": "number",
+      "required": false,
+      "description": "Search volume growth rate (weekly data)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].searchVolumeGrowthQuarterly",
+      "type": "number",
+      "required": false,
+      "description": "Search volume growth rate (quarterly data)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].unitsSoldWeekly",
+      "type": "integer",
+      "required": false,
+      "description": "Sales volume (weekly data)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].unitsSoldQuarterly",
+      "type": "integer",
+      "required": false,
+      "description": "Sales volume (quarterly data)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].clickCountWeekly",
+      "type": "integer",
+      "required": false,
+      "description": "Click volume (weekly data)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].clickCountQuarterly",
+      "type": "integer",
+      "required": false,
+      "description": "Click volume (quarterly data)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].clickToSaleConversionWeekly",
+      "type": "number",
+      "required": false,
+      "description": "Click conversion rate (weekly data)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].clickConversionRateQuarterly",
+      "type": "number",
+      "required": false,
+      "description": "Click conversion rate (quarterly data)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].searchConversionRateWeekly",
+      "type": "number",
+      "required": false,
+      "description": "Search conversion rate (weekly data)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].searchConversionRateQuarterly",
+      "type": "number",
+      "required": false,
+      "description": "Search conversion rate (quarterly data)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].brandCount",
+      "type": "integer",
+      "required": false,
+      "description": "Brand count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].top5BrandsClickShare",
+      "type": "number",
+      "required": false,
+      "description": "Top 5 brands' click share in the niche market",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].top5ProductsClickShare",
+      "type": "number",
+      "required": false,
+      "description": "Top 5 products click share",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].avgBrandAgeNow",
+      "type": "number",
+      "required": false,
+      "description": "Average brand age (current)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].avgBrandAgeQuarterly",
+      "type": "number",
+      "required": false,
+      "description": "Average brand age (quarterly data)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].newProductsLaunchedSemiannual",
+      "type": "integer",
+      "required": false,
+      "description": "Number of new products launched (semi-annual data)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].successfulLaunchedSemiannual",
+      "type": "integer",
+      "required": false,
+      "description": "Number of successfully launched products (semi-annual data)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].launchRateSemiannual",
+      "type": "number",
+      "required": false,
+      "description": "Product launch success rate (semi-annual data)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].returnRateAnnual",
+      "type": "number",
+      "required": false,
+      "description": "Return rate (annual data)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].acos",
+      "type": "number",
+      "required": false,
+      "description": "(ACOS) Advertising Cost of Sale",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].profitMarginGt50PctSkuRatio",
+      "type": "number",
+      "required": false,
+      "description": "Proportion of products with profit margin > 50%",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].breakEvenRatio",
+      "type": "number",
+      "required": false,
+      "description": "Break-even natural share",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].cpc",
+      "type": "object",
+      "required": false,
+      "description": "CPC data: { high (maximum bid), medium (median bid), low (minimum bid) }",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].categorieList",
+      "type": "array",
+      "required": false,
+      "description": "Product category list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "nicheInfoVoList[].referenceAsinImageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Niche market reference image URL",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "errcode": 1,
+    "costToken": 1,
+    "nicheInfoVoList": [
+      {
+        "nicheId": "example-id",
+        "demand": 1,
+        "productCount": 1,
+        "avgPrice": 1,
+        "minimumPrice": 1,
+        "maximumPrice": 1,
+        "searchVolumeWeekly": 1,
+        "searchVolumeQuarterly": 1,
+        "searchVolumeGrowthWeekly": 1,
+        "searchVolumeGrowthQuarterly": 1,
+        "unitsSoldWeekly": 1,
+        "unitsSoldQuarterly": 1,
+        "clickCountWeekly": 1,
+        "clickCountQuarterly": 1,
+        "clickToSaleConversionWeekly": 1,
+        "clickConversionRateQuarterly": 1,
+        "searchConversionRateWeekly": 1,
+        "searchConversionRateQuarterly": 1,
+        "brandCount": 1,
+        "top5BrandsClickShare": 1,
+        "top5ProductsClickShare": 1,
+        "avgBrandAgeNow": 1,
+        "avgBrandAgeQuarterly": 1,
+        "newProductsLaunchedSemiannual": 1,
+        "successfulLaunchedSemiannual": 1,
+        "launchRateSemiannual": 1,
+        "returnRateAnnual": 1,
+        "acos": 1,
+        "profitMarginGt50PctSkuRatio": 1,
+        "breakEvenRatio": 1,
+        "cpc": {},
+        "categorieList": [],
+        "referenceAsinImageUrl": "B072MQ5BRX"
+      }
+    ]
+  },
+  "jsonSchema": null
+}

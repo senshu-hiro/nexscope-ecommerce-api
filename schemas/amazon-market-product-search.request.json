@@ -1,0 +1,62 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-market-product-search.",
+  "fields": [
+    {
+      "name": "marketplace",
+      "type": "string",
+      "required": true,
+      "description": "Amazon site code: us, gb, de, fr, in, ca, jp, es, it, mx, ae, au, br, sa",
+      "example": "us",
+      "constraints": {}
+    },
+    {
+      "name": "queryMode",
+      "type": "integer",
+      "required": false,
+      "description": "Query mode. 1: single condition query (default); 2: multi-condition combined query (AND relationship)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "queryType",
+      "type": "integer",
+      "required": false,
+      "description": "Query type (1-16), only effective when queryMode=1. See the complete Query Types description in API.md",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "queryValue",
+      "type": "string",
+      "required": false,
+      "description": "Query condition value, format varies by queryMode and queryType. See the format description for each queryType in API.md",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, default 1. Max 100 products per page",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "queryMonth",
+      "type": "string",
+      "required": false,
+      "description": "Historical month lookback, format yyyy-MM. When not specified, queries real-time data",
+      "example": "2026-01",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "marketplace": "us",
+    "queryMode": 1,
+    "page": 1,
+    "queryValue": "B072MQ5BRX",
+    "queryType": 1
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,586 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Return code, \"200\" indicates success (returned on success)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Error code, 200 indicates success; only returned on business errors (coexists with code on success)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Message; ok for success",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Error message; ok for success, reason description on business error",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Total matched record count (can reach tens of millions with no filters; equals hit count when using skus precise lookup)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Product report data (see details below), content identical to products",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "required": false,
+      "description": "Product report data (identical to data, two keys for the same data)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Column definitions, elements contain {field, title, cellType, sortable, filterable}, identifying sortable/filterable fields",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Response display type, e.g., productWorkbenches",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "API latency (milliseconds)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sku",
+      "type": "integer",
+      "required": false,
+      "description": "Product SKU",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].productId",
+      "type": "integer",
+      "required": false,
+      "description": "Unified product ID (= sku)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].title",
+      "type": "string",
+      "required": false,
+      "description": "Product title (original Russian)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product main image URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "data[].productUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "data[].productPageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Unified product page URL (= productUrl)",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "data[].currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency, always ₽",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Data source, always ozon",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Source tool identifier for the Ozon bestseller report endpoint",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sales",
+      "type": "integer",
+      "required": false,
+      "description": "Monthly sales volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].monthlySalesUnits",
+      "type": "integer",
+      "required": false,
+      "description": "Unified monthly sales (= sales)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].revenue",
+      "type": "number",
+      "required": false,
+      "description": "Monthly sales revenue (RUB)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].monthlySalesRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Unified monthly revenue (= revenue)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].missedRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Lost revenue (RUB)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].price",
+      "type": "number",
+      "required": false,
+      "description": "Price (RUB)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].convToCartPdp",
+      "type": "number",
+      "required": false,
+      "description": "Cart conversion rate (%)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].orderConversionRate",
+      "type": "number",
+      "required": false,
+      "description": "Order conversion rate (%)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].salesRate",
+      "type": "number",
+      "required": false,
+      "description": "Sales growth rate (%)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].revenueRate",
+      "type": "number",
+      "required": false,
+      "description": "Revenue growth rate (%)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].drr",
+      "type": "number",
+      "required": false,
+      "description": "Ad cost share (ratio)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].grossMargin",
+      "type": "number",
+      "required": false,
+      "description": "Gross margin (%)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].returnCancellationRate",
+      "type": "number",
+      "required": false,
+      "description": "Return/cancellation rate (%)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].views",
+      "type": "integer",
+      "required": false,
+      "description": "Views",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].reviewRating",
+      "type": "number",
+      "required": false,
+      "description": "Rating (0~5)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].rating",
+      "type": "number",
+      "required": false,
+      "description": "Unified rating (= reviewRating)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].reviewCount",
+      "type": "integer",
+      "required": false,
+      "description": "Review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].questionsAndAnswers",
+      "type": "integer",
+      "required": false,
+      "description": "QA count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].variants",
+      "type": "integer",
+      "required": false,
+      "description": "Variant count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].fulfillment",
+      "type": "array",
+      "required": false,
+      "description": "Fulfillment methods (values OZON/FBO/FBS/RFBS/FBP)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].weight",
+      "type": "number",
+      "required": false,
+      "description": "Weight (g)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].volume",
+      "type": "number",
+      "required": false,
+      "description": "Volume (L)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].upTime",
+      "type": "integer",
+      "required": false,
+      "description": "Listing timestamp (milliseconds)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].upDays",
+      "type": "integer",
+      "required": false,
+      "description": "Days since listing",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].upMonths",
+      "type": "integer",
+      "required": false,
+      "description": "Months since listing",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].brandName",
+      "type": "string",
+      "required": false,
+      "description": "Brand name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].brand",
+      "type": "string",
+      "required": false,
+      "description": "Unified brand (= brandName)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].brandId",
+      "type": "integer",
+      "required": false,
+      "description": "Brand ID",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].brandUrl",
+      "type": "string",
+      "required": false,
+      "description": "Brand link",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "data[].sellerName",
+      "type": "string",
+      "required": false,
+      "description": "Seller name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sellerId",
+      "type": "integer",
+      "required": false,
+      "description": "Seller ID (may be negative for Ozon self-operated)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].categoryInfo",
+      "type": "object",
+      "required": false,
+      "description": "Category information (see below)",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "columns[].cnTitlePath",
+      "type": "string",
+      "required": false,
+      "description": "Chinese category path",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].enTitlePath",
+      "type": "string",
+      "required": false,
+      "description": "English category path",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].titlePath",
+      "type": "string",
+      "required": false,
+      "description": "Russian category path",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].fullCategoryId",
+      "type": "array",
+      "required": false,
+      "description": "Full category ID hierarchy array",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns[].category",
+      "type": "object",
+      "required": false,
+      "description": "Category node: {cnTitle, enTitle, title, level, id, pid, crossBorderSellable, disabled}",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "errcode": 1,
+    "total": 1,
+    "data": [
+      {
+        "sku": 1,
+        "productId": 1,
+        "imageUrl": "https://example.com/image.jpg",
+        "productUrl": "https://example.com/image.jpg",
+        "productPageUrl": "https://example.com/image.jpg",
+        "sales": 1,
+        "monthlySalesUnits": 1,
+        "revenue": 1,
+        "monthlySalesRevenue": 1,
+        "missedRevenue": 1,
+        "price": 1,
+        "convToCartPdp": 1,
+        "orderConversionRate": 1,
+        "salesRate": 1,
+        "revenueRate": 1,
+        "drr": 1,
+        "grossMargin": 1,
+        "returnCancellationRate": 1,
+        "views": 1,
+        "reviewRating": 1,
+        "rating": 1,
+        "reviewCount": 1,
+        "questionsAndAnswers": 1,
+        "variants": 1,
+        "fulfillment": [],
+        "weight": 1,
+        "volume": 1,
+        "upTime": 1,
+        "upDays": 1,
+        "upMonths": 1,
+        "brandId": 1,
+        "brandUrl": "https://example.com/image.jpg",
+        "sellerId": 1,
+        "categoryInfo": {}
+      }
+    ],
+    "products": [],
+    "columns": [
+      {
+        "fullCategoryId": [],
+        "category": {}
+      }
+    ],
+    "costTime": 1,
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

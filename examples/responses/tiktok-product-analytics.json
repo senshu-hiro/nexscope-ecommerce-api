@@ -1,0 +1,29 @@
+{
+  "errcode": 1,
+  "data": [
+    {
+      "product_id": "example-id",
+      "unit_price": 1,
+      "sales_volumn": 1,
+      "revenue": 1,
+      "video_revenue": 1,
+      "live_revenue": 1,
+      "showcase_revenue": 1,
+      "revenue_growth_rate": 1,
+      "commission_rate": 1,
+      "launch_date": "2026-01-01",
+      "product_shop_id": "example-id",
+      "pri_cate_id": "example-id",
+      "sec_cate_id": "example-id",
+      "ter_cate_id": "example-id",
+      "min_price": 1,
+      "max_price": 1,
+      "product_review_count": 1,
+      "video_number": 1,
+      "live_number": 1,
+      "shopping_mall_revenue": 1,
+      "creator_number": 1
+    }
+  ],
+  "costToken": 1
+}

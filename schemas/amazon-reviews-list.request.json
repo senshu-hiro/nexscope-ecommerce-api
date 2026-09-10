@@ -1,0 +1,112 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-reviews-list.",
+  "fields": [
+    {
+      "name": "asin",
+      "type": "string",
+      "required": true,
+      "description": "Amazon product ASIN",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "domainCode",
+      "type": "string",
+      "required": false,
+      "description": "Amazon domain code, default com. Options: com, ca, co.uk, in, de, fr, it, es, co.jp, com.au, com.br, nl, se, com.mx, ae. Use com for the US site",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "star1Num",
+      "type": "integer",
+      "required": false,
+      "description": "Number of 1-star reviews, default 10, max 100",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "star2Num",
+      "type": "integer",
+      "required": false,
+      "description": "Number of 2-star reviews, default 10, max 100",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "star3Num",
+      "type": "integer",
+      "required": false,
+      "description": "Number of 3-star reviews, default 10, max 100",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "star4Num",
+      "type": "integer",
+      "required": false,
+      "description": "Number of 4-star reviews, default 10, max 100",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "star5Num",
+      "type": "integer",
+      "required": false,
+      "description": "Number of 5-star reviews, default 10, max 100",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "filterByKeyword",
+      "type": "string",
+      "required": false,
+      "description": "Filter reviews by keyword, max length 1000 characters",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "sortBy",
+      "type": "string",
+      "required": false,
+      "description": "Review sort order: recent (most recent reviews) or helpful (most helpful reviews), default recent",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "reviewerType",
+      "type": "string",
+      "required": false,
+      "description": "Reviewer type: all_reviews (all reviews) or avp_only_reviews (verified purchases only), default all_reviews",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "mediaType",
+      "type": "string",
+      "required": false,
+      "description": "Media type: all_contents (all content) or media_reviews_only (reviews with media only), default all_contents",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "formatType",
+      "type": "string",
+      "required": false,
+      "description": "Format type: all_formats (all formats) or current_format (current format), default all_formats",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "domainCode": "com",
+    "star4Num": 1,
+    "star3Num": 1,
+    "star2Num": 1,
+    "star1Num": 1,
+    "star5Num": 1,
+    "asin": "B072MQ5BRX"
+  },
+  "jsonSchema": null
+}

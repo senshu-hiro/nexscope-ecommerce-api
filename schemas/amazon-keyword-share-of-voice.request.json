@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-keyword-share-of-voice.",
+  "fields": [
+    {
+      "name": "marketplace",
+      "type": "string",
+      "required": true,
+      "description": "Target marketplace code. Options: us, uk, de, in, ca, fr, it, es, mx, jp",
+      "example": "us",
+      "constraints": {}
+    },
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": true,
+      "description": "Keyword to query",
+      "example": "phone case",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "keyword": "phone case",
+    "marketplace": "us"
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,242 @@
+{
+  "properties": {
+    "errcode": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "request_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "errmsg": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "Provider business records for Chuhaijiang TikTok Creator Detail. Known row fields: id, nickname, unique_id, user_avatar, category_label. Missing and null fields remain unchanged; monetary values retain their original unit and runtime type.",
+          "items": {
+            "properties": {
+              "id": {
+                "description": "Source-documented id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "nickname": {
+                "description": "Source-documented nickname; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "unique_id": {
+                "description": "Source-documented unique_id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "user_avatar": {
+                "description": "Source-documented user_avatar; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "category_label": {
+                "description": "Source-documented category_label; may be absent or null. Preserve the provider value and original monetary units."
+              }
+            },
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": true
+          }
+        },
+        "total_count": {
+          "description": "Total matching records.",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "core": {
+          "properties": {
+            "items": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "description": "Optional core detail records requested through include; preserved separately from basic items. Known fields are taken verbatim from the source reference.",
+              "items": {
+                "properties": {
+                  "core_author_avg_engagement_rate": {
+                    "description": "Source-documented core_author_avg_engagement_rate; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "core_follower_count": {
+                    "description": "Source-documented core_follower_count; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "core_product_count": {
+                    "description": "Source-documented core_product_count; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "core_total_favorited": {
+                    "description": "Source-documented core_total_favorited; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "core_uid": {
+                    "description": "Source-documented core_uid; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "core_video_total_like_count_to_follower_count": {
+                    "description": "Source-documented core_video_total_like_count_to_follower_count; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "id": {
+                    "description": "Source-documented id; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "tioktok_creator_detail_core_ec_video_count": {
+                    "description": "Source-documented tioktok_creator_detail_core_ec_video_count; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "tioktok_creator_detail_core_ecom_video_avg_play_count": {
+                    "description": "Source-documented tioktok_creator_detail_core_ecom_video_avg_play_count; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "tioktok_creator_detail_core_med_commission_rate": {
+                    "description": "Source-documented tioktok_creator_detail_core_med_commission_rate; may be absent or null. Preserve the provider value and original monetary units."
+                  }
+                },
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": true
+              }
+            },
+            "total_count": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            }
+          },
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true
+        },
+        "channel": {
+          "properties": {
+            "items": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "description": "Optional channel detail records requested through include; preserved separately from basic items. Known fields are taken verbatim from the source reference.",
+              "items": {
+                "properties": {
+                  "channel_country_code": {
+                    "description": "Source-documented channel_country_code; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "channel_ec_video_30d_avg_engagement_rate": {
+                    "description": "Source-documented channel_ec_video_30d_avg_engagement_rate; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "channel_ec_video_30d_avg_play_count": {
+                    "description": "Source-documented channel_ec_video_30d_avg_play_count; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "channel_live_30d_gmv": {
+                    "description": "Source-documented channel_live_30d_gmv; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "channel_live_30d_gpm": {
+                    "description": "Source-documented channel_live_30d_gpm; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "channel_total_video_live_30d_gmv": {
+                    "description": "Source-documented channel_total_video_live_30d_gmv; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "channel_uid": {
+                    "description": "Source-documented channel_uid; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "channel_video_30d_gmv": {
+                    "description": "Source-documented channel_video_30d_gmv; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "channel_video_30d_gpm": {
+                    "description": "Source-documented channel_video_30d_gpm; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "id": {
+                    "description": "Source-documented id; may be absent or null. Preserve the provider value and original monetary units."
+                  }
+                },
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": true
+              }
+            },
+            "total_count": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            }
+          },
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true
+        },
+        "portrait": {
+          "properties": {
+            "items": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "description": "Optional portrait detail records requested through include; preserved separately from basic items. Known fields are taken verbatim from the source reference.",
+              "items": {
+                "properties": {
+                  "id": {
+                    "description": "Source-documented id; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "portrait_age_distribution": {
+                    "description": "Source-documented portrait_age_distribution; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "portrait_follower_count": {
+                    "description": "Source-documented portrait_follower_count; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "portrait_gender_distribution": {
+                    "description": "Source-documented portrait_gender_distribution; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "portrait_region_distribution": {
+                    "description": "Source-documented portrait_region_distribution; may be absent or null. Preserve the provider value and original monetary units."
+                  },
+                  "portrait_uid": {
+                    "description": "Source-documented portrait_uid; may be absent or null. Preserve the provider value and original monetary units."
+                  }
+                },
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": true
+              }
+            },
+            "total_count": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            }
+          },
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

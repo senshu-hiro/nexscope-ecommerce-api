@@ -1,0 +1,11 @@
+{
+  "requestConsumed": 1,
+  "value": [
+    {
+      "Keyword": "wireless earbuds",
+      "Rank": 1,
+      "SearchVolume": 1
+    }
+  ],
+  "operation": "searchByName"
+}

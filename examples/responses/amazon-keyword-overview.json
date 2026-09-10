@@ -1,0 +1,31 @@
+{
+  "total": 1,
+  "data": [
+    {
+      "keyword": "phone case",
+      "keywordPopularityRank": 1,
+      "estimatedWeeklySearchVolume": 1,
+      "supplyDemandRatio": 1,
+      "totalSearchResultProductCount": 1,
+      "naturalSearchProductCount": 1,
+      "sponsoredProductsCount": 1,
+      "brandAdProductCount": 1,
+      "videoAdProductCount": 1,
+      "paidAdvertisingProductCount": 1,
+      "amazonChoiceProductCount": 1,
+      "topRatedProductCount": 1,
+      "searchRecommendationProductCount": 1,
+      "editorialRecommendationsProductCount": 1,
+      "recNonadProductCount": 1,
+      "recAdProductCount": 1,
+      "trackedAsinTotalCount": 1,
+      "totalMarketplaceKeywordCount": 1,
+      "dataPeriodStartDate": "2026-01-01",
+      "dataPeriodEndDate": "2026-01-01",
+      "keywordDataUpdateTime": "phone case"
+    }
+  ],
+  "costTime": 1,
+  "costToken": 1,
+  "columns": []
+}

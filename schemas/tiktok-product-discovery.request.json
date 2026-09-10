@@ -1,0 +1,133 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.tiktok-product-discovery.",
+  "fields": [
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": false,
+      "description": "Search keyword (fuzzy match on product title)",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "region",
+      "type": "string",
+      "required": false,
+      "description": "Market region code. Options: US (United States), GB (United Kingdom), MX (Mexico), ES (Spain), DE (Germany), IT (Italy), FR (France), ID (Indonesia), VN (Vietnam), MY (Malaysia), TH (Thailand), PH (Philippines), BR (Brazil), JP (Japan), SG (Singapore)",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "category",
+      "type": "string",
+      "required": false,
+      "description": "English category name, automatically matched to TikTok category ID. Non-English input must be translated to English first",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "shopType",
+      "type": "integer",
+      "required": false,
+      "description": "Store type: 1=local store, 2=cross-border store",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "isTopSelling",
+      "type": "boolean",
+      "required": false,
+      "description": "Filter hot-selling products only",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "isNewListed",
+      "type": "boolean",
+      "required": false,
+      "description": "Filter newly listed products only",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "isSshop",
+      "type": "boolean",
+      "required": false,
+      "description": "Filter TikTok fully managed (S-shop) products only",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "isFreeShipping",
+      "type": "boolean",
+      "required": false,
+      "description": "Filter free shipping products only",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "isLocalWarehouse",
+      "type": "boolean",
+      "required": false,
+      "description": "Filter local warehouse shipping products only",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "unitsSoldRange",
+      "type": "object",
+      "required": false,
+      "description": "Sales volume range filter, format: {\"min\": 100, \"max\": 5000}",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "commissionRateRange",
+      "type": "object",
+      "required": false,
+      "description": "Commission rate range filter, format: {\"min\": 0.05, \"max\": 0.20} (decimal, 0.10=10%)",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "creatorCountRange",
+      "type": "object",
+      "required": false,
+      "description": "Creator count range filter, format: {\"min\": 10, \"max\": 500}",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "orderField",
+      "type": "string",
+      "required": false,
+      "description": "Sort field: day7_units_sold (7-day sales), day7_gmv (7-day GMV), commission_rate (commission rate), total_units_sold (total sales), total_gmv (total GMV), creator_count (creator count). Default descending order",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, default 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page, max 10, default 10",
+      "example": 10,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "pageNumber": 1,
+    "keyword": "phone case",
+    "pageSize": 10,
+    "region": "US"
+  },
+  "jsonSchema": null
+}

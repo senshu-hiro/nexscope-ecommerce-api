@@ -1,0 +1,151 @@
+{
+  "properties": {
+    "errcode": {
+      "type": "integer"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "errmsg": {
+      "type": "string"
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Creative identity and copy: id.",
+                "nullable": true
+              },
+              "video_id": {
+                "type": "string",
+                "description": "Creative identity and copy: video id.",
+                "nullable": true
+              },
+              "product_id": {
+                "type": "string",
+                "description": "Creative identity and copy: product id.",
+                "nullable": true
+              },
+              "author_uid": {
+                "type": "string",
+                "description": "Creative identity and copy: author uid.",
+                "nullable": true
+              },
+              "author_unique_id": {
+                "type": "string",
+                "description": "Creative identity and copy: author unique id.",
+                "nullable": true
+              },
+              "author_nickname": {
+                "type": "string",
+                "description": "Creative identity and copy: author nickname.",
+                "nullable": true
+              },
+              "video_desc": {
+                "type": "string",
+                "description": "Creative identity and copy: video desc.",
+                "nullable": true
+              },
+              "country_code": {
+                "type": "string",
+                "description": "Creative identity and copy: country code.",
+                "nullable": true
+              },
+              "platform": {
+                "type": "string",
+                "description": "Creative identity and copy: platform.",
+                "nullable": true
+              },
+              "follower_cnt": {
+                "type": "integer",
+                "description": "Creative audience and engagement count: follower cnt.",
+                "nullable": true
+              },
+              "video_play_count": {
+                "type": "integer",
+                "description": "Creative audience and engagement count: video play count.",
+                "nullable": true
+              },
+              "video_like_count": {
+                "type": "integer",
+                "description": "Creative audience and engagement count: video like count.",
+                "nullable": true
+              },
+              "video_comment_count": {
+                "type": "integer",
+                "description": "Creative audience and engagement count: video comment count.",
+                "nullable": true
+              },
+              "video_share_count": {
+                "type": "integer",
+                "description": "Creative audience and engagement count: video share count.",
+                "nullable": true
+              },
+              "video_collect_count": {
+                "type": "integer",
+                "description": "Creative audience and engagement count: video collect count.",
+                "nullable": true
+              },
+              "video_engagement_rate": {
+                "type": "number",
+                "description": "Provider engagement ratio: video engagement rate.",
+                "nullable": true
+              },
+              "video_30d_gmv": {
+                "type": "object",
+                "description": "Monetary metric with original unit and value: video 30d gmv.",
+                "nullable": true
+              },
+              "video_total_gmv": {
+                "type": "object",
+                "description": "Monetary metric with original unit and value: video total gmv.",
+                "nullable": true
+              },
+              "video_30d_gpm": {
+                "type": "object",
+                "description": "Monetary metric with original unit and value: video 30d gpm.",
+                "nullable": true
+              },
+              "video_date": {
+                "description": "Provider video date. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "video_launch_time": {
+                "description": "Provider video launch time. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "content_tag_v2": {
+                "description": "Provider content tag v2. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "is_aigc_video": {
+                "description": "Provider is aigc video. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "user_avatar": {
+                "description": "Provider user avatar. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "content_intent": {
+                "description": "Provider content intent. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "video_duration": {
+                "description": "Provider video duration. The source establishes this field name; preserve its runtime JSON type and missing values."
+              }
+            },
+            "type": "object",
+            "additionalProperties": true
+          },
+          "nullable": true
+        },
+        "total_count": {
+          "nullable": true,
+          "type": "integer"
+        }
+      },
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

@@ -1,0 +1,79 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.tiktok-shop-analytics.",
+  "fields": [
+    {
+      "name": "region",
+      "type": "string",
+      "required": false,
+      "description": "Region/market code, e.g., US. Max length 1000",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "dateRange",
+      "type": "string",
+      "required": false,
+      "description": "Time range, e.g., last7Day (last 7 days), last30Day (last 30 days). Max length 1000",
+      "example": "last30Day",
+      "constraints": {}
+    },
+    {
+      "name": "pageNumber",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, value range 1-5 (out of range returns errcode 501)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page, value range 5-100",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "language",
+      "type": "string",
+      "required": false,
+      "description": "Return language, e.g., zh-CN, en-US. Max length 1000",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency unit, e.g., USD. Max length 1000",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sortField",
+      "type": "object",
+      "required": false,
+      "description": "Sort criteria; pass an empty object {} for default rank order when not sorting",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "shopId",
+      "type": "string",
+      "required": false,
+      "description": "TikTok shop unique ID (string, to avoid large integer precision loss), e.g., 7495514739648989419. Obtainable from the shop_id field in the shop rank response",
+      "example": "7496162162184128712",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "dateRange": "last30Day",
+    "sortField": {},
+    "region": "US",
+    "pageNumber": 1,
+    "shopId": "7496162162184128712",
+    "pageSize": 10
+  },
+  "jsonSchema": null
+}

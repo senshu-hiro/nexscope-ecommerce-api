@@ -1,0 +1,21 @@
+{
+  "total": 1,
+  "storeNum": 1,
+  "stores": [
+    {
+      "storeId": "123456",
+      "storeName": "Lewshop1",
+      "storeUrl": "https://www.etsy.com/shop/Lewshop1",
+      "country": [],
+      "category": [],
+      "salesTotal": 1,
+      "salesWeekly": 1,
+      "reviews": 1,
+      "favorites": 1,
+      "rating": 4.8,
+      "status": 1
+    }
+  ],
+  "columns": [],
+  "costToken": 3600
+}

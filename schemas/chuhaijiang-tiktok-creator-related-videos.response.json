@@ -1,0 +1,149 @@
+{
+  "properties": {
+    "errcode": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "request_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "errmsg": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "Provider business records for Chuhaijiang TikTok Creator Related Videos. Known row fields: id, tiktok_creator_detail_is_ad, tiktok_creator_detail_is_aigc_video, tiktok_creator_detail_video_30d_gmv, tiktok_creator_detail_video_30d_sold_count, tiktok_creator_detail_video_ad_source, tiktok_creator_detail_video_author_category_label, tiktok_creator_detail_video_author_nickname, tiktok_creator_detail_video_author_uid, tiktok_creator_detail_video_author_unique_id, tiktok_creator_detail_video_collect_count, tiktok_creator_detail_video_comment_count, tiktok_creator_detail_video_country_code, tiktok_creator_detail_video_cover, tiktok_creator_detail_video_desc, tiktok_creator_detail_video_duration, tiktok_creator_detail_video_engagement_rate, tiktok_creator_detail_video_id, tiktok_creator_detail_video_launch_time, tiktok_creator_detail_video_like_count, tiktok_creator_detail_video_play_count, tiktok_creator_detail_video_product_id, tiktok_creator_detail_video_product_images, tiktok_creator_detail_video_product_l1_category, tiktok_creator_detail_video_product_l2_category, tiktok_creator_detail_video_product_l3_category, tiktok_creator_detail_video_product_title, tiktok_creator_detail_video_share_count, tiktok_creator_detail_video_share_url, tiktok_creator_detail_video_total_like_count_to_follower_count_ratio, tiktok_creator_detail_video_user_avatar. Missing and null fields remain unchanged; monetary values retain their original unit and runtime type.",
+          "items": {
+            "properties": {
+              "id": {
+                "description": "Source-documented id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_is_ad": {
+                "description": "Source-documented tiktok_creator_detail_is_ad; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_is_aigc_video": {
+                "description": "Source-documented tiktok_creator_detail_is_aigc_video; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_30d_gmv": {
+                "description": "Source-documented tiktok_creator_detail_video_30d_gmv; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_30d_sold_count": {
+                "description": "Source-documented tiktok_creator_detail_video_30d_sold_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_ad_source": {
+                "description": "Source-documented tiktok_creator_detail_video_ad_source; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_author_category_label": {
+                "description": "Source-documented tiktok_creator_detail_video_author_category_label; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_author_nickname": {
+                "description": "Source-documented tiktok_creator_detail_video_author_nickname; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_author_uid": {
+                "description": "Source-documented tiktok_creator_detail_video_author_uid; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_author_unique_id": {
+                "description": "Source-documented tiktok_creator_detail_video_author_unique_id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_collect_count": {
+                "description": "Source-documented tiktok_creator_detail_video_collect_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_comment_count": {
+                "description": "Source-documented tiktok_creator_detail_video_comment_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_country_code": {
+                "description": "Source-documented tiktok_creator_detail_video_country_code; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_cover": {
+                "description": "Source-documented tiktok_creator_detail_video_cover; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_desc": {
+                "description": "Source-documented tiktok_creator_detail_video_desc; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_duration": {
+                "description": "Source-documented tiktok_creator_detail_video_duration; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_engagement_rate": {
+                "description": "Source-documented tiktok_creator_detail_video_engagement_rate; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_id": {
+                "description": "Source-documented tiktok_creator_detail_video_id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_launch_time": {
+                "description": "Source-documented tiktok_creator_detail_video_launch_time; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_like_count": {
+                "description": "Source-documented tiktok_creator_detail_video_like_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_play_count": {
+                "description": "Source-documented tiktok_creator_detail_video_play_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_product_id": {
+                "description": "Source-documented tiktok_creator_detail_video_product_id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_product_images": {
+                "description": "Source-documented tiktok_creator_detail_video_product_images; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_product_l1_category": {
+                "description": "Source-documented tiktok_creator_detail_video_product_l1_category; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_product_l2_category": {
+                "description": "Source-documented tiktok_creator_detail_video_product_l2_category; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_product_l3_category": {
+                "description": "Source-documented tiktok_creator_detail_video_product_l3_category; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_product_title": {
+                "description": "Source-documented tiktok_creator_detail_video_product_title; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_share_count": {
+                "description": "Source-documented tiktok_creator_detail_video_share_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_share_url": {
+                "description": "Source-documented tiktok_creator_detail_video_share_url; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_total_like_count_to_follower_count_ratio": {
+                "description": "Source-documented tiktok_creator_detail_video_total_like_count_to_follower_count_ratio; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_video_user_avatar": {
+                "description": "Source-documented tiktok_creator_detail_video_user_avatar; may be absent or null. Preserve the provider value and original monetary units."
+              }
+            },
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": true
+          }
+        },
+        "total_count": {
+          "description": "Total matching records.",
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

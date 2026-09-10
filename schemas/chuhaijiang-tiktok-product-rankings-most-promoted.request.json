@@ -1,0 +1,86 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "country": {
+      "type": "string",
+      "description": "Lowercase TikTok market code.",
+      "enum": [
+        "br",
+        "de",
+        "es",
+        "fr",
+        "gb",
+        "id",
+        "it",
+        "jp",
+        "mx",
+        "my",
+        "ph",
+        "sg",
+        "th",
+        "us",
+        "vn"
+      ],
+      "example": "us"
+    },
+    "page": {
+      "type": "integer",
+      "description": "Page number, starting at 1.",
+      "minimum": 1,
+      "example": 1
+    },
+    "pageSize": {
+      "type": "integer",
+      "description": "Maximum records per page.",
+      "minimum": 1,
+      "maximum": 20,
+      "example": 5
+    },
+    "date": {
+      "type": "string",
+      "description": "Ranking date in YYYYMMDD format.",
+      "pattern": "^[0-9]{8}$",
+      "example": "20260824"
+    },
+    "granularity": {
+      "type": "string",
+      "description": "Ranking period.",
+      "enum": [
+        "daily",
+        "weekly",
+        "monthly",
+        "0",
+        "1",
+        "2"
+      ],
+      "example": "daily"
+    },
+    "category": {
+      "type": "string",
+      "description": "Product category ID."
+    },
+    "sellerType": {
+      "type": "string",
+      "description": "Seller type.",
+      "enum": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "sort": {
+      "type": "string",
+      "description": "Provider sort field and direction (field:asc or field:desc).",
+      "default": "related_creator_count:desc",
+      "pattern": "^(interval_gmv|interval_sold_count|live_count|live_user_count|related_creator_count|video_play_count):(asc|desc)$",
+      "example": "related_creator_count:desc"
+    }
+  },
+  "required": [
+    "country",
+    "date",
+    "granularity"
+  ]
+}

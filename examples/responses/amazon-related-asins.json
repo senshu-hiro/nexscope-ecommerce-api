@@ -1,0 +1,42 @@
+{
+  "total": 1,
+  "pages": 1,
+  "page": 1,
+  "pageSize": 10,
+  "data": [
+    {
+      "asin": "B072MQ5BRX",
+      "parentAsin": "B072MQ5BRX",
+      "price": 1,
+      "currentPrice": 1,
+      "customerRating": 1,
+      "totalReviews": 1,
+      "launchDate": "2026-01-01",
+      "imagesUrl": "https://example.com/image.jpg",
+      "sellerId": "example-id",
+      "fbaFee": 1,
+      "shippingFee": 1,
+      "gpm": 1,
+      "clickConversionRate": 1,
+      "clickConversionRateComposite": 1,
+      "clickCountT7": 1,
+      "clickCountT30": 1,
+      "clickCountT90": 1,
+      "clickCountGrowthT7": 1,
+      "clickCountGrowthT30": 1,
+      "purchasedClicksT360": 1,
+      "salesVolumeT360": 1,
+      "nicheCount": 1,
+      "involvedNum": 1,
+      "involvedFrequency": 1,
+      "categoryNames": [],
+      "hasMetric": false,
+      "niches": [],
+      "bestSellersRanking": [],
+      "trends": [],
+      "lastUpdateTime": "2026-01-01"
+    }
+  ],
+  "columns": [],
+  "costToken": 1
+}

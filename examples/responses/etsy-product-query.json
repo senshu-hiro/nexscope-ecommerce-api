@@ -1,0 +1,23 @@
+{
+  "total": 1,
+  "columns": [],
+  "costToken": 1,
+  "productNum": 1,
+  "products": [
+    {
+      "favorites": 1,
+      "favoritesWeekly": 1,
+      "imageUrl": "https://example.com/image.jpg",
+      "isBestsell": 1,
+      "isPick": 1,
+      "isRaving": 1,
+      "price": 1,
+      "productUrl": "https://example.com/image.jpg",
+      "reviews": 1,
+      "reviewsWeekly": 1,
+      "salesTotal": 1,
+      "salesWeekly": 1,
+      "status": 1
+    }
+  ]
+}

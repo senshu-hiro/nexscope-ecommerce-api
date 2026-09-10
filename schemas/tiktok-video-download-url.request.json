@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.tiktok-video-download-url.",
+  "fields": [
+    {
+      "name": "url",
+      "type": "string",
+      "required": true,
+      "description": "TikTok video URL, supports two formats: https://vt.tiktok.com/xxx short link or https://www.tiktok.com/@user/video/xxx full link. Max length 1000",
+      "example": "https://www.tiktok.com/@zachking/video/6768504823336815877",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "url": "https://www.tiktok.com/@zachking/video/6768504823336815877"
+  },
+  "jsonSchema": null
+}

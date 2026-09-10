@@ -1,0 +1,85 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "country": {
+      "type": "string",
+      "description": "Lowercase TikTok market code.",
+      "enum": [
+        "br",
+        "de",
+        "es",
+        "fr",
+        "gb",
+        "id",
+        "it",
+        "jp",
+        "mx",
+        "my",
+        "ph",
+        "sg",
+        "th",
+        "us",
+        "vn"
+      ],
+      "example": "us"
+    },
+    "page": {
+      "type": "integer",
+      "description": "Page number, starting at 1.",
+      "minimum": 1,
+      "example": 1
+    },
+    "pageSize": {
+      "type": "integer",
+      "description": "Maximum records per page.",
+      "minimum": 1,
+      "maximum": 20,
+      "example": 5
+    },
+    "category": {
+      "type": "string",
+      "description": "Product category ID."
+    },
+    "sellerType": {
+      "type": "string",
+      "description": "Seller type.",
+      "enum": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "sort": {
+      "type": "string",
+      "description": "Provider sort field and direction (field:asc or field:desc).",
+      "default": "gmv_3d:desc",
+      "pattern": "^(gmv_3d|sold_count_3d|total_gmv|total_sold_count):(asc|desc)$",
+      "example": "gmv_3d:desc"
+    },
+    "listedFrom": {
+      "type": "string",
+      "description": "Earliest listing date in YYYYMMDD format.",
+      "pattern": "^[0-9]{8}$"
+    },
+    "listedTo": {
+      "type": "string",
+      "description": "Latest listing date in YYYYMMDD format.",
+      "pattern": "^[0-9]{8}$"
+    },
+    "productStatus": {
+      "type": "string",
+      "description": "Provider product status.",
+      "enum": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    }
+  },
+  "required": [
+    "country"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "checkId": "check-id",
+  "status": "success",
+  "total": 2,
+  "riskLevel": "medium",
+  "data": [],
+  "costToken": 225000
+}

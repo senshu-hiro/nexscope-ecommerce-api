@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "description": "Provide patentId or patentNumber. A request may contain at most 100 comma-separated patents.",
+  "fields": [
+    {
+      "name": "patentId",
+      "type": "string",
+      "required": false,
+      "description": "One or up to 100 comma-separated PatSnap patent IDs. Takes precedence when both identifiers are provided.",
+      "example": "patent-id",
+      "constraints": {}
+    },
+    {
+      "name": "patentNumber",
+      "type": "string",
+      "required": false,
+      "description": "One or up to 100 comma-separated publication or grant numbers.",
+      "example": "US10123456B2",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "patentNumber": "US10123456B2"
+  },
+  "jsonSchema": null
+}

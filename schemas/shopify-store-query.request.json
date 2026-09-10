@@ -1,0 +1,132 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.shopify-store-query.",
+  "fields": [
+    {
+      "name": "searchKey",
+      "type": "string",
+      "required": false,
+      "description": "Store name or domain keyword",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "country",
+      "type": "string",
+      "required": false,
+      "description": "Country code (e.g., US, CN)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "year",
+      "type": "integer",
+      "required": false,
+      "description": "Store creation year: 1=Last 1 year, 2=1~2 years, 3=2~3 years, 4=3+ years",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productNumMin",
+      "type": "integer",
+      "required": false,
+      "description": "Product count range start",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productNumMax",
+      "type": "integer",
+      "required": false,
+      "description": "Product count range end",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "advertiseCountMin",
+      "type": "integer",
+      "required": false,
+      "description": "Ad count range start",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "advertiseCountMax",
+      "type": "integer",
+      "required": false,
+      "description": "Ad count range end",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "monthlyVisitMin",
+      "type": "integer",
+      "required": false,
+      "description": "Monthly visits range start",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "monthlyVisitMax",
+      "type": "integer",
+      "required": false,
+      "description": "Monthly visits range end",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "monthOrderMin",
+      "type": "integer",
+      "required": false,
+      "description": "Monthly orders range start",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "monthOrderMax",
+      "type": "integer",
+      "required": false,
+      "description": "Monthly orders range end",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "sortBy",
+      "type": "integer",
+      "required": false,
+      "description": "Sort field: 0=Product count, 1=Category count, 2=Monthly visits, 3=FB followers, 4=Ins followers, 5=Ad count, 6=Relevance, 7=Monthly orders (default)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "orderBy",
+      "type": "string",
+      "required": false,
+      "description": "Sort direction: desc (default) / asc",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number (starting from 1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Results per page, max 100",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "page": 1,
+    "pageSize": 10,
+    "keyword": "phone case"
+  },
+  "jsonSchema": null
+}

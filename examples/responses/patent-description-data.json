@@ -1,0 +1,11 @@
+{
+  "total": 1,
+  "data": [
+    {
+      "patentId": "example-id",
+      "description": []
+    }
+  ],
+  "columns": [],
+  "costToken": 1
+}

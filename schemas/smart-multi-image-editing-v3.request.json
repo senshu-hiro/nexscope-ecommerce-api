@@ -1,0 +1,119 @@
+{
+  "type": "object",
+  "description": "Create an edited output from multiple source images using prompt, provider, resolution, and quality controls.",
+  "fields": [
+    {
+      "name": "imageList",
+      "type": "array",
+      "required": true,
+      "description": "Public image URLs to combine or reference. Provide no more than 6 JPG, JPEG, PNG, or WEBP images; each image must be at most 10 MB and between 800 and 4096 pixels.",
+      "example": [
+        "https://example.com/product.jpg",
+        "https://example.com/model-reference.jpg"
+      ],
+      "constraints": {
+        "maxItems": 6,
+        "minItems": 1
+      }
+    },
+    {
+      "name": "provider",
+      "type": "string",
+      "required": true,
+      "description": "Image model. Supported values: BANANA, BANANA_2, BANANA_PRO, WAN2_7, QWEN_IMAGE_3_PRO, SEEDREAM5, GPT_2_IMAGE, or AIDRAW_EDIT.",
+      "example": "BANANA_PRO",
+      "constraints": {
+        "allowedValues": [
+          "BANANA",
+          "BANANA_2",
+          "BANANA_PRO",
+          "WAN2_7",
+          "QWEN_IMAGE_3_PRO",
+          "SEEDREAM5",
+          "GPT_2_IMAGE",
+          "AIDRAW_EDIT"
+        ]
+      }
+    },
+    {
+      "name": "prompt",
+      "type": "string",
+      "required": false,
+      "description": "Optional fusion instruction, up to 600 characters.",
+      "example": "combine the product with the model in a clean studio scene",
+      "constraints": {}
+    },
+    {
+      "name": "outputNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of images to generate. Defaults to 1.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "resolution",
+      "type": "string",
+      "required": false,
+      "description": "Target resolution preset.",
+      "example": "1K",
+      "constraints": {}
+    },
+    {
+      "name": "aspectRatio",
+      "type": "string",
+      "required": false,
+      "description": "Target aspect ratio.",
+      "example": "1:1",
+      "constraints": {}
+    },
+    {
+      "name": "supplyType",
+      "type": "string",
+      "required": false,
+      "description": "Generation route. Supported values: eco or stable. Defaults to stable.",
+      "example": "stable",
+      "constraints": {}
+    },
+    {
+      "name": "needOptimize",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether the prompt should be optimized upstream.",
+      "example": true,
+      "constraints": {}
+    },
+    {
+      "name": "template",
+      "type": "string",
+      "required": false,
+      "description": "Optional fusion template. Supported values: outfit-fusion, outfit-try-on.",
+      "example": "outfit-fusion",
+      "constraints": {}
+    },
+    {
+      "name": "quality",
+      "type": "string",
+      "required": false,
+      "description": "GPT Image quality only. Supported values: low, medium, or high. Defaults to medium.",
+      "example": "medium",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageList": [
+      "https://example.com/product.jpg",
+      "https://example.com/model-reference.jpg"
+    ],
+    "provider": "BANANA_PRO",
+    "prompt": "combine the product with the model in a clean studio scene",
+    "outputNum": 1,
+    "resolution": "1K",
+    "aspectRatio": "1:1",
+    "supplyType": "stable",
+    "needOptimize": true,
+    "template": "outfit-fusion",
+    "quality": "medium"
+  },
+  "jsonSchema": null
+}

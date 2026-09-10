@@ -1,0 +1,86 @@
+{
+  "properties": {
+    "errcode": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "request_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "errmsg": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "Provider business records for Chuhaijiang TikTok Product Search. Known row fields: id, product_name, product_images, floor_price, ceiling_price, product_rating, product_sold_count, product_gmv, seller_id, shop_name. Missing and null fields remain unchanged; monetary values retain their original unit and runtime type.",
+          "items": {
+            "properties": {
+              "id": {
+                "description": "Source-documented id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "product_name": {
+                "description": "Source-documented product_name; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "product_images": {
+                "description": "Source-documented product_images; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "floor_price": {
+                "description": "Source-documented floor_price; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "ceiling_price": {
+                "description": "Source-documented ceiling_price; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "product_rating": {
+                "description": "Source-documented product_rating; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "product_sold_count": {
+                "description": "Source-documented product_sold_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "product_gmv": {
+                "description": "Source-documented product_gmv; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "seller_id": {
+                "description": "Source-documented seller_id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "shop_name": {
+                "description": "Source-documented shop_name; may be absent or null. Preserve the provider value and original monetary units."
+              }
+            },
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": true
+          }
+        },
+        "total_count": {
+          "description": "Total matching records.",
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

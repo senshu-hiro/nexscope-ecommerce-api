@@ -1,0 +1,19 @@
+{
+  "total": 1,
+  "allRecordsCount": 1,
+  "data": [
+    {
+      "patentId": "patent-id",
+      "title": "Wireless speaker system",
+      "abstractContent": "A wireless speaker system...",
+      "publicationNumber": "US10123456B2",
+      "applicationNo": "US15/123456",
+      "applicants": [],
+      "inventors": [],
+      "assignees": [],
+      "ipcFurther": []
+    }
+  ],
+  "columns": [],
+  "costToken": 6000
+}

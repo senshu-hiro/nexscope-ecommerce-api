@@ -1,0 +1,364 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of results returned on this page",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "storeNum",
+      "type": "integer",
+      "required": false,
+      "description": "Total number of matching stores (upstream store_num)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "stores",
+      "type": "array",
+      "required": false,
+      "description": "Shopify store list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Columns for rendering",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Title (Shopify Store Query)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Source type: shopify",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Tool type: ehunt",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style: tableListWorkbenches",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].storeId",
+      "type": "string",
+      "required": false,
+      "description": "Store ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "stores[].shopId",
+      "type": "string",
+      "required": false,
+      "description": "Shopify shop ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "stores[].storeName",
+      "type": "string",
+      "required": false,
+      "description": "Store name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].storeDomain",
+      "type": "string",
+      "required": false,
+      "description": "Store domain",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].storeLink",
+      "type": "string",
+      "required": false,
+      "description": "Store link",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].country",
+      "type": "string",
+      "required": false,
+      "description": "Country",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].createdTime",
+      "type": "string",
+      "required": false,
+      "description": "Creation time",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].productNum",
+      "type": "string",
+      "required": false,
+      "description": "Product count",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].categoryNum",
+      "type": "string",
+      "required": false,
+      "description": "Category count",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].categories",
+      "type": "string",
+      "required": false,
+      "description": "Category list (elements contain id, name)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].monthlyVisit",
+      "type": "string",
+      "required": false,
+      "description": "Monthly visits (formatted)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].monthOrderNum",
+      "type": "string",
+      "required": false,
+      "description": "Monthly orders (formatted)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].fbFollowers",
+      "type": "string",
+      "required": false,
+      "description": "Facebook followers",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].insFollowers",
+      "type": "string",
+      "required": false,
+      "description": "Instagram followers",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].advertiseCount",
+      "type": "string",
+      "required": false,
+      "description": "Ad count",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].adLink",
+      "type": "string",
+      "required": false,
+      "description": "Ad library link",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].email",
+      "type": "string",
+      "required": false,
+      "description": "Contact email",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].facebookUrl",
+      "type": "string",
+      "required": false,
+      "description": "Facebook page",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "stores[].instagramUrl",
+      "type": "string",
+      "required": false,
+      "description": "Instagram page",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "stores[].socialLinks",
+      "type": "string",
+      "required": false,
+      "description": "Social media links (Map)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].globalRank",
+      "type": "string",
+      "required": false,
+      "description": "Global rank",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].logo",
+      "type": "string",
+      "required": false,
+      "description": "Store logo URL",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "stores[].availableStatus",
+      "type": "string",
+      "required": false,
+      "description": "Whether active: 1=Active",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token cost reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "storeNum": 1,
+    "stores": [
+      {
+        "storeId": "example-id",
+        "shopId": "example-id",
+        "facebookUrl": "https://example.com/image.jpg",
+        "instagramUrl": "https://example.com/image.jpg"
+      }
+    ],
+    "columns": []
+  },
+  "jsonSchema": null
+}

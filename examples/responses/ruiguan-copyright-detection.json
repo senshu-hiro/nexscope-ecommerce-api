@@ -1,0 +1,14 @@
+{
+  "total": 1,
+  "data": [
+    {
+      "subRadarResult": 1,
+      "copyrightUrl": "https://example.com/image.jpg",
+      "troCase": false,
+      "troHolder": false
+    }
+  ],
+  "detectId": "example-id",
+  "columns": [],
+  "costToken": 1
+}

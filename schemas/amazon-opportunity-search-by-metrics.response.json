@@ -1,0 +1,357 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Response code, 200 indicates success",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Message, ok on success, error description on failure",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Array of keyword metric records, each corresponding to a (site, keyword) combination, approximately 37 fields, sorted by collection time descending",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].amazonDomain",
+      "type": "string",
+      "required": false,
+      "description": "Site code (currently fixed US)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": false,
+      "description": "Original search keyword",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "data[].nicheName",
+      "type": "string",
+      "required": false,
+      "description": "Normalized niche name (snake_case)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "nicheRevenue360dMinUsdAtLeast/nicheRevenue360dMaxUsdAtLeast",
+      "type": "number",
+      "required": false,
+      "description": "Last 360 days market revenue lower bound / upper bound (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nichePeakSearchVolumeAtLeast",
+      "type": "integer",
+      "required": false,
+      "description": "Peak monthly search volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nichePeakMonth",
+      "type": "integer",
+      "required": false,
+      "description": "Search peak month (1-12)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheSearchVolumeYoyChangePctAtLeast",
+      "type": "number",
+      "required": false,
+      "description": "Search volume YoY change rate (%, signed)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheBrandCount/nicheBrandCountYoyChangePctAtLeast",
+      "type": "integer",
+      "required": false,
+      "description": "Active brand count and its YoY change rate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheTop5ProductClickSharePctAtLeast",
+      "type": "number",
+      "required": false,
+      "description": "Top 5 product click share (0-100)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "featureTop5BrandSharePctAtLeast",
+      "type": "number",
+      "required": false,
+      "description": "Top 5 brand combined share (0-100)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "featureTopBrands",
+      "type": "array",
+      "required": false,
+      "description": "Top 3 brand name list (original text)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "priceMinUsd/priceMaxUsd",
+      "type": "number",
+      "required": false,
+      "description": "Niche overall minimum / maximum product price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceSweetSpotMinUsd/priceSweetSpotMaxUsd",
+      "type": "number",
+      "required": false,
+      "description": "Value sweet spot price range lower bound / upper bound",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceEntryClickSharePctAtLeast/priceMidClickSharePctAtLeast/priceHighClickSharePctAtLeast",
+      "type": "number",
+      "required": false,
+      "description": "Entry / Mid / High tier click share (0-100)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "demoPrimaryAgeMin/demoPrimaryAgeMax",
+      "type": "integer",
+      "required": false,
+      "description": "Core audience age lower bound / upper bound",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].demoGenderDominant",
+      "type": "string",
+      "required": false,
+      "description": "Dominant gender (female / male / mixed / unspecified)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].demoPrimaryIncomeTier",
+      "type": "string",
+      "required": false,
+      "description": "Core audience income tier",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "demoLifeStageTags",
+      "type": "array",
+      "required": false,
+      "description": "Life stage tag list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "featureNewAvgReviewCountAtLeast/featureEstablishedAvgReviewCountAtLeast",
+      "type": "integer",
+      "required": false,
+      "description": "New / Established product average review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "featureEmergingTrendTags/featureUncommonFeatureTags",
+      "type": "array",
+      "required": false,
+      "description": "Emerging trend / Rare differentiation feature tags",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].searchTopCategory1Label",
+      "type": "string",
+      "required": false,
+      "description": "Traffic top category 1 normalized label",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "reviewPositiveTop1Topic/reviewPositiveTop1PctAtLeast",
+      "type": "number",
+      "required": false,
+      "description": "Positive review #1 topic and its share among positive reviews",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "reviewNegativeTop1Topic/reviewNegativeTop1PctAtLeast/reviewNegativeTop2Topic",
+      "type": "number",
+      "required": false,
+      "description": "Negative review #1 topic, share, and secondary cause",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "reviewStrategicInsightTags",
+      "type": "array",
+      "required": false,
+      "description": "Review strategic insight tags",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token cost reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "data": [],
+    "keyword": "phone case",
+    "nicheRevenue360dMinUsdAtLeast/nicheRevenue360dMaxUsdAtLeast": 1,
+    "nichePeakSearchVolumeAtLeast": 1,
+    "nichePeakMonth": 1,
+    "nicheSearchVolumeYoyChangePctAtLeast": 1,
+    "nicheBrandCount/nicheBrandCountYoyChangePctAtLeast": 1,
+    "nicheTop5ProductClickSharePctAtLeast": 1,
+    "featureTop5BrandSharePctAtLeast": 1,
+    "featureTopBrands": [],
+    "priceMinUsd/priceMaxUsd": 1,
+    "priceSweetSpotMinUsd/priceSweetSpotMaxUsd": 1,
+    "priceEntryClickSharePctAtLeast/priceMidClickSharePctAtLeast/priceHighClickSharePctAtLeast": 1,
+    "demoPrimaryAgeMin/demoPrimaryAgeMax": 1,
+    "demoLifeStageTags": [],
+    "featureNewAvgReviewCountAtLeast/featureEstablishedAvgReviewCountAtLeast": 1,
+    "featureEmergingTrendTags/featureUncommonFeatureTags": [],
+    "reviewPositiveTop1Topic/reviewPositiveTop1PctAtLeast": 1,
+    "reviewNegativeTop1Topic/reviewNegativeTop1PctAtLeast/reviewNegativeTop2Topic": 1,
+    "reviewStrategicInsightTags": []
+  },
+  "jsonSchema": null
+}

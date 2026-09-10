@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.tiktok-batch-product-detail.",
+  "fields": [
+    {
+      "name": "productIds",
+      "type": "array",
+      "required": false,
+      "description": "List of product IDs (max 1000). Example: [\"1729382310407603945\", \"1729382310407603946\"]",
+      "example": [
+        "1732294342978343112"
+      ],
+      "constraints": {}
+    },
+    {
+      "name": "productUrls",
+      "type": "array",
+      "required": false,
+      "description": "List of product URLs (max 1000), in the form https://shop.tiktok.com/us/pdp/<slug>/<productId>?...; the backend will extract the trailing productId from each URL and merge into productIds, not mutually exclusive with productIds",
+      "example": [],
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "productIds": [
+      "1732294342978343112"
+    ]
+  },
+  "jsonSchema": null
+}

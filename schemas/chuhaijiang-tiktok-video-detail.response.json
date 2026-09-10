@@ -1,0 +1,162 @@
+{
+  "properties": {
+    "errcode": {
+      "type": "integer"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "errmsg": {
+      "type": "string"
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Video detail identity: id.",
+                "nullable": true
+              },
+              "unique_id": {
+                "type": "string",
+                "description": "Video detail identity: unique id.",
+                "nullable": true
+              },
+              "nickname": {
+                "type": "string",
+                "description": "Video detail identity: nickname.",
+                "nullable": true
+              },
+              "share_url": {
+                "type": "string",
+                "description": "Video detail identity: share url.",
+                "nullable": true
+              },
+              "video_cover": {
+                "type": "object",
+                "description": "Provider image object: video cover.",
+                "nullable": true
+              },
+              "user_avatar": {
+                "type": "object",
+                "description": "Provider image object: user avatar.",
+                "nullable": true
+              },
+              "video_duration": {
+                "type": "integer",
+                "description": "Provider duration or author count; preserve original units: video duration.",
+                "nullable": true
+              },
+              "follower_count": {
+                "type": "integer",
+                "description": "Provider duration or author count; preserve original units: follower count.",
+                "nullable": true
+              },
+              "video_count": {
+                "type": "integer",
+                "description": "Provider duration or author count; preserve original units: video count.",
+                "nullable": true
+              },
+              "video_avg_play_count": {
+                "type": "number",
+                "description": "Author historical average metric: video avg play count.",
+                "nullable": true
+              },
+              "video_avg_like_count": {
+                "type": "number",
+                "description": "Author historical average metric: video avg like count.",
+                "nullable": true
+              },
+              "author_avg_engagement_rate": {
+                "type": "number",
+                "description": "Author historical average metric: author avg engagement rate.",
+                "nullable": true
+              },
+              "had_product": {
+                "type": "boolean",
+                "description": "Provider content flag: had product.",
+                "nullable": true
+              },
+              "has_comment": {
+                "type": "boolean",
+                "description": "Provider content flag: has comment.",
+                "nullable": true
+              }
+            },
+            "type": "object",
+            "additionalProperties": true
+          },
+          "nullable": true
+        },
+        "core": {
+          "nullable": true,
+          "type": "object",
+          "properties": {
+            "items": {
+              "items": {
+                "properties": {
+                  "core_country_code": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Country of the returned video: core country code."
+                  },
+                  "core_video_play_count": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Core video engagement count: core video play count."
+                  },
+                  "core_video_like_count": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Core video engagement count: core video like count."
+                  },
+                  "core_video_comment_count": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Core video engagement count: core video comment count."
+                  },
+                  "core_video_share_count": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Core video engagement count: core video share count."
+                  },
+                  "core_video_collect_count": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Core video engagement count: core video collect count."
+                  },
+                  "core_video_engagement_rate": {
+                    "type": "number",
+                    "nullable": true,
+                    "description": "Core video decimal ratio: core video engagement rate."
+                  },
+                  "core_video_like_play_ratio": {
+                    "type": "number",
+                    "nullable": true,
+                    "description": "Core video decimal ratio: core video like play ratio."
+                  },
+                  "core_video_30d_gpm": {
+                    "type": "object",
+                    "nullable": true,
+                    "description": "Thirty-day GPM with original unit and value: core video 30d gpm."
+                  }
+                },
+                "type": "object",
+                "additionalProperties": true
+              },
+              "type": "array"
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

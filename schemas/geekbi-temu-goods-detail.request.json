@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "goodsId": {
+      "type": "string",
+      "description": "Product ID returned by product search.",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "regionId": {
+      "type": "integer",
+      "description": "Temu region from sites[].regionId; never siteId.",
+      "minimum": 1,
+      "default": 211
+    }
+  },
+  "required": [
+    "goodsId"
+  ]
+}

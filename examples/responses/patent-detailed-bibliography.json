@@ -1,0 +1,35 @@
+{
+  "total": 1,
+  "data": [
+    {
+      "patentId": "example-id",
+      "inventionTitle": [],
+      "abstracts": [],
+      "applicants": [],
+      "assignees": [],
+      "inventors": [],
+      "agents": [],
+      "agency": [],
+      "examiners": [],
+      "priorityClaims": [],
+      "applicationReference": {},
+      "publicationReference": {},
+      "datesOfPublicAvailability": {},
+      "classificationIpcr": {},
+      "classificationCpc": {},
+      "classificationUpc": {},
+      "classificationLoc": [],
+      "classificationFi": [],
+      "classificationFterm": [],
+      "classificationGbc": {},
+      "referenceCitedPatents": [],
+      "referenceCitedOthers": [],
+      "relatedDocuments": [],
+      "pctOrRegionalFilingData": {},
+      "pctOrRegionalPublishingData": {},
+      "exdt": 1
+    }
+  ],
+  "columns": [],
+  "costToken": 1
+}

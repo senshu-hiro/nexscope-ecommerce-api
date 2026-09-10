@@ -1,0 +1,13 @@
+{
+  "errmsg": "ok",
+  "data": {
+    "items": [
+      {
+        "id": null,
+        "tiktok_creator_detail_live_country_code": null,
+        "tiktok_creator_detail_live_cover": null
+      }
+    ]
+  },
+  "errcode": 200
+}

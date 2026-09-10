@@ -1,0 +1,28 @@
+{
+  "total": 1,
+  "costToken": 1,
+  "columns": [],
+  "products": [
+    {
+      "asin": "B072MQ5BRX",
+      "parentAsin": "B072MQ5BRX",
+      "price": 1,
+      "imageUrl": "https://example.com/image.jpg",
+      "productImageUrls": [],
+      "asinUrl": "B072MQ5BRX",
+      "ratings": 1,
+      "availableDate": "2026-01-01",
+      "availableDateString": "2026-01-01",
+      "categoryNames": [],
+      "marketplaceId": "US",
+      "clickCountT7": 1,
+      "clickCountT30": 1,
+      "clickCountT90": 1,
+      "clickConversionRate": 1,
+      "clickConversionRateComposite": 1,
+      "grossProfitMargin": 1,
+      "fbaFee": 1,
+      "shippingFee": 1
+    }
+  ]
+}

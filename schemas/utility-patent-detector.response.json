@@ -1,0 +1,427 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Record count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "detectId",
+      "type": "string",
+      "required": false,
+      "description": "Detection ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token cost",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Render column definitions",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Patent list (see below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].globalUtilityId",
+      "type": "string",
+      "required": false,
+      "description": "Patent ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].title",
+      "type": "string",
+      "required": false,
+      "description": "Utility patent title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].titleCn",
+      "type": "string",
+      "required": false,
+      "description": "Utility patent title (Chinese)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].similarity",
+      "type": "number",
+      "required": false,
+      "description": "Similarity between the product and this patent (0--1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].patentValidity",
+      "type": "string",
+      "required": false,
+      "description": "Patent validity: Active or Invalid",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].applicationNumber",
+      "type": "string",
+      "required": false,
+      "description": "Application number",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].applicationDate",
+      "type": "string",
+      "required": false,
+      "description": "Application date (yyyy-MM-dd)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "data[].publicationNumber",
+      "type": "string",
+      "required": false,
+      "description": "Publication number",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].publicationDate",
+      "type": "string",
+      "required": false,
+      "description": "Publication date (yyyy-MM-dd)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "data[].estimatedDueDate",
+      "type": "string",
+      "required": false,
+      "description": "Estimated expiration date (yyyy-MM-dd)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "data[].region",
+      "type": "string",
+      "required": false,
+      "description": "Receiving office",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "data[].patentAbstract",
+      "type": "string",
+      "required": false,
+      "description": "Abstract",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].patentAbstractCn",
+      "type": "string",
+      "required": false,
+      "description": "Abstract (Chinese)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].claims",
+      "type": "string",
+      "required": false,
+      "description": "Claims",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].claimsCn",
+      "type": "string",
+      "required": false,
+      "description": "Claims (Chinese)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].specification",
+      "type": "string",
+      "required": false,
+      "description": "Specification",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].specificationCn",
+      "type": "string",
+      "required": false,
+      "description": "Specification (Chinese)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].inventors",
+      "type": "array",
+      "required": false,
+      "description": "Inventors and countries concatenated, array format",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].inventorAddresses",
+      "type": "array",
+      "required": false,
+      "description": "Inventor addresses, array format",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].applicants",
+      "type": "array",
+      "required": false,
+      "description": "Applicants and countries concatenated, array format",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].applicantAddresses",
+      "type": "array",
+      "required": false,
+      "description": "Rights holder addresses, array format",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].priorityNumber",
+      "type": "array",
+      "required": false,
+      "description": "Priority numbers, array format",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].relatedPublicationDate",
+      "type": "array",
+      "required": false,
+      "description": "First publication dates (yyyy-MM-dd), array format",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].patentImageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Patent cover image",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "data[].images",
+      "type": "array",
+      "required": false,
+      "description": "Patent drawings",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].classNumList",
+      "type": "array",
+      "required": false,
+      "description": "Classification number path list, format: classNum1 > classNum2 > classNum3",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].cpcKindRaw",
+      "type": "array",
+      "required": false,
+      "description": "CPC classification (raw JSONArray)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].troCase",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether there is a TRO enforcement history",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "data[].troHolder",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether it is a patent of a TRO rights holder",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "detectId": "example-id",
+    "costToken": 1,
+    "columns": [],
+    "data": [
+      {
+        "globalUtilityId": "example-id",
+        "similarity": 1,
+        "applicationDate": "2026-01-01",
+        "publicationDate": "2026-01-01",
+        "estimatedDueDate": "2026-01-01",
+        "region": "US",
+        "inventors": [],
+        "inventorAddresses": [],
+        "applicants": [],
+        "applicantAddresses": [],
+        "priorityNumber": [],
+        "relatedPublicationDate": [],
+        "patentImageUrl": "https://example.com/image.jpg",
+        "images": [],
+        "classNumList": [],
+        "cpcKindRaw": [],
+        "troCase": false,
+        "troHolder": false
+      }
+    ]
+  },
+  "jsonSchema": null
+}

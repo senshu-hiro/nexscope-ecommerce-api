@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-niche-info.",
+  "fields": [
+    {
+      "name": "nicheId",
+      "type": "string",
+      "required": true,
+      "description": "Niche market ID, max length 1000 characters, only supports single ID query",
+      "example": "dfecfecfa9701de73a08867d7bcd3bc0",
+      "constraints": {}
+    },
+    {
+      "name": "countryCode",
+      "type": "string",
+      "required": false,
+      "description": "Country code, only supports US, JP, DE, default US",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "nicheId": "dfecfecfa9701de73a08867d7bcd3bc0",
+    "countryCode": "US"
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,110 @@
+{
+  "properties": {
+    "errcode": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "request_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "errmsg": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "Provider business records for Chuhaijiang TikTok Creator Related Lives. Known row fields: id, tiktok_creator_detail_live_country_code, tiktok_creator_detail_live_cover, tiktok_creator_detail_live_end_time, tiktok_creator_detail_live_gmv, tiktok_creator_detail_live_gpm, tiktok_creator_detail_live_max_user_count, tiktok_creator_detail_live_most_product_category_label, tiktok_creator_detail_live_new_follow_count, tiktok_creator_detail_live_opm, tiktok_creator_detail_live_product_count, tiktok_creator_detail_live_room_id, tiktok_creator_detail_live_room_link, tiktok_creator_detail_live_start_time, tiktok_creator_detail_live_title, tiktok_creator_detail_live_total_sold_count, tiktok_creator_detail_live_total_user, tiktok_creator_detail_live_user_follower_count. Missing and null fields remain unchanged; monetary values retain their original unit and runtime type.",
+          "items": {
+            "properties": {
+              "id": {
+                "description": "Source-documented id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_country_code": {
+                "description": "Source-documented tiktok_creator_detail_live_country_code; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_cover": {
+                "description": "Source-documented tiktok_creator_detail_live_cover; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_end_time": {
+                "description": "Source-documented tiktok_creator_detail_live_end_time; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_gmv": {
+                "description": "Source-documented tiktok_creator_detail_live_gmv; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_gpm": {
+                "description": "Source-documented tiktok_creator_detail_live_gpm; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_max_user_count": {
+                "description": "Source-documented tiktok_creator_detail_live_max_user_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_most_product_category_label": {
+                "description": "Source-documented tiktok_creator_detail_live_most_product_category_label; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_new_follow_count": {
+                "description": "Source-documented tiktok_creator_detail_live_new_follow_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_opm": {
+                "description": "Source-documented tiktok_creator_detail_live_opm; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_product_count": {
+                "description": "Source-documented tiktok_creator_detail_live_product_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_room_id": {
+                "description": "Source-documented tiktok_creator_detail_live_room_id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_room_link": {
+                "description": "Source-documented tiktok_creator_detail_live_room_link; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_start_time": {
+                "description": "Source-documented tiktok_creator_detail_live_start_time; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_title": {
+                "description": "Source-documented tiktok_creator_detail_live_title; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_total_sold_count": {
+                "description": "Source-documented tiktok_creator_detail_live_total_sold_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_total_user": {
+                "description": "Source-documented tiktok_creator_detail_live_total_user; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tiktok_creator_detail_live_user_follower_count": {
+                "description": "Source-documented tiktok_creator_detail_live_user_follower_count; may be absent or null. Preserve the provider value and original monetary units."
+              }
+            },
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": true
+          }
+        },
+        "total_count": {
+          "description": "Total matching records.",
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

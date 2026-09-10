@@ -1,0 +1,6 @@
+{
+  "imageList": [
+    "https://example.com/product.jpg"
+  ],
+  "prompt": "Show the complete product from the supplied front view."
+}

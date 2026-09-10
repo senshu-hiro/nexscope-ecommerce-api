@@ -1,0 +1,44 @@
+{
+  "required": [
+    "connectionId",
+    "startDate",
+    "endDate"
+  ],
+  "type": "object",
+  "properties": {
+    "connectionId": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "advertiserAccountId": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "timeUnit": {
+      "enum": [
+        "DAILY",
+        "SUMMARY"
+      ],
+      "type": "string",
+      "default": "DAILY"
+    },
+    "detailLevel": {
+      "enum": [
+        "ACCOUNT",
+        "CAMPAIGN",
+        "AD_GROUP"
+      ],
+      "type": "string",
+      "default": "ACCOUNT"
+    }
+  },
+  "additionalProperties": false
+}

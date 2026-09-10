@@ -1,0 +1,9 @@
+{
+  "requestConsumed": 1,
+  "value": {
+    "Price": 1,
+    "ProductId": "5169493923",
+    "Title": "Example Walmart product"
+  },
+  "operation": "detail"
+}

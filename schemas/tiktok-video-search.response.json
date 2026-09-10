@@ -1,0 +1,462 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Business status code, 200 indicates success (see error codes below)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Business status description",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Record count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Video list (see video fields below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Rendered columns",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token cost",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].videoId",
+      "type": "string",
+      "required": false,
+      "description": "Video ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].videoDesc",
+      "type": "string",
+      "required": false,
+      "description": "Video description",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].officialUrl",
+      "type": "string",
+      "required": false,
+      "description": "TikTok official video URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].coverUrl",
+      "type": "string",
+      "required": false,
+      "description": "Video cover URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].duration",
+      "type": "integer",
+      "required": false,
+      "description": "Video duration (seconds)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].width",
+      "type": "string",
+      "required": false,
+      "description": "Video width",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].height",
+      "type": "string",
+      "required": false,
+      "description": "Video height",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].ratio",
+      "type": "string",
+      "required": false,
+      "description": "Video resolution (e.g., 540p/720p)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].dataSize",
+      "type": "string",
+      "required": false,
+      "description": "Video file size",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].createDate",
+      "type": "string",
+      "required": false,
+      "description": "Video publish date",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].userId",
+      "type": "string",
+      "required": false,
+      "description": "Creator ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].uniqueId",
+      "type": "string",
+      "required": false,
+      "description": "TikTok account ID (unique_id)",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].avatar",
+      "type": "string",
+      "required": false,
+      "description": "Creator avatar",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalViewsCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Total view count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalViews1dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Views in last 1 day",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalViews7dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Views in last 7 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalViews30dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Views in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalDiggCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Total like count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalDigg1dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Likes in last 1 day",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalDigg7dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Likes in last 7 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalDigg30dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Likes in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalCommentsCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Total comment count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalSharesCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Total share count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalFavoritesCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Total favorite count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalVideoSaleCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Video sales (units)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalVideoSaleGmvAmt",
+      "type": "integer",
+      "required": false,
+      "description": "Video sales GMV (amount)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].salesFlagText",
+      "type": "string",
+      "required": false,
+      "description": "Whether promotional video",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].isAdText",
+      "type": "string",
+      "required": false,
+      "description": "Whether ad video",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].createdByAiText",
+      "type": "string",
+      "required": false,
+      "description": "Whether AI video (Yes/No/Unknown)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].productCategoryList",
+      "type": "string",
+      "required": false,
+      "description": "Product categories",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].videoProducts",
+      "type": "string",
+      "required": false,
+      "description": "Video associated products",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].region",
+      "type": "string",
+      "required": false,
+      "description": "Region code",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Product source",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Source tool",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "errcode": 1,
+    "total": 1,
+    "data": [],
+    "columns": [
+      {
+        "videoId": "example-id",
+        "officialUrl": "https://example.com/image.jpg",
+        "coverUrl": "https://example.com/image.jpg",
+        "duration": 1,
+        "createDate": "2026-01-01",
+        "userId": "example-id",
+        "uniqueId": "example-id",
+        "totalViewsCnt": 1,
+        "totalViews1dCnt": 1,
+        "totalViews7dCnt": 1,
+        "totalViews30dCnt": 1,
+        "totalDiggCnt": 1,
+        "totalDigg1dCnt": 1,
+        "totalDigg7dCnt": 1,
+        "totalDigg30dCnt": 1,
+        "totalCommentsCnt": 1,
+        "totalSharesCnt": 1,
+        "totalFavoritesCnt": 1,
+        "totalVideoSaleCnt": 1,
+        "totalVideoSaleGmvAmt": 1,
+        "region": "US"
+      }
+    ],
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

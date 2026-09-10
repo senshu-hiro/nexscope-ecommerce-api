@@ -1,0 +1,546 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Total record count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "marketplace",
+      "type": "string",
+      "required": false,
+      "description": "Site code",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Statistics result list (corresponds to third-party data)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Render columns",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].nodeIdPath",
+      "type": "string",
+      "required": false,
+      "description": "Node ID path",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].nodeLabelPath",
+      "type": "string",
+      "required": false,
+      "description": "Node name path",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].nodeLabelLocale",
+      "type": "string",
+      "required": false,
+      "description": "Node name translation",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].nodeLabelPathLocale",
+      "type": "string",
+      "required": false,
+      "description": "Node name path translation",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].countryCode",
+      "type": "string",
+      "required": false,
+      "description": "Two-letter country code",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency type for this market",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalProducts",
+      "type": "integer",
+      "required": false,
+      "description": "Total product count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "integer",
+      "required": false,
+      "description": "Sample product count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "sellers",
+      "type": "integer",
+      "required": false,
+      "description": "Seller count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "brands",
+      "type": "integer",
+      "required": false,
+      "description": "Brand count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgSellers",
+      "type": "number",
+      "required": false,
+      "description": "Average seller count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "hlProducts",
+      "type": "integer",
+      "required": false,
+      "description": "Top N Listing sample product count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgUnits",
+      "type": "integer",
+      "required": false,
+      "description": "Average monthly sales volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Average monthly sales revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgPrice",
+      "type": "number",
+      "required": false,
+      "description": "Average price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgRating",
+      "type": "number",
+      "required": false,
+      "description": "Average star rating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgRatings",
+      "type": "integer",
+      "required": false,
+      "description": "Average review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgRatingsCv",
+      "type": "integer",
+      "required": false,
+      "description": "Average monthly review growth count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgBsr",
+      "type": "integer",
+      "required": false,
+      "description": "Average BSR",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgProfit",
+      "type": "number",
+      "required": false,
+      "description": "Average profit margin",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgWeight",
+      "type": "number",
+      "required": false,
+      "description": "Average weight (pound)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "baseAvgWeight",
+      "type": "number",
+      "required": false,
+      "description": "Average weight (g)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgVolume",
+      "type": "number",
+      "required": false,
+      "description": "Average volume (in³)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "baseAvgVolume",
+      "type": "number",
+      "required": false,
+      "description": "Average volume (cm³)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "hlAvgUnits",
+      "type": "integer",
+      "required": false,
+      "description": "Top N Listing average monthly sales volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "hlAvgRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Top N Listing average monthly sales revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "hlAvgPrice",
+      "type": "number",
+      "required": false,
+      "description": "Top N Listing average price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "hlAvgRating",
+      "type": "number",
+      "required": false,
+      "description": "Top N Listing average star rating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "hlAvgRatings",
+      "type": "integer",
+      "required": false,
+      "description": "Top N Listing average review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "hlAvgRatingsCv",
+      "type": "integer",
+      "required": false,
+      "description": "Top N Listing average monthly review growth count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "hlAvgBsr",
+      "type": "integer",
+      "required": false,
+      "description": "Top N Listing average BSR",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "newProducts",
+      "type": "integer",
+      "required": false,
+      "description": "New product count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "newProductProportion",
+      "type": "number",
+      "required": false,
+      "description": "New product share",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "newAvgUnits",
+      "type": "integer",
+      "required": false,
+      "description": "New product average monthly sales volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "newAvgRevenue",
+      "type": "number",
+      "required": false,
+      "description": "New product average monthly sales revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "newAvgPrice",
+      "type": "number",
+      "required": false,
+      "description": "New product average price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "newAvgRating",
+      "type": "number",
+      "required": false,
+      "description": "New product average star rating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "newAvgRatings",
+      "type": "integer",
+      "required": false,
+      "description": "New product average review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minNewRatings",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum new product review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxNewRatings",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum new product review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "firstShelfDate",
+      "type": "string",
+      "required": false,
+      "description": "Product first listing date",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "lastShelfDate",
+      "type": "string",
+      "required": false,
+      "description": "Product latest listing date",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "marketplace": "US",
+    "data": [],
+    "columns": [],
+    "costToken": 1,
+    "totalProducts": 1,
+    "products": 1,
+    "sellers": 1,
+    "brands": 1,
+    "avgSellers": 1,
+    "hlProducts": 1,
+    "avgUnits": 1,
+    "avgRevenue": 1,
+    "avgPrice": 1,
+    "avgRating": 1,
+    "avgRatings": 1,
+    "avgRatingsCv": 1,
+    "avgBsr": 1,
+    "avgProfit": 1,
+    "avgWeight": 1,
+    "baseAvgWeight": 1,
+    "avgVolume": 1,
+    "baseAvgVolume": 1,
+    "hlAvgUnits": 1,
+    "hlAvgRevenue": 1,
+    "hlAvgPrice": 1,
+    "hlAvgRating": 1,
+    "hlAvgRatings": 1,
+    "hlAvgRatingsCv": 1,
+    "hlAvgBsr": 1,
+    "newProducts": 1,
+    "newProductProportion": 1,
+    "newAvgUnits": 1,
+    "newAvgRevenue": 1,
+    "newAvgPrice": 1,
+    "newAvgRating": 1,
+    "newAvgRatings": 1,
+    "minNewRatings": 1,
+    "maxNewRatings": 1,
+    "firstShelfDate": "2026-01-01",
+    "lastShelfDate": "2026-01-01"
+  },
+  "jsonSchema": null
+}

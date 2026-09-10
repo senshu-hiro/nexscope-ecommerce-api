@@ -1,0 +1,117 @@
+{
+  "properties": {
+    "errcode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Provider business status code."
+    },
+    "errmsg": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Provider business status message."
+    },
+    "total": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Number of returned records."
+    },
+    "columns": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Provider render column metadata.",
+      "items": {}
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Provider render/source metadata."
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Provider render/source metadata."
+    },
+    "sourceType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Provider render/source metadata."
+    },
+    "sourceTool": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Provider render/source metadata."
+    },
+    "categories": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Category tree nodes.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "catId": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Provider identifier; searches use regionId and known category IDs."
+          },
+          "catLevel": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Provider identifier; searches use regionId and known category IDs."
+          },
+          "parentCatId": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Provider identifier; searches use regionId and known category IDs."
+          },
+          "catName": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Provider catName."
+          },
+          "isLeaf": {
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "description": "Whether this category is a leaf."
+          }
+        }
+      }
+    },
+    "parentCatId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Supplied parent category ID, if present."
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

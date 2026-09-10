@@ -1,0 +1,12 @@
+{
+  "page": {
+    "page": 1,
+    "pageSize": 10,
+    "orders": [
+      {
+        "field": "searchVolume",
+        "direction": "DESC"
+      }
+    ]
+  }
+}

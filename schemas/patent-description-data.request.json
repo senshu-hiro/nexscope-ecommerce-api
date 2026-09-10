@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.patent-description-data.",
+  "fields": [
+    {
+      "name": "patentId",
+      "type": "string",
+      "required": false,
+      "description": "Patent ID (at least one of patentId and patentNumber must be provided; if both are present, patentId takes priority). Only a single value is supported; multiple values separated by commas are not allowed. Max length: 60000 characters.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "patentNumber",
+      "type": "string",
+      "required": false,
+      "description": "Publication/grant number (at least one of patentId and patentNumber must be provided; if both are present, patentId takes priority). Only a single value is supported; multiple values separated by commas are not allowed. Max length: 60000 characters.",
+      "example": "US11299876B2",
+      "constraints": {}
+    },
+    {
+      "name": "replaceByRelated",
+      "type": "string",
+      "required": false,
+      "description": "Whether to substitute with a family patent's description when the current patent's description is unavailable: 1 Yes, 0 No. Max length: 1000 characters.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "patentNumber": "US11299876B2"
+  },
+  "jsonSchema": null
+}

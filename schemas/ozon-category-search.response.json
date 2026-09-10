@@ -1,0 +1,521 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Return code, \"200\" indicates success (returned on success)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Error code, 200 indicates success; only returned on business errors (coexists with code on success)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Message; ok for success",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Error message; ok for success, reason description on business error",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "id",
+      "type": "string",
+      "required": false,
+      "description": "Echoed category ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of records returned on this page (equals the current page data count, not total category product count)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "totalSales",
+      "type": "integer",
+      "required": false,
+      "description": "Total category sales volume (within the statistics interval)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "totalRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Total category sales revenue (RUB)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "avgPrice",
+      "type": "number",
+      "required": false,
+      "description": "Average category product price (RUB)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "rating",
+      "type": "number",
+      "required": false,
+      "description": "Average category product rating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].seasonalityAmplitude",
+      "type": "string",
+      "required": false,
+      "description": "Seasonality intensity, e.g., STRONG_SEASONALITY",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].seasonalityCoef",
+      "type": "string",
+      "required": false,
+      "description": "Seasonality phase, e.g., OFF_SEASON",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "startDate",
+      "type": "string",
+      "required": false,
+      "description": "Statistics start date",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "endDate",
+      "type": "string",
+      "required": false,
+      "description": "Statistics end date",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "sellerType",
+      "type": "object",
+      "required": false,
+      "description": "Fulfillment method distribution (not seller domestic/cross-border type), keys are fulfillment methods and values are product counts for that method, e.g., {\"FBO\":218,\"RFBS\":528,\"FBP\":5,\"FBS\":240,\"OZON\":1}",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "categoryInfo",
+      "type": "object",
+      "required": false,
+      "description": "Category metadata, structure see \"categoryInfo Structure\" below",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Category product list (see details below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "required": false,
+      "description": "Category product list, content identical to data",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "hasNextPage",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether there is a next page",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Column definitions, elements contain {field, title, cellType, sortable, filterable}",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Response display type",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "API latency (milliseconds)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sku",
+      "type": "integer",
+      "required": false,
+      "description": "Product SKU",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].productId",
+      "type": "integer",
+      "required": false,
+      "description": "Unified product ID, mapped from sku",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].title",
+      "type": "string",
+      "required": false,
+      "description": "Product title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].price",
+      "type": "number",
+      "required": false,
+      "description": "Product price (RUB)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency, always ₽",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sales",
+      "type": "integer",
+      "required": false,
+      "description": "Product sales volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].monthlySalesUnits",
+      "type": "integer",
+      "required": false,
+      "description": "Unified monthly sales, mapped from sales",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].revenue",
+      "type": "number",
+      "required": false,
+      "description": "Product sales revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].monthlySalesRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Unified monthly revenue, mapped from revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].reviewRating",
+      "type": "number",
+      "required": false,
+      "description": "Product rating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].rating",
+      "type": "number",
+      "required": false,
+      "description": "Unified rating, mapped from reviewRating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].reviewCount",
+      "type": "integer",
+      "required": false,
+      "description": "Number of reviews",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].brandName",
+      "type": "string",
+      "required": false,
+      "description": "Brand name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].brand",
+      "type": "string",
+      "required": false,
+      "description": "Unified brand, mapped from brandName",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sellerName",
+      "type": "string",
+      "required": false,
+      "description": "Seller name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].fulfillment",
+      "type": "array",
+      "required": false,
+      "description": "Product fulfillment methods, e.g., [\"FBO\"], may contain multiple values",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product image URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "data[].productUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "data[].productPageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Unified product page URL, mapped from productUrl",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "data[].categoryInfo",
+      "type": "object",
+      "required": false,
+      "description": "Product category attribution information, structure see \"categoryInfo Structure\" below",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "data[].sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Data source, always ozon",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Source tool identifier for the Ozon category endpoint",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].cnTitlePath",
+      "type": "string",
+      "required": false,
+      "description": "Chinese category path, for example Footwear > Athletic and Work Shoes > Weightlifting Shoes",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].enTitlePath",
+      "type": "string",
+      "required": false,
+      "description": "English category path, e.g., Footwear > Sports and Work Footwear > Weightlifting Shoes",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].titlePath",
+      "type": "string",
+      "required": false,
+      "description": "Russian (front-end) category path, e.g., Обувь > Спортивная и рабочая обувь > Штангетки",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].fullCategoryId",
+      "type": "array",
+      "required": false,
+      "description": "Array of category IDs at each level, e.g., [\"15621032\",\"15621032_15621049\",\"15621032_15621049_115951147\"]",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].category",
+      "type": "object",
+      "required": false,
+      "description": "Terminal category object, containing cnTitle/enTitle/title(Russian)/level/crossBorderSellable(whether cross-border sales are allowed)/pid/disabled/id",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "errcode": 1,
+    "id": "example-id",
+    "total": 1,
+    "totalSales": 1,
+    "totalRevenue": 1,
+    "avgPrice": 1,
+    "rating": 1,
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-01",
+    "sellerType": {},
+    "categoryInfo": {},
+    "data": [
+      {
+        "sku": 1,
+        "productId": 1,
+        "price": 1,
+        "sales": 1,
+        "monthlySalesUnits": 1,
+        "revenue": 1,
+        "monthlySalesRevenue": 1,
+        "reviewRating": 1,
+        "rating": 1,
+        "reviewCount": 1,
+        "fulfillment": [],
+        "imageUrl": "https://example.com/image.jpg",
+        "productUrl": "https://example.com/image.jpg",
+        "productPageUrl": "https://example.com/image.jpg",
+        "categoryInfo": {}
+      }
+    ],
+    "products": [
+      {
+        "fullCategoryId": [],
+        "category": {}
+      }
+    ],
+    "hasNextPage": false,
+    "columns": [],
+    "costTime": 1,
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

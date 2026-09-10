@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.tiktok-seller-detail.",
+  "fields": [
+    {
+      "name": "sellerId",
+      "type": "string",
+      "required": true,
+      "description": "TikTok Shop seller ID. Obtainable from the \"EchoTik TikTok Seller Search\" API (nexscope-echotik-list-seller) results, or from the ID in a known store link. Max length 1000",
+      "example": "7496162162184128712",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "sellerId": "7496162162184128712"
+  },
+  "jsonSchema": null
+}

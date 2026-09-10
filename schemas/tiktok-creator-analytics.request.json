@@ -1,0 +1,79 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.tiktok-creator-analytics.",
+  "fields": [
+    {
+      "name": "region",
+      "type": "string",
+      "required": false,
+      "description": "Region/market code, e.g., US",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "dateRange",
+      "type": "string",
+      "required": false,
+      "description": "Time range, e.g., last7Day, last30Day",
+      "example": "last30Day",
+      "constraints": {}
+    },
+    {
+      "name": "pageNumber",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, value range 1-5",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page, value range 5-100",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "language",
+      "type": "string",
+      "required": false,
+      "description": "Return language, e.g., zh-CN, en-US",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency unit, e.g., USD",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sortField",
+      "type": "object",
+      "required": false,
+      "description": "Sort criteria; pass an empty object {} for default rank order when not sorting",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "creatorId",
+      "type": "string",
+      "required": false,
+      "description": "Creator unique ID, e.g., 7153432386608251946, obtainable from the creator_id in the creator rank response",
+      "example": "68616495085350913",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "dateRange": "last30Day",
+    "sortField": {},
+    "creatorId": "68616495085350913",
+    "region": "US",
+    "pageNumber": 1,
+    "pageSize": 10
+  },
+  "jsonSchema": null
+}

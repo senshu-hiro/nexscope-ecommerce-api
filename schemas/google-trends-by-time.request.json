@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.google-trends-by-time.",
+  "fields": [
+    {
+      "name": "days",
+      "type": "integer",
+      "required": false,
+      "description": "Time range, query trend data for the last N days, default 7. Common values: 1, 2, 7",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "region",
+      "type": "string",
+      "required": false,
+      "description": "Country/region code, default US. Options: US, GB, JP, CA, MX, DE, FR, IT, ES, NL, AU, SG, AE, BR, IN, TR, PL, SE",
+      "example": "US",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "region": "US",
+    "days": 1
+  },
+  "jsonSchema": null
+}

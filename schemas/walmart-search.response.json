@@ -1,0 +1,394 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Record count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "required": false,
+      "description": "Product list (see product object below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Rendered columns",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token cost",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].productId",
+      "type": "string",
+      "required": false,
+      "description": "Product ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "products[].usItemId",
+      "type": "string",
+      "required": false,
+      "description": "US item ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "products[].title",
+      "type": "string",
+      "required": false,
+      "description": "Title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].description",
+      "type": "string",
+      "required": false,
+      "description": "Description",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].price",
+      "type": "number",
+      "required": false,
+      "description": "Price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].wasPrice",
+      "type": "number",
+      "required": false,
+      "description": "Original price (was_price)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency unit",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].minPrice",
+      "type": "number",
+      "required": false,
+      "description": "Minimum price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].pricePerUnitAmount",
+      "type": "string",
+      "required": false,
+      "description": "Price per unit amount",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].pricePerUnit",
+      "type": "string",
+      "required": false,
+      "description": "Price per unit",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].rating",
+      "type": "number",
+      "required": false,
+      "description": "Rating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].reviews",
+      "type": "integer",
+      "required": false,
+      "description": "Review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sellerName",
+      "type": "string",
+      "required": false,
+      "description": "Seller name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sellerId",
+      "type": "string",
+      "required": false,
+      "description": "Seller ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "products[].imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Thumbnail",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].productPageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product page URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].sponsored",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether a sponsored product",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].outOfStock",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether out of stock",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].freeShipping",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether free shipping",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].twoDayShipping",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether two-day shipping supported",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].freeShippingWithWalmartPlus",
+      "type": "boolean",
+      "required": false,
+      "description": "Free shipping for Walmart Plus members",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].shippingPrice",
+      "type": "number",
+      "required": false,
+      "description": "Shipping cost",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].multipleOptionsAvailable",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether multiple options available",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].variantSwatches",
+      "type": "array",
+      "required": false,
+      "description": "Variant swatch list (each item contains name variant name, imageUrl variant image URL, productPageUrl variant product page URL, variantFieldId variant field ID)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Source tool",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Source type: walmart",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "products": [
+      {
+        "productId": "example-id",
+        "usItemId": "example-id",
+        "price": 1,
+        "wasPrice": 1,
+        "minPrice": 1,
+        "rating": 1,
+        "reviews": 1,
+        "sellerId": "example-id",
+        "imageUrl": "https://example.com/image.jpg",
+        "productPageUrl": "https://example.com/image.jpg",
+        "sponsored": false,
+        "outOfStock": false,
+        "freeShipping": false,
+        "twoDayShipping": false,
+        "freeShippingWithWalmartPlus": false,
+        "shippingPrice": 1,
+        "multipleOptionsAvailable": false,
+        "variantSwatches": []
+      }
+    ],
+    "columns": [],
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "offerId"
+  ],
+  "properties": {
+    "offerId": {
+      "type": "string",
+      "pattern": "^[1-9]\\d{0,999}$"
+    },
+    "currency": {
+      "type": "string",
+      "pattern": "^[A-Za-z]{3}$"
+    }
+  }
+}

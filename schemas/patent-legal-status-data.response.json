@@ -1,0 +1,221 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of records",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Patent legal status list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].patentId",
+      "type": "string",
+      "required": false,
+      "description": "Patent ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].pn",
+      "type": "string",
+      "required": false,
+      "description": "Publication (grant) number",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].simpleLegalStatus",
+      "type": "array",
+      "required": false,
+      "description": "Simple legal status. Options: Inactive, Active, Pending, Undetermined, PCT designated period, PCT designated expiration",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].legalStatus",
+      "type": "array",
+      "required": false,
+      "description": "Legal status. Options: Published, Examining, Granted, Double, Abandoned-Undetermined, Abandoned-Voluntarily, Abandoned-Deemed, Withdrawn-Undetermined, Withdrawn-Voluntarily, Withdrawn-Deemed, Rejected, Revoked, Expired, Non-Payment, Restoration, Ceased, P-Revoked, Discontinuation, PCT published, PCT entering(designated period), PCT entering(designated expiration), PCT unentered",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].eventStatus",
+      "type": "array",
+      "required": false,
+      "description": "Legal events. Options: Transfer, License, Pledge, Trust, Opposition, Re-examination, Customs, Litigation, Preservation, Invalid-procedure, Oral-procedure, Declassification, Double application",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].legalDate",
+      "type": "integer",
+      "required": false,
+      "description": "Legal status update date (timestamp)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Column definitions for rendering",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "data": [
+      {
+        "patentId": "example-id",
+        "simpleLegalStatus": [],
+        "legalStatus": [],
+        "eventStatus": [],
+        "legalDate": 1
+      }
+    ],
+    "columns": [],
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

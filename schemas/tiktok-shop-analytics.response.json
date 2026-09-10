@@ -1,0 +1,328 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Business status code, 200 indicates success",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Shop rank list (rank) or 1-element detail array (detail)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed for this call, fixed at 14000",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Status message, ok on success",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].rank",
+      "type": "integer",
+      "required": false,
+      "description": "Rank position (1 is highest)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].shop_name",
+      "type": "string",
+      "required": false,
+      "description": "Shop name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].shop_id",
+      "type": "string",
+      "required": false,
+      "description": "Shop unique ID (string, to avoid large integer precision loss)",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].shop_type",
+      "type": "string",
+      "required": false,
+      "description": "Shop type (e.g., BRAND)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].revenue",
+      "type": "number",
+      "required": false,
+      "description": "Total revenue / GMV (in the requested currency)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sales_volumn",
+      "type": "integer",
+      "required": false,
+      "description": "Sales volume (note the field is spelled volumn)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].on_sell_product_count",
+      "type": "integer",
+      "required": false,
+      "description": "Products currently on sale",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].unit_price",
+      "type": "number",
+      "required": false,
+      "description": "Unit price (in the requested currency)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].revenue_growth_rate",
+      "type": "number",
+      "required": false,
+      "description": "Revenue growth rate (%, can be positive or negative)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].self_promotion_revenue",
+      "type": "number",
+      "required": false,
+      "description": "Self-operated/self-promoted revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].affiliate_revenue",
+      "type": "number",
+      "required": false,
+      "description": "Affiliate distribution revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].shopping_mall_revenue",
+      "type": "number",
+      "required": false,
+      "description": "Mall revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].seller_type",
+      "type": "string",
+      "required": false,
+      "description": "Shop/seller type (e.g., BRAND) -- detail uses seller_type, not shop_type",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].region",
+      "type": "string",
+      "required": false,
+      "description": "Region/market (e.g., US)",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "data[].product_number",
+      "type": "integer",
+      "required": false,
+      "description": "Products currently on sale",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].self_account_revenue",
+      "type": "number",
+      "required": false,
+      "description": "Self-operated/self-broadcast revenue -- detail uses self_account_revenue, not self_promotion_revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].shoppingmall_revenue",
+      "type": "number",
+      "required": false,
+      "description": "Mall revenue (note: no underscore between shopping and mall)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_number",
+      "type": "integer",
+      "required": false,
+      "description": "Creator collaborations",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].video_number",
+      "type": "integer",
+      "required": false,
+      "description": "Associated video count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].live_number",
+      "type": "integer",
+      "required": false,
+      "description": "Associated livestream count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "errcode": 1,
+    "data": [
+      {
+        "rank": 1,
+        "shop_id": "example-id",
+        "revenue": 1,
+        "sales_volumn": 1,
+        "on_sell_product_count": 1,
+        "unit_price": 1,
+        "revenue_growth_rate": 1,
+        "self_promotion_revenue": 1,
+        "affiliate_revenue": 1,
+        "shopping_mall_revenue": 1,
+        "region": "US",
+        "product_number": 1,
+        "self_account_revenue": 1,
+        "shoppingmall_revenue": 1,
+        "creator_number": 1,
+        "video_number": 1,
+        "live_number": 1
+      }
+    ],
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

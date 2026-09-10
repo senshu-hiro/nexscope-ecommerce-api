@@ -1,0 +1,358 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Message",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Total data count. Note: this endpoint typically returns only a single record, total is usually 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Response code",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Return data (see data fields below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Latency (ms)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Render columns",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].keyword",
+      "type": "string",
+      "required": false,
+      "description": "Keyword. The keyword text of the search query",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "data[].keywordPopularityRank",
+      "type": "integer",
+      "required": false,
+      "description": "Keyword popularity rank. This keyword's monthly search volume ranking among all Amazon keywords; lower values indicate higher search volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].estimatedWeeklySearchVolume",
+      "type": "integer",
+      "required": false,
+      "description": "Estimated weekly search volume. Estimated weekly search count for this keyword on Amazon, reflecting its search popularity",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].supplyDemandRatio",
+      "type": "number",
+      "required": false,
+      "description": "Supply-demand ratio. Ratio of supply to demand, formula: search result product count / monthly search volume; lower values indicate less competition and greater opportunity",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].totalSearchResultProductCount",
+      "type": "integer",
+      "required": false,
+      "description": "Total search result product count. Total number of products displayed for this keyword (including natural search, ad placements, recommendation placements, etc.)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].naturalSearchProductCount",
+      "type": "integer",
+      "required": false,
+      "description": "Natural search product count. Number of products displayed in natural search results for this keyword (excluding ad placements)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sponsoredProductsCount",
+      "type": "integer",
+      "required": false,
+      "description": "SP ad product count. Number of products running Sponsored Products ads for this keyword",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].brandAdProductCount",
+      "type": "integer",
+      "required": false,
+      "description": "Brand ad product count. Number of products running brand ads for this keyword",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].videoAdProductCount",
+      "type": "integer",
+      "required": false,
+      "description": "Video ad product count. Number of products running video ads for this keyword",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].paidAdvertisingProductCount",
+      "type": "integer",
+      "required": false,
+      "description": "Total PPC ad product count. Total number of products running any PPC paid ads for this keyword (including SP, brand ads, video ads, etc.)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].amazonChoiceProductCount",
+      "type": "integer",
+      "required": false,
+      "description": "Amazon's Choice product count. Number of products with the Amazon's Choice badge for this keyword",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].topRatedProductCount",
+      "type": "integer",
+      "required": false,
+      "description": "Top Rated recommended product count. Number of products appearing in the Top Rated (high rating) recommendation placement for this keyword",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].searchRecommendationProductCount",
+      "type": "integer",
+      "required": false,
+      "description": "Search recommendation product count. Number of products recommended by Amazon when searching this keyword",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].editorialRecommendationsProductCount",
+      "type": "integer",
+      "required": false,
+      "description": "Editorial Recommendations product count. Number of products appearing in the editorial recommendation placement for this keyword",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].recNonadProductCount",
+      "type": "integer",
+      "required": false,
+      "description": "Recommendation placement non-ad product count. Number of non-ad (organic) products in recommendation placements for this keyword",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].recAdProductCount",
+      "type": "integer",
+      "required": false,
+      "description": "Recommendation placement ad product count. Number of ad products in recommendation placements for this keyword",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].trackedAsinTotalCount",
+      "type": "integer",
+      "required": false,
+      "description": "SIF tracked ASIN deduplicated total count. Deduplicated count of ASINs that SIF has tracked with exposure scores across all positions (natural/ad/recommendation) for this keyword (upstream field: totalAsinNum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].totalMarketplaceKeywordCount",
+      "type": "integer",
+      "required": false,
+      "description": "Total marketplace keyword count. Total number of keywords for this site, used to understand overall market size",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].dataPeriodStartDate",
+      "type": "string",
+      "required": false,
+      "description": "Data period start date. ABA week start date corresponding to the returned data (yyyy-MM-dd)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "data[].dataPeriodEndDate",
+      "type": "string",
+      "required": false,
+      "description": "Data period end date. ABA week end date corresponding to the returned data (yyyy-MM-dd)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "data[].keywordDataUpdateTime",
+      "type": "string",
+      "required": false,
+      "description": "Keyword data update time",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "data": [
+      {
+        "keyword": "phone case",
+        "keywordPopularityRank": 1,
+        "estimatedWeeklySearchVolume": 1,
+        "supplyDemandRatio": 1,
+        "totalSearchResultProductCount": 1,
+        "naturalSearchProductCount": 1,
+        "sponsoredProductsCount": 1,
+        "brandAdProductCount": 1,
+        "videoAdProductCount": 1,
+        "paidAdvertisingProductCount": 1,
+        "amazonChoiceProductCount": 1,
+        "topRatedProductCount": 1,
+        "searchRecommendationProductCount": 1,
+        "editorialRecommendationsProductCount": 1,
+        "recNonadProductCount": 1,
+        "recAdProductCount": 1,
+        "trackedAsinTotalCount": 1,
+        "totalMarketplaceKeywordCount": 1,
+        "dataPeriodStartDate": "2026-01-01",
+        "dataPeriodEndDate": "2026-01-01",
+        "keywordDataUpdateTime": "phone case"
+      }
+    ],
+    "costTime": 1,
+    "costToken": 1,
+    "columns": []
+  },
+  "jsonSchema": null
+}

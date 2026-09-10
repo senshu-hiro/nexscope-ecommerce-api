@@ -1,0 +1,13 @@
+{
+  "errmsg": "ok",
+  "data": {
+    "items": [
+      {
+        "avg_commission_rate": null,
+        "follower_count": null,
+        "has_email_address": null
+      }
+    ]
+  },
+  "errcode": 200
+}

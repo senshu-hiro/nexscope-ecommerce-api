@@ -1,0 +1,485 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Return code, \"200\" success",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Message; ok for success",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Total number of matched products under the seller",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "required": false,
+      "description": "Product list (see details below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Rendered column definitions",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "API latency (milliseconds)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Response type",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].productId",
+      "type": "integer",
+      "required": false,
+      "description": "SKU ID",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].title",
+      "type": "string",
+      "required": false,
+      "description": "Product name (Russian)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].brand",
+      "type": "string",
+      "required": false,
+      "description": "Brand",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].brandId",
+      "type": "integer",
+      "required": false,
+      "description": "Brand ID",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sellerName",
+      "type": "string",
+      "required": false,
+      "description": "Seller name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sellerId",
+      "type": "integer",
+      "required": false,
+      "description": "Seller ID",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].category",
+      "type": "string",
+      "required": false,
+      "description": "Category path (Russian, / separated)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].nicheName",
+      "type": "string",
+      "required": false,
+      "description": "Niche path (Russian)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].nicheId",
+      "type": "integer",
+      "required": false,
+      "description": "Niche ID",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].country",
+      "type": "string",
+      "required": false,
+      "description": "Country of sale, always RU for Ozon",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].firstDate",
+      "type": "string",
+      "required": false,
+      "description": "Listing date (yyyy-MM-dd)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "products[].imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Main image URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].productPageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product page URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].sourceTool/sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Source tool / data source identifier",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].price",
+      "type": "number",
+      "required": false,
+      "description": "Current selling price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].oldPrice",
+      "type": "number",
+      "required": false,
+      "description": "Original price before discount",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].ozonCardPrice",
+      "type": "number",
+      "required": false,
+      "description": "Ozon Card price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].minPrice/maxPrice/averagePrice",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum / average price during the statistics period",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency symbol (₽ / $ / €)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].rating",
+      "type": "number",
+      "required": false,
+      "description": "Rating, 0-5",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].reviewCount",
+      "type": "integer",
+      "required": false,
+      "description": "Number of reviews",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].balance",
+      "type": "integer",
+      "required": false,
+      "description": "Current stock (units)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].balanceFbs",
+      "type": "integer",
+      "required": false,
+      "description": "FBS stock (seller self-ship units)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].frozenStocks",
+      "type": "integer",
+      "required": false,
+      "description": "Slow-moving stock",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].warehousesCount",
+      "type": "integer",
+      "required": false,
+      "description": "Number of FBO warehouses",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].isFbs",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether shipped via FBS",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].salesPerDay",
+      "type": "number",
+      "required": false,
+      "description": "Average daily sales (units/day)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].monthlySalesUnits",
+      "type": "integer",
+      "required": false,
+      "description": "Sales volume during the statistics period (units)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].monthlySalesRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Sales revenue during the statistics period",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].lostProfit",
+      "type": "number",
+      "required": false,
+      "description": "Lost revenue (due to stockouts, etc.)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].daysInSite",
+      "type": "integer",
+      "required": false,
+      "description": "Days on sale (statistics period, including out-of-stock days)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].daysInStock",
+      "type": "integer",
+      "required": false,
+      "description": "Days in stock",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].turnoverDays",
+      "type": "number",
+      "required": false,
+      "description": "Turnover days (lower is faster)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].position",
+      "type": "integer",
+      "required": false,
+      "description": "Ranking within the current query dimension (seller for this endpoint)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].categoryPosition",
+      "type": "integer",
+      "required": false,
+      "description": "Ranking within the category",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].revenueSharePercent",
+      "type": "number",
+      "required": false,
+      "description": "Revenue share of this SKU within the current query dimension, 0-100",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "products": [
+      {
+        "productId": 1,
+        "brandId": 1,
+        "sellerId": 1,
+        "nicheId": 1,
+        "firstDate": "2026-01-01",
+        "imageUrl": "https://example.com/image.jpg",
+        "productPageUrl": "https://example.com/image.jpg",
+        "price": 1,
+        "oldPrice": 1,
+        "ozonCardPrice": 1,
+        "minPrice/maxPrice/averagePrice": 1,
+        "rating": 1,
+        "reviewCount": 1,
+        "balance": 1,
+        "balanceFbs": 1,
+        "frozenStocks": 1,
+        "warehousesCount": 1,
+        "isFbs": false,
+        "salesPerDay": 1,
+        "monthlySalesUnits": 1,
+        "monthlySalesRevenue": 1,
+        "lostProfit": 1,
+        "daysInSite": 1,
+        "daysInStock": 1,
+        "turnoverDays": 1,
+        "position": 1,
+        "categoryPosition": 1,
+        "revenueSharePercent": 1
+      }
+    ],
+    "columns": [],
+    "costTime": 1,
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

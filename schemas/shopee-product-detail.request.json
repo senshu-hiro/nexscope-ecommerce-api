@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "productUrl"
+  ],
+  "properties": {
+    "productUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://(?:shopee\\.sg|shopee\\.co\\.id|shopee\\.com\\.my|shopee\\.ph|shopee\\.co\\.th|shopee\\.tw|shopee\\.vn|shopee\\.com\\.br)(?::443)?/[^?#]*-i\\.\\d+\\.\\d+/?(?:[?#].*)?$"
+    }
+  }
+}

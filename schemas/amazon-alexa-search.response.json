@@ -1,0 +1,318 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "products[].stdout",
+      "type": "string",
+      "required": false,
+      "description": "Markdown format Q&A report, containing each round's user question, Alexa answer, recommended products, and follow-up questions; only returned when format=markdown",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Structured conversation result array; only returned when format=json",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "resultsNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of conversation rounds Alexa actually answered; 0 means no valid response was produced",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Business status code, \"200\" on success (same as numeric errcode)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Business status code (HTTP layer is generally 200; use this field to determine business success/failure)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].msg/errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Response message, ok on success",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "API latency in milliseconds",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed by this call; charged only if upstream succeeds",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "taskId",
+      "type": "string",
+      "required": false,
+      "description": "Task identifier returned by upstream",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style: stdoutWorkbenches (markdown) or json",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].prompt",
+      "type": "string",
+      "required": false,
+      "description": "Prompt sent to Alexa for this round",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].content",
+      "type": "string",
+      "required": false,
+      "description": "Text content of Alexa's response for this round",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].screenshot",
+      "type": "string",
+      "required": false,
+      "description": "Screenshot link for this round's conversation",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].followUpQuestions",
+      "type": "array",
+      "required": false,
+      "description": "List of follow-up questions recommended by Alexa",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].products",
+      "type": "array",
+      "required": false,
+      "description": "Recommended product group list, each group containing title and items",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].title",
+      "type": "string",
+      "required": false,
+      "description": "Recommended group title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].items[].asin",
+      "type": "string",
+      "required": false,
+      "description": "Product ASIN",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "products[].items[].title",
+      "type": "string",
+      "required": false,
+      "description": "Product title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].items[].url",
+      "type": "string",
+      "required": false,
+      "description": "Product detail page URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].items[].cover",
+      "type": "string",
+      "required": false,
+      "description": "Product cover image URL",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].items[].price",
+      "type": "string",
+      "required": false,
+      "description": "Current price (with currency)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].items[].originalPrice",
+      "type": "string",
+      "required": false,
+      "description": "Original or strikethrough price",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].items[].score",
+      "type": "string",
+      "required": false,
+      "description": "Rating",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].items[].ratingsCount",
+      "type": "string",
+      "required": false,
+      "description": "Review count",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].items[].describe",
+      "type": "string",
+      "required": false,
+      "description": "Product description",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "data": [
+      {
+        "followUpQuestions": [],
+        "products": []
+      }
+    ],
+    "resultsNum": 1,
+    "errcode": 1,
+    "costTime": 1,
+    "costToken": 1,
+    "taskId": "example-id",
+    "products": [
+      {
+        "items": [
+          {
+            "asin": "B072MQ5BRX",
+            "url": "https://example.com/image.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  "jsonSchema": null
+}

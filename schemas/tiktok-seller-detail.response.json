@@ -1,0 +1,527 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Business status code, 200 indicates success (see error codes below)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Business status description",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token cost",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Render column definitions (display metadata)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style (e.g., tableListWorkbenches)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].sellerId",
+      "type": "string",
+      "required": false,
+      "description": "Store ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].sellerName",
+      "type": "string",
+      "required": false,
+      "description": "Store name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].sellerLink",
+      "type": "string",
+      "required": false,
+      "description": "Store link",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].coverUrl",
+      "type": "string",
+      "required": false,
+      "description": "Store cover image URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].region",
+      "type": "string",
+      "required": false,
+      "description": "Region",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].categoryId",
+      "type": "string",
+      "required": false,
+      "description": "Primary category ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].categoryL2Id",
+      "type": "string",
+      "required": false,
+      "description": "Secondary category ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].categoryL3Id",
+      "type": "string",
+      "required": false,
+      "description": "Tertiary category ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalSaleCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Total sales",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalSale1dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Sales in last 1 day (increment)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalSale7dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Sales in last 7 days (increment)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalSale30dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Sales in last 30 days (increment)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalSale90dCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Sales in last 90 days (increment)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalSaleGmvAmt",
+      "type": "number",
+      "required": false,
+      "description": "Total GMV",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalSaleGmv1dAmt",
+      "type": "number",
+      "required": false,
+      "description": "GMV in last 1 day (increment)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalSaleGmv7dAmt",
+      "type": "number",
+      "required": false,
+      "description": "GMV in last 7 days (increment)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalSaleGmv30dAmt",
+      "type": "number",
+      "required": false,
+      "description": "GMV in last 30 days (increment)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalSaleGmv90dAmt",
+      "type": "number",
+      "required": false,
+      "description": "GMV in last 90 days (increment)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].followersCount",
+      "type": "integer",
+      "required": false,
+      "description": "Follower count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].rating",
+      "type": "number",
+      "required": false,
+      "description": "Rating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].reviewCount",
+      "type": "integer",
+      "required": false,
+      "description": "Review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].positiveFeedbackRate",
+      "type": "number",
+      "required": false,
+      "description": "Positive feedback rate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].responseRate",
+      "type": "number",
+      "required": false,
+      "description": "Response rate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].deliveryRate",
+      "type": "integer",
+      "required": false,
+      "description": "Delivery rate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalProductCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Historical product count in store (including delisted)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalCrawlProductCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Current product count in store",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].spuAvgPrice",
+      "type": "number",
+      "required": false,
+      "description": "Average SKU price across the store",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].minPrice",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].maxPrice",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalIflCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Total promoting creator count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalVideoCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Total promotional video count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].totalLiveCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Total livestream count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].salesFlagText",
+      "type": "string",
+      "required": false,
+      "description": "Primary selling method (video sales / livestream sales)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].salesTrendFlagText",
+      "type": "string",
+      "required": false,
+      "description": "Sales trend (rising / falling / stable)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].shopIdentityLabel",
+      "type": "string",
+      "required": false,
+      "description": "Store identity (e.g., OFFICIAL SHOP)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].shopTypeText",
+      "type": "string",
+      "required": false,
+      "description": "Whether a brand store (Yes / No)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].fromFlagText",
+      "type": "string",
+      "required": false,
+      "description": "Cross-border identifier (local / cross-border)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].productCategoryList",
+      "type": "string",
+      "required": false,
+      "description": "Product categories (JSON string, containing category_name / category_id)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].mostProductCategoryList",
+      "type": "string",
+      "required": false,
+      "description": "TOP1 product category (JSON string)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].firstCrawlDt",
+      "type": "integer",
+      "required": false,
+      "description": "Estimated listing time, in yyyyMMdd format (e.g., 20240504 represents 2024-05-04)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].userId",
+      "type": "string",
+      "required": false,
+      "description": "Creator UID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Product source (e.g., Tiktok)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Source tool (e.g., EchoTik-Seller Detail)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "errcode": 1,
+    "costToken": 1,
+    "columns": [
+      {
+        "sellerId": "example-id",
+        "coverUrl": "https://example.com/image.jpg",
+        "region": "US",
+        "categoryId": "example-id",
+        "categoryL2Id": "example-id",
+        "categoryL3Id": "example-id",
+        "totalSaleCnt": 1,
+        "totalSale1dCnt": 1,
+        "totalSale7dCnt": 1,
+        "totalSale30dCnt": 1,
+        "totalSale90dCnt": 1,
+        "totalSaleGmvAmt": 1,
+        "totalSaleGmv1dAmt": 1,
+        "totalSaleGmv7dAmt": 1,
+        "totalSaleGmv30dAmt": 1,
+        "totalSaleGmv90dAmt": 1,
+        "followersCount": 1,
+        "rating": 1,
+        "reviewCount": 1,
+        "positiveFeedbackRate": 1,
+        "responseRate": 1,
+        "deliveryRate": 1,
+        "totalProductCnt": 1,
+        "totalCrawlProductCnt": 1,
+        "spuAvgPrice": 1,
+        "minPrice": 1,
+        "maxPrice": 1,
+        "totalIflCnt": 1,
+        "totalVideoCnt": 1,
+        "totalLiveCnt": 1,
+        "firstCrawlDt": 1,
+        "userId": "example-id"
+      }
+    ]
+  },
+  "jsonSchema": null
+}

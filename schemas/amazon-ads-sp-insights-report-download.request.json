@@ -1,0 +1,18 @@
+{
+  "required": [
+    "connectionId",
+    "documentToken"
+  ],
+  "type": "object",
+  "properties": {
+    "connectionId": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "documentToken": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

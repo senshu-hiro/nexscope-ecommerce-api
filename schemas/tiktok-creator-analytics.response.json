@@ -1,0 +1,416 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Business status code, 200 indicates success",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Rank or detail data",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed for this call, typically 14000",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Status message, ok on success",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_nickname",
+      "type": "string",
+      "required": false,
+      "description": "Creator nickname",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_handle",
+      "type": "string",
+      "required": false,
+      "description": "TikTok profile name, e.g., @based",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_id",
+      "type": "string",
+      "required": false,
+      "description": "Creator unique ID, string format to avoid large integer precision loss",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_followers",
+      "type": "string",
+      "required": false,
+      "description": "Follower count, returned as string",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].content_views",
+      "type": "string",
+      "required": false,
+      "description": "Total content views, returned as string",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sales_volumn",
+      "type": "integer",
+      "required": false,
+      "description": "Sales volume, field spelled as volumn",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].revenue",
+      "type": "number",
+      "required": false,
+      "description": "Total revenue / GMV, returned in the requested currency",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].video_revenue",
+      "type": "number",
+      "required": false,
+      "description": "Short video sales revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].live_revenue",
+      "type": "number",
+      "required": false,
+      "description": "Livestream sales revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].revenue_growth_rate",
+      "type": "number",
+      "required": false,
+      "description": "Revenue growth rate (%), can be positive or negative",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_region",
+      "type": "string",
+      "required": false,
+      "description": "Creator region",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_status",
+      "type": "string",
+      "required": false,
+      "description": "Creator status",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_bio",
+      "type": "string",
+      "required": false,
+      "description": "Creator bio",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_belonged_shop_id",
+      "type": "string",
+      "required": false,
+      "description": "Belonged shop ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].new_followers",
+      "type": "integer",
+      "required": false,
+      "description": "New followers within the dateRange window",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].unit_price",
+      "type": "number",
+      "required": false,
+      "description": "Unit price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].video_number",
+      "type": "integer",
+      "required": false,
+      "description": "Video count within the window",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].video_views",
+      "type": "integer",
+      "required": false,
+      "description": "Total video views",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].video_gpm",
+      "type": "number",
+      "required": false,
+      "description": "Video GPM",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].live_number",
+      "type": "integer",
+      "required": false,
+      "description": "Livestream count within the window",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].live_views",
+      "type": "integer",
+      "required": false,
+      "description": "Total livestream views",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].live_gpm",
+      "type": "number",
+      "required": false,
+      "description": "Livestream GPM",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].product_number",
+      "type": "integer",
+      "required": false,
+      "description": "Associated product count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].shop_number",
+      "type": "integer",
+      "required": false,
+      "description": "Associated shop count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_contact_email",
+      "type": "string",
+      "required": false,
+      "description": "Contact email",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_contact_ins",
+      "type": "string",
+      "required": false,
+      "description": "Instagram contact",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_contact_whatsapp",
+      "type": "string",
+      "required": false,
+      "description": "WhatsApp contact",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_contact_facebook",
+      "type": "string",
+      "required": false,
+      "description": "Facebook contact",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_contact_tiktok",
+      "type": "string",
+      "required": false,
+      "description": "TikTok contact",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_contact_zalo",
+      "type": "string",
+      "required": false,
+      "description": "Zalo contact",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_contact_line",
+      "type": "string",
+      "required": false,
+      "description": "Line contact",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "errcode": 1,
+    "data": [
+      {
+        "creator_id": "example-id",
+        "sales_volumn": 1,
+        "revenue": 1,
+        "video_revenue": 1,
+        "live_revenue": 1,
+        "revenue_growth_rate": 1,
+        "creator_belonged_shop_id": "example-id",
+        "new_followers": 1,
+        "unit_price": 1,
+        "video_number": 1,
+        "video_views": 1,
+        "video_gpm": 1,
+        "live_number": 1,
+        "live_views": 1,
+        "live_gpm": 1,
+        "product_number": 1,
+        "shop_number": 1
+      }
+    ],
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

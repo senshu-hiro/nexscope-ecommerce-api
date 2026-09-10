@@ -1,0 +1,27 @@
+{
+  "total": 1,
+  "products": [
+    {
+      "productId": "example-id",
+      "usItemId": "example-id",
+      "price": 1,
+      "wasPrice": 1,
+      "minPrice": 1,
+      "rating": 1,
+      "reviews": 1,
+      "sellerId": "example-id",
+      "imageUrl": "https://example.com/image.jpg",
+      "productPageUrl": "https://example.com/image.jpg",
+      "sponsored": false,
+      "outOfStock": false,
+      "freeShipping": false,
+      "twoDayShipping": false,
+      "freeShippingWithWalmartPlus": false,
+      "shippingPrice": 1,
+      "multipleOptionsAvailable": false,
+      "variantSwatches": []
+    }
+  ],
+  "columns": [],
+  "costToken": 1
+}

@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.patent-claims.",
+  "fields": [
+    {
+      "name": "patentId",
+      "type": "string",
+      "required": false,
+      "description": "PatSnap internal patent ID. Only a single value is supported; multiple values separated by commas are not allowed. Max length 60000 characters",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "patentNumber",
+      "type": "string",
+      "required": false,
+      "description": "Publication/announcement number. Only a single value is supported; multiple values separated by commas are not allowed. Max length 60000 characters",
+      "example": "US11299876B2",
+      "constraints": {}
+    },
+    {
+      "name": "replaceByRelated",
+      "type": "string",
+      "required": false,
+      "description": "Whether to substitute with a family patent's claims when the current patent's claims are unavailable: 1 yes, 0 no. Max length 1000 characters",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "patentNumber": "US11299876B2"
+  },
+  "jsonSchema": null
+}

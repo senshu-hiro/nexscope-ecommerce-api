@@ -1,0 +1,466 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Return code, \"200\" indicates success (returned on success)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Error code, 200 indicates success; only returned on business errors (coexists with code on success)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Message; ok for success",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Error message; ok for success, reason description on business error",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Total record count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Market hot keyword data (see details below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Column definitions, elements contain {field, title, cellType, sortable, filterable}",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "API latency (milliseconds)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Response display type, e.g., tableListWorkbenches",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].query",
+      "type": "string",
+      "required": false,
+      "description": "Keyword (original Russian)",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "data[].queryCn",
+      "type": "string",
+      "required": false,
+      "description": "Keyword Chinese translation",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "data[].platform",
+      "type": "integer",
+      "required": false,
+      "description": "Platform: 0 Ozon, 1 Wildberries",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].searchVolume",
+      "type": "integer",
+      "required": false,
+      "description": "Monthly search volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].count30GrowthRate",
+      "type": "number",
+      "required": false,
+      "description": "Monthly search growth (%, can be negative)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].productCount",
+      "type": "integer",
+      "required": false,
+      "description": "Product count (may be missing in some rows)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].competingProducts",
+      "type": "integer",
+      "required": false,
+      "description": "Competing product count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sellers",
+      "type": "integer",
+      "required": false,
+      "description": "Seller count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].avgPrice",
+      "type": "number",
+      "required": false,
+      "description": "Average price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].itemsViews",
+      "type": "number",
+      "required": false,
+      "description": "Product visibility",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].viewSharing",
+      "type": "number",
+      "required": false,
+      "description": "View concentration (%)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].conversionSharing",
+      "type": "number",
+      "required": false,
+      "description": "Conversion concentration (%)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].marketSpace",
+      "type": "integer",
+      "required": false,
+      "description": "Market space",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].returnCancellationRate",
+      "type": "number",
+      "required": false,
+      "description": "Return/cancellation rate (%)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].uniqQueriesWCa",
+      "type": "integer",
+      "required": false,
+      "description": "Add-to-cart count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].ca",
+      "type": "number",
+      "required": false,
+      "description": "Add-to-cart conversion rate (%)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].categories",
+      "type": "array",
+      "required": false,
+      "description": "Category ID array",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].categoryInfos",
+      "type": "array",
+      "required": false,
+      "description": "Category information (see below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].products",
+      "type": "array",
+      "required": false,
+      "description": "Top product data (see below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].id",
+      "type": "string",
+      "required": false,
+      "description": "Record ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].products[].ozonId",
+      "type": "integer",
+      "required": false,
+      "description": "Ozon product ID",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].products[].sku",
+      "type": "integer",
+      "required": false,
+      "description": "SKU ID",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].products[].title",
+      "type": "string",
+      "required": false,
+      "description": "Product title (Russian)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].products[].imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Main image URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "data[].products[].advert",
+      "type": "integer",
+      "required": false,
+      "description": "Ad indicator (0/1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].categoryInfos[].titleCn",
+      "type": "string",
+      "required": false,
+      "description": "Category Chinese name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].categoryInfos[].titleEn",
+      "type": "string",
+      "required": false,
+      "description": "Category English name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].categoryInfos[].titleRu",
+      "type": "string",
+      "required": false,
+      "description": "Category Russian name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].categoryInfos[].cnTitlePath",
+      "type": "string",
+      "required": false,
+      "description": "Chinese category path",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].categoryInfos[].enTitlePath",
+      "type": "string",
+      "required": false,
+      "description": "English category path",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].categoryInfos[].titlePath",
+      "type": "string",
+      "required": false,
+      "description": "Russian category path",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].categoryInfos[].id",
+      "type": "string",
+      "required": false,
+      "description": "Category ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].categoryInfos[].crossBorderSellable",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether cross-border sales are allowed",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "errcode": 1,
+    "total": 1,
+    "data": [
+      {
+        "query": "phone case",
+        "queryCn": "phone case",
+        "platform": 1,
+        "searchVolume": 1,
+        "count30GrowthRate": 1,
+        "productCount": 1,
+        "competingProducts": 1,
+        "sellers": 1,
+        "avgPrice": 1,
+        "itemsViews": 1,
+        "viewSharing": 1,
+        "conversionSharing": 1,
+        "marketSpace": 1,
+        "returnCancellationRate": 1,
+        "uniqQueriesWCa": 1,
+        "ca": 1,
+        "categories": [],
+        "categoryInfos": [
+          {
+            "id": "example-id",
+            "crossBorderSellable": false
+          }
+        ],
+        "products": [
+          {
+            "ozonId": 1,
+            "sku": 1,
+            "imageUrl": "https://example.com/image.jpg",
+            "advert": 1
+          }
+        ],
+        "id": "example-id"
+      }
+    ],
+    "columns": [],
+    "costTime": 1,
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

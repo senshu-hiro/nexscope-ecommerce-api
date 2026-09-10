@@ -1,0 +1,9 @@
+{
+  "startDate": "2026-01-01",
+  "includeFbs": false,
+  "pageSize": 10,
+  "endDate": "2026-01-31",
+  "page": 1,
+  "brandName": "COMMO",
+  "currencyRate": 1
+}

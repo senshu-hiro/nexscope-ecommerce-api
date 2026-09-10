@@ -1,0 +1,101 @@
+{
+  "properties": {
+    "errcode": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "request_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "errmsg": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "Provider business records for Chuhaijiang TikTok Creator Growth. Known row fields: bio_email, category_label, channel_id, creator_oecuid, follower_count, handle, id, interval_new_follower, nickname, tioktok_creator_growth_interval_new_follower_ratio, uid, unique_id, user_avatar, user_sell_product_l1_category, video_count. Missing and null fields remain unchanged; monetary values retain their original unit and runtime type.",
+          "items": {
+            "properties": {
+              "bio_email": {
+                "description": "Source-documented bio_email; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "category_label": {
+                "description": "Source-documented category_label; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "channel_id": {
+                "description": "Source-documented channel_id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "creator_oecuid": {
+                "description": "Source-documented creator_oecuid; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "follower_count": {
+                "description": "Source-documented follower_count; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "handle": {
+                "description": "Source-documented handle; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "id": {
+                "description": "Source-documented id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "interval_new_follower": {
+                "description": "Source-documented interval_new_follower; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "nickname": {
+                "description": "Source-documented nickname; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "tioktok_creator_growth_interval_new_follower_ratio": {
+                "description": "Source-documented tioktok_creator_growth_interval_new_follower_ratio; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "uid": {
+                "description": "Source-documented uid; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "unique_id": {
+                "description": "Source-documented unique_id; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "user_avatar": {
+                "description": "Source-documented user_avatar; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "user_sell_product_l1_category": {
+                "description": "Source-documented user_sell_product_l1_category; may be absent or null. Preserve the provider value and original monetary units."
+              },
+              "video_count": {
+                "description": "Source-documented video_count; may be absent or null. Preserve the provider value and original monetary units."
+              }
+            },
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": true
+          }
+        },
+        "total_count": {
+          "description": "Total matching records.",
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

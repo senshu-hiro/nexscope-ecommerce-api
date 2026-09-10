@@ -1,0 +1,370 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of matched trademark records",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Trademark list (flattened), each element contains the following fields",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "detectId",
+      "type": "string",
+      "required": false,
+      "description": "API call ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Rendered column definitions",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "blacklistTrademarks",
+      "type": "array",
+      "required": false,
+      "description": "Blacklisted trademarks detected in the text",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "whitelistTrademarks",
+      "type": "array",
+      "required": false,
+      "description": "Whitelisted (safe) trademarks detected in the text",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].textTrademarkRadar",
+      "type": "string",
+      "required": false,
+      "description": "Product risk level: \"0\" = low risk, \"1\" = pending manual review, \"2\" = high risk",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token cost",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].trademarkName",
+      "type": "string",
+      "required": false,
+      "description": "Trademark word",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].region",
+      "type": "string",
+      "required": false,
+      "description": "Country/region code",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "data[].score",
+      "type": "integer",
+      "required": false,
+      "description": "Risk score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].highestModeScore",
+      "type": "integer",
+      "required": false,
+      "description": "Highest risk score (range 0-5)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].trademarksStatus",
+      "type": "string",
+      "required": false,
+      "description": "Status of the highest-score trademark word",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].regionStatus",
+      "type": "string",
+      "required": false,
+      "description": "Trademark status in the matched region",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].holder",
+      "type": "string",
+      "required": false,
+      "description": "Rights holder",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].applicationNumber",
+      "type": "string",
+      "required": false,
+      "description": "Application number",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].registrationNumber",
+      "type": "string",
+      "required": false,
+      "description": "Registration number",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].isFamous",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether it is a famous trademark",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "data[].isAmazonBrand",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether it is an Amazon hot search brand",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "data[].isActiveHolder",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether the holder is an active enforcer",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "data[].isCompatibility",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether it is compatibility",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "data[].isCommonSense",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether it is a common word",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "data[].niceClass",
+      "type": "array",
+      "required": false,
+      "description": "Nice classification",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].originalTextMatches",
+      "type": "array",
+      "required": false,
+      "description": "Original matched trigger words",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "blacklisttrademarks[].trademark",
+      "type": "string",
+      "required": false,
+      "description": "Trademark name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "blacklisttrademarks[].region",
+      "type": "string",
+      "required": false,
+      "description": "Country/region code",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "blacklisttrademarks[].note",
+      "type": "string",
+      "required": false,
+      "description": "Remarks",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "data": [
+      {
+        "region": "US",
+        "score": 1,
+        "highestModeScore": 1,
+        "isFamous": false,
+        "isAmazonBrand": false,
+        "isActiveHolder": false,
+        "isCompatibility": false,
+        "isCommonSense": false,
+        "niceClass": [],
+        "originalTextMatches": []
+      }
+    ],
+    "detectId": "example-id",
+    "columns": [],
+    "blacklistTrademarks": [],
+    "whitelistTrademarks": [],
+    "costToken": 1,
+    "blacklisttrademarks": [
+      {
+        "region": "US"
+      }
+    ]
+  },
+  "jsonSchema": null
+}

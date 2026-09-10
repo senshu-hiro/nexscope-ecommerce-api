@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "description": "Generate model pose variations from an input image and either a pose prompt or posture reference image.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the model image. The image must be up to 20 MB and between 385 and 4096 pixels in both width and height.",
+      "example": "https://example.com/model-reference.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "prompt",
+      "type": "string",
+      "required": false,
+      "description": "Text prompt describing the target pose.",
+      "example": "standing naturally with one hand holding the product",
+      "constraints": {}
+    },
+    {
+      "name": "postureUrl",
+      "type": "string",
+      "required": false,
+      "description": "Optional posture reference image URL.",
+      "example": "https://example.com/pose.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "outputNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of images to generate, from 1 to 4. Defaults to 1.",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/model-reference.jpg",
+    "prompt": "standing naturally with one hand holding the product",
+    "postureUrl": "https://example.com/pose.jpg",
+    "outputNum": 1
+  },
+  "jsonSchema": null
+}

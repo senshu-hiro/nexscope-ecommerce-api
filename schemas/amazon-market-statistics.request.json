@@ -1,0 +1,53 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-market-statistics.",
+  "fields": [
+    {
+      "name": "marketplace",
+      "type": "string",
+      "required": true,
+      "description": "Site code, see [marketplace](#marketplace-options)",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "nodeIdPath",
+      "type": "string",
+      "required": true,
+      "description": "Node ID path string, e.g. 1064954:1069242:1069784:1069820:1069838:1069828",
+      "example": "1064954:1069242",
+      "constraints": {}
+    },
+    {
+      "name": "month",
+      "type": "string",
+      "required": false,
+      "description": "Filter date: nearly or yyyyMM",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "topN",
+      "type": "integer",
+      "required": false,
+      "description": "Top Listing count (used for top-related metric definitions)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "newProduct",
+      "type": "integer",
+      "required": false,
+      "description": "New product definition (months)",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "newProduct": 1,
+    "topN": 1,
+    "nodeIdPath": "1064954:1069242",
+    "marketplace": "US"
+  },
+  "jsonSchema": null
+}

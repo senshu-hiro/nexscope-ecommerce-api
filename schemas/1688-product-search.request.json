@@ -1,0 +1,277 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.1688-product-search.",
+  "fields": [
+    {
+      "name": "keyWord",
+      "type": "string",
+      "required": false,
+      "description": "Search keyword (must be written in Simplified Chinese; maximum 50 characters)",
+      "example": "iPhone 15",
+      "constraints": {}
+    },
+    {
+      "name": "goodsUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product link URL (mutually exclusive with keyWord)",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "productIds",
+      "type": "string",
+      "required": false,
+      "description": "Product IDs, comma-separated, max 20",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "cycle",
+      "type": "string",
+      "required": false,
+      "description": "Statistical period: 7 (last 7 days) or 30 (last 30 days)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "searchType",
+      "type": "integer",
+      "required": false,
+      "description": "Search type: 1 = fuzzy match, 3 = exact match",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "sortField",
+      "type": "string",
+      "required": false,
+      "description": "Sort field: orderCount7d, saleCount7d, saleVolume7d, orderCount30d, saleCount30d, saleVolume30d, offerCreateTime, price, consignPrice",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sortType",
+      "type": "string",
+      "required": false,
+      "description": "Sort order: desc (descending), asc (ascending)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageIndex",
+      "type": "integer",
+      "required": false,
+      "description": "Page number (starting from 1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Results per page (10-100)",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "beginPrice",
+      "type": "number",
+      "required": false,
+      "description": "Wholesale price (start)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "endPrice",
+      "type": "number",
+      "required": false,
+      "description": "Wholesale price (end)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "beginConsignPrice",
+      "type": "number",
+      "required": false,
+      "description": "Dropship price (start)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "endConsignPrice",
+      "type": "number",
+      "required": false,
+      "description": "Dropship price (end)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "beginOrderCount",
+      "type": "integer",
+      "required": false,
+      "description": "Order count (start)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "endOrderCount",
+      "type": "integer",
+      "required": false,
+      "description": "Order count (end)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "beginSaleCount",
+      "type": "integer",
+      "required": false,
+      "description": "Units sold (start)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "endSaleCount",
+      "type": "integer",
+      "required": false,
+      "description": "Units sold (end)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "beginSaleVolume",
+      "type": "number",
+      "required": false,
+      "description": "Sales amount (start)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "endSaleVolume",
+      "type": "number",
+      "required": false,
+      "description": "Sales amount (end)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "beginStartQuantity",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum purchase quantity (start)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "endStartQuantity",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum purchase quantity (end)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "beginTpYear",
+      "type": "integer",
+      "required": false,
+      "description": "TrustPass years (start)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "endTpYear",
+      "type": "integer",
+      "required": false,
+      "description": "TrustPass years (end)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "beginOfferCreateTime",
+      "type": "string",
+      "required": false,
+      "description": "Listing time start (format: YYYY-MM-DD)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "endOfferCreateTime",
+      "type": "string",
+      "required": false,
+      "description": "Listing time end (format: YYYY-MM-DD)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "companyType",
+      "type": "integer",
+      "required": false,
+      "description": "Company type: 0 = no limit, 1 = store, 2 = factory",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "offerType",
+      "type": "integer",
+      "required": false,
+      "description": "Product tag: 0 = no limit, 2 = new product, 3 = 1688 Select, 4 = cross-border, 5 = customization supported, 6 = store highlight",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "shiLiType",
+      "type": "string",
+      "required": false,
+      "description": "Seller type (multi-select, comma-separated): superFactory (Super Factory), Power (Power Seller), TrustPass (TrustPass)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sendTime",
+      "type": "string",
+      "required": false,
+      "description": "Delivery time (multi-select, comma-separated): 24, 48, 72",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "faceToFaceSupport",
+      "type": "string",
+      "required": false,
+      "description": "Waybill support (multi-select, comma-separated): 441218 (Taobao), 386434 (Douyin), 422914 (Pinduoduo), 422978 (Xiaohongshu), 386370 (Kuaishou)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "proxyRights",
+      "type": "string",
+      "required": false,
+      "description": "Dropship rights (multi-select, comma-separated): 4360897 (one-piece dropship with free shipping), 449154 (procure now, pay later)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "shopService",
+      "type": "string",
+      "required": false,
+      "description": "Seller services (multi-select, comma-separated): 4057409 (Safe Buy), 888777 (Deep Verification Report)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "buyerProtections",
+      "type": "string",
+      "required": false,
+      "description": "Buyer protections, comma-separated: free shipping, 7-day free return, or shipping insurance",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "pageSize": 10,
+    "keyWord": "iPhone 15",
+    "searchType": 1,
+    "pageIndex": 1
+  },
+  "jsonSchema": null
+}

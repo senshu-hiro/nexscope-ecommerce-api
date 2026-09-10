@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-product-detail.",
+  "fields": [
+    {
+      "name": "asins",
+      "type": "string",
+      "required": true,
+      "description": "ASIN list, supports batch query, up to 40 ASINs. Format: ^[A-Z0-9]+(,[A-Z0-9]+){0,39}$. Example: B072MQ5BRX,B08N5WRWNW",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "amazonDomain",
+      "type": "string",
+      "required": false,
+      "description": "Amazon country site, default amazon.com. Options: amazon.com, amazon.co.uk, amazon.de, amazon.fr, amazon.it, amazon.es, amazon.co.jp, amazon.ca, amazon.com.au, amazon.com.br, amazon.in, amazon.nl, amazon.se, amazon.pl, amazon.sg, amazon.sa, amazon.ae, amazon.com.tr, amazon.com.mx, amazon.eg, amazon.cn, amazon.com.be",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "language",
+      "type": "string",
+      "required": false,
+      "description": "Language. Examples: en_US, de_DE, fr_FR, ja_JP, it_IT, es_ES, pt_BR, en_GB, zh_CN",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "deliveryZip",
+      "type": "string",
+      "required": false,
+      "description": "Delivery zip code, used to get delivery-related pricing. Examples: 10001 (New York, US), 10115 (Berlin, Germany), EC1A 1BB (London, UK)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "device",
+      "type": "string",
+      "required": false,
+      "description": "Device type: desktop (default), mobile, tablet",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "returnBoughtTogether",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to return frequently bought together items (boughtTogether), default false",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "returnRelatedProducts",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to return related product list (relatedProducts), default false",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "returnAuthorsReviews",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to return author review list (authorsReviews), default false",
+      "example": false,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "returnRelatedProducts": false,
+    "returnAuthorsReviews": false,
+    "asins": "B072MQ5BRX",
+    "returnBoughtTogether": false
+  },
+  "jsonSchema": null
+}

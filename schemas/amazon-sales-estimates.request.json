@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-sales-estimates.",
+  "fields": [
+    {
+      "name": "marketplace",
+      "type": "string",
+      "required": true,
+      "description": "Target marketplace code. Options: us, uk, de, in, ca, fr, it, es, mx, jp",
+      "example": "us",
+      "constraints": {}
+    },
+    {
+      "name": "asin",
+      "type": "string",
+      "required": true,
+      "description": "Amazon ASIN to query",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "startDate",
+      "type": "string",
+      "required": true,
+      "description": "Start date (format: YYYY-MM-DD)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "endDate",
+      "type": "string",
+      "required": true,
+      "description": "End date (format: YYYY-MM-DD); must be earlier than the current date",
+      "example": "2026-01-01",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "asin": "B072MQ5BRX",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-01",
+    "marketplace": "us"
+  },
+  "jsonSchema": null
+}

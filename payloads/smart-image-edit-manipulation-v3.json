@@ -1,0 +1,13 @@
+{
+  "imageUrl": "https://example.com/product.jpg",
+  "prompt": "make the background pure white and keep the product unchanged",
+  "provider": "BANANA_PRO",
+  "outputNum": 1,
+  "resolution": "1K",
+  "aspectRatio": "1:1",
+  "supplyType": "stable",
+  "needOptimize": true,
+  "template": "white-background",
+  "source": "api",
+  "quality": "medium"
+}

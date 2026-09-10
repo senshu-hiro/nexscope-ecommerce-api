@@ -1,0 +1,97 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.ruiguan-detection-patent-design.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Product image URL used for comparison with the patent database (maximum 1,000 characters)",
+      "example": "https://m.media-amazon.com/images/I/719mRAn2VrL._AC_SL1500_.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "queryMode",
+      "type": "string",
+      "required": true,
+      "description": "Search mode: physical for product-photo search, line for line-drawing search, or hybrid for combined search. Maximum 1,000 characters",
+      "example": "physical",
+      "constraints": {}
+    },
+    {
+      "name": "topNumber",
+      "type": "integer",
+      "required": true,
+      "description": "Number of patents to return (maximum 100)",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "regions",
+      "type": "string",
+      "required": false,
+      "description": "Country or region codes where the product is sold, separated by commas, for example US,EU,CN. Supported values: US, EU, CN, JP, KR, DE, GB, FR, IT, AU, CA, BR, MX, IN, TH, SE, CH, IE, IL, DK, NZ, AT, BX, FI, and WO. Maximum 1,000 characters",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "productTitle",
+      "type": "string",
+      "required": false,
+      "description": "Product title used to provide additional search context (maximum 1,000 characters)",
+      "example": "Magnetic phone case",
+      "constraints": {}
+    },
+    {
+      "name": "productDescription",
+      "type": "string",
+      "required": false,
+      "description": "Product description used to provide additional search context (maximum 1,000 characters)",
+      "example": "A protective smartphone case with a magnetic ring stand and shockproof corners.",
+      "constraints": {}
+    },
+    {
+      "name": "patentStatus",
+      "type": "string",
+      "required": false,
+      "description": "Patent-validity filter: 1 for active patents, 0 for inactive patents, or 1,0 for all patents. Maximum 1,000 characters",
+      "example": "1,0",
+      "constraints": {}
+    },
+    {
+      "name": "enableRadar",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to enable AI radar analysis for potential infringement",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "topLoc",
+      "type": "string",
+      "required": false,
+      "description": "Top-level LOC classes to search, for example 06,07. Pattern: ^(0[1-9]\\",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceLanguage",
+      "type": "string",
+      "required": false,
+      "description": "Source-language code used to translate content into English, for example zh-CN. Leave empty when the text is already English. Maximum 1,000 characters",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "productDescription": "A protective smartphone case with a magnetic ring stand and shockproof corners.",
+    "topNumber": 10,
+    "regions": "US",
+    "enableRadar": false,
+    "imageUrl": "https://m.media-amazon.com/images/I/719mRAn2VrL._AC_SL1500_.jpg",
+    "productTitle": "Magnetic phone case",
+    "patentStatus": "1,0",
+    "queryMode": "physical"
+  },
+  "jsonSchema": null
+}

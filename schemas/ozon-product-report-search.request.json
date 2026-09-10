@@ -1,0 +1,304 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.ozon-product-report-search.",
+  "fields": [
+    {
+      "name": "page",
+      "type": "object",
+      "required": true,
+      "description": "Pagination & sorting: {page, pageSize, orders[]}",
+      "example": {
+        "pageSize": 10,
+        "page": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "page.page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, starting from 1, default 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "page.pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page, default 20",
+      "example": 20,
+      "constraints": {}
+    },
+    {
+      "name": "page.orders",
+      "type": "array",
+      "required": false,
+      "description": "Sort rules, elements {field, direction}; direction takes DESC (descending) / ASC (ascending). field is a metric field in the response (e.g., sales, revenue, price, reviewRating, reviewCount, salesRate)",
+      "example": [
+        {
+          "field": "sales",
+          "direction": "DESC"
+        }
+      ],
+      "constraints": {}
+    },
+    {
+      "name": "skus",
+      "type": "array",
+      "required": false,
+      "description": "SKU array (max 10), for precise lookup of specified products",
+      "example": [
+        "1664362124"
+      ],
+      "constraints": {}
+    },
+    {
+      "name": "keywords",
+      "type": "array",
+      "required": false,
+      "description": "Keyword array, filters by product title",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "categoryIds",
+      "type": "array",
+      "required": false,
+      "description": "Category ID array (Seerfar category IDs, not category names)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "sellerName",
+      "type": "array",
+      "required": false,
+      "description": "Seller name array",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "brand",
+      "type": "object",
+      "required": false,
+      "description": "Brand filter: {brandName: array<string>, type: integer}; type takes 0 include brand, 1 exclude brand, 2 unbranded",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "fulfillment",
+      "type": "array",
+      "required": false,
+      "description": "Fulfillment method array, fixed options: OZON, FBO, FBS, RFBS, FBP",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "labels",
+      "type": "array",
+      "required": false,
+      "description": "Label array, fixed options: 0 new product, 1 genuine product, 2 best seller",
+      "example": [
+        2
+      ],
+      "constraints": {}
+    },
+    {
+      "name": "creationDate",
+      "type": "integer",
+      "required": false,
+      "description": "Listing time filter (months), fixed options: 1 last 30 days, 3 last 90 days, 6 last 180 days, 12 last year, 24 last two years; no filtering if omitted",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "variationsMerge",
+      "type": "integer",
+      "required": false,
+      "description": "Whether to merge variants: 0 do not merge, 1 merge",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "searchDate",
+      "type": "string",
+      "required": false,
+      "description": "Query date yyyy-MM-dd (e.g., 2026-04-01); defaults to last 30 days if omitted; passing 2026-04-01 queries March 2026 data",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "tag",
+      "type": "string",
+      "required": false,
+      "description": "Tag word",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "uId",
+      "type": "string",
+      "required": false,
+      "description": "User ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "memberId",
+      "type": "string",
+      "required": false,
+      "description": "Member ID (a unique member identifier; data is attributed to memberId)",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "monthlySales",
+      "type": "object",
+      "required": false,
+      "description": "Monthly sales range: {min, max}; either bound may be omitted",
+      "example": {
+        "min": 5000
+      },
+      "constraints": {}
+    },
+    {
+      "name": "monthlySalesRate",
+      "type": "object",
+      "required": false,
+      "description": "Sales growth-rate range: {min, max}; either bound may be omitted",
+      "example": {
+        "min": 10
+      },
+      "constraints": {}
+    },
+    {
+      "name": "monthlyRevenue",
+      "type": "object",
+      "required": false,
+      "description": "Monthly revenue range in RUB: {min, max}; either bound may be omitted",
+      "example": {
+        "min": 100000
+      },
+      "constraints": {}
+    },
+    {
+      "name": "price",
+      "type": "object",
+      "required": false,
+      "description": "Price range in RUB: {min, max}; either bound may be omitted",
+      "example": {
+        "max": 500
+      },
+      "constraints": {}
+    },
+    {
+      "name": "convToCartPdp",
+      "type": "object",
+      "required": false,
+      "description": "Cart conversion-rate range: {min, max}; either bound may be omitted",
+      "example": {
+        "min": 20
+      },
+      "constraints": {}
+    },
+    {
+      "name": "reviewRating",
+      "type": "object",
+      "required": false,
+      "description": "Rating range from 0 to 5: {min, max}; either bound may be omitted",
+      "example": {
+        "min": 4
+      },
+      "constraints": {}
+    },
+    {
+      "name": "reviewCount",
+      "type": "object",
+      "required": false,
+      "description": "Review-count range: {min, max}; either bound may be omitted",
+      "example": {
+        "min": 100
+      },
+      "constraints": {}
+    },
+    {
+      "name": "questionsAndAnswers",
+      "type": "object",
+      "required": false,
+      "description": "Question-and-answer count range: {min, max}; either bound may be omitted",
+      "example": {
+        "min": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "variants",
+      "type": "object",
+      "required": false,
+      "description": "Variant-count range: {min, max}; either bound may be omitted",
+      "example": {
+        "min": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "drr",
+      "type": "object",
+      "required": false,
+      "description": "Advertising cost-share range: {min, max}; either bound may be omitted",
+      "example": {
+        "max": 20
+      },
+      "constraints": {}
+    },
+    {
+      "name": "grossMargin",
+      "type": "object",
+      "required": false,
+      "description": "Gross-margin range: {min, max}; either bound may be omitted",
+      "example": {
+        "min": 10
+      },
+      "constraints": {}
+    },
+    {
+      "name": "returnCancellationRate",
+      "type": "object",
+      "required": false,
+      "description": "Return and cancellation-rate range: {min, max}; either bound may be omitted",
+      "example": {
+        "max": 10
+      },
+      "constraints": {}
+    },
+    {
+      "name": "weight",
+      "type": "object",
+      "required": false,
+      "description": "Weight range in grams: {min, max}; either bound may be omitted",
+      "example": {
+        "max": 1000
+      },
+      "constraints": {}
+    },
+    {
+      "name": "volume",
+      "type": "object",
+      "required": false,
+      "description": "Volume range in liters: {min, max}; either bound may be omitted",
+      "example": {
+        "max": 10
+      },
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "skus": [
+      "1664362124"
+    ],
+    "page": {
+      "pageSize": 10,
+      "page": 1
+    }
+  },
+  "jsonSchema": null
+}

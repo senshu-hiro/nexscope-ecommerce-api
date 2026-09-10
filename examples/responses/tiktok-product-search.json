@@ -1,0 +1,42 @@
+{
+  "total": 1,
+  "products": [
+    {
+      "productId": "example-id",
+      "imageUrl": "https://example.com/image.jpg",
+      "coverUrl": "https://example.com/image.jpg",
+      "productImageUrls": [],
+      "categoryIds": [],
+      "region": "US",
+      "price": 1,
+      "minPrice": 1,
+      "maxPrice": 1,
+      "spuAvgPrice": 1,
+      "productRating": 1,
+      "reviewCount": 1,
+      "ratings": 1,
+      "productCommissionRate": 1,
+      "totalSaleCnt": 1,
+      "totalSale1dCnt": 1,
+      "totalSale7dCnt": 1,
+      "totalSale15dCnt": 1,
+      "totalSale30dCnt": 1,
+      "totalSale60dCnt": 1,
+      "totalSale90dCnt": 1,
+      "monthlySalesUnits": 1,
+      "totalSaleGmvAmt": 1,
+      "totalSaleGmv1dAmt": 1,
+      "totalSaleGmv7dAmt": 1,
+      "totalSaleGmv15dAmt": 1,
+      "totalSaleGmv30dAmt": 1,
+      "totalSaleGmv60dAmt": 1,
+      "totalSaleGmv90dAmt": 1,
+      "firstCrawlDt": 1,
+      "availableDate": "2026-01-01",
+      "salePropsInfo": [],
+      "asin": "B072MQ5BRX"
+    }
+  ],
+  "columns": [],
+  "costToken": 1
+}

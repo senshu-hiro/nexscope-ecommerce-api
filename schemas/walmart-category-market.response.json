@@ -1,0 +1,52 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "operation",
+    "value",
+    "requestConsumed"
+  ],
+  "properties": {
+    "operation": {},
+    "value": {},
+    "requestConsumed": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "operation": {
+          "const": "tree"
+        },
+        "value": {
+          "type": "array"
+        }
+      }
+    },
+    {
+      "properties": {
+        "operation": {
+          "const": "searchByName"
+        },
+        "value": {
+          "type": "array"
+        }
+      }
+    },
+    {
+      "properties": {
+        "operation": {
+          "const": "marketReport"
+        },
+        "value": {
+          "type": [
+            "object",
+            "array"
+          ]
+        }
+      }
+    }
+  ]
+}

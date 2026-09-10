@@ -1,0 +1,19 @@
+{
+  "costToken": 1,
+  "keywordInfoList": [
+    {
+      "monthlySearchVolumeExact": 1,
+      "monthlySearchVolumeBroad": 1,
+      "monthlyTrend": 1,
+      "quarterlyTrend": 1,
+      "relevancyScore": 1,
+      "easeOfRankingScore": 1,
+      "organicProductCount": 1,
+      "sponsoredProductCount": 1,
+      "ppcBidExact": 1,
+      "ppcBidBroad": 1,
+      "spBrandAdBid": 1,
+      "recommendedPromotions": 1
+    }
+  ]
+}

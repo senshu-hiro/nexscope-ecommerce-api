@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+node_modules/
+request.json
+response.json
+creative-request.json
+creative-task.json
+.DS_Store

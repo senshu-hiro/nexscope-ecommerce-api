@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.patent-fulltext-images.",
+  "fields": [
+    {
+      "name": "patentId",
+      "type": "string",
+      "required": false,
+      "description": "Patent ID",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "patentNumber",
+      "type": "string",
+      "required": false,
+      "description": "Publication (grant) number",
+      "example": "US11299876B2",
+      "constraints": {}
+    },
+    {
+      "name": "limit",
+      "type": "string",
+      "required": false,
+      "description": "Total number of images to return, max 100, default \"100\"",
+      "example": "10",
+      "constraints": {}
+    },
+    {
+      "name": "offset",
+      "type": "string",
+      "required": false,
+      "description": "Offset",
+      "example": "0",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "patentNumber": "US11299876B2",
+    "offset": "0",
+    "limit": "10"
+  },
+  "jsonSchema": null
+}

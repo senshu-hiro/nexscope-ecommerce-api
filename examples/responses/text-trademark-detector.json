@@ -1,0 +1,27 @@
+{
+  "total": 1,
+  "data": [
+    {
+      "region": "US",
+      "score": 1,
+      "highestModeScore": 1,
+      "isFamous": false,
+      "isAmazonBrand": false,
+      "isActiveHolder": false,
+      "isCompatibility": false,
+      "isCommonSense": false,
+      "niceClass": [],
+      "originalTextMatches": []
+    }
+  ],
+  "detectId": "example-id",
+  "columns": [],
+  "blacklistTrademarks": [],
+  "whitelistTrademarks": [],
+  "costToken": 1,
+  "blacklisttrademarks": [
+    {
+      "region": "US"
+    }
+  ]
+}

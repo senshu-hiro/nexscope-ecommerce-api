@@ -1,0 +1,364 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Business status code, 200 indicates success",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Rank or detail data",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed for this call, typically 14000",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Status message, ok on success",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].product_id",
+      "type": "string",
+      "required": false,
+      "description": "Product ID (string format, to avoid large integer precision loss); used as productId to query details",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].product_name",
+      "type": "string",
+      "required": false,
+      "description": "Product title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].unit_price",
+      "type": "number",
+      "required": false,
+      "description": "Unit price (currency depends on region, e.g., US means USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sales_volumn",
+      "type": "integer",
+      "required": false,
+      "description": "Sales volume (units). Note: the field name is spelled sales_volumn (as-is, not volume). Use this exact name when extracting with jq/ConvertFrom-Json",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].revenue",
+      "type": "number",
+      "required": false,
+      "description": "Total revenue (GMV), = video_revenue + live_revenue + showcase_revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].video_revenue",
+      "type": "number",
+      "required": false,
+      "description": "Video channel revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].live_revenue",
+      "type": "number",
+      "required": false,
+      "description": "Livestream channel revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].showcase_revenue",
+      "type": "number",
+      "required": false,
+      "description": "Showcase/display channel revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].revenue_growth_rate",
+      "type": "number",
+      "required": false,
+      "description": "Revenue growth rate (percentage, e.g., 27.94 means 27.94%)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].commission_rate",
+      "type": "number",
+      "required": false,
+      "description": "Commission rate (percentage, e.g., 25.0 means 25%; not basis points)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].launch_date",
+      "type": "string",
+      "required": false,
+      "description": "Launch date (YYYY-MM-DD)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "data[].product_region",
+      "type": "string",
+      "required": false,
+      "description": "Product region/market (e.g., us)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].product_shop_id",
+      "type": "string",
+      "required": false,
+      "description": "Belonged shop ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].pri_cate_id",
+      "type": "string",
+      "required": false,
+      "description": "Primary category ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].sec_cate_id",
+      "type": "string",
+      "required": false,
+      "description": "Secondary category ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].ter_cate_id",
+      "type": "string",
+      "required": false,
+      "description": "Tertiary category ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].min_price",
+      "type": "number",
+      "required": false,
+      "description": "Minimum price (in the requested currency)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].max_price",
+      "type": "number",
+      "required": false,
+      "description": "Maximum price (in the requested currency)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].product_review_count",
+      "type": "integer",
+      "required": false,
+      "description": "Product review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].delivery_type",
+      "type": "string",
+      "required": false,
+      "description": "Delivery method (e.g., local)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].video_number",
+      "type": "integer",
+      "required": false,
+      "description": "Associated video count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].live_number",
+      "type": "integer",
+      "required": false,
+      "description": "Associated livestream count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].shopping_mall_revenue",
+      "type": "number",
+      "required": false,
+      "description": "Mall revenue (in the requested currency)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_number",
+      "type": "integer",
+      "required": false,
+      "description": "Associated creator count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "errcode": 1,
+    "data": [
+      {
+        "product_id": "example-id",
+        "unit_price": 1,
+        "sales_volumn": 1,
+        "revenue": 1,
+        "video_revenue": 1,
+        "live_revenue": 1,
+        "showcase_revenue": 1,
+        "revenue_growth_rate": 1,
+        "commission_rate": 1,
+        "launch_date": "2026-01-01",
+        "product_shop_id": "example-id",
+        "pri_cate_id": "example-id",
+        "sec_cate_id": "example-id",
+        "ter_cate_id": "example-id",
+        "min_price": 1,
+        "max_price": 1,
+        "product_review_count": 1,
+        "video_number": 1,
+        "live_number": 1,
+        "shopping_mall_revenue": 1,
+        "creator_number": 1
+      }
+    ],
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,249 @@
+{
+  "type": "object",
+  "description": "Create ecommerce product marketing materials such as selling-point images and A+ style visuals from product images and brief inputs.",
+  "fields": [
+    {
+      "name": "imageList",
+      "type": "array",
+      "required": true,
+      "description": "Public product image URLs. Provide no more than 5 JPG, JPEG, PNG, or WEBP images; each image must be at most 10 MB and between 800 and 4096 pixels.",
+      "example": [
+        "https://example.com/product.jpg"
+      ],
+      "constraints": {
+        "maxItems": 5,
+        "minItems": 1
+      }
+    },
+    {
+      "name": "provider",
+      "type": "string",
+      "required": false,
+      "description": "Image model. Defaults to BANANA_2. Supported values: BANANA_2, BANANA_2_LITE, BANANA_PRO, WAN2_7, SEEDREAM5_PRO, GPT_2_IMAGE.",
+      "example": "BANANA_2",
+      "constraints": {}
+    },
+    {
+      "name": "sellerPoint",
+      "type": "string",
+      "required": false,
+      "description": "Product selling points, up to 2500 characters. Required when isExtractPrePoint is false.",
+      "example": "Shockproof, slim, clear phone case",
+      "constraints": {
+        "requiredWhen": {
+          "isExtractPrePoint": [
+            false
+          ]
+        },
+        "maxLength": 2500
+      }
+    },
+    {
+      "name": "isExtractPrePoint",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to automatically extract selling points. Defaults to false. When false, sellerPoint is required.",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "resolution",
+      "type": "string",
+      "required": false,
+      "description": "Target resolution supported by the selected provider.",
+      "example": "2K",
+      "constraints": {}
+    },
+    {
+      "name": "aspectRatio",
+      "type": "string",
+      "required": false,
+      "description": "Target aspect ratio supported by the selected provider.",
+      "example": "1:1",
+      "constraints": {}
+    },
+    {
+      "name": "noText",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether generated images should avoid text.",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "brandKey",
+      "type": "string",
+      "required": false,
+      "description": "Optional brand information serialized as a JSON string. Supported keys: brandColor, fontStyle, salesRegion, language, platform, customSettings.",
+      "example": "{\"brandColor\":\"#0775FA\",\"fontStyle\":\"sans serif\",\"salesRegion\":\"North America\",\"language\":\"English\",\"platform\":\"Amazon\"}",
+      "constraints": {}
+    },
+    {
+      "name": "quality",
+      "type": "string",
+      "required": false,
+      "description": "GPT Image quality only. Supported values: low, medium, or high.",
+      "example": "medium",
+      "constraints": {}
+    },
+    {
+      "name": "sensitiveLibraryId",
+      "type": "integer",
+      "required": false,
+      "description": "Optional sensitive-word library ID used to screen generated copy.",
+      "example": 1001,
+      "constraints": {}
+    },
+    {
+      "name": "replaceLibraryId",
+      "type": "integer",
+      "required": false,
+      "description": "Optional replacement-word library ID used to rewrite generated copy.",
+      "example": 1002,
+      "constraints": {}
+    },
+    {
+      "name": "aPlusNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of standard A+ images, from 0 to 12. Defaults to 0.",
+      "example": 0,
+      "constraints": {}
+    },
+    {
+      "name": "aPlusProNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of premium A+ images, from 0 to 12. Defaults to 0.",
+      "example": 0,
+      "constraints": {}
+    },
+    {
+      "name": "aPlusHasPhone",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether A+ output includes phone display layouts.",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "aPlusAspectRatio",
+      "type": "string",
+      "required": false,
+      "description": "Premium A+ aspect ratio. Supported values: 16:9, 9:16, 1:1, 1:3.7.",
+      "example": "1:1",
+      "constraints": {}
+    },
+    {
+      "name": "sellerTypeNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of selling-point images, from 0 to 12. Defaults to 0.",
+      "example": 0,
+      "constraints": {}
+    },
+    {
+      "name": "sceneTypeNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of scene images, from 0 to 12. Defaults to 0.",
+      "example": 0,
+      "constraints": {}
+    },
+    {
+      "name": "closeUpTypeNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of close-up images, from 0 to 12. Defaults to 0.",
+      "example": 0,
+      "constraints": {}
+    },
+    {
+      "name": "closeUpWhiteTypeNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of white-background close-up images, from 0 to 12. Defaults to 0.",
+      "example": 0,
+      "constraints": {}
+    },
+    {
+      "name": "whiteBgTypeNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of white-background images, from 0 to 12. Defaults to 0.",
+      "example": 0,
+      "constraints": {}
+    },
+    {
+      "name": "aPlusStyles",
+      "type": "array",
+      "required": false,
+      "description": "Optional A+ style entries. Each item may contain a saved style id or a custom prompt.",
+      "example": [
+        {
+          "id": 1
+        },
+        {
+          "prompt": "clean premium layout"
+        }
+      ],
+      "constraints": {}
+    },
+    {
+      "name": "pointStyles",
+      "type": "array",
+      "required": false,
+      "description": "Optional selling-point style entries. Each item may contain a saved style id or a custom prompt.",
+      "example": [
+        {
+          "id": 2
+        },
+        {
+          "prompt": "minimal feature callouts"
+        }
+      ],
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageList": [
+      "https://example.com/product.jpg"
+    ],
+    "provider": "BANANA_2",
+    "sellerPoint": "Shockproof, slim, clear phone case",
+    "isExtractPrePoint": false,
+    "resolution": "2K",
+    "aspectRatio": "1:1",
+    "noText": false,
+    "brandKey": "{\"brandColor\":\"#0775FA\",\"fontStyle\":\"sans serif\",\"salesRegion\":\"North America\",\"language\":\"English\",\"platform\":\"Amazon\"}",
+    "quality": "medium",
+    "sensitiveLibraryId": 1001,
+    "replaceLibraryId": 1002,
+    "aPlusNum": 0,
+    "aPlusProNum": 0,
+    "aPlusHasPhone": false,
+    "aPlusAspectRatio": "1:1",
+    "sellerTypeNum": 0,
+    "sceneTypeNum": 0,
+    "closeUpTypeNum": 0,
+    "closeUpWhiteTypeNum": 0,
+    "whiteBgTypeNum": 0,
+    "aPlusStyles": [
+      {
+        "id": 1
+      },
+      {
+        "prompt": "clean premium layout"
+      }
+    ],
+    "pointStyles": [
+      {
+        "id": 2
+      },
+      {
+        "prompt": "minimal feature callouts"
+      }
+    ]
+  },
+  "jsonSchema": null
+}

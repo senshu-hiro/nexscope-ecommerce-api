@@ -1,0 +1,108 @@
+{
+  "type": "object",
+  "description": "Generate model images by combining a source product image with a model head image, optional masks, scene references, and prompt guidance.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the source product or outfit image. The image must be up to 20 MB and between 385 and 8192 pixels in both width and height.",
+      "example": "https://example.com/source-image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "modelHeadImageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the target model head image. The image must be up to 5 MB and between 512 and 2048 pixels in both width and height.",
+      "example": "https://example.com/model-reference.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "imageSegUrl",
+      "type": "string",
+      "required": false,
+      "description": "Optional segmentation mask URL for the source image.",
+      "example": "https://example.com/mask.png",
+      "constraints": {}
+    },
+    {
+      "name": "sceneImgUrl",
+      "type": "string",
+      "required": false,
+      "description": "Optional scene reference image URL. The image must be up to 10 MB and between 768 and 4096 pixels in both width and height.",
+      "example": "https://example.com/scene.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "sceneStrength",
+      "type": "number",
+      "required": false,
+      "description": "Scene reference strength from 0 to 1. Defaults to 0.7.",
+      "example": 0.7,
+      "constraints": {}
+    },
+    {
+      "name": "modelPrompt",
+      "type": "string",
+      "required": false,
+      "description": "Comma-separated model appearance terms, such as smile, laugh, sitting, lying, fat, plump, slim, sideways, profile, back, or bald.",
+      "example": "smile, slim",
+      "constraints": {}
+    },
+    {
+      "name": "customPrompt",
+      "type": "string",
+      "required": false,
+      "description": "Positive generation prompt, up to 600 characters.",
+      "example": "clean ecommerce catalog photo",
+      "constraints": {}
+    },
+    {
+      "name": "customNegPrompt",
+      "type": "string",
+      "required": false,
+      "description": "Negative prompt to avoid unwanted artifacts.",
+      "example": "blur, distorted hands",
+      "constraints": {}
+    },
+    {
+      "name": "genOriRes",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to generate the original resolution. Defaults to false.",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "realModel",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to prefer a realistic model style.",
+      "example": true,
+      "constraints": {}
+    },
+    {
+      "name": "outputNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of images to generate, from 1 to 4. Defaults to 1.",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/source-image.jpg",
+    "modelHeadImageUrl": "https://example.com/model-reference.jpg",
+    "imageSegUrl": "https://example.com/mask.png",
+    "sceneImgUrl": "https://example.com/scene.jpg",
+    "sceneStrength": 0.7,
+    "modelPrompt": "smile, slim",
+    "customPrompt": "clean ecommerce catalog photo",
+    "customNegPrompt": "blur, distorted hands",
+    "genOriRes": false,
+    "realModel": true,
+    "outputNum": 1
+  },
+  "jsonSchema": null
+}

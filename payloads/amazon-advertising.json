@@ -1,0 +1,5 @@
+{
+  "connectionId": 123,
+  "operationId": "ads_manager.sp.list_campaigns",
+  "payload": {}
+}

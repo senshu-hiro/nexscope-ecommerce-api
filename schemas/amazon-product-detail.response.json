@@ -1,0 +1,850 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Total rows",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Rendered columns",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token consumption",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "required": false,
+      "description": "Product list (see below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].asin",
+      "type": "string",
+      "required": false,
+      "description": "ASIN code",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "products[].title",
+      "type": "string",
+      "required": false,
+      "description": "Product title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].brand",
+      "type": "string",
+      "required": false,
+      "description": "Brand",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].price",
+      "type": "number",
+      "required": false,
+      "description": "Price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].extractedPrice",
+      "type": "number",
+      "required": false,
+      "description": "Extracted price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].oldPrice",
+      "type": "number",
+      "required": false,
+      "description": "Original price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].extractedOldPrice",
+      "type": "number",
+      "required": false,
+      "description": "Extracted original price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].discount",
+      "type": "string",
+      "required": false,
+      "description": "Discount",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].saveWithCoupon",
+      "type": "string",
+      "required": false,
+      "description": "Amount saved with coupon",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].rating",
+      "type": "number",
+      "required": false,
+      "description": "Rating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].ratings",
+      "type": "integer",
+      "required": false,
+      "description": "Number of reviews",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].prime",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether it is a Prime item",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].stock",
+      "type": "string",
+      "required": false,
+      "description": "Stock status",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].delivery",
+      "type": "string",
+      "required": false,
+      "description": "Delivery information",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].link",
+      "type": "string",
+      "required": false,
+      "description": "Product link",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].linkClean",
+      "type": "string",
+      "required": false,
+      "description": "Clean link",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].asinUrl",
+      "type": "string",
+      "required": false,
+      "description": "Link",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "products[].imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Thumbnail",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].thumbnail",
+      "type": "string",
+      "required": false,
+      "description": "Thumbnail",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].productImageUrls",
+      "type": "array",
+      "required": false,
+      "description": "Product image URL list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].aboutItem",
+      "type": "array",
+      "required": false,
+      "description": "Bullet points",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].productDescription",
+      "type": "string",
+      "required": false,
+      "description": "Product description; when A+ content exists, this is a JSON string (see A+ structure below)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].description",
+      "type": "string",
+      "required": false,
+      "description": "Product description",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].dimension",
+      "type": "string",
+      "required": false,
+      "description": "Product dimensions",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].weight",
+      "type": "string",
+      "required": false,
+      "description": "Weight",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].tags",
+      "type": "string",
+      "required": false,
+      "description": "Tag list",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].badges",
+      "type": "string",
+      "required": false,
+      "description": "Badge list",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].climatePledgeFriendly",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether it is Climate Pledge Friendly",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].snapEbtEligible",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether SNAP EBT eligible",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].boughtLastMonth",
+      "type": "string",
+      "required": false,
+      "description": "Units bought last month (string)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].boughtLastMonthCount",
+      "type": "integer",
+      "required": false,
+      "description": "Units bought last month (number)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].reviewsSummary",
+      "type": "string",
+      "required": false,
+      "description": "Review summary",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].reviewsImages",
+      "type": "array",
+      "required": false,
+      "description": "Review image list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Source tool",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Source type: amazon",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].pageFileUrl",
+      "type": "string",
+      "required": false,
+      "description": "Full page file URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].manufacturer",
+      "type": "string",
+      "required": false,
+      "description": "Manufacturer",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].productDimensions",
+      "type": "string",
+      "required": false,
+      "description": "Product dimensions",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].upc",
+      "type": "string",
+      "required": false,
+      "description": "UPC code",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].units",
+      "type": "string",
+      "required": false,
+      "description": "Units",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].review",
+      "type": "integer",
+      "required": false,
+      "description": "Number of reviews",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].fiveStar",
+      "type": "integer",
+      "required": false,
+      "description": "Five-star review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].fourStar",
+      "type": "integer",
+      "required": false,
+      "description": "Four-star review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].threeStar",
+      "type": "integer",
+      "required": false,
+      "description": "Three-star review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].twoStar",
+      "type": "integer",
+      "required": false,
+      "description": "Two-star review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].oneStar",
+      "type": "integer",
+      "required": false,
+      "description": "One-star review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].items",
+      "type": "array",
+      "required": false,
+      "description": "Variant item list, each item contains name (name), asin (ASIN code), position (position), selected (whether selected)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].position",
+      "type": "integer",
+      "required": false,
+      "description": "Module order",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].image",
+      "type": "string",
+      "required": false,
+      "description": "A+ module main image URL (often contains aplus-media-library-service-media)",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].carouselImages",
+      "type": "array",
+      "required": false,
+      "description": "Optional; carousel sub-items, each containing position / title / image",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "asin",
+      "type": "string",
+      "required": false,
+      "description": "ASIN code",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].price",
+      "type": "string",
+      "required": false,
+      "description": "Price",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "extractedPrice",
+      "type": "number",
+      "required": false,
+      "description": "Extracted price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].priceUnit",
+      "type": "string",
+      "required": false,
+      "description": "Unit price",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "extractedPriceUnit",
+      "type": "number",
+      "required": false,
+      "description": "Extracted unit price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].thumbnail",
+      "type": "string",
+      "required": false,
+      "description": "Thumbnail",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].link",
+      "type": "string",
+      "required": false,
+      "description": "Link",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].linkClean",
+      "type": "string",
+      "required": false,
+      "description": "Clean link",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].stock",
+      "type": "string",
+      "required": false,
+      "description": "Stock status",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "delivery",
+      "type": "array",
+      "required": false,
+      "description": "Delivery information",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "position",
+      "type": "integer",
+      "required": false,
+      "description": "Position",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].oldPrice",
+      "type": "string",
+      "required": false,
+      "description": "Original price",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "extractedOldPrice",
+      "type": "number",
+      "required": false,
+      "description": "Extracted original price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "rating",
+      "type": "number",
+      "required": false,
+      "description": "Rating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "reviews",
+      "type": "integer",
+      "required": false,
+      "description": "Number of reviews",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "prime",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether it is a Prime item",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "sponsored",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether it is a sponsored item",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "climatePledgeFriendly",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether Climate Pledge Friendly",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].discount",
+      "type": "string",
+      "required": false,
+      "description": "Discount",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "badges",
+      "type": "array",
+      "required": false,
+      "description": "Badge list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].text",
+      "type": "string",
+      "required": false,
+      "description": "Review content",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].author",
+      "type": "string",
+      "required": false,
+      "description": "Author",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "authorImage",
+      "type": "string",
+      "required": false,
+      "description": "Author avatar",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].authorLink",
+      "type": "string",
+      "required": false,
+      "description": "Author link",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "date",
+      "type": "string",
+      "required": false,
+      "description": "Date",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "verifiedPurchase",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether verified purchase",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].helpfulVotes",
+      "type": "string",
+      "required": false,
+      "description": "Helpful vote count",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].productSize",
+      "type": "string",
+      "required": false,
+      "description": "Product size",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].productFlavorName",
+      "type": "string",
+      "required": false,
+      "description": "Product flavor name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "columns": [],
+    "costToken": 1,
+    "products": [
+      {
+        "asin": "B072MQ5BRX",
+        "price": 1,
+        "extractedPrice": 1,
+        "oldPrice": 1,
+        "extractedOldPrice": 1,
+        "rating": 1,
+        "ratings": 1,
+        "prime": false,
+        "asinUrl": "B072MQ5BRX",
+        "imageUrl": "https://example.com/image.jpg",
+        "productImageUrls": [],
+        "aboutItem": [],
+        "climatePledgeFriendly": false,
+        "snapEbtEligible": false,
+        "boughtLastMonthCount": 1,
+        "reviewsImages": [],
+        "pageFileUrl": "https://example.com/image.jpg",
+        "review": 1,
+        "fiveStar": 1,
+        "fourStar": 1,
+        "threeStar": 1,
+        "twoStar": 1,
+        "oneStar": 1,
+        "items": [],
+        "position": 1,
+        "image": "https://example.com/image.jpg",
+        "carouselImages": []
+      }
+    ],
+    "asin": "B072MQ5BRX",
+    "extractedPrice": 1,
+    "extractedPriceUnit": 1,
+    "delivery": [],
+    "position": 1,
+    "extractedOldPrice": 1,
+    "rating": 1,
+    "reviews": 1,
+    "prime": false,
+    "sponsored": false,
+    "climatePledgeFriendly": false,
+    "badges": [],
+    "authorImage": "https://example.com/image.jpg",
+    "date": "2026-01-01",
+    "verifiedPurchase": false
+  },
+  "jsonSchema": null
+}

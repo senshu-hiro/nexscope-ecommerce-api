@@ -1,0 +1,86 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "product"
+  ],
+  "properties": {
+    "product": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "itemId",
+        "shopId"
+      ],
+      "properties": {
+        "itemId": {
+          "type": "string"
+        },
+        "shopId": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "brand": {
+          "type": [
+            "string",
+            "object",
+            "null"
+          ]
+        },
+        "category": {
+          "type": [
+            "string",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "images": {
+          "type": "array"
+        },
+        "videos": {
+          "type": "array"
+        },
+        "price": {
+          "type": [
+            "number",
+            "object",
+            "null"
+          ]
+        },
+        "currency": {
+          "type": "string"
+        },
+        "sold": {
+          "type": [
+            "integer",
+            "number",
+            "null"
+          ]
+        },
+        "rating": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "stock": {
+          "type": [
+            "integer",
+            "number",
+            "object",
+            "null"
+          ]
+        },
+        "models": {
+          "type": "array"
+        }
+      }
+    }
+  }
+}

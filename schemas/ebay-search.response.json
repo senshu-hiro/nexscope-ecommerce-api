@@ -1,0 +1,363 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Total matching results",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "required": false,
+      "description": "Product list array (see product fields below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Rendered column definitions",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style identifier",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token consumption",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].productId",
+      "type": "string",
+      "required": false,
+      "description": "eBay product ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "products[].title",
+      "type": "string",
+      "required": false,
+      "description": "Product title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].subtitle",
+      "type": "string",
+      "required": false,
+      "description": "Product subtitle",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].price",
+      "type": "number",
+      "required": false,
+      "description": "Current price / transaction price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].minPrice",
+      "type": "number",
+      "required": false,
+      "description": "Price range start value (for multi-SKU items)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].maxPrice",
+      "type": "number",
+      "required": false,
+      "description": "Price range end value (for multi-SKU items)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].oldPrice",
+      "type": "number",
+      "required": false,
+      "description": "Original price before discount",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency unit (e.g., USD, GBP, EUR)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].condition",
+      "type": "string",
+      "required": false,
+      "description": "Item condition description",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].link",
+      "type": "string",
+      "required": false,
+      "description": "eBay product detail page link",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product thumbnail URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].shipping",
+      "type": "string",
+      "required": false,
+      "description": "Shipping information",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].location",
+      "type": "string",
+      "required": false,
+      "description": "Item location",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sellerName",
+      "type": "string",
+      "required": false,
+      "description": "Seller name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sellerReviews",
+      "type": "integer",
+      "required": false,
+      "description": "Seller feedback count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].positiveFeedbackInPercentage",
+      "type": "number",
+      "required": false,
+      "description": "Seller positive feedback percentage",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].salesQuantity",
+      "type": "integer",
+      "required": false,
+      "description": "Quantity sold",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].bidsCount",
+      "type": "integer",
+      "required": false,
+      "description": "Bid count (for auction items)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].returns",
+      "type": "string",
+      "required": false,
+      "description": "Return information",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].promotion",
+      "type": "string",
+      "required": false,
+      "description": "Promotion information",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sponsored",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether sponsored/promoted item",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Source platform identifier (ebay)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Source tool identifier",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "products": [
+      {
+        "productId": "example-id",
+        "price": 1,
+        "minPrice": 1,
+        "maxPrice": 1,
+        "oldPrice": 1,
+        "imageUrl": "https://example.com/image.jpg",
+        "sellerReviews": 1,
+        "positiveFeedbackInPercentage": 1,
+        "salesQuantity": 1,
+        "bidsCount": 1,
+        "sponsored": false
+      }
+    ],
+    "columns": [],
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

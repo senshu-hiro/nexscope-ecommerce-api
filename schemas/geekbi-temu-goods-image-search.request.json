@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "imageUrl": {
+      "type": "string",
+      "description": "Provider OSS temporary image URL, obtained through presignedPut and a successful PUT upload with the signature query removed. Replace the example.invalid placeholder before calling; external URLs are rejected upstream. Actual image must be at most 10 MB and JPEG, PNG, GIF, WebP or BMP.",
+      "minLength": 1,
+      "maxLength": 2048,
+      "format": "uri"
+    },
+    "contentType": {
+      "type": "string",
+      "description": "Must match OSS response and actual image bytes; omitted means server detection.",
+      "maxLength": 100,
+      "enum": [
+        "image/jpeg",
+        "image/png",
+        "image/gif",
+        "image/webp",
+        "image/bmp"
+      ]
+    }
+  },
+  "required": [
+    "imageUrl"
+  ]
+}

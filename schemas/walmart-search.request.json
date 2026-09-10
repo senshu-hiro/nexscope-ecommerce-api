@@ -1,0 +1,116 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.walmart-search.",
+  "fields": [
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": false,
+      "description": "Search keyword, max length 1024 characters. *At least one of keyword and categoryId must be provided",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "categoryId",
+      "type": "string",
+      "required": false,
+      "description": "Category ID. *At least one of keyword and categoryId must be provided. 0 means all departments. For example: 976759_976787 means \"Cookies\"",
+      "example": "976759_976787",
+      "constraints": {}
+    },
+    {
+      "name": "sort",
+      "type": "string",
+      "required": false,
+      "description": "Sort method. Options: price_low (price low to high), price_high (price high to low), best_seller (best seller), best_match (best match)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number for pagination, default 1, max 100",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minPrice",
+      "type": "number",
+      "required": false,
+      "description": "Minimum price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxPrice",
+      "type": "number",
+      "required": false,
+      "description": "Maximum price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "spelling",
+      "type": "boolean",
+      "required": false,
+      "description": "Enable spelling correction, default true. true includes spelling correction, false excludes it",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "softSort",
+      "type": "boolean",
+      "required": false,
+      "description": "Sort by relevance, default true. Set to false to disable relevance sorting",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "storeId",
+      "type": "string",
+      "required": false,
+      "description": "Store ID, used to filter products by a specific store",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "device",
+      "type": "string",
+      "required": false,
+      "description": "Device type, default desktop. Options: desktop, tablet, mobile",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "facet",
+      "type": "string",
+      "required": false,
+      "description": "Filter conditions, format as key:value pairs separated by \\",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "nextDayEnabled",
+      "type": "boolean",
+      "required": false,
+      "description": "Only show NextDay delivery results, default false. true to enable, false to disable",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "jsonRestrictor",
+      "type": "string",
+      "required": false,
+      "description": "JSON field restrictor",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "page": 1,
+    "spelling": true,
+    "keyword": "phone case"
+  },
+  "jsonSchema": null
+}

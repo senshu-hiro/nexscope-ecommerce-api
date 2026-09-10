@@ -1,0 +1,7 @@
+{
+  "imageUrl": "https://example.com/product.jpg",
+  "targetOriginUrl": "https://example.com/model-reference.jpg",
+  "targetMaskUrl": "https://example.com/mask.png",
+  "productCategory": "hat",
+  "outputNum": 1
+}

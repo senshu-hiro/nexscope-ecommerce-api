@@ -1,0 +1,149 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.tiktok-video-search.",
+  "fields": [
+    {
+      "name": "region",
+      "type": "string",
+      "required": true,
+      "description": "Region code. Options: US (United States), ID (Indonesia), TH (Thailand), PH (Philippines), MY (Malaysia), VN (Vietnam), GB (United Kingdom), MX (Mexico), SG (Singapore), SA (Saudi Arabia), BR (Brazil), ES (Spain), JP (Japan), DE (Germany), IT (Italy), FR (France)",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "userId",
+      "type": "string",
+      "required": false,
+      "description": "Creator ID filter. Max length 1000",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "productId",
+      "type": "string",
+      "required": false,
+      "description": "Associated product ID. Max length 1000",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "productCategoryId",
+      "type": "string",
+      "required": false,
+      "description": "Associated product category ID. Max length 1000",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "minTotalViewsCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Video view count filter (minimum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxTotalViewsCnt",
+      "type": "integer",
+      "required": false,
+      "description": "Video view count filter (maximum)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minDuration",
+      "type": "integer",
+      "required": false,
+      "description": "Video duration range filter (seconds) - minimum",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxDuration",
+      "type": "integer",
+      "required": false,
+      "description": "Video duration range filter (seconds) - maximum",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minCreateTime",
+      "type": "integer",
+      "required": false,
+      "description": "Publish time range filter (seconds-level timestamp) - minimum",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxCreateTime",
+      "type": "integer",
+      "required": false,
+      "description": "Publish time range filter (seconds-level timestamp) - maximum",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salesFlag",
+      "type": "integer",
+      "required": false,
+      "description": "Whether a promotional video: 0=non-promotional video, 1=promotional video",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "isAd",
+      "type": "integer",
+      "required": false,
+      "description": "Whether an ad video: 0=non-ad video, 1=ad video",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "createdByAi",
+      "type": "string",
+      "required": false,
+      "description": "Whether AI video, string \"true\"=AI video, \"false\"=non-AI video (regex ^(true",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "videoSortField",
+      "type": "integer",
+      "required": false,
+      "description": "Sort field: 1=total_digg_cnt (likes), 2=create_time (publish time), 3=total_views_cnt (views)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "sortType",
+      "type": "integer",
+      "required": false,
+      "description": "Sort direction: 0=ascending, 1=descending",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageNum",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, starting from 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page. Must be a multiple of 10, max 100; the third-party API limit is 10 per page, internally the gateway fetches 10 per page in multiple rounds and merges",
+      "example": 10,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "pageNumber": 1,
+    "keyword": "phone case",
+    "pageSize": 10,
+    "region": "US"
+  },
+  "jsonSchema": null
+}

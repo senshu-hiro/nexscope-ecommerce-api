@@ -1,0 +1,610 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Total count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "marketplace",
+      "type": "string",
+      "required": false,
+      "description": "Marketplace code",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "asin",
+      "type": "string",
+      "required": false,
+      "description": "Queried ASIN",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Traffic keyword list (corresponds to third-party data.items)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "summaryList",
+      "type": "array",
+      "required": false,
+      "description": "High-frequency keyword summary list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Column definitions",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token consumption",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "summaryList[].total",
+      "type": "integer",
+      "required": false,
+      "description": "Total count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "summaryList[].keywords",
+      "type": "string",
+      "required": false,
+      "description": "Keywords",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "data[].keyword",
+      "type": "string",
+      "required": false,
+      "description": "Keyword",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "data[].keywordCn",
+      "type": "string",
+      "required": false,
+      "description": "Keyword Chinese translation",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "data[].trafficKeywordType",
+      "type": "string",
+      "required": false,
+      "description": "Traffic share type",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "data[].conversionKeywordType",
+      "type": "string",
+      "required": false,
+      "description": "Traffic conversion type",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "data[].badges",
+      "type": "array",
+      "required": false,
+      "description": "Impression position (traffic keyword type)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].rankPosition",
+      "type": "object",
+      "required": false,
+      "description": "Organic ranking position info, see [Ranking Object](#ranking-object-rankposition--adposition)",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "data[].adPosition",
+      "type": "object",
+      "required": false,
+      "description": "Ad ranking position info, same structure as [Ranking Object](#ranking-object-rankposition--adposition)",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "data[].searches",
+      "type": "integer",
+      "required": false,
+      "description": "Monthly search volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].searchesRank",
+      "type": "integer",
+      "required": false,
+      "description": "Weekly search volume ranking",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].searchesRankTimeFrom",
+      "type": "integer",
+      "required": false,
+      "description": "Weekly search volume ranking time range start",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].searchesRankTimeTo",
+      "type": "integer",
+      "required": false,
+      "description": "Weekly search volume ranking time range end",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].purchases",
+      "type": "integer",
+      "required": false,
+      "description": "Monthly purchase volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].purchaseRate",
+      "type": "number",
+      "required": false,
+      "description": "Purchase rate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].products",
+      "type": "integer",
+      "required": false,
+      "description": "Product count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].supplyDemandRatio",
+      "type": "number",
+      "required": false,
+      "description": "Supply-demand ratio",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].trafficPercentage",
+      "type": "number",
+      "required": false,
+      "description": "Traffic share",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].naturalRatio",
+      "type": "number",
+      "required": false,
+      "description": "Traffic distribution - organic share",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].adRatio",
+      "type": "number",
+      "required": false,
+      "description": "Traffic distribution - ad share",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].calculatedWeeklySearches",
+      "type": "number",
+      "required": false,
+      "description": "Estimated weekly impressions",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].impressions",
+      "type": "integer",
+      "required": false,
+      "description": "Impressions",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].clicks",
+      "type": "integer",
+      "required": false,
+      "description": "Clicks",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].bid",
+      "type": "number",
+      "required": false,
+      "description": "PPC bid",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].bidMin",
+      "type": "number",
+      "required": false,
+      "description": "PPC bid lower limit",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].bidMax",
+      "type": "number",
+      "required": false,
+      "description": "PPC bid upper limit",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].latest1daysAds",
+      "type": "integer",
+      "required": false,
+      "description": "Ad competitors in the last 1 day",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].latest7daysAds",
+      "type": "integer",
+      "required": false,
+      "description": "Ad competitors in the last 7 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].latest30daysAds",
+      "type": "integer",
+      "required": false,
+      "description": "Ad competitors in the last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sprt",
+      "type": "number",
+      "required": false,
+      "description": "SP-related ratio",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].monopolyClickRate",
+      "type": "number",
+      "required": false,
+      "description": "Monopoly click rate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].top3ClickingRate",
+      "type": "number",
+      "required": false,
+      "description": "Top 3 click rate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].top3ConversionRate",
+      "type": "number",
+      "required": false,
+      "description": "Top 3 conversion rate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].titleDensity",
+      "type": "number",
+      "required": false,
+      "description": "Title density",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].stats",
+      "type": "array",
+      "required": false,
+      "description": "High-frequency words, elements see table below",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].updatedTime",
+      "type": "integer",
+      "required": false,
+      "description": "Update time",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "stats[].keywords",
+      "type": "string",
+      "required": false,
+      "description": "Word",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "stats[].total",
+      "type": "integer",
+      "required": false,
+      "description": "Total count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "stats[].rankPosition",
+      "type": "object",
+      "required": false,
+      "description": "Organic ranking position, structure see below",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "stats[].adPosition",
+      "type": "object",
+      "required": false,
+      "description": "Ad ranking position, structure see below",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "columns[].updatedTime",
+      "type": "integer",
+      "required": false,
+      "description": "Ranking time",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].index",
+      "type": "integer",
+      "required": false,
+      "description": "Position on current page",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].position",
+      "type": "integer",
+      "required": false,
+      "description": "Position in total results",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "marketplace": "US",
+    "asin": "B072MQ5BRX",
+    "data": [
+      {
+        "keyword": "phone case",
+        "keywordCn": "phone case",
+        "trafficKeywordType": "phone case",
+        "conversionKeywordType": "phone case",
+        "badges": [],
+        "rankPosition": {},
+        "adPosition": {},
+        "searches": 1,
+        "searchesRank": 1,
+        "searchesRankTimeFrom": 1,
+        "searchesRankTimeTo": 1,
+        "purchases": 1,
+        "purchaseRate": 1,
+        "products": 1,
+        "supplyDemandRatio": 1,
+        "trafficPercentage": 1,
+        "naturalRatio": 1,
+        "adRatio": 1,
+        "calculatedWeeklySearches": 1,
+        "impressions": 1,
+        "clicks": 1,
+        "bid": 1,
+        "bidMin": 1,
+        "bidMax": 1,
+        "latest1daysAds": 1,
+        "latest7daysAds": 1,
+        "latest30daysAds": 1,
+        "sprt": 1,
+        "monopolyClickRate": 1,
+        "top3ClickingRate": 1,
+        "top3ConversionRate": 1,
+        "titleDensity": 1,
+        "stats": [],
+        "updatedTime": 1
+      }
+    ],
+    "summaryList": [
+      {
+        "total": 1,
+        "keywords": "phone case"
+      }
+    ],
+    "columns": [
+      {
+        "updatedTime": 1,
+        "pageSize": 1,
+        "index": 1,
+        "page": 1,
+        "position": 1
+      }
+    ],
+    "costToken": 1,
+    "stats": [
+      {
+        "keywords": "phone case",
+        "total": 1,
+        "rankPosition": {},
+        "adPosition": {}
+      }
+    ]
+  },
+  "jsonSchema": null
+}

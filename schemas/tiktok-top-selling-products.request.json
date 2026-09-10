@@ -1,0 +1,106 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.tiktok-top-selling-products.",
+  "fields": [
+    {
+      "name": "region",
+      "type": "string",
+      "required": true,
+      "description": "Market region code. Options: US (United States), GB (United Kingdom), MX (Mexico), ES (Spain), ID (Indonesia), VN (Vietnam), MY (Malaysia), TH (Thailand), PH (Philippines)",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "dateInfo",
+      "type": "object",
+      "required": true,
+      "description": "Date specification object, containing type and value fields",
+      "example": {
+        "value": "2026-08-01",
+        "type": "day"
+      },
+      "constraints": {}
+    },
+    {
+      "name": "dateInfo.type",
+      "type": "string",
+      "required": true,
+      "description": "Time granularity: day, week, month",
+      "example": "day",
+      "constraints": {}
+    },
+    {
+      "name": "dateInfo.value",
+      "type": "string",
+      "required": true,
+      "description": "Date value: day format YYYY-MM-DD, week format YYYY-weekNumber (e.g., 2025-18), month format YYYY-MM",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "category",
+      "type": "string",
+      "required": false,
+      "description": "Product category name (English), matched to TikTok category ID. Non-English input must be translated to English first",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "orderby",
+      "type": "object",
+      "required": false,
+      "description": "Sort rule object, containing field and order fields",
+      "example": {
+        "field": "units_sold",
+        "order": "desc"
+      },
+      "constraints": {}
+    },
+    {
+      "name": "orderby.field",
+      "type": "string",
+      "required": false,
+      "description": "Sort field: units_sold (sales), gmv (GMV), total_units_sold (total sales), total_gmv (total GMV), growth_rate (growth rate)",
+      "example": "units_sold",
+      "constraints": {}
+    },
+    {
+      "name": "orderby.order",
+      "type": "string",
+      "required": false,
+      "description": "Sort direction: desc (descending), asc (ascending), default desc",
+      "example": "desc",
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, default 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page, max 10, default 10",
+      "example": 10,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "page": 1,
+    "dateInfo": {
+      "value": "2026-08-01",
+      "type": "day"
+    },
+    "orderby": {
+      "field": "units_sold",
+      "order": "desc"
+    },
+    "pageSize": 10,
+    "region": "US"
+  },
+  "jsonSchema": null
+}

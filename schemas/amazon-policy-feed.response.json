@@ -1,0 +1,238 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Gateway response code, 200 indicates success.",
+      "example": 200,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Gateway status or error message.",
+      "example": "ok",
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Business response code for the list endpoint.",
+      "example": "200",
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Business message for the list endpoint.",
+      "example": "ok",
+      "constraints": {}
+    },
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of news items returned by the list endpoint.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style returned by the upstream endpoint.",
+      "example": "tableListWorkbenches",
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "News list returned by the policy feed endpoint.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].id",
+      "type": "string",
+      "required": false,
+      "description": "News record ID used to fetch the full body.",
+      "example": "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4",
+      "constraints": {}
+    },
+    {
+      "name": "data[].title",
+      "type": "string",
+      "required": false,
+      "description": "News title in the list response.",
+      "example": "Amazon policy update",
+      "constraints": {}
+    },
+    {
+      "name": "data[].summaryZh",
+      "type": "string",
+      "required": false,
+      "description": "AI-generated Chinese summary for the news item.",
+      "example": "Policy summary",
+      "constraints": {}
+    },
+    {
+      "name": "data[].originalUrl",
+      "type": "string",
+      "required": false,
+      "description": "Original article URL.",
+      "example": "https://example.com/news",
+      "constraints": {}
+    },
+    {
+      "name": "data[].publishedAt",
+      "type": "string",
+      "required": false,
+      "description": "Publication or change time, format yyyy-MM-dd HH:mm:ss.",
+      "example": "2026-01-01 00:00:00",
+      "constraints": {}
+    },
+    {
+      "name": "stdout",
+      "type": "string",
+      "required": false,
+      "description": "Full news body in Markdown format returned by the detail endpoint.",
+      "example": "# Amazon policy update",
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "News title returned by the detail endpoint.",
+      "example": "Amazon policy update",
+      "constraints": {}
+    },
+    {
+      "name": "summaryZh",
+      "type": "string",
+      "required": false,
+      "description": "AI-generated Chinese summary returned by the detail endpoint.",
+      "example": "Policy summary",
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Total processing time in milliseconds.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token consumption.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Frontend column definitions returned by the list endpoint.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "errcode": 200,
+    "errmsg": "ok",
+    "code": "200",
+    "msg": "ok",
+    "total": 1,
+    "type": "tableListWorkbenches",
+    "data": [
+      {
+        "id": "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4",
+        "title": "Amazon policy update",
+        "summaryZh": "Policy summary",
+        "originalUrl": "https://example.com/news",
+        "publishedAt": "2026-01-01 00:00:00"
+      }
+    ],
+    "stdout": "# Amazon policy update",
+    "title": "Amazon policy update",
+    "summaryZh": "Policy summary",
+    "costTime": 1,
+    "costToken": 1,
+    "columns": []
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,15 @@
+{
+  "query": {},
+  "matches": [
+    {
+      "rank": 1,
+      "asin": "B072MQ5BRX",
+      "title": "Example product",
+      "imageUrl": "https://example.com/image.jpg",
+      "price": 29.99,
+      "rating": 4.5,
+      "estimatedMonthlySales": 1200
+    }
+  ],
+  "caveats": []
+}

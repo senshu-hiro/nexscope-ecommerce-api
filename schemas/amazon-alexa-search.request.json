@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-alexa-search.",
+  "fields": [
+    {
+      "name": "prompts",
+      "type": "array",
+      "required": true,
+      "description": "Conversation prompt array, supports only 1 entry. Each call accepts only 1 question. For follow-up questions, the agent must summarize key information from the previous response (recommended products, ASINs, key conclusions, etc.), concatenate it with the new question, and send it as a new prompts[0]. Each call is an independent new session and does not retain cross-call conversation history",
+      "example": [
+        "What are good phone cases for iPhone?"
+      ],
+      "constraints": {}
+    },
+    {
+      "name": "format",
+      "type": "string",
+      "required": false,
+      "description": "Response format: markdown (default) returns a readable report; json returns a structured data array",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "required": false,
+      "description": "Linked page URL, used to supplement the page context of Alexa's current response. Only pass this when the user provides a specific page (category page / search results page / product detail page, etc.); do not pass this parameter for the Amazon homepage (e.g. https://www.amazon.com/)",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "format": "markdown",
+    "prompts": [
+      "What are good phone cases for iPhone?"
+    ]
+  },
+  "jsonSchema": null
+}

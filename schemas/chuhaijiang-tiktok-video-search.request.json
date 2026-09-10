@@ -1,0 +1,101 @@
+{
+  "required": [
+    "country"
+  ],
+  "type": "object",
+  "properties": {
+    "country": {
+      "enum": [
+        "br",
+        "de",
+        "es",
+        "fr",
+        "gb",
+        "id",
+        "it",
+        "jp",
+        "mx",
+        "my",
+        "ph",
+        "sg",
+        "th",
+        "us",
+        "vn"
+      ],
+      "type": "string",
+      "description": "Lowercase request market. Returned country_code may differ; preserve both."
+    },
+    "page": {
+      "default": 1,
+      "minimum": 1,
+      "type": "integer",
+      "description": "Page number, starting at 1. No automatic pagination."
+    },
+    "pageSize": {
+      "maximum": 10,
+      "minimum": 1,
+      "type": "integer",
+      "description": "Items per page, from 1 to 10. Omission preserves the upstream default."
+    },
+    "keyword": {
+      "type": "string",
+      "description": "Video copy or related keyword."
+    },
+    "category": {
+      "type": "string",
+      "description": "Use only provider-approved categories; no category enum is published."
+    },
+    "isCommercial": {
+      "type": "boolean",
+      "description": "Filter videos promoting products."
+    },
+    "minViews": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "maxViews": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "minLikes": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "maxLikes": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "minGmv30d": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "maxGmv30d": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "minEngagement": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "maxEngagement": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "accountType": {
+      "enum": [
+        0,
+        3,
+        4
+      ],
+      "type": "integer",
+      "description": "Provider account type; business labels are unpublished."
+    },
+    "sort": {
+      "pattern": "^[^:]+:(asc|desc)$",
+      "default": "views:desc",
+      "type": "string",
+      "description": "Provider-approved field followed by :asc or :desc. No complete field enum is published."
+    }
+  },
+  "additionalProperties": false
+}

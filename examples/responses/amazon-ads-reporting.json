@@ -1,0 +1,7 @@
+{
+  "status": "PENDING",
+  "reportId": "report-id",
+  "documentToken": "opaque-document-token",
+  "content": {},
+  "contentType": "application/json"
+}

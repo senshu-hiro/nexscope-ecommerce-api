@@ -1,0 +1,28 @@
+{
+  "total": 1,
+  "detectId": "example-id",
+  "costToken": 1,
+  "columns": [],
+  "data": [
+    {
+      "globalUtilityId": "example-id",
+      "similarity": 1,
+      "applicationDate": "2026-01-01",
+      "publicationDate": "2026-01-01",
+      "estimatedDueDate": "2026-01-01",
+      "region": "US",
+      "inventors": [],
+      "inventorAddresses": [],
+      "applicants": [],
+      "applicantAddresses": [],
+      "priorityNumber": [],
+      "relatedPublicationDate": [],
+      "patentImageUrl": "https://example.com/image.jpg",
+      "images": [],
+      "classNumList": [],
+      "cpcKindRaw": [],
+      "troCase": false,
+      "troHolder": false
+    }
+  ]
+}

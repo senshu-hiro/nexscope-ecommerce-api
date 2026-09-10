@@ -1,0 +1,294 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Return code (string), \"200\" indicates success",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Return code (integer), 200 indicates success",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].msg/errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Message; ok for success",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of daily data points (window days)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "List of daily data points (see details below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Rendered column definitions",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "API latency (milliseconds)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Response type",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].date",
+      "type": "string",
+      "required": false,
+      "description": "Date, YYYY-MM-DD",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "data[].hasData",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether there is data for this day (false indicates a missing day, distinct from sales=0)",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "data[].price",
+      "type": "number",
+      "required": false,
+      "description": "Daily selling price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].oldPrice",
+      "type": "number",
+      "required": false,
+      "description": "Daily original price before discount",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].ozonCardPrice",
+      "type": "number",
+      "required": false,
+      "description": "Ozon Card price (Ozon official bank card discount price)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].discount",
+      "type": "integer",
+      "required": false,
+      "description": "Discount, integer percentage 0-100",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency symbol (e.g., ₽ / $ / €)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sales",
+      "type": "integer",
+      "required": false,
+      "description": "Daily sales (units)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].balance",
+      "type": "integer",
+      "required": false,
+      "description": "Daily FBO warehouse stock (units)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].rating",
+      "type": "number",
+      "required": false,
+      "description": "Rating, 0-5",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].comments",
+      "type": "integer",
+      "required": false,
+      "description": "Review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].isBestseller",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether the \"bestseller\" badge was active that day",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "data[].isNew",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether the \"new product\" badge was active that day",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "errcode": 1,
+    "total": 1,
+    "data": [
+      {
+        "date": "2026-01-01",
+        "hasData": false,
+        "price": 1,
+        "oldPrice": 1,
+        "ozonCardPrice": 1,
+        "discount": 1,
+        "sales": 1,
+        "balance": 1,
+        "rating": 1,
+        "comments": 1,
+        "isBestseller": false,
+        "isNew": false
+      }
+    ],
+    "columns": [],
+    "costTime": 1,
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

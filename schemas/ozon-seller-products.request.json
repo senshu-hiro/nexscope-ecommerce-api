@@ -1,0 +1,103 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.ozon-seller-products.",
+  "fields": [
+    {
+      "name": "sellerId",
+      "type": "string",
+      "required": true,
+      "description": "Ozon seller ID (numeric string), matching the seller identifier in product lists/seller rankings",
+      "example": "1581151",
+      "constraints": {}
+    },
+    {
+      "name": "startDate",
+      "type": "string",
+      "required": false,
+      "description": "Statistics start date YYYY-MM-DD; latest is yesterday",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "endDate",
+      "type": "string",
+      "required": false,
+      "description": "Statistics end date YYYY-MM-DD; latest is yesterday",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, starting from 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Rows per page 1-100, default 100",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "sortField",
+      "type": "string",
+      "required": false,
+      "description": "Sort column name (snake_case), e.g., sales, revenue, final_price, balance, rating",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sortDirection",
+      "type": "string",
+      "required": false,
+      "description": "asc / desc",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency code, default RUB, e.g., USD",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "currencyRate",
+      "type": "integer",
+      "required": false,
+      "description": "Custom exchange rate (for non-default currency)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "includeFbs",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to include FBS data",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "filters",
+      "type": "array",
+      "required": false,
+      "description": "List of numeric filter conditions, each {field, op, value, value2?}, multiple conditions AND",
+      "example": [],
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "page": 1,
+    "currencyRate": 1,
+    "sellerId": "1581151",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-31",
+    "pageSize": 10
+  },
+  "jsonSchema": null
+}

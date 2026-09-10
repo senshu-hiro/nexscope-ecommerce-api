@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.ruiguan-gun-parts-search.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "URL of the product image to inspect (maximum 1,000 characters)",
+      "example": "https://m.media-amazon.com/images/I/719mRAn2VrL._AC_SL1500_.jpg",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://m.media-amazon.com/images/I/719mRAn2VrL._AC_SL1500_.jpg"
+  },
+  "jsonSchema": null
+}

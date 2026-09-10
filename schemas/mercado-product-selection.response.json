@@ -1,0 +1,198 @@
+{
+  "type": "object",
+  "description": "Returns the normalized Lingdong gateway payload directly.",
+  "fields": [
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Nexscope wrapper status code.",
+      "example": "200",
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Nexscope wrapper status message.",
+      "example": "ok",
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Gateway business status code.",
+      "example": 200,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Gateway business status message.",
+      "example": "ok",
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider result type.",
+      "example": "rawMcpToolResult",
+      "constraints": {}
+    },
+    {
+      "name": "toolName",
+      "type": "string",
+      "required": false,
+      "description": "Executed Mercado tool name.",
+      "example": "categorySearch",
+      "constraints": {}
+    },
+    {
+      "name": "charged",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether the selected tool is paid.",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "object",
+      "required": false,
+      "description": "Parsed business data, or provider text when the result is not JSON.",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "contentText",
+      "type": "string",
+      "required": false,
+      "description": "Original concatenated provider text.",
+      "example": "Category results...",
+      "constraints": {}
+    },
+    {
+      "name": "textParsedAsJson",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether provider text was parsed as JSON.",
+      "example": true,
+      "constraints": {}
+    },
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Inferred result count when available.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Provider-reported token cost; free tools return zero.",
+      "example": 0,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Gateway execution time in milliseconds.",
+      "example": 308,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "code": "200",
+    "msg": "ok",
+    "errcode": 200,
+    "errmsg": "ok",
+    "type": "rawMcpToolResult",
+    "toolName": "categorySearch",
+    "charged": false,
+    "data": {},
+    "contentText": "Category results...",
+    "textParsedAsJson": true,
+    "total": 1,
+    "costToken": 0,
+    "costTime": 308
+  },
+  "jsonSchema": null
+}

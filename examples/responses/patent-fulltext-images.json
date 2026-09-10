@@ -1,0 +1,12 @@
+{
+  "total": 1,
+  "data": [
+    {
+      "patentId": "example-id",
+      "fulltextImagePath": "https://example.com/image.jpg",
+      "imageType": "https://example.com/image.jpg"
+    }
+  ],
+  "columns": [],
+  "costToken": 1
+}

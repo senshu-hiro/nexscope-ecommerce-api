@@ -1,0 +1,83 @@
+{
+  "type": "object",
+  "description": "Generate similar ecommerce images from a reference image with optional prompt and strength controls.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of a JPG, PNG, or WEBP reference image up to 10 MB and at most 4096 pixels in both width and height.",
+      "example": "https://example.com/product.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "prompt",
+      "type": "string",
+      "required": false,
+      "description": "Optional prompt for the desired variation, up to 600 characters.",
+      "example": "same product, brighter background",
+      "constraints": {}
+    },
+    {
+      "name": "weight",
+      "type": "integer",
+      "required": false,
+      "description": "Reference image weight from 0 to 2. Defaults to 2.",
+      "example": 2,
+      "constraints": {}
+    },
+    {
+      "name": "width",
+      "type": "integer",
+      "required": false,
+      "description": "Desired output width in pixels, from 384 to 4096.",
+      "example": 1024,
+      "constraints": {
+        "minimum": 384,
+        "maximum": 4096,
+        "requiredWhenPresent": [
+          "height"
+        ]
+      }
+    },
+    {
+      "name": "height",
+      "type": "integer",
+      "required": false,
+      "description": "Desired output height in pixels, from 384 to 4096.",
+      "example": 1024,
+      "constraints": {
+        "minimum": 384,
+        "maximum": 4096,
+        "requiredWhenPresent": [
+          "width"
+        ]
+      }
+    },
+    {
+      "name": "scale",
+      "type": "string",
+      "required": false,
+      "description": "Optional aspect ratio. Provide scale or both width and height.",
+      "example": "1:1",
+      "constraints": {}
+    },
+    {
+      "name": "outputNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of images to generate, from 1 to 4. Defaults to 4.",
+      "example": 4,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/product.jpg",
+    "prompt": "same product, brighter background",
+    "weight": 2,
+    "width": 1024,
+    "height": 1024,
+    "outputNum": 4
+  },
+  "jsonSchema": null
+}

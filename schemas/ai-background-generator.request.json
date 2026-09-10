@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "description": "Create product or lifestyle scene images from text prompts and optional reference images.",
+  "fields": [
+    {
+      "name": "prompt",
+      "type": "string",
+      "required": true,
+      "description": "Text prompt describing the desired scene.",
+      "example": "a premium phone case on a clean marble desk",
+      "constraints": {}
+    },
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Optional reference image URL.",
+      "example": "https://example.com/product.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "style",
+      "type": "string",
+      "required": false,
+      "description": "Style preset. Supported values: scene-material, portrait-material, ancient-chinese, expressive-sketch, cyberpunk, pixel-illustration, tranquil-ink, anime-line-art, makoto-shinkai, hayao-miyazaki, cg, monochrome-illustration, retro-anime, chibi-character, realistic-oil-painting, c4d-paper-cut, expressive-watercolor, fresh-anime.",
+      "example": "scene-material",
+      "constraints": {}
+    },
+    {
+      "name": "scale",
+      "type": "string",
+      "required": false,
+      "description": "Output aspect ratio. Supported values: 1:1, 16:9, 9:16. Defaults to 1:1.",
+      "example": "1:1",
+      "constraints": {}
+    },
+    {
+      "name": "outputNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of images to generate, from 1 to 4. Defaults to 4.",
+      "example": 4,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "prompt": "a premium phone case on a clean marble desk",
+    "imageUrl": "https://example.com/product.jpg",
+    "style": "scene-material",
+    "scale": "1:1",
+    "outputNum": 4
+  },
+  "jsonSchema": null
+}

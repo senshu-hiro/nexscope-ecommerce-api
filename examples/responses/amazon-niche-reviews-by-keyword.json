@@ -1,0 +1,12 @@
+{
+  "total": 1,
+  "data": [
+    {
+      "nicheId": "example-id",
+      "keyword": "phone case",
+      "percentOfMentions": 1
+    }
+  ],
+  "columns": [],
+  "costToken": 1
+}

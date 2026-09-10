@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "videos",
+    "total"
+  ],
+  "properties": {
+    "videos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "videoId": {
+            "type": "string"
+          },
+          "officialUrl": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          },
+          "totalViewsCnt": {
+            "type": [
+              "integer",
+              "number"
+            ]
+          }
+        }
+      }
+    },
+    "total": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

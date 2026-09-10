@@ -1,0 +1,12 @@
+{
+  "total": 1,
+  "productNum": 1,
+  "products": [
+    {
+      "productId": "example-id",
+      "logoUrl": "https://example.com/image.jpg",
+      "storeId": "example-id"
+    }
+  ],
+  "columns": []
+}

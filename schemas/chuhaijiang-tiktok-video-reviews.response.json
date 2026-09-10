@@ -1,0 +1,80 @@
+{
+  "properties": {
+    "errcode": {
+      "type": "integer"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "errmsg": {
+      "type": "string"
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "tiktok_video_detail_comment_id": {
+                "type": "string",
+                "description": "Comment identity and text: tiktok video detail comment id.",
+                "nullable": true
+              },
+              "tiktok_video_detail_comment_text": {
+                "type": "string",
+                "description": "Comment identity and text: tiktok video detail comment text.",
+                "nullable": true
+              },
+              "tiktok_video_detail_comment_unique_id": {
+                "type": "string",
+                "description": "Comment identity and text: tiktok video detail comment unique id.",
+                "nullable": true
+              },
+              "tiktok_video_detail_comment_nickname": {
+                "type": "string",
+                "description": "Comment identity and text: tiktok video detail comment nickname.",
+                "nullable": true
+              },
+              "tiktok_video_detail_video_id": {
+                "type": "string",
+                "description": "Comment identity and text: tiktok video detail video id.",
+                "nullable": true
+              },
+              "tiktok_video_detail_comment_create_time": {
+                "type": "integer",
+                "description": "Provider comment timestamp or count; preserve original units: tiktok video detail comment create time.",
+                "nullable": true
+              },
+              "tiktok_video_detail_comment_like_count": {
+                "type": "integer",
+                "description": "Provider comment timestamp or count; preserve original units: tiktok video detail comment like count.",
+                "nullable": true
+              },
+              "tiktok_video_detail_comment_reply_count": {
+                "type": "integer",
+                "description": "Provider comment timestamp or count; preserve original units: tiktok video detail comment reply count.",
+                "nullable": true
+              },
+              "tiktok_video_detail_comment_user_avatar": {
+                "type": "object",
+                "description": "Avatar object with thumb_url and url: tiktok video detail comment user avatar.",
+                "nullable": true
+              }
+            },
+            "type": "object",
+            "additionalProperties": true
+          },
+          "nullable": true
+        },
+        "total_count": {
+          "nullable": true,
+          "type": "integer"
+        }
+      },
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

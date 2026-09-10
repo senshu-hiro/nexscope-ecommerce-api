@@ -1,0 +1,141 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "regionId": {
+      "type": "integer",
+      "description": "Temu region from sites[].regionId; never siteId.",
+      "minimum": 1,
+      "default": 211
+    },
+    "page": {
+      "type": "integer",
+      "description": "Page number.",
+      "minimum": 1,
+      "default": 1
+    },
+    "size": {
+      "type": "integer",
+      "description": "Items per page; page times size must not exceed 10000.",
+      "minimum": 1,
+      "maximum": 200,
+      "default": 20
+    },
+    "keyword": {
+      "type": "string",
+      "description": "User keyword; preserve the supplied language.",
+      "maxLength": 300
+    },
+    "sort": {
+      "type": "string",
+      "description": "Confirmed provider sort field; omit when unnecessary.",
+      "maxLength": 100
+    },
+    "order": {
+      "type": "string",
+      "description": "Sort direction, case-insensitive.",
+      "pattern": "^([aA][sS][cC]|[dD][eE][sS][cC])$"
+    },
+    "catIds": {
+      "type": "array",
+      "description": "Category identifiers obtained from category lookup.",
+      "items": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "hostingMode": {
+      "type": "integer",
+      "description": "1 fully managed, 2 semi-managed.",
+      "enum": [
+        1,
+        2
+      ]
+    },
+    "mallSoldMin": {
+      "type": "integer",
+      "description": "Lower bound for mallSold; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "mallSoldMax": {
+      "type": "integer",
+      "description": "Upper bound for mallSold; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "reviewNumMin": {
+      "type": "integer",
+      "description": "Lower bound for reviewNum; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "reviewNumMax": {
+      "type": "integer",
+      "description": "Upper bound for reviewNum; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "goodsNumMin": {
+      "type": "integer",
+      "description": "Lower bound for goodsNum; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "goodsNumMax": {
+      "type": "integer",
+      "description": "Upper bound for goodsNum; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "followerNumMin": {
+      "type": "integer",
+      "description": "Lower bound for followerNum; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "followerNumMax": {
+      "type": "integer",
+      "description": "Upper bound for followerNum; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "mallSalesMin": {
+      "type": "number",
+      "description": "Lower bound for mallSales; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "mallSalesMax": {
+      "type": "number",
+      "description": "Upper bound for mallSales; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "avgPriceMin": {
+      "type": "number",
+      "description": "Lower bound for avgPrice; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "avgPriceMax": {
+      "type": "number",
+      "description": "Upper bound for avgPrice; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "mallStarMin": {
+      "type": "number",
+      "description": "Lower bound for mallStar; minimum must not exceed maximum.",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "mallStarMax": {
+      "type": "number",
+      "description": "Upper bound for mallStar; minimum must not exceed maximum.",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "mallOpenTimeMin": {
+      "type": "string",
+      "description": "Earliest mallOpenTime in ISO-8601 date-time; minimum must not exceed maximum.",
+      "maxLength": 40,
+      "format": "date-time"
+    },
+    "mallOpenTimeMax": {
+      "type": "string",
+      "description": "Latest mallOpenTime in ISO-8601 date-time; minimum must not exceed maximum.",
+      "maxLength": 40,
+      "format": "date-time"
+    }
+  },
+  "required": []
+}

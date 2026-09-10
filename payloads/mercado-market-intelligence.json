@@ -1,0 +1,8 @@
+{
+  "arguments": {
+    "market_code": "MLM",
+    "query": "celulares",
+    "limit": 10
+  },
+  "toolName": "search_categories"
+}

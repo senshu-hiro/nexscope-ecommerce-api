@@ -1,0 +1,180 @@
+{
+  "type": "object",
+  "description": "Create a product-selling video from prompt and product image references.",
+  "fields": [
+    {
+      "name": "prompt",
+      "type": "string",
+      "required": true,
+      "description": "Sales script or creative prompt.",
+      "example": "Introduce this shockproof phone case in an upbeat tone.",
+      "constraints": {}
+    },
+    {
+      "name": "imageList",
+      "type": "array",
+      "required": true,
+      "description": "Public product image URLs. Provide up to 30 images for Seedance 2.5 or up to 9 images for the other supported models.",
+      "example": [
+        "https://example.com/product.jpg"
+      ],
+      "constraints": {
+        "maxItemsBy": {
+          "videoType": {
+            "seedance-2-0": 9,
+            "seedance-2-0-mini": 9,
+            "seedance-2-0-fast": 9,
+            "happyhorse-v2": 9,
+            "seedance-2-5": 30
+          }
+        },
+        "minItems": 1,
+        "maxItems": 30
+      }
+    },
+    {
+      "name": "videoType",
+      "type": "string",
+      "required": true,
+      "description": "Video model. Supported values: seedance-2-0, seedance-2-0-fast, seedance-2-0-mini, seedance-2-5, or happyhorse-v2.",
+      "example": "seedance-2-0-fast",
+      "constraints": {
+        "allowedValues": [
+          "seedance-2-0",
+          "seedance-2-0-fast",
+          "seedance-2-0-mini",
+          "seedance-2-5",
+          "happyhorse-v2"
+        ]
+      }
+    },
+    {
+      "name": "videoTime",
+      "type": "integer",
+      "required": false,
+      "description": "Target duration in seconds. Seedance 2.0, Fast, Mini, and HappyHorse V2 support 5, 10, or 15; Seedance 2.5 also supports 30.",
+      "example": 10,
+      "constraints": {
+        "allowedValuesBy": {
+          "videoType": {
+            "seedance-2-0": [
+              5,
+              10,
+              15
+            ],
+            "seedance-2-0-mini": [
+              5,
+              10,
+              15
+            ],
+            "seedance-2-0-fast": [
+              5,
+              10,
+              15
+            ],
+            "happyhorse-v2": [
+              5,
+              10,
+              15
+            ],
+            "seedance-2-5": [
+              5,
+              10,
+              15,
+              30
+            ]
+          }
+        },
+        "allowedValues": [
+          5,
+          10,
+          15,
+          30
+        ]
+      }
+    },
+    {
+      "name": "aspectRatio",
+      "type": "string",
+      "required": false,
+      "description": "Target aspect ratio: 16:9, 9:16, 1:1, 4:3, 3:4, or 21:9.",
+      "example": "9:16",
+      "constraints": {
+        "allowedValues": [
+          "16:9",
+          "9:16",
+          "1:1",
+          "4:3",
+          "3:4",
+          "21:9"
+        ]
+      }
+    },
+    {
+      "name": "isPro",
+      "type": "boolean",
+      "required": false,
+      "description": "Enable Pro mode for any Seedance model. HappyHorse V2 does not support Pro mode. When enabled without resolution, the default is 720p.",
+      "example": false,
+      "constraints": {
+        "forbiddenWhen": {
+          "videoType": [
+            "happyhorse-v2"
+          ]
+        }
+      }
+    },
+    {
+      "name": "resolution",
+      "type": "string",
+      "required": false,
+      "description": "Target resolution. Seedance 2.0 and 2.5 support 480p, 720p, or 1080p; Seedance Fast and Mini support 480p or 720p; HappyHorse V2 supports 720p or 1080p.",
+      "example": "720p",
+      "constraints": {
+        "allowedValuesBy": {
+          "videoType": {
+            "seedance-2-0": [
+              "480p",
+              "720p",
+              "1080p"
+            ],
+            "seedance-2-0-mini": [
+              "480p",
+              "720p"
+            ],
+            "seedance-2-0-fast": [
+              "480p",
+              "720p"
+            ],
+            "happyhorse-v2": [
+              "720p",
+              "1080p"
+            ],
+            "seedance-2-5": [
+              "480p",
+              "720p",
+              "1080p"
+            ]
+          }
+        },
+        "allowedValues": [
+          "480p",
+          "720p",
+          "1080p"
+        ]
+      }
+    }
+  ],
+  "example": {
+    "prompt": "Introduce this shockproof phone case in an upbeat tone.",
+    "imageList": [
+      "https://example.com/product.jpg"
+    ],
+    "videoType": "seedance-2-0-fast",
+    "videoTime": 10,
+    "aspectRatio": "9:16",
+    "isPro": false,
+    "resolution": "720p"
+  },
+  "jsonSchema": null
+}

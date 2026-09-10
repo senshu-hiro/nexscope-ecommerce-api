@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.web-search.",
+  "fields": [
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": true,
+      "description": "Search keyword, max length 1000 characters",
+      "example": "phone case",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "keyword": "phone case"
+  },
+  "jsonSchema": null
+}

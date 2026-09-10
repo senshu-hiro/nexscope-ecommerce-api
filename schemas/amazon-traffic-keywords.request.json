@@ -1,0 +1,101 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-traffic-keywords.",
+  "fields": [
+    {
+      "name": "marketplace",
+      "type": "string",
+      "required": true,
+      "description": "Marketplace site, default US",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "asin",
+      "type": "string",
+      "required": true,
+      "description": "Product ASIN to reverse lookup",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "month",
+      "type": "string",
+      "required": false,
+      "description": "20)\\d{2}(0[1-9]",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "size",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": false,
+      "description": "Keyword filter",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "badges",
+      "type": "string",
+      "required": false,
+      "description": "Traffic keyword type (impression position), see [Badges Enum](#badges-enum)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "trafficKeywordTypes",
+      "type": "string",
+      "required": false,
+      "description": "Traffic share type, see [trafficKeywordTypes Enum](#traffickeywordtypes-enum)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "conversionKeywordTypes",
+      "type": "string",
+      "required": false,
+      "description": "Traffic conversion type, see [conversionKeywordTypes Enum](#conversionkeywordtypes-enum)",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "orderField",
+      "type": "string",
+      "required": false,
+      "description": "Sort field, see [orderField Options](#orderfield-options)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "orderDesc",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to sort in descending order",
+      "example": false,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "asin": "B072MQ5BRX",
+    "page": 1,
+    "size": 10,
+    "marketplace": "US"
+  },
+  "jsonSchema": null
+}

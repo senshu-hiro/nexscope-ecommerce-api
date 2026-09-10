@@ -1,0 +1,119 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "regionId": {
+      "type": "integer",
+      "description": "Temu region from sites[].regionId; never siteId.",
+      "minimum": 1,
+      "default": 211
+    },
+    "page": {
+      "type": "integer",
+      "description": "Page number.",
+      "minimum": 1,
+      "default": 1
+    },
+    "size": {
+      "type": "integer",
+      "description": "Items per page; page times size must not exceed 10000.",
+      "minimum": 1,
+      "maximum": 200,
+      "default": 20
+    },
+    "keyword": {
+      "type": "string",
+      "description": "User keyword; preserve the supplied language.",
+      "maxLength": 300
+    },
+    "sort": {
+      "type": "string",
+      "description": "Confirmed provider sort field; omit when unnecessary.",
+      "maxLength": 100
+    },
+    "order": {
+      "type": "string",
+      "description": "Sort direction, case-insensitive.",
+      "pattern": "^([aA][sS][cC]|[dD][eE][sS][cC])$"
+    },
+    "dsrMin": {
+      "type": "number",
+      "description": "Lower bound for dsr; minimum must not exceed maximum."
+    },
+    "dsrMax": {
+      "type": "number",
+      "description": "Upper bound for dsr; minimum must not exceed maximum."
+    },
+    "totalSoldMin": {
+      "type": "integer",
+      "description": "Lower bound for totalSold; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "totalSoldMax": {
+      "type": "integer",
+      "description": "Upper bound for totalSold; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "itemCountMin": {
+      "type": "integer",
+      "description": "Lower bound for itemCount; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "itemCountMax": {
+      "type": "integer",
+      "description": "Upper bound for itemCount; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "mallCountMin": {
+      "type": "integer",
+      "description": "Lower bound for mallCount; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "mallCountMax": {
+      "type": "integer",
+      "description": "Upper bound for mallCount; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "avgPriceMin": {
+      "type": "number",
+      "description": "Lower bound for avgPrice; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "avgPriceMax": {
+      "type": "number",
+      "description": "Upper bound for avgPrice; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "totalSalesMin": {
+      "type": "number",
+      "description": "Lower bound for totalSales; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "totalSalesMax": {
+      "type": "number",
+      "description": "Upper bound for totalSales; minimum must not exceed maximum.",
+      "minimum": 0
+    },
+    "catIds": {
+      "type": "array",
+      "description": "Category identifiers obtained from category lookup.",
+      "items": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "firstOnSaleTimeMin": {
+      "type": "string",
+      "description": "Earliest firstOnSaleTime in ISO-8601 date-time; minimum must not exceed maximum.",
+      "maxLength": 40,
+      "format": "date-time"
+    },
+    "firstOnSaleTimeMax": {
+      "type": "string",
+      "description": "Latest firstOnSaleTime in ISO-8601 date-time; minimum must not exceed maximum.",
+      "maxLength": 40,
+      "format": "date-time"
+    }
+  },
+  "required": []
+}

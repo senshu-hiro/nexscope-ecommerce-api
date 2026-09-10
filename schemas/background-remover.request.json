@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "description": "Cut out products, people, or clothing from a source image using an upstream background-removal model.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the image to cut out. The image must be up to 20 MB and between 385 and 8192 pixels in both width and height.",
+      "example": "https://example.com/product.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "subType",
+      "type": "integer",
+      "required": true,
+      "description": "Cutout type. Supported values: 1 (general), 2 (portrait), 3 (product), 9 (apparel), 12 (hair), 13 (face).",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "clothClass",
+      "type": "string",
+      "required": false,
+      "description": "Apparel classes used only when subType is 9. Multiple values may be comma-separated. Supported values: tops, coat, skirt, pants, bag, shoes, hat.",
+      "example": "tops",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/product.jpg",
+    "subType": 1
+  },
+  "jsonSchema": null
+}

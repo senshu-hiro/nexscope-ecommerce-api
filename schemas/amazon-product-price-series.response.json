@@ -1,0 +1,273 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "asin",
+      "type": "string",
+      "required": false,
+      "description": "ASIN",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "buyboxPrice",
+      "type": "array",
+      "required": false,
+      "description": "Buy Box price (time=timestamp, value=Buy Box price)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "price",
+      "type": "array",
+      "required": false,
+      "description": "Price (time=timestamp, value=price)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "priceList",
+      "type": "array",
+      "required": false,
+      "description": "List/strikethrough price (time=timestamp, value=list price)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "priceDeal",
+      "type": "array",
+      "required": false,
+      "description": "Deal price (time=timestamp, value=deal price)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "pricePrime",
+      "type": "array",
+      "required": false,
+      "description": "Prime price (time=timestamp, value=Prime price)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "priceFba",
+      "type": "array",
+      "required": false,
+      "description": "FBA price (time=timestamp, value=FBA price)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "priceFbm",
+      "type": "array",
+      "required": false,
+      "description": "FBM price (time=timestamp, value=FBM price)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "priceCoupon",
+      "type": "array",
+      "required": false,
+      "description": "Coupon price (time=timestamp, value=coupon price)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "bsrMain",
+      "type": "array",
+      "required": false,
+      "description": "Main category BSR, each element contains categoryName (category name) and points (time=timestamp, value=ranking)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "bsrSub",
+      "type": "array",
+      "required": false,
+      "description": "Subcategory BSR, each element contains categoryName (category name) and points (time=timestamp, value=ranking)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "sellerCount",
+      "type": "array",
+      "required": false,
+      "description": "Seller count (time=timestamp, value=seller count)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "rating",
+      "type": "array",
+      "required": false,
+      "description": "Rating (time=timestamp, value=rating)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "ratingCount",
+      "type": "array",
+      "required": false,
+      "description": "Rating count (time=timestamp, value=rating count)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "monthlySold",
+      "type": "array",
+      "required": false,
+      "description": "Child ASIN sales (time=timestamp, value=sales units)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token consumption",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "asin": "B072MQ5BRX",
+    "buyboxPrice": [],
+    "price": [],
+    "priceList": [],
+    "priceDeal": [],
+    "pricePrime": [],
+    "priceFba": [],
+    "priceFbm": [],
+    "priceCoupon": [],
+    "bsrMain": [],
+    "bsrSub": [],
+    "sellerCount": [],
+    "rating": [],
+    "ratingCount": [],
+    "monthlySold": [],
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,13 @@
+{
+  "errmsg": "ok",
+  "data": {
+    "items": [
+      {
+        "bio_email": null,
+        "category_label": null,
+        "country_code": null
+      }
+    ]
+  },
+  "errcode": 200
+}

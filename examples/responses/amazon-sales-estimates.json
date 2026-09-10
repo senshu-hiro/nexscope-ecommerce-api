@@ -1,0 +1,18 @@
+{
+  "costToken": 1,
+  "salesEstimateList": [
+    {
+      "asin": "B072MQ5BRX",
+      "id": "example-id",
+      "parentAsin": "B072MQ5BRX",
+      "isParent": false,
+      "isVariant": false,
+      "isStandalone": false,
+      "variants": [],
+      "dailyEstimates": [],
+      "date": "2026-01-01",
+      "estimatedUnitsSold": 1,
+      "lastKnownPrice": 1
+    }
+  ]
+}

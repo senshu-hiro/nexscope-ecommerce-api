@@ -1,0 +1,265 @@
+{
+  "type": "object",
+  "description": "Returns a complete directory of concrete Amazon research APIs. This endpoint does not execute a research query itself.",
+  "fields": [
+    {
+      "name": "directoryType",
+      "type": "string",
+      "required": true,
+      "description": "Identifies this response as an API directory, not a research result.",
+      "example": "amazon-product-research-directory",
+      "constraints": {}
+    },
+    {
+      "name": "goal",
+      "type": "string",
+      "required": true,
+      "description": "Applied directory filter.",
+      "example": "all",
+      "constraints": {}
+    },
+    {
+      "name": "count",
+      "type": "integer",
+      "required": true,
+      "description": "Number of concrete API entries returned.",
+      "example": 33,
+      "constraints": {}
+    },
+    {
+      "name": "recommendedApis",
+      "type": "array",
+      "required": true,
+      "description": "Concrete APIs that execute the selected research operation.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "recommendedApis[].operation",
+      "type": "string",
+      "required": true,
+      "description": "Original API operation name.",
+      "example": "amazon_search",
+      "constraints": {}
+    },
+    {
+      "name": "recommendedApis[].slug",
+      "type": "string",
+      "required": true,
+      "description": "Concrete API API slug to invoke.",
+      "example": "amazon-search",
+      "constraints": {}
+    },
+    {
+      "name": "recommendedApis[].endpoint",
+      "type": "string",
+      "required": true,
+      "description": "Concrete API API run endpoint.",
+      "example": "/api/skill-api/v1/skills/amazon-search/run",
+      "constraints": {}
+    },
+    {
+      "name": "recommendedApis[].reason",
+      "type": "string",
+      "required": true,
+      "description": "What the concrete API executes.",
+      "example": "Search Amazon storefront results by keyword.",
+      "constraints": {}
+    },
+    {
+      "name": "recommendedApis[].typicalFields",
+      "type": "array",
+      "required": true,
+      "description": "Typical inputs for navigation; the linked API schema is authoritative.",
+      "example": [
+        "keyword",
+        "marketplace"
+      ],
+      "constraints": {}
+    },
+    {
+      "name": "recommendedApis[].requestExample",
+      "type": "object",
+      "required": true,
+      "description": "Example request for the concrete API.",
+      "example": {
+        "keyword": "wireless speaker",
+        "marketplace": "US"
+      },
+      "constraints": {}
+    },
+    {
+      "name": "usage",
+      "type": "string",
+      "required": true,
+      "description": "Next step for callers.",
+      "example": "Invoke one recommended API directly for the actual research result.",
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token cost reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "directoryType": "amazon-product-research-directory",
+    "goal": "all",
+    "count": 33,
+    "recommendedApis": [
+      {
+        "slug": "amazon-search",
+        "operation": "amazon_search",
+        "typicalFields": [
+          "keyword",
+          "marketplace"
+        ],
+        "requestExample": {
+          "keyword": "wireless speaker",
+          "marketplace": "US"
+        },
+        "reason": "Search Amazon storefront results by keyword.",
+        "endpoint": "/api/skill-api/v1/skills/amazon-search/run"
+      },
+      {
+        "slug": "amazon-alexa-search",
+        "operation": "amazon_alexa_search",
+        "typicalFields": [
+          "keyword",
+          "marketplace"
+        ],
+        "requestExample": {
+          "keyword": "wireless speaker",
+          "marketplace": "US"
+        },
+        "reason": "Search Amazon Alexa ranking and product results.",
+        "endpoint": "/api/skill-api/v1/skills/amazon-alexa-search/run"
+      }
+    ],
+    "usage": "Invoke one recommended API directly for the actual research result."
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,37 @@
+{
+  "costToken": 1,
+  "productDatabaseList": [
+    {
+      "id": "example-id",
+      "price": 1,
+      "approximate30DayUnitsSold": 1,
+      "approximate30DayRevenue": 1,
+      "productRank": 1,
+      "reviews": 1,
+      "rating": 1,
+      "listingQualityScore": 1,
+      "numberOfSellers": 1,
+      "imageUrl": "https://example.com/image.jpg",
+      "dateFirstAvailable": "2026-01-01",
+      "weightValue": 1,
+      "lengthValue": 1,
+      "widthValue": 1,
+      "heightValue": 1,
+      "parentAsin": "B072MQ5BRX",
+      "isParent": false,
+      "isVariant": false,
+      "isStandalone": false,
+      "isAvailable": false,
+      "buyBoxOwnerSellerId": "example-id",
+      "updatedAt": "2026-01-01",
+      "feeBreakdown": {},
+      "subcategoryRanks": [],
+      "variants": [],
+      "upcList": [],
+      "eanList": [],
+      "isbnList": [],
+      "gtinList": [],
+      "dateFirstAvailableIsEstimated": false
+    }
+  ]
+}

@@ -1,0 +1,726 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Return code, \"200\" indicates success (returned on success)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Error code, 200 indicates success; only returned on business errors",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Message; ok for success",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Error message; ok for success, reason description on business error",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of records returned (1 on hit, 0 on miss)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "totalSales",
+      "type": "integer",
+      "required": false,
+      "description": "Total sales volume within the statistics window",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "dailySales",
+      "type": "number",
+      "required": false,
+      "description": "Average daily sales (approx totalSales / window days)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "totalRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Sales revenue within the statistics window (RUB)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "stock",
+      "type": "integer",
+      "required": false,
+      "description": "Stock",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "startDate",
+      "type": "string",
+      "required": false,
+      "description": "Statistics window start date (e.g., 2026-06-01)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "endDate",
+      "type": "string",
+      "required": false,
+      "description": "Statistics window end date (e.g., 2026-06-30)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "salesTrendVOList",
+      "type": "array",
+      "required": false,
+      "description": "Daily sales data series (see below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "categoryRanks",
+      "type": "array",
+      "required": false,
+      "description": "Product category ranking history (see below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "required": false,
+      "description": "Product detail list (1 record on single SKU hit, empty on miss)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Returned data, content identical to products",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Column definitions, elements contain {field, title, cellType, sortable, filterable}",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Response display type, e.g., productWorkbenches",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "API latency (milliseconds)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sku",
+      "type": "integer",
+      "required": false,
+      "description": "Product SKU",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].productId",
+      "type": "integer",
+      "required": false,
+      "description": "Unified product ID, mapped from sku",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].title",
+      "type": "string",
+      "required": false,
+      "description": "Product title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].price",
+      "type": "number",
+      "required": false,
+      "description": "Product price (RUB)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency, always ₽",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].reviewRating",
+      "type": "number",
+      "required": false,
+      "description": "Product rating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].rating",
+      "type": "number",
+      "required": false,
+      "description": "Unified rating, mapped from reviewRating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].reviewCount",
+      "type": "integer",
+      "required": false,
+      "description": "Number of reviews",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].questionsAndAnswers",
+      "type": "integer",
+      "required": false,
+      "description": "QA count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].brandName",
+      "type": "string",
+      "required": false,
+      "description": "Brand name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].brand",
+      "type": "string",
+      "required": false,
+      "description": "Unified brand, mapped from brandName",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].brandId",
+      "type": "integer",
+      "required": false,
+      "description": "Brand ID",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].brandUrl",
+      "type": "string",
+      "required": false,
+      "description": "Brand link",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].sellerName",
+      "type": "string",
+      "required": false,
+      "description": "Seller name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sellerId",
+      "type": "integer",
+      "required": false,
+      "description": "Seller ID (negative values indicate Ozon platform self-operated sellers, e.g., -4 Ozon Россия)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].fulfillment",
+      "type": "array",
+      "required": false,
+      "description": "Product fulfillment methods, e.g., [\"FBO\"], [\"OZON\"], may contain multiple values",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].upTime",
+      "type": "integer",
+      "required": false,
+      "description": "Listing time, millisecond timestamp",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].upDays",
+      "type": "integer",
+      "required": false,
+      "description": "Days since listing",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].upMonths",
+      "type": "integer",
+      "required": false,
+      "description": "Months since listing",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Unified main image URL, mapped from the first of imageUrls",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].imageUrls",
+      "type": "array",
+      "required": false,
+      "description": "List of product image URLs",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].productUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].productPageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Unified product page URL, mapped from productUrl",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].categoryInfo",
+      "type": "object",
+      "required": false,
+      "description": "Product category information (see below)",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "products[].monthlySalesUnits",
+      "type": "integer",
+      "required": false,
+      "description": "Unified monthly sales, actual value equals totalSales of the current statistics window",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].monthlySalesRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Unified monthly revenue, actual value equals totalRevenue of the current statistics window",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Data source, always ozon",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Source tool identifier for the Ozon competitor-detail endpoint",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].weight",
+      "type": "number",
+      "required": false,
+      "description": "Product weight, in grams (digital/service products may not return this, see field differences)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].grossMargin",
+      "type": "number",
+      "required": false,
+      "description": "Gross margin (defined in schema, some products may not return this in practice, see field differences)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salestrendvolist[].date",
+      "type": "string",
+      "required": false,
+      "description": "Date (e.g., 2026-06-01)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "salestrendvolist[].sales",
+      "type": "integer",
+      "required": false,
+      "description": "Daily sales (may be 0)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salestrendvolist[].revenue",
+      "type": "number",
+      "required": false,
+      "description": "Daily revenue (RUB)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salestrendvolist[].price",
+      "type": "number",
+      "required": false,
+      "description": "Daily price (RUB)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salestrendvolist[].stock",
+      "type": "integer",
+      "required": false,
+      "description": "Daily stock",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salestrendvolist[].reviewCount",
+      "type": "integer",
+      "required": false,
+      "description": "Cumulative review count as of this date",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salestrendvolist[].reviewRating",
+      "type": "number",
+      "required": false,
+      "description": "Rating as of this date",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "categoryranks[].date",
+      "type": "string",
+      "required": false,
+      "description": "Month (e.g., 2026-02; current month shows as specific date 2026-07-01)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "categoryranks[].rank",
+      "type": "integer",
+      "required": false,
+      "description": "Category ranking",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "categoryranks[].count",
+      "type": "integer",
+      "required": false,
+      "description": "Statistics count (subject to actual gateway interpretation)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].cnTitlePath",
+      "type": "string",
+      "required": false,
+      "description": "Chinese category path",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].enTitlePath",
+      "type": "string",
+      "required": false,
+      "description": "English category path",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].titlePath",
+      "type": "string",
+      "required": false,
+      "description": "Category path (original text)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].category",
+      "type": "object",
+      "required": false,
+      "description": "Terminal category object (fields see below)",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "columns[].fullCategoryId",
+      "type": "array",
+      "required": false,
+      "description": "Full category ID path (string array, root to terminal, e.g., [\"99999999\", \"99999999_200001489\", \"99999999_200001489_970727001\"])",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns[].cnTitle",
+      "type": "string",
+      "required": false,
+      "description": "Category Chinese name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].enTitle",
+      "type": "string",
+      "required": false,
+      "description": "Category English name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].title",
+      "type": "string",
+      "required": false,
+      "description": "Category original title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].level",
+      "type": "integer",
+      "required": false,
+      "description": "Category level",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].id",
+      "type": "string",
+      "required": false,
+      "description": "Category ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].pid",
+      "type": "string",
+      "required": false,
+      "description": "Parent category ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].crossBorderSellable",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether cross-border sales are supported",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].disabled",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether disabled",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "errcode": 1,
+    "total": 1,
+    "totalSales": 1,
+    "dailySales": 1,
+    "totalRevenue": 1,
+    "stock": 1,
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-01",
+    "salesTrendVOList": [],
+    "categoryRanks": [],
+    "products": [
+      {
+        "sku": 1,
+        "productId": 1,
+        "price": 1,
+        "reviewRating": 1,
+        "rating": 1,
+        "reviewCount": 1,
+        "questionsAndAnswers": 1,
+        "brandId": 1,
+        "brandUrl": "https://example.com/image.jpg",
+        "sellerId": 1,
+        "fulfillment": [],
+        "upTime": 1,
+        "upDays": 1,
+        "upMonths": 1,
+        "imageUrl": "https://example.com/image.jpg",
+        "imageUrls": [],
+        "productUrl": "https://example.com/image.jpg",
+        "productPageUrl": "https://example.com/image.jpg",
+        "categoryInfo": {},
+        "monthlySalesUnits": 1,
+        "monthlySalesRevenue": 1,
+        "weight": 1,
+        "grossMargin": 1
+      }
+    ],
+    "data": [],
+    "columns": [
+      {
+        "category": {},
+        "fullCategoryId": [],
+        "level": 1,
+        "id": "example-id",
+        "pid": "example-id",
+        "crossBorderSellable": false,
+        "disabled": false
+      }
+    ],
+    "costTime": 1,
+    "costToken": 1,
+    "salestrendvolist": [
+      {
+        "date": "2026-01-01",
+        "sales": 1,
+        "revenue": 1,
+        "price": 1,
+        "stock": 1,
+        "reviewCount": 1,
+        "reviewRating": 1
+      }
+    ],
+    "categoryranks": [
+      {
+        "date": "2026-01-01",
+        "rank": 1,
+        "count": 1
+      }
+    ]
+  },
+  "jsonSchema": null
+}

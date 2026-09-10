@@ -1,0 +1,492 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token consumption",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList",
+      "type": "array",
+      "required": false,
+      "description": "Product data list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].id",
+      "type": "string",
+      "required": false,
+      "description": "Product unique identifier",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].title",
+      "type": "string",
+      "required": false,
+      "description": "Product title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].brand",
+      "type": "string",
+      "required": false,
+      "description": "Brand name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].category",
+      "type": "string",
+      "required": false,
+      "description": "Primary category",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].breadcrumbPath",
+      "type": "string",
+      "required": false,
+      "description": "Full category path",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].price",
+      "type": "number",
+      "required": false,
+      "description": "Current selling price (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].approximate30DayUnitsSold",
+      "type": "integer",
+      "required": false,
+      "description": "Estimated units sold in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].approximate30DayRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Estimated revenue in last 30 days (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].productRank",
+      "type": "integer",
+      "required": false,
+      "description": "BSR ranking",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].reviews",
+      "type": "integer",
+      "required": false,
+      "description": "Total number of reviews",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].rating",
+      "type": "number",
+      "required": false,
+      "description": "Average rating (1.0-5.0)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].listingQualityScore",
+      "type": "integer",
+      "required": false,
+      "description": "Listing quality score (LQS, 1-10)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].numberOfSellers",
+      "type": "integer",
+      "required": false,
+      "description": "Number of active sellers",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].sellerType",
+      "type": "string",
+      "required": false,
+      "description": "Seller type (amz/fba/fbm)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product main image URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].dateFirstAvailable",
+      "type": "string",
+      "required": false,
+      "description": "Date first listed",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].weightValue",
+      "type": "number",
+      "required": false,
+      "description": "Product weight",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].weightUnit",
+      "type": "string",
+      "required": false,
+      "description": "Weight unit",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].lengthValue",
+      "type": "number",
+      "required": false,
+      "description": "Length",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].widthValue",
+      "type": "number",
+      "required": false,
+      "description": "Width",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].heightValue",
+      "type": "number",
+      "required": false,
+      "description": "Height",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].dimensionsUnit",
+      "type": "string",
+      "required": false,
+      "description": "Dimensions unit",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].parentAsin",
+      "type": "string",
+      "required": false,
+      "description": "Parent ASIN",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].isParent",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether it is a parent listing",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].isVariant",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether it is a variant",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].isStandalone",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether it is a standalone product",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].isAvailable",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether it is available for purchase",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].buyBoxOwner",
+      "type": "string",
+      "required": false,
+      "description": "Buy Box owner seller name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].buyBoxOwnerSellerId",
+      "type": "string",
+      "required": false,
+      "description": "Buy Box owner seller ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].updatedAt",
+      "type": "string",
+      "required": false,
+      "description": "Data update time",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].feeBreakdown",
+      "type": "object",
+      "required": false,
+      "description": "Fee details: fbaFee (FBA fee), referralFee (referral fee), variableClosingFee (variable closing fee), totalFees (total fees)",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].subcategoryRanks",
+      "type": "array",
+      "required": false,
+      "description": "Subcategory BSR ranking list, each item contains subcategory, rank, id",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].type",
+      "type": "string",
+      "required": false,
+      "description": "Resource type",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].variants",
+      "type": "array",
+      "required": false,
+      "description": "Variant list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].upcList",
+      "type": "array",
+      "required": false,
+      "description": "UPC code list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].eanList",
+      "type": "array",
+      "required": false,
+      "description": "EAN code list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].isbnList",
+      "type": "array",
+      "required": false,
+      "description": "ISBN code list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].gtinList",
+      "type": "array",
+      "required": false,
+      "description": "GTIN code list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "productDatabaseList[].dateFirstAvailableIsEstimated",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether the listing date is estimated",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "costToken": 1,
+    "productDatabaseList": [
+      {
+        "id": "example-id",
+        "price": 1,
+        "approximate30DayUnitsSold": 1,
+        "approximate30DayRevenue": 1,
+        "productRank": 1,
+        "reviews": 1,
+        "rating": 1,
+        "listingQualityScore": 1,
+        "numberOfSellers": 1,
+        "imageUrl": "https://example.com/image.jpg",
+        "dateFirstAvailable": "2026-01-01",
+        "weightValue": 1,
+        "lengthValue": 1,
+        "widthValue": 1,
+        "heightValue": 1,
+        "parentAsin": "B072MQ5BRX",
+        "isParent": false,
+        "isVariant": false,
+        "isStandalone": false,
+        "isAvailable": false,
+        "buyBoxOwnerSellerId": "example-id",
+        "updatedAt": "2026-01-01",
+        "feeBreakdown": {},
+        "subcategoryRanks": [],
+        "variants": [],
+        "upcList": [],
+        "eanList": [],
+        "isbnList": [],
+        "gtinList": [],
+        "dateFirstAvailableIsEstimated": false
+      }
+    ]
+  },
+  "jsonSchema": null
+}

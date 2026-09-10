@@ -1,0 +1,52 @@
+{
+  "type": "object",
+  "description": "Use lookup to browse nodes. Use like with nodeLabel to search category names.",
+  "fields": [
+    {
+      "name": "operation",
+      "type": "string",
+      "required": false,
+      "description": "lookup (default) or like.",
+      "example": "lookup",
+      "constraints": {}
+    },
+    {
+      "name": "marketId",
+      "type": "string",
+      "required": false,
+      "description": "Amazon marketplace or site identifier.",
+      "example": "1",
+      "constraints": {}
+    },
+    {
+      "name": "nodeId",
+      "type": "string",
+      "required": false,
+      "description": "Parent category node identifier.",
+      "example": "0",
+      "constraints": {}
+    },
+    {
+      "name": "table",
+      "type": "string",
+      "required": false,
+      "description": "Optional upstream category table selector.",
+      "example": "nodes",
+      "constraints": {}
+    },
+    {
+      "name": "nodeLabel",
+      "type": "string",
+      "required": false,
+      "description": "Category label required by operation=like.",
+      "example": "Electronics",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "marketId": "1",
+    "operation": "lookup",
+    "nodeId": "0"
+  },
+  "jsonSchema": null
+}

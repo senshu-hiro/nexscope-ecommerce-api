@@ -1,0 +1,212 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.temu-product-source-query.",
+  "fields": [
+    {
+      "name": "searchKey",
+      "type": "string",
+      "required": false,
+      "description": "Keyword or product ID / store ID",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "categoryHome",
+      "type": "string",
+      "required": false,
+      "description": "Front-end category ID",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "categoryBackend",
+      "type": "string",
+      "required": false,
+      "description": "Back-end category ID",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "priceBegin",
+      "type": "number",
+      "required": false,
+      "description": "Price range start (USD), combined to form upstream price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceEnd",
+      "type": "number",
+      "required": false,
+      "description": "Price range end (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "ratingBegin",
+      "type": "number",
+      "required": false,
+      "description": "Rating range start, combined to form upstream rating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "ratingEnd",
+      "type": "number",
+      "required": false,
+      "description": "Rating range end",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "reviewsBegin",
+      "type": "integer",
+      "required": false,
+      "description": "Review count range start, combined to form reviews",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "reviewsEnd",
+      "type": "integer",
+      "required": false,
+      "description": "Review count range end",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salesTotalBegin",
+      "type": "integer",
+      "required": false,
+      "description": "Total sales range start, combined to form sales_total",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salesTotalEnd",
+      "type": "integer",
+      "required": false,
+      "description": "Total sales range end",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salesWeeklyBegin",
+      "type": "integer",
+      "required": false,
+      "description": "Weekly sales range start, combined to form sales_weekly",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salesWeeklyEnd",
+      "type": "integer",
+      "required": false,
+      "description": "Weekly sales range end",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salesDailyBegin",
+      "type": "integer",
+      "required": false,
+      "description": "Daily sales range start, combined to form sales_daily",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salesDailyEnd",
+      "type": "integer",
+      "required": false,
+      "description": "Daily sales range end",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "publishTimeBegin",
+      "type": "string",
+      "required": false,
+      "description": "Listing date range start, combined to form publish_time",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "publishTimeEnd",
+      "type": "string",
+      "required": false,
+      "description": "Listing date range end",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "soldOut",
+      "type": "integer",
+      "required": false,
+      "description": "Whether delisted: 0=Listed, 1=Delisted",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "isLocal",
+      "type": "integer",
+      "required": false,
+      "description": "Whether semi-managed: 0=Fully managed, 1=Semi-managed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "region",
+      "type": "string",
+      "required": false,
+      "description": "Semi-managed regions, comma-separated",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "tags",
+      "type": "string",
+      "required": false,
+      "description": "Product tags, comma-separated",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "customTags",
+      "type": "string",
+      "required": false,
+      "description": "Custom tags, comma-separated",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sortBy",
+      "type": "string",
+      "required": false,
+      "description": "Sort field+direction: order_week-0 (weekly sales descending, default), price-0, order_total-0, rating-0, etc.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number (starting from 1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Results per page, max 100, recommended not to exceed 50",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "page": 1,
+    "pageSize": 10,
+    "keyword": "phone case"
+  },
+  "jsonSchema": null
+}

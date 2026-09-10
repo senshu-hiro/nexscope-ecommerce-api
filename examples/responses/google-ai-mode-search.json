@@ -1,0 +1,8 @@
+{
+  "sourceUrl": "https://example.com/image.jpg",
+  "resultsNum": 1,
+  "errcode": 1,
+  "costTime": 1,
+  "costToken": 1,
+  "taskId": "example-id"
+}

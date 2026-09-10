@@ -1,0 +1,12 @@
+{
+  "total": 1,
+  "data": [
+    {
+      "pdImgOssUrl": "https://example.com/image.jpg",
+      "cosine": 1
+    }
+  ],
+  "detectId": "example-id",
+  "columns": [],
+  "costToken": 1
+}

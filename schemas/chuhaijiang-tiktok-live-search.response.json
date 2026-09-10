@@ -1,0 +1,135 @@
+{
+  "properties": {
+    "errcode": {
+      "type": "integer"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "errmsg": {
+      "type": "string"
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Livestream identity: id.",
+                "nullable": true
+              },
+              "title": {
+                "type": "string",
+                "description": "Livestream identity: title.",
+                "nullable": true
+              },
+              "room_link": {
+                "type": "string",
+                "description": "Livestream identity: room link.",
+                "nullable": true
+              },
+              "user_id": {
+                "type": "string",
+                "description": "Livestream identity: user id.",
+                "nullable": true
+              },
+              "user_nickname": {
+                "type": "string",
+                "description": "Livestream identity: user nickname.",
+                "nullable": true
+              },
+              "country_code": {
+                "type": "string",
+                "description": "Livestream identity: country code.",
+                "nullable": true
+              },
+              "most_product_category_label": {
+                "type": "string",
+                "description": "Livestream identity: most product category label.",
+                "nullable": true
+              },
+              "start_time": {
+                "type": "integer",
+                "description": "Unix timestamp in milliseconds: start time.",
+                "nullable": true
+              },
+              "end_time": {
+                "type": "integer",
+                "description": "Unix timestamp in milliseconds: end time.",
+                "nullable": true
+              },
+              "cover": {
+                "type": "object",
+                "description": "Image object with url and thumb_url: cover.",
+                "nullable": true
+              },
+              "user_unique_id": {
+                "type": "string",
+                "description": "Host identity: user unique id.",
+                "nullable": true
+              },
+              "user_category_label": {
+                "type": "string",
+                "description": "Host identity: user category label.",
+                "nullable": true
+              },
+              "product_count": {
+                "type": "integer",
+                "description": "Livestream performance count: product count.",
+                "nullable": true
+              },
+              "total_sold_count": {
+                "type": "integer",
+                "description": "Livestream performance count: total sold count.",
+                "nullable": true
+              },
+              "total_user": {
+                "type": "integer",
+                "description": "Livestream performance count: total user.",
+                "nullable": true
+              },
+              "max_user_count": {
+                "type": "integer",
+                "description": "Livestream performance count: max user count.",
+                "nullable": true
+              },
+              "new_follow_count": {
+                "type": "integer",
+                "description": "Livestream performance count: new follow count.",
+                "nullable": true
+              },
+              "gmv": {
+                "type": "object",
+                "description": "Monetary metric preserving original unit and value: gmv.",
+                "nullable": true
+              },
+              "gpm": {
+                "type": "object",
+                "description": "Monetary metric preserving original unit and value: gpm.",
+                "nullable": true
+              },
+              "opm": {
+                "type": "number",
+                "description": "Orders per thousand viewers: opm.",
+                "nullable": true
+              }
+            },
+            "type": "object",
+            "additionalProperties": true
+          },
+          "nullable": true
+        },
+        "total_count": {
+          "nullable": true,
+          "type": "integer"
+        }
+      },
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

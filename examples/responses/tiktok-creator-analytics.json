@@ -1,0 +1,25 @@
+{
+  "errcode": 1,
+  "data": [
+    {
+      "creator_id": "example-id",
+      "sales_volumn": 1,
+      "revenue": 1,
+      "video_revenue": 1,
+      "live_revenue": 1,
+      "revenue_growth_rate": 1,
+      "creator_belonged_shop_id": "example-id",
+      "new_followers": 1,
+      "unit_price": 1,
+      "video_number": 1,
+      "video_views": 1,
+      "video_gpm": 1,
+      "live_number": 1,
+      "live_views": 1,
+      "live_gpm": 1,
+      "product_number": 1,
+      "shop_number": 1
+    }
+  ],
+  "costToken": 1
+}

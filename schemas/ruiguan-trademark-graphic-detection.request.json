@@ -1,0 +1,70 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.ruiguan-trademark-graphic-detection.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Product image URL or Base64-encoded image data (maximum 1,000 characters)",
+      "example": "https://m.media-amazon.com/images/I/719mRAn2VrL._AC_SL1500_.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "topNumber",
+      "type": "integer",
+      "required": true,
+      "description": "Maximum number of YOLO bounding boxes to return (default 5, maximum 100). The actual result count may be lower",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productTitle",
+      "type": "string",
+      "required": false,
+      "description": "Product title used for context-aware detection (maximum 1,000 characters)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "trademarkName",
+      "type": "string",
+      "required": false,
+      "description": "Possible graphic-logo name used to narrow the search (maximum 1,000 characters)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "regions",
+      "type": "string",
+      "required": false,
+      "description": "Comma-separated country or region codes to inspect. Defaults to all regions. Supported values: US (United States), WO (WIPO), ES (Spain), GB (United Kingdom), DE (Germany), IT (Italy), CA (Canada), MX (Mexico), EM (European Union), AU (Australia), FR (France), JP (Japan), TR (Turkey), BX (Benelux), and CN (China)",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "enableLocalizing",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to enable image cropping (default false)",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "enableRadar",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to enable radar monitoring (default true)",
+      "example": false,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "enableRadar": false,
+    "regions": "US",
+    "imageUrl": "https://m.media-amazon.com/images/I/719mRAn2VrL._AC_SL1500_.jpg",
+    "topNumber": 10,
+    "enableLocalizing": false
+  },
+  "jsonSchema": null
+}

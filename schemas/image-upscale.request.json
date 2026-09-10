@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "description": "Increase image resolution and optionally enhance visual quality.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the image to upscale. Width and height must each be at most 4096 pixels.",
+      "example": "https://example.com/product.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "magnification",
+      "type": "number",
+      "required": true,
+      "description": "Upscaling magnification factor from 1 to 4. Decimal values are supported.",
+      "example": 2.0,
+      "constraints": {}
+    },
+    {
+      "name": "enhanceQuality",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to enhance image quality during upscaling.",
+      "example": true,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/product.jpg",
+    "magnification": 2.0,
+    "enhanceQuality": true
+  },
+  "jsonSchema": null
+}

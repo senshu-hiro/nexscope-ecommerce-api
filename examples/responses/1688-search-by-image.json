@@ -1,0 +1,17 @@
+{
+  "imageId": "example-id",
+  "total": 1,
+  "totalPage": 1,
+  "columns": [],
+  "costToken": 1,
+  "products": [],
+  "offerId": "example-id",
+  "asin": "B072MQ5BRX",
+  "imageUrl": "https://example.com/image.jpg",
+  "price": 1,
+  "consignPrice": 1,
+  "salesQuantity": 1,
+  "estimatedSalesAmount": 1,
+  "asinUrl": "B072MQ5BRX",
+  "quantityBegin": 1
+}

@@ -1,0 +1,23 @@
+{
+  "data": [
+    {
+      "followUpQuestions": [],
+      "products": []
+    }
+  ],
+  "resultsNum": 1,
+  "errcode": 1,
+  "costTime": 1,
+  "costToken": 1,
+  "taskId": "example-id",
+  "products": [
+    {
+      "items": [
+        {
+          "asin": "B072MQ5BRX",
+          "url": "https://example.com/image.jpg"
+        }
+      ]
+    }
+  ]
+}

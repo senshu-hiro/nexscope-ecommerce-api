@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "description": "Search parameters for the patent provider.",
+  "fields": [
+    {
+      "name": "queryText",
+      "type": "string",
+      "required": false,
+      "description": "Optional patent Analytics query expression forwarded as documented by the provider.",
+      "example": "TI=(wireless speaker)",
+      "constraints": {}
+    },
+    {
+      "name": "pageNum",
+      "type": "integer",
+      "required": false,
+      "description": "Page number.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Results per page.",
+      "example": 20,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "pageSize": 20,
+    "queryText": "TI=(wireless speaker)",
+    "pageNum": 1
+  },
+  "jsonSchema": null
+}

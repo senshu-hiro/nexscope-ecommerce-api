@@ -1,0 +1,305 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of records returned in this response",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "allRecordsCount",
+      "type": "integer",
+      "required": false,
+      "description": "Total number of matching records in the database",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Matching patent records",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Column definitions used for rendering",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Rendering style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].patentId",
+      "type": "string",
+      "required": false,
+      "description": "Similar patent ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].patentPn",
+      "type": "string",
+      "required": false,
+      "description": "Similar patent number",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].apno",
+      "type": "string",
+      "required": false,
+      "description": "Application number",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].title",
+      "type": "string",
+      "required": false,
+      "description": "Patent title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].inventor",
+      "type": "string",
+      "required": false,
+      "description": "Inventor",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].originalAssignee",
+      "type": "string",
+      "required": false,
+      "description": "Original assignee",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].currentAssignee",
+      "type": "string",
+      "required": false,
+      "description": "Current assignee",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].authority",
+      "type": "string",
+      "required": false,
+      "description": "Patent authority (country code)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].url",
+      "type": "string",
+      "required": false,
+      "description": "URL of the similar patent drawing",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "data[].score",
+      "type": "number",
+      "required": false,
+      "description": "Similarity score; higher values indicate greater similarity. Available only when field is SCORE",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].loc",
+      "type": "array",
+      "required": false,
+      "description": "LOC classification (Locarno classification number)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].locMatch",
+      "type": "integer",
+      "required": false,
+      "description": "Whether a high-weight LOC class matched: 1 for matched and 0 for not matched. Available only when model=1 and field=SCORE",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].apdt",
+      "type": "integer",
+      "required": false,
+      "description": "Application date (timestamp)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].pbdt",
+      "type": "integer",
+      "required": false,
+      "description": "Publication date (timestamp)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].imgId",
+      "type": "string",
+      "required": false,
+      "description": "Patent drawing img_id, returned only when returnImgId is true",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "allRecordsCount": 1,
+    "data": [
+      {
+        "patentId": "example-id",
+        "url": "https://example.com/image.jpg",
+        "score": 1,
+        "loc": [],
+        "locMatch": 1,
+        "apdt": 1,
+        "pbdt": 1,
+        "imgId": "example-id"
+      }
+    ],
+    "columns": [],
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

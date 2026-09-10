@@ -1,0 +1,526 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "code",
+      "type": "integer",
+      "required": false,
+      "description": "Response code (200 indicates success)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Response message",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Total result count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page number",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageCount",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count (max 200 pages)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Latency (ms)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "requestConsumed",
+      "type": "integer",
+      "required": false,
+      "description": "Requests consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Render columns",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "required": false,
+      "description": "Product list (see below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].asin",
+      "type": "string",
+      "required": false,
+      "description": "ASIN",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "products[].title",
+      "type": "string",
+      "required": false,
+      "description": "Product title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].brand",
+      "type": "string",
+      "required": false,
+      "description": "Brand",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].asinUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product link, Amazon Listing detail page URL",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "products[].imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Main image URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].productImageUrls",
+      "type": "array",
+      "required": false,
+      "description": "Main image list (all product image URLs)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].parentAsin",
+      "type": "string",
+      "required": false,
+      "description": "Parent ASIN, the parent ASIN if variants exist, null if no variants",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "products[].variationNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of variations",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].weight",
+      "type": "string",
+      "required": false,
+      "description": "Weight, unit g",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].size",
+      "type": "array",
+      "required": false,
+      "description": "Dimensions, outer packaging [longest side, second longest side, shortest side], unit cm",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].price",
+      "type": "number",
+      "required": false,
+      "description": "Current price, before coupon, in local currency (e.g. USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].oldPrice",
+      "type": "number",
+      "required": false,
+      "description": "Strikethrough price, in local currency (e.g. USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].salesPrice",
+      "type": "number",
+      "required": false,
+      "description": "Final price, actual price after coupon deduction, in local currency (e.g. USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].coupon",
+      "type": "integer",
+      "required": false,
+      "description": "Coupon policy. Value >= 0 = deduction amount (e.g. 500 = $5), value < 0 = discount percentage (e.g. -10 = 10% discount)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].fbaFees",
+      "type": "number",
+      "required": false,
+      "description": "FBA fees, in local currency (e.g. USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].fbaDetail",
+      "type": "array",
+      "required": false,
+      "description": "FBA detail. First item is delivery fee, subsequent items are month:storage fee, e.g. [475,\"1-9:5\",\"10-12:15\"]",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].platformFee",
+      "type": "number",
+      "required": false,
+      "description": "Platform commission, in local currency (e.g. USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].profitAmount",
+      "type": "number",
+      "required": false,
+      "description": "Profit, final price - FBA fee - commission, in local currency (e.g. USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].profitRate",
+      "type": "number",
+      "required": false,
+      "description": "Profit margin, e.g. 25.83 means 25.83%",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].monthlySalesUnits",
+      "type": "integer",
+      "required": false,
+      "description": "Monthly sales volume, last 30 days Listing-level (does not split by variant), recommended for evaluating sales, value -1 means unable to estimate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].monthlySalesRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Monthly sales revenue, estimated value, in local currency (e.g. USD), value -1 means unable to estimate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].listingSalesVolumeOfDaily",
+      "type": "integer",
+      "required": false,
+      "description": "Daily sales volume, Listing-level (does not split by variant), value -1 means unable to estimate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].listingSalesOfDaily",
+      "type": "number",
+      "required": false,
+      "description": "Daily sales revenue, in local currency (e.g. USD), value -1 means unable to estimate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].salesRank",
+      "type": "integer",
+      "required": false,
+      "description": "BSR rank, main category rank",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].category",
+      "type": "array",
+      "required": false,
+      "description": "Main category, [category name, NodeId]",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].bsrCategory",
+      "type": "array",
+      "required": false,
+      "description": "Subcategory rank list, each entry containing nodeId (node ID), name (category name), rank (rank), date (date, format yyyyMMdd)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].rating",
+      "type": "number",
+      "required": false,
+      "description": "Current rating (0.0-5.0, e.g. 4.8)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].ratings",
+      "type": "integer",
+      "required": false,
+      "description": "Number of ratings",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].availableDate",
+      "type": "string",
+      "required": false,
+      "description": "Listing time, format yyyy-MM-dd",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "products[].onlineDays",
+      "type": "integer",
+      "required": false,
+      "description": "Days since listing",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].buyboxSeller",
+      "type": "string",
+      "required": false,
+      "description": "Buybox seller name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].buyBoxSellerId",
+      "type": "string",
+      "required": false,
+      "description": "Buybox seller ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "products[].buyboxSellerAddress",
+      "type": "string",
+      "required": false,
+      "description": "Seller location, Buybox seller nationality (two-letter code e.g. CN, US), null if Amazon's own",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].isFBA",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether FBA, whether Buybox seller uses FBA logistics",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sellerNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of sellers",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].aPlus",
+      "type": "boolean",
+      "required": false,
+      "description": "Has A+",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].hasVideo",
+      "type": "boolean",
+      "required": false,
+      "description": "Has video",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].hasBrandStore",
+      "type": "boolean",
+      "required": false,
+      "description": "Has brand store",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "code": 1,
+    "total": 1,
+    "page": 1,
+    "pageCount": 1,
+    "costTime": 1,
+    "costToken": 1,
+    "requestConsumed": 1,
+    "columns": [],
+    "products": [
+      {
+        "asin": "B072MQ5BRX",
+        "asinUrl": "B072MQ5BRX",
+        "imageUrl": "https://example.com/image.jpg",
+        "productImageUrls": [],
+        "parentAsin": "B072MQ5BRX",
+        "variationNum": 1,
+        "size": [],
+        "price": 1,
+        "oldPrice": 1,
+        "salesPrice": 1,
+        "coupon": 1,
+        "fbaFees": 1,
+        "fbaDetail": [],
+        "platformFee": 1,
+        "profitAmount": 1,
+        "profitRate": 1,
+        "monthlySalesUnits": 1,
+        "monthlySalesRevenue": 1,
+        "listingSalesVolumeOfDaily": 1,
+        "listingSalesOfDaily": 1,
+        "salesRank": 1,
+        "category": [],
+        "bsrCategory": [],
+        "rating": 1,
+        "ratings": 1,
+        "availableDate": "2026-01-01",
+        "onlineDays": 1,
+        "buyBoxSellerId": "example-id",
+        "isFBA": false,
+        "sellerNum": 1,
+        "aPlus": false,
+        "hasVideo": false,
+        "hasBrandStore": false
+      }
+    ]
+  },
+  "jsonSchema": null
+}

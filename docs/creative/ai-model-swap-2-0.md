@@ -1,0 +1,167 @@
+# AI Model Swap API 2.0
+
+Swap a product image onto a fixed model reference.
+
+[All APIs](../../README.md#complete-api-catalog) · [Official documentation](https://www.nexscope.ai/api-docs/ai-model-swap-2-0?view=api&co-from=github-ecommerce-api)
+
+Category: Multimodal AI · Creative API
+
+Generate model images from a product image and a full model reference image with optional segmentation and scene controls.
+
+## Endpoint
+
+`POST https://api.nexscope.ai/api/skill-api/v1/skills/ai-model-swap-2-0/run`
+
+Headers: `Authorization: Bearer YOUR_API_KEY` and `Content-Type: application/json`.
+
+Execution: asynchronous; submission returns a task ID. Follow [task polling](../calling-apis.md#asynchronous-creative-apis).
+
+Creative API access requires an active subscription; trial credits do not enable API key access.
+
+Task result: `GET https://api.nexscope.ai/api/skill-api/v1/skills/ai-model-swap-2-0/tasks/{taskId}`
+
+## Request parameters
+
+| Name | Type | Required | Description | Constraints |
+|---|---|---|---|---|
+| `imageUrl` | string | Yes | Public URL of the source product or outfit image. The image must be up to 20 MB and between 385 and 8192 pixels in both width and height. | {} |
+| `modelImageUrl` | string | Yes | Public URL of the full model reference image. | {} |
+| `outputNum` | integer | No | Number of images to generate, from 1 to 4. Defaults to 1. | {} |
+| `imageSegUrl` | string | No | Optional segmentation mask URL for the source image. | {} |
+| `sceneImgUrl` | string | No | Optional scene reference image URL. | {} |
+| `sceneStrength` | number | No | Scene reference strength from 0 to 1. Defaults to 0.7. | {} |
+| `genOriRes` | boolean | No | Whether to generate the original resolution. Defaults to false. | {} |
+| `realModel` | boolean | No | Whether to prefer a realistic model style. | {} |
+
+The table summarizes the published fields. Consult the full request definition for nested objects, alternatives, and conditional requirements.
+
+### Media constraints
+
+```json
+[
+  {
+    "fieldName": "imageUrl",
+    "mediaKind": "image",
+    "acceptedContentTypes": [
+      "image/jpeg",
+      "image/png",
+      "image/webp"
+    ],
+    "maxFileSizeBytes": "20971520",
+    "maxFiles": 1,
+    "minWidthPixels": 385,
+    "maxWidthPixels": 8192,
+    "minHeightPixels": 385,
+    "maxHeightPixels": 8192,
+    "minAspectRatio": null,
+    "maxAspectRatio": null
+  },
+  {
+    "fieldName": "modelImageUrl",
+    "mediaKind": "image",
+    "acceptedContentTypes": [
+      "image/jpeg",
+      "image/png",
+      "image/webp"
+    ],
+    "maxFileSizeBytes": "20971520",
+    "maxFiles": 1,
+    "minWidthPixels": null,
+    "maxWidthPixels": null,
+    "minHeightPixels": null,
+    "maxHeightPixels": null,
+    "minAspectRatio": null,
+    "maxAspectRatio": null
+  },
+  {
+    "fieldName": "imageSegUrl",
+    "mediaKind": "image",
+    "acceptedContentTypes": [
+      "image/jpeg",
+      "image/png",
+      "image/webp"
+    ],
+    "maxFileSizeBytes": "20971520",
+    "maxFiles": 1,
+    "minWidthPixels": null,
+    "maxWidthPixels": null,
+    "minHeightPixels": null,
+    "maxHeightPixels": null,
+    "minAspectRatio": null,
+    "maxAspectRatio": null
+  },
+  {
+    "fieldName": "sceneImgUrl",
+    "mediaKind": "image",
+    "acceptedContentTypes": [
+      "image/jpeg",
+      "image/png",
+      "image/webp"
+    ],
+    "maxFileSizeBytes": "20971520",
+    "maxFiles": 1,
+    "minWidthPixels": null,
+    "maxWidthPixels": null,
+    "minHeightPixels": null,
+    "maxHeightPixels": null,
+    "minAspectRatio": null,
+    "maxAspectRatio": null
+  }
+]
+```
+
+## Call this API
+
+Run these commands from the repository root after [setting your API key](../../README.md#1-get-and-configure-your-api-key). Copy the sample to a separate file and replace illustrative URLs, IDs, search terms, and required values before submitting. Sample responses are documentation fixtures, not live results.
+
+```bash
+cp payloads/ai-model-swap-2-0.json request.json
+# Edit request.json for your inputs.
+bash examples/curl/run.sh ai-model-swap-2-0 request.json
+# Or: node examples/javascript/run.mjs ai-model-swap-2-0 request.json
+# Or: python3 examples/python/run.py ai-model-swap-2-0 request.json
+```
+
+### Published request example
+
+```json
+{
+  "imageUrl": "https://example.com/source-image.jpg",
+  "modelImageUrl": "https://example.com/model-reference.jpg",
+  "outputNum": 1,
+  "imageSegUrl": "https://example.com/mask.png",
+  "sceneImgUrl": "https://example.com/scene.jpg",
+  "sceneStrength": 0.7,
+  "genOriRes": false,
+  "realModel": true
+}
+```
+
+## Response
+
+The run endpoint returns its API-specific payload directly. Do not assume a `data` or `result` wrapper. For asynchronous APIs, the run response is a task receipt, not the final generated asset.
+
+### Published response example
+
+```json
+{
+  "taskId": "6b3f1c61-1b7d-4a59-8a7d-3b23e4b0c9e2",
+  "status": "PENDING",
+  "message": "The task has been created. Use taskId to query the result."
+}
+```
+
+## Full definitions
+
+- [Request definition](../../schemas/ai-model-swap-2-0.request.json) — field-descriptors
+- [Response definition](../../schemas/ai-model-swap-2-0.response.json) — field-descriptors
+- [Editable request sample](../../payloads/ai-model-swap-2-0.json)
+- [Response fixture](../../examples/responses/ai-model-swap-2-0.json)
+
+Some source definitions use field descriptors rather than JSON Schema; these are preserved and labeled rather than presented as strict validation schemas.
+
+## MCP
+
+Tool name: `nexscope_ai_model_swap_2_0`. See [MCP integration](../calling-apis.md#mcp).
+
+Source retrieved: 2026-09-10. See [source and validation notes](../source-notes.md).

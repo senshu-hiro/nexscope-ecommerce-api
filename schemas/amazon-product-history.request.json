@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-product-history.",
+  "fields": [
+    {
+      "name": "asin",
+      "type": "string",
+      "required": true,
+      "description": "Amazon Standard Identification Number (ASIN), multiple ASINs separated by English commas, up to 5, max length 300 characters. Example: B0088PUEPK or B0088PUEPK,B00U26V4VQ,B07M68S376",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "domain",
+      "type": "string",
+      "required": true,
+      "description": "Amazon domain ID. Options: 1 (United States), 2 (United Kingdom), 3 (Germany), 4 (France), 5 (Japan), 6 (Canada), 8 (Italy), 9 (Spain), 10 (India), 11 (Mexico), 12 (Brazil)",
+      "example": "1",
+      "constraints": {}
+    },
+    {
+      "name": "history",
+      "type": "integer",
+      "required": false,
+      "description": "Whether to include historical data and historical sales in the response. 1 = include price history, sales rank, historical sales and other time-series data (sales for previous months), 0 = return only basic product information. Default: 0",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "asin": "B072MQ5BRX",
+    "history": 1,
+    "domain": "1"
+  },
+  "jsonSchema": null
+}

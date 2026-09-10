@@ -1,0 +1,11 @@
+{
+  "total": 1,
+  "data": [
+    {
+      "nodeId": "172282",
+      "nodeLabel": "Electronics",
+      "parentNodeId": "0"
+    }
+  ],
+  "costToken": 150
+}

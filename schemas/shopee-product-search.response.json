@@ -1,0 +1,510 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of records returned in current response",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "totalSize",
+      "type": "integer",
+      "required": false,
+      "description": "Total number of results",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Source tool identifier",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Source type: shopee",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Column definitions for rendering",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "required": false,
+      "description": "Product list (see fields below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].pid",
+      "type": "string",
+      "required": false,
+      "description": "Unique product ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "products[].title",
+      "type": "string",
+      "required": false,
+      "description": "Product title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].description",
+      "type": "string",
+      "required": false,
+      "description": "Product description",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product main image URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].productUrl",
+      "type": "string",
+      "required": false,
+      "description": "Shopee product link",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].price",
+      "type": "number",
+      "required": false,
+      "description": "Default product price (local currency)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].minPrice",
+      "type": "number",
+      "required": false,
+      "description": "Lowest SKU price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].maxPrice",
+      "type": "number",
+      "required": false,
+      "description": "Highest SKU price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sold",
+      "type": "integer",
+      "required": false,
+      "description": "Units sold in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].estimateSold",
+      "type": "integer",
+      "required": false,
+      "description": "Estimated units sold in last 30 days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].historicalSold",
+      "type": "integer",
+      "required": false,
+      "description": "Total historical units sold",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].payment",
+      "type": "number",
+      "required": false,
+      "description": "Sales revenue in last 30 days (local currency)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].rating",
+      "type": "number",
+      "required": false,
+      "description": "Product rating (0-5)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].ratings",
+      "type": "integer",
+      "required": false,
+      "description": "Number of ratings",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].favorite",
+      "type": "integer",
+      "required": false,
+      "description": "Number of favorites",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].viewCount",
+      "type": "integer",
+      "required": false,
+      "description": "View count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].stock",
+      "type": "integer",
+      "required": false,
+      "description": "Stock quantity",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].skuNumber",
+      "type": "integer",
+      "required": false,
+      "description": "Number of SKUs",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].genTime",
+      "type": "string",
+      "required": false,
+      "description": "Listing time",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].statTime",
+      "type": "string",
+      "required": false,
+      "description": "Statistics time",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].lastModiTime",
+      "type": "string",
+      "required": false,
+      "description": "Latest crawl time",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].categoryStructure",
+      "type": "string",
+      "required": false,
+      "description": "Category structure path",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].cid",
+      "type": "string",
+      "required": false,
+      "description": "Category ID (comma-separated)",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "products[].shopId",
+      "type": "string",
+      "required": false,
+      "description": "Store ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "products[].shopName",
+      "type": "string",
+      "required": false,
+      "description": "Store name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].shopUrl",
+      "type": "string",
+      "required": false,
+      "description": "Store link",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].userName",
+      "type": "string",
+      "required": false,
+      "description": "Store owner name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].shopLocation",
+      "type": "string",
+      "required": false,
+      "description": "Store location",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].shopProductsCount",
+      "type": "integer",
+      "required": false,
+      "description": "Total products in store",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].approvedDate",
+      "type": "string",
+      "required": false,
+      "description": "Store opening time",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "products[].isOfficialShop",
+      "type": "integer",
+      "required": false,
+      "description": "Whether official store (1=Yes, 0=No)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].isShopeeVerified",
+      "type": "integer",
+      "required": false,
+      "description": "Shopee Preferred (1=Yes, 0=No)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].isHotSales",
+      "type": "integer",
+      "required": false,
+      "description": "Whether hot selling (1=Yes, 0=No)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].shippingIconType",
+      "type": "integer",
+      "required": false,
+      "description": "Store location type (0=Local, 1=Overseas, 3 or null=Unknown)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].cbOption",
+      "type": "integer",
+      "required": false,
+      "description": "Shipping origin (0=Local, 1=Cross-border)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].estimatedDays",
+      "type": "integer",
+      "required": false,
+      "description": "Estimated delivery days",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].status",
+      "type": "integer",
+      "required": false,
+      "description": "Product status (1=Active, 0=Delisted, 8=Excluded from listing)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].notExist",
+      "type": "integer",
+      "required": false,
+      "description": "Whether exists (0=Exists, 1=Does not exist)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "totalSize": 1,
+    "columns": [],
+    "costToken": 1,
+    "products": [
+      {
+        "pid": "example-id",
+        "imageUrl": "https://example.com/image.jpg",
+        "productUrl": "https://example.com/image.jpg",
+        "price": 1,
+        "minPrice": 1,
+        "maxPrice": 1,
+        "sold": 1,
+        "estimateSold": 1,
+        "historicalSold": 1,
+        "payment": 1,
+        "rating": 1,
+        "ratings": 1,
+        "favorite": 1,
+        "viewCount": 1,
+        "stock": 1,
+        "skuNumber": 1,
+        "cid": "example-id",
+        "shopId": "example-id",
+        "shopUrl": "https://example.com/image.jpg",
+        "shopProductsCount": 1,
+        "approvedDate": "2026-01-01",
+        "isOfficialShop": 1,
+        "isShopeeVerified": 1,
+        "isHotSales": 1,
+        "shippingIconType": 1,
+        "cbOption": 1,
+        "estimatedDays": 1,
+        "status": 1,
+        "notExist": 1
+      }
+    ]
+  },
+  "jsonSchema": null
+}

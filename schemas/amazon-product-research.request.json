@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "description": "Optional category filter. Use all to list every original Amazon product-research operation.",
+  "fields": [
+    {
+      "name": "goal",
+      "type": "string",
+      "required": false,
+      "description": "Optional filter: all, search, detail, reviews, image-search, opportunity, keyword, price-history, or sales-estimates.",
+      "example": "all",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "goal": "all"
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,87 @@
+{
+  "type": "object",
+  "description": "Generate a Wan 2.6 video from a required primary image with optional camera control.",
+  "fields": [
+    {
+      "name": "videoTime",
+      "type": "integer",
+      "required": true,
+      "description": "Video duration in seconds. Supported values: 5, 10, 15.",
+      "example": 10,
+      "constraints": {
+        "allowedValues": [
+          5,
+          10,
+          15
+        ]
+      }
+    },
+    {
+      "name": "prompt",
+      "type": "string",
+      "required": true,
+      "description": "Video generation prompt describing motion, subject consistency, camera movement, and the ecommerce scene. Maximum 2000 characters.",
+      "example": "Keep the product consistent while the camera slowly orbits and highlights material details.",
+      "constraints": {
+        "maxLength": 2000
+      }
+    },
+    {
+      "name": "promptOptimizer",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether Nexscope should optimize the video prompt before generation. Defaults to false.",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "isPro",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to use the model's professional generation mode when supported. Defaults to false.",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "resolution",
+      "type": "string",
+      "required": false,
+      "description": "Output resolution. Supported values: 720p, 1080p.",
+      "example": "1080p",
+      "constraints": {
+        "allowedValues": [
+          "720p",
+          "1080p"
+        ]
+      }
+    },
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the required first-frame or primary reference image.",
+      "example": "https://example.com/source-image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "camera",
+      "type": "string",
+      "required": false,
+      "description": "Camera mode. Supported values: single or multi.",
+      "example": "single",
+      "constraints": {
+        "allowedValues": [
+          "single",
+          "multi"
+        ]
+      }
+    }
+  ],
+  "example": {
+    "videoTime": 10,
+    "prompt": "Keep the product consistent while the camera slowly orbits and highlights material details.",
+    "imageUrl": "https://example.com/source-image.jpg",
+    "resolution": "1080p"
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,37 @@
+{
+  "total": 1,
+  "data": [
+    {
+      "keyword": "phone case",
+      "translateKeyword": "phone case",
+      "asin": "B072MQ5BRX",
+      "productNaturalRank": 1,
+      "productAdRank": 1,
+      "weeklySearchVolume": 1,
+      "keywordPopularityRank": 1,
+      "totalSearchResultProductCount": 1,
+      "trafficShare": 1,
+      "naturalTrafficShare": 1,
+      "paidTrafficShare": 1,
+      "naturalTrafficScore": 1,
+      "sponsoredProductsScore": 1,
+      "brandAdScore": 1,
+      "videoAdScore": 1,
+      "sponsoredRecommendationScore": 1,
+      "sponsoredRecommendationBreakdown": [],
+      "clickConcentrationShare": 1,
+      "clickToPurchaseConversionRate": 1,
+      "displayPositionTypes": [],
+      "trafficCharacteristicMarkers": [],
+      "conversionPerformanceMarkers": [],
+      "periodEndDate": "2026-01-01",
+      "updateTime": "2026-01-01"
+    }
+  ],
+  "columns": [],
+  "isParentAsin": false,
+  "hasVaiants": false,
+  "abaCreateDateWeek": "2026-01-01",
+  "costTime": 1,
+  "costToken": 1
+}

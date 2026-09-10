@@ -1,0 +1,7 @@
+{
+  "enableRadar": false,
+  "regions": "US",
+  "imageUrl": "https://m.media-amazon.com/images/I/719mRAn2VrL._AC_SL1500_.jpg",
+  "topNumber": 10,
+  "enableLocalizing": false
+}

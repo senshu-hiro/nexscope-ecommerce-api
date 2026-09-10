@@ -1,0 +1,192 @@
+{
+  "properties": {
+    "errcode": {
+      "type": "integer"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "errmsg": {
+      "type": "string"
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Livestream identity: id.",
+                "nullable": true
+              },
+              "title": {
+                "type": "string",
+                "description": "Livestream identity: title.",
+                "nullable": true
+              },
+              "room_link": {
+                "type": "string",
+                "description": "Livestream identity: room link.",
+                "nullable": true
+              },
+              "user_id": {
+                "type": "string",
+                "description": "Livestream identity: user id.",
+                "nullable": true
+              },
+              "user_nickname": {
+                "type": "string",
+                "description": "Livestream identity: user nickname.",
+                "nullable": true
+              },
+              "country_code": {
+                "type": "string",
+                "description": "Livestream identity: country code.",
+                "nullable": true
+              },
+              "most_product_category_label": {
+                "type": "string",
+                "description": "Livestream identity: most product category label.",
+                "nullable": true
+              },
+              "start_time": {
+                "type": "integer",
+                "description": "Unix timestamp in milliseconds: start time.",
+                "nullable": true
+              },
+              "end_time": {
+                "type": "integer",
+                "description": "Unix timestamp in milliseconds: end time.",
+                "nullable": true
+              },
+              "cover": {
+                "type": "object",
+                "description": "Image object with url and thumb_url: cover.",
+                "nullable": true
+              },
+              "user_avatar": {
+                "type": "object",
+                "description": "Host avatar with url and thumb_url: user avatar.",
+                "nullable": true
+              },
+              "user_follower_count": {
+                "type": "integer",
+                "description": "Host historical count: user follower count.",
+                "nullable": true
+              },
+              "user_live_count": {
+                "type": "integer",
+                "description": "Host historical count: user live count.",
+                "nullable": true
+              },
+              "user_avg_audience_count": {
+                "type": "number",
+                "description": "Host historical average audience: user avg audience count.",
+                "nullable": true
+              },
+              "user_avg_max_audience_count": {
+                "type": "number",
+                "description": "Host historical average audience: user avg max audience count.",
+                "nullable": true
+              }
+            },
+            "type": "object",
+            "additionalProperties": true
+          },
+          "nullable": true
+        },
+        "core": {
+          "nullable": true,
+          "type": "object",
+          "properties": {
+            "items": {
+              "items": {
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Core livestream identifier: id."
+                  },
+                  "core_room_id": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Core livestream identifier: core room id."
+                  },
+                  "core_country_code": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Core livestream identifier: core country code."
+                  },
+                  "core_gmv": {
+                    "type": "object",
+                    "nullable": true,
+                    "description": "Monetary metric with original unit and value: core gmv."
+                  },
+                  "core_gpm": {
+                    "type": "object",
+                    "nullable": true,
+                    "description": "Monetary metric with original unit and value: core gpm."
+                  },
+                  "core_avg_price": {
+                    "type": "object",
+                    "nullable": true,
+                    "description": "Monetary metric with original unit and value: core avg price."
+                  },
+                  "core_product_count": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Core livestream performance count: core product count."
+                  },
+                  "core_sold_product_id_count": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Core livestream performance count: core sold product id count."
+                  },
+                  "core_total_sold_count": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Core livestream performance count: core total sold count."
+                  },
+                  "core_total_user": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Core livestream performance count: core total user."
+                  },
+                  "core_max_user_count": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Core livestream performance count: core max user count."
+                  },
+                  "core_new_follow_count": {
+                    "type": "integer",
+                    "nullable": true,
+                    "description": "Core livestream performance count: core new follow count."
+                  },
+                  "core_avg_online_viewer": {
+                    "type": "number",
+                    "nullable": true,
+                    "description": "Average online audience: core avg online viewer."
+                  },
+                  "core_follower_conversion_rate": {
+                    "type": "number",
+                    "nullable": true,
+                    "description": "Decimal follower conversion ratio: core follower conversion rate."
+                  }
+                },
+                "type": "object",
+                "additionalProperties": true
+              },
+              "type": "array"
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

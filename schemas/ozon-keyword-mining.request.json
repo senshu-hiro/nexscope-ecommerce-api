@@ -1,0 +1,213 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.ozon-keyword-mining.",
+  "fields": [
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": true,
+      "description": "Seed keyword, mining expands around this term (maxLength 1000)",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "object",
+      "required": true,
+      "description": "Pagination & sorting: {page, pageSize, orders[]}",
+      "example": {
+        "pageSize": 10,
+        "page": 1
+      },
+      "constraints": {}
+    },
+    {
+      "name": "page.page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, starting from 1, default 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "page.pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page, default 20",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "page.orders",
+      "type": "array",
+      "required": false,
+      "description": "Sort rules, elements {field, direction}; direction takes DESC (descending) / ASC (ascending)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "matchType",
+      "type": "integer",
+      "required": false,
+      "description": "Keyword match mode: 0 exact, 1 fuzzy",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "includeKeywords",
+      "type": "array",
+      "required": false,
+      "description": "Include keyword array (max 1000), used to further narrow down / specify required words on top of the seed term",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "excludeKeywords",
+      "type": "array",
+      "required": false,
+      "description": "Exclude keyword array (max 1000), used to remove irrelevant terms",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "wordCount",
+      "type": "string",
+      "required": false,
+      "description": "Keyword word count range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "searchVolume",
+      "type": "string",
+      "required": false,
+      "description": "Search volume range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "searchChange30",
+      "type": "string",
+      "required": false,
+      "description": "30-day search change range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "productViews",
+      "type": "string",
+      "required": false,
+      "description": "Product views range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "string",
+      "required": false,
+      "description": "Product count range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sellers",
+      "type": "string",
+      "required": false,
+      "description": "Seller count range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "price",
+      "type": "string",
+      "required": false,
+      "description": "Price range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "marketSpace",
+      "type": "string",
+      "required": false,
+      "description": "Market space range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "conversionSharing",
+      "type": "string",
+      "required": false,
+      "description": "Conversion concentration range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "relevancy",
+      "type": "string",
+      "required": false,
+      "description": "Relevance range (degree of relevance to the seed keyword)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "uniqQueriesWCa",
+      "type": "string",
+      "required": false,
+      "description": "Add-to-cart count range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "ca",
+      "type": "string",
+      "required": false,
+      "description": "Add-to-cart conversion rate range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "titleDensity",
+      "type": "string",
+      "required": false,
+      "description": "Title density range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "adRivalCount",
+      "type": "string",
+      "required": false,
+      "description": "Ad competitor count range",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "uId",
+      "type": "string",
+      "required": false,
+      "description": "User ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "memberId",
+      "type": "string",
+      "required": false,
+      "description": "Member ID (a unique member identifier; data is attributed to memberId)",
+      "example": "example-id",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "includeKeywords": [],
+    "page": {
+      "pageSize": 10,
+      "page": 1
+    },
+    "uId": "example-id",
+    "matchType": 1,
+    "excludeKeywords": [],
+    "keyword": "phone case"
+  },
+  "jsonSchema": null
+}

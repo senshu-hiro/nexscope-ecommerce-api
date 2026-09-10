@@ -1,0 +1,354 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Business status code, 200 indicates success",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Rank or detail data",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed for this call, typically 14000",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Status message, ok on success",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].video_id",
+      "type": "string",
+      "required": false,
+      "description": "Video ID, string format to avoid large integer precision loss",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].video_title",
+      "type": "string",
+      "required": false,
+      "description": "Video title / caption",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].views",
+      "type": "integer",
+      "required": false,
+      "description": "View count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].digg_count",
+      "type": "integer",
+      "required": false,
+      "description": "Like count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].comment_count",
+      "type": "integer",
+      "required": false,
+      "description": "Comment count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].share_count",
+      "type": "integer",
+      "required": false,
+      "description": "Share count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].revenue",
+      "type": "number",
+      "required": false,
+      "description": "Total revenue / GMV, returned in the requested currency",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].revenue_growth_rate",
+      "type": "number",
+      "required": false,
+      "description": "Revenue growth rate (%), can be positive or negative",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].ad",
+      "type": "integer",
+      "required": false,
+      "description": "Whether ad/promotional video flag (1=yes)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].ad_view_ratio",
+      "type": "number",
+      "required": false,
+      "description": "Ad view share (%)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].ad_revenue_ratio",
+      "type": "number",
+      "required": false,
+      "description": "Ad revenue share (%)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].ads_roas",
+      "type": "number",
+      "required": false,
+      "description": "Ad ROAS",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].belonged_creator_id",
+      "type": "string",
+      "required": false,
+      "description": "Belonged creator ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].belonged_creator_handle",
+      "type": "string",
+      "required": false,
+      "description": "Belonged creator username",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_debut",
+      "type": "string",
+      "required": false,
+      "description": "Creator debut date (YYYY-MM-DD)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].video_region",
+      "type": "string",
+      "required": false,
+      "description": "Video region, may be empty string",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sales_volumn",
+      "type": "integer",
+      "required": false,
+      "description": "Sales volume, field spelled as volumn",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].video_gpm",
+      "type": "number",
+      "required": false,
+      "description": "Video GPM (GMV per thousand views)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].ads_views",
+      "type": "integer",
+      "required": false,
+      "description": "Ad view count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].ad_cpa",
+      "type": "number",
+      "required": false,
+      "description": "Ad CPA",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].ads_period",
+      "type": "integer",
+      "required": false,
+      "description": "Ad running period (days)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].duration",
+      "type": "number",
+      "required": false,
+      "description": "Video duration (seconds)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].product_number",
+      "type": "integer",
+      "required": false,
+      "description": "Associated product count in the video",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "errcode": 1,
+    "data": [
+      {
+        "video_id": "example-id",
+        "views": 1,
+        "digg_count": 1,
+        "comment_count": 1,
+        "share_count": 1,
+        "revenue": 1,
+        "revenue_growth_rate": 1,
+        "ad": 1,
+        "ad_view_ratio": 1,
+        "ad_revenue_ratio": 1,
+        "ads_roas": 1,
+        "belonged_creator_id": "example-id",
+        "sales_volumn": 1,
+        "video_gpm": 1,
+        "ads_views": 1,
+        "ad_cpa": 1,
+        "ads_period": 1,
+        "duration": 1,
+        "product_number": 1
+      }
+    ],
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

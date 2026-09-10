@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.patent-description-data-translation.",
+  "fields": [
+    {
+      "name": "patentId",
+      "type": "string",
+      "required": false,
+      "description": "Patent ID. At least one of patentId and patentNumber must be provided; if both are present, patentId takes priority. Only a single value is supported; multiple values separated by commas are not allowed. Max length: 60000 characters",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "patentNumber",
+      "type": "string",
+      "required": false,
+      "description": "Publication (grant) number. At least one of patentId and patentNumber must be provided; if both are present, patentId takes priority. Only a single value is supported; multiple values separated by commas are not allowed. Max length: 60000 characters",
+      "example": "CN115000000A",
+      "constraints": {}
+    },
+    {
+      "name": "lang",
+      "type": "string",
+      "required": false,
+      "description": "Translation language, supports en (English, default), cn (Chinese), jp (Japanese). Max length: 1000 characters",
+      "example": "en",
+      "constraints": {}
+    },
+    {
+      "name": "replaceByRelated",
+      "type": "integer",
+      "required": false,
+      "description": "Whether to substitute with a family patent's description when the description is unavailable: 1 Yes, 0 No (default 0)",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "patentNumber": "CN115000000A",
+    "replaceByRelated": 1,
+    "lang": "en"
+  },
+  "jsonSchema": null
+}

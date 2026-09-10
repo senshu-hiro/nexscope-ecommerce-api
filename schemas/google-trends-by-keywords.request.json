@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.google-trends-by-keywords.",
+  "fields": [
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": true,
+      "description": "Keyword (the keyword must be in the language of the target country! For example, use English keywords for the US, German keywords for Germany. If not in the corresponding country's language, please translate first.) Max length 100 characters",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "region",
+      "type": "string",
+      "required": false,
+      "description": "Country/region, default US. Options: US, GB, JP, CA, MX, DE, FR, IT, ES, NL, AU, SG, AE, BR, IN, TR, PL, SE",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "dayRangeStart",
+      "type": "string",
+      "required": false,
+      "description": "Time range start (",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dayRangeEnd",
+      "type": "string",
+      "required": false,
+      "description": "Time range end (",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "region": "US",
+    "keyword": "phone case"
+  },
+  "jsonSchema": null
+}

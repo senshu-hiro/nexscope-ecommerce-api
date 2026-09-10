@@ -1,0 +1,8 @@
+{
+  "imageUrl": "https://example.com/product.jpg",
+  "prompt": "same product, brighter background",
+  "weight": 2,
+  "width": 1024,
+  "height": 1024,
+  "outputNum": 4
+}

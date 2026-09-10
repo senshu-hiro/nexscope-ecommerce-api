@@ -1,0 +1,36 @@
+{
+  "directoryType": "amazon-product-research-directory",
+  "goal": "all",
+  "count": 33,
+  "recommendedApis": [
+    {
+      "slug": "amazon-search",
+      "operation": "amazon_search",
+      "typicalFields": [
+        "keyword",
+        "marketplace"
+      ],
+      "requestExample": {
+        "keyword": "wireless speaker",
+        "marketplace": "US"
+      },
+      "reason": "Search Amazon storefront results by keyword.",
+      "endpoint": "/api/skill-api/v1/skills/amazon-search/run"
+    },
+    {
+      "slug": "amazon-alexa-search",
+      "operation": "amazon_alexa_search",
+      "typicalFields": [
+        "keyword",
+        "marketplace"
+      ],
+      "requestExample": {
+        "keyword": "wireless speaker",
+        "marketplace": "US"
+      },
+      "reason": "Search Amazon Alexa ranking and product results.",
+      "endpoint": "/api/skill-api/v1/skills/amazon-alexa-search/run"
+    }
+  ],
+  "usage": "Invoke one recommended API directly for the actual research result."
+}

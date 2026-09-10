@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.ozon-product-detail-search.",
+  "fields": [
+    {
+      "name": "sku",
+      "type": "string",
+      "required": true,
+      "description": "Product SKU (Ozon SKU, e.g., 175924376). This is the sku returned by other Seerfar Ozon tools",
+      "example": "1664362124",
+      "constraints": {}
+    },
+    {
+      "name": "dateRange",
+      "type": "string",
+      "required": false,
+      "description": "Sales/metrics statistics window, default past_30_days. Options: past_7_days / past_30_days / past_60_days / past_90_days / past_180_days / past_365_days",
+      "example": "past_30_days",
+      "constraints": {}
+    },
+    {
+      "name": "uId",
+      "type": "string",
+      "required": false,
+      "description": "User ID (max 1000)",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "memberId",
+      "type": "string",
+      "required": false,
+      "description": "Member ID (a unique member identifier; a user can belong to multiple teams; data is attributed to memberId, max 1000)",
+      "example": "example-id",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "sku": "1664362124",
+    "dateRange": "past_30_days"
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,320 @@
+{
+  "type": "object",
+  "description": "Returns the documented Kalodata product-detail payload.",
+  "fields": [
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Product-detail data.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].product_id",
+      "type": "string",
+      "required": false,
+      "description": "TikTok product ID.",
+      "example": "1732505564636812173",
+      "constraints": {}
+    },
+    {
+      "name": "data[].product_name",
+      "type": "string",
+      "required": false,
+      "description": "Product name.",
+      "example": "Example product",
+      "constraints": {}
+    },
+    {
+      "name": "data[].unit_price",
+      "type": "number",
+      "required": false,
+      "description": "Current unit price.",
+      "example": 12.99,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sales_volumn",
+      "type": "integer",
+      "required": false,
+      "description": "Estimated sales volume (provider spelling).",
+      "example": 100,
+      "constraints": {}
+    },
+    {
+      "name": "data[].revenue",
+      "type": "number",
+      "required": false,
+      "description": "Total revenue / GMV.",
+      "example": 1000,
+      "constraints": {}
+    },
+    {
+      "name": "data[].video_revenue",
+      "type": "number",
+      "required": false,
+      "description": "Video-channel revenue.",
+      "example": 600,
+      "constraints": {}
+    },
+    {
+      "name": "data[].live_revenue",
+      "type": "number",
+      "required": false,
+      "description": "Livestream revenue.",
+      "example": 300,
+      "constraints": {}
+    },
+    {
+      "name": "data[].showcase_revenue",
+      "type": "number",
+      "required": false,
+      "description": "Showcase revenue.",
+      "example": 100,
+      "constraints": {}
+    },
+    {
+      "name": "data[].revenue_growth_rate",
+      "type": "number",
+      "required": false,
+      "description": "Revenue growth percentage.",
+      "example": 12.5,
+      "constraints": {}
+    },
+    {
+      "name": "data[].commission_rate",
+      "type": "number",
+      "required": false,
+      "description": "Commission percentage.",
+      "example": 20,
+      "constraints": {}
+    },
+    {
+      "name": "data[].launch_date",
+      "type": "string",
+      "required": false,
+      "description": "Product launch date.",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "data[].product_region",
+      "type": "string",
+      "required": false,
+      "description": "Product market region.",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "data[].product_shop_id",
+      "type": "string",
+      "required": false,
+      "description": "Owning shop ID.",
+      "example": "shop-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].min_price",
+      "type": "number",
+      "required": false,
+      "description": "Minimum product price.",
+      "example": 9.99,
+      "constraints": {}
+    },
+    {
+      "name": "data[].max_price",
+      "type": "number",
+      "required": false,
+      "description": "Maximum product price.",
+      "example": 19.99,
+      "constraints": {}
+    },
+    {
+      "name": "data[].product_review_count",
+      "type": "integer",
+      "required": false,
+      "description": "Review count.",
+      "example": 200,
+      "constraints": {}
+    },
+    {
+      "name": "data[].video_number",
+      "type": "integer",
+      "required": false,
+      "description": "Associated video count.",
+      "example": 25,
+      "constraints": {}
+    },
+    {
+      "name": "data[].live_number",
+      "type": "integer",
+      "required": false,
+      "description": "Associated livestream count.",
+      "example": 5,
+      "constraints": {}
+    },
+    {
+      "name": "data[].creator_number",
+      "type": "integer",
+      "required": false,
+      "description": "Associated creator count.",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token cost reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "data": [
+      {
+        "product_id": "1732505564636812173",
+        "product_name": "Example product",
+        "unit_price": 12.99,
+        "sales_volumn": 100,
+        "revenue": 1000,
+        "video_revenue": 600,
+        "live_revenue": 300,
+        "showcase_revenue": 100,
+        "revenue_growth_rate": 12.5,
+        "commission_rate": 20,
+        "launch_date": "2026-01-01",
+        "product_region": "US",
+        "product_shop_id": "shop-id",
+        "min_price": 9.99,
+        "max_price": 19.99,
+        "product_review_count": 200,
+        "video_number": 25,
+        "live_number": 5,
+        "creator_number": 10
+      }
+    ]
+  },
+  "jsonSchema": null
+}

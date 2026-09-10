@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "description": "Extract visible print or pattern elements from product imagery.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the image containing the print. The image must be up to 20 MB and between 385 and 8192 pixels in both width and height.",
+      "example": "https://example.com/product.jpg",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/product.jpg"
+  },
+  "jsonSchema": null
+}

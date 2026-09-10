@@ -1,0 +1,194 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "historicalSearchVolumeList",
+      "type": "array",
+      "required": false,
+      "description": "Historical search volume period list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "historicalSearchVolumeList[].id",
+      "type": "string",
+      "required": false,
+      "description": "Data period identifier (market/keyword/date range)",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "historicalSearchVolumeList[].estimateStartDate",
+      "type": "string",
+      "required": false,
+      "description": "Period start date (YYYY-MM-DD, 7-day statistical period start)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "historicalSearchVolumeList[].estimateEndDate",
+      "type": "string",
+      "required": false,
+      "description": "Period end date (YYYY-MM-DD, 7-day statistical period end)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "historicalSearchVolumeList[].estimatedExactSearchVolume",
+      "type": "integer",
+      "required": false,
+      "description": "Exact match search volume for this period (searches/week)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "historicalSearchVolumeList[].type",
+      "type": "string",
+      "required": false,
+      "description": "Resource type, fixed value historical_keyword_search_volume",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "costToken": 1,
+    "historicalSearchVolumeList": [
+      {
+        "id": "example-id",
+        "estimateStartDate": "2026-01-01",
+        "estimateEndDate": "2026-01-01",
+        "estimatedExactSearchVolume": 1
+      }
+    ]
+  },
+  "jsonSchema": null
+}

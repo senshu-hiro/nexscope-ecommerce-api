@@ -1,0 +1,87 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "q"
+  ],
+  "properties": {
+    "q": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1000
+    },
+    "num": {
+      "type": "integer",
+      "minimum": 10,
+      "maximum": 100,
+      "default": 10
+    },
+    "page": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
+    },
+    "country": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "before": {
+      "type": "string",
+      "pattern": "^(priority|filing|publication):\\d{8}$"
+    },
+    "after": {
+      "type": "string",
+      "pattern": "^(priority|filing|publication):\\d{8}$"
+    },
+    "sort": {
+      "type": "string",
+      "enum": [
+        "new",
+        "old"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "PATENT",
+        "DESIGN"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "GRANT",
+        "APPLICATION"
+      ]
+    },
+    "patents": {
+      "type": "boolean",
+      "default": true
+    },
+    "scholar": {
+      "type": "boolean",
+      "default": false
+    },
+    "litigation": {
+      "type": "string",
+      "enum": [
+        "YES",
+        "NO"
+      ]
+    },
+    "inventor": {
+      "type": "string"
+    },
+    "assignee": {
+      "type": "string"
+    },
+    "clustered": {
+      "const": true
+    },
+    "dups": {
+      "const": "language"
+    }
+  }
+}

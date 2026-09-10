@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "description": "Dress a model image with upper and/or lower garment assets, supporting optional masks and original garment references.",
+  "fields": [
+    {
+      "name": "modelImageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the model image.",
+      "example": "https://example.com/model-reference.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "upperOriginUrl",
+      "type": "string",
+      "required": false,
+      "description": "Public URL of the original upper garment image. The image must be up to 20 MB and between 385 and 4096 pixels in both width and height.",
+      "example": "https://example.com/top.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "downOriginUrl",
+      "type": "string",
+      "required": false,
+      "description": "Public URL of the original lower garment image. The image must be up to 20 MB and between 385 and 4096 pixels in both width and height.",
+      "example": "https://example.com/bottom.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "upperImageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Optional processed upper garment mask or crop URL.",
+      "example": "https://example.com/top-mask.png",
+      "constraints": {}
+    },
+    {
+      "name": "downImageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Optional processed lower garment mask or crop URL.",
+      "example": "https://example.com/bottom-mask.png",
+      "constraints": {}
+    },
+    {
+      "name": "modelMaskImageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Optional mask URL for the model body area.",
+      "example": "https://example.com/mask.png",
+      "constraints": {}
+    },
+    {
+      "name": "outputNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of images to generate, from 1 to 4. Defaults to 1.",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "modelImageUrl": "https://example.com/model-reference.jpg",
+    "upperOriginUrl": "https://example.com/top.jpg",
+    "downOriginUrl": "https://example.com/bottom.jpg",
+    "upperImageUrl": "https://example.com/top-mask.png",
+    "downImageUrl": "https://example.com/bottom-mask.png",
+    "modelMaskImageUrl": "https://example.com/mask.png",
+    "outputNum": 1
+  },
+  "jsonSchema": null
+}

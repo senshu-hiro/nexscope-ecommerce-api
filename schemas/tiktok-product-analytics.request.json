@@ -1,0 +1,79 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.tiktok-product-analytics.",
+  "fields": [
+    {
+      "name": "region",
+      "type": "string",
+      "required": false,
+      "description": "TikTok Shop market region code, e.g., US. If not specified, defaults to the server default (usually US)",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "dateRange",
+      "type": "string",
+      "required": false,
+      "description": "Relative date range, e.g., last7Day, last30Day",
+      "example": "last30Day",
+      "constraints": {}
+    },
+    {
+      "name": "currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency code, e.g., USD",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "language",
+      "type": "string",
+      "required": false,
+      "description": "Return language, e.g., zh-CN, en-US",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sortField",
+      "type": "object",
+      "required": false,
+      "description": "Sort specification object; omitted to use default ranking",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "pageNumber",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, range 1-5",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page, range 5-100",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "productId",
+      "type": "string",
+      "required": false,
+      "description": "TikTok product ID, e.g., 1729508370969629931 (string format, to avoid large integer precision loss), obtainable from the product_id in the product rank response",
+      "example": "1732505564636812173",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "dateRange": "last30Day",
+    "sortField": {},
+    "region": "US",
+    "pageNumber": 1,
+    "productId": "1732505564636812173",
+    "pageSize": 10
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,140 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.shopify-product-query.",
+  "fields": [
+    {
+      "name": "searchKey",
+      "type": "string",
+      "required": false,
+      "description": "Keyword or Shopify product/store URL",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "priceMin",
+      "type": "number",
+      "required": false,
+      "description": "Price range start (USD), combined with priceMax to form upstream price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceMax",
+      "type": "number",
+      "required": false,
+      "description": "Price range end (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salesWeeklyMin",
+      "type": "integer",
+      "required": false,
+      "description": "Weekly sales range start",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "salesWeeklyMax",
+      "type": "integer",
+      "required": false,
+      "description": "Weekly sales range end",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "publishedTimeBegin",
+      "type": "string",
+      "required": false,
+      "description": "Listing date range start",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "publishedTimeEnd",
+      "type": "string",
+      "required": false,
+      "description": "Listing date range end",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "facebookAd",
+      "type": "integer",
+      "required": false,
+      "description": "Has Facebook ad: 1=Yes",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "competitionMin",
+      "type": "integer",
+      "required": false,
+      "description": "Competition (number of stores selling) range start",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "competitionMax",
+      "type": "integer",
+      "required": false,
+      "description": "Competition (number of stores selling) range end",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "hasSupplier",
+      "type": "integer",
+      "required": false,
+      "description": "Has supplier: 1=Yes, 0=No",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "showDeleted",
+      "type": "integer",
+      "required": false,
+      "description": "Show delisted products: 1=Yes, 0=No",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "country",
+      "type": "string",
+      "required": false,
+      "description": "Shipping country (two-letter country code, e.g., US)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sortBy",
+      "type": "integer",
+      "required": false,
+      "description": "Sort field (default 14=Weekly sales descending; also includes price/ad count/competition/revenue etc. values, see enumeration below)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number (starting from 1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Results per page, max 100, recommended not to exceed 50",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "page": 1,
+    "pageSize": 10,
+    "keyword": "phone case"
+  },
+  "jsonSchema": null
+}

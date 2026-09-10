@@ -1,0 +1,521 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Return code (string), \"200\" indicates success",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Return code (integer), 200 indicates success",
+      "example": 200,
+      "constraints": {}
+    },
+    {
+      "name": "products[].msg/errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Message; ok for success",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of SKUs returned (= successCount + failedCount)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "successCount",
+      "type": "integer",
+      "required": false,
+      "description": "Number of SKUs for which cards were successfully returned",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "failedCount",
+      "type": "integer",
+      "required": false,
+      "description": "Number of SKUs that failed",
+      "example": 0,
+      "constraints": {}
+    },
+    {
+      "name": "failures",
+      "type": "array",
+      "required": false,
+      "description": "List of failed SKU details (each item contains the failed productId and error info)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "required": false,
+      "description": "Product card list (see details below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Rendered column definitions",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "API latency (milliseconds)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Response type",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].productId",
+      "type": "integer",
+      "required": false,
+      "description": "SKU ID",
+      "example": 1786874757,
+      "constraints": {}
+    },
+    {
+      "name": "products[].title",
+      "type": "string",
+      "required": false,
+      "description": "Product name (Russian)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].brand",
+      "type": "string",
+      "required": false,
+      "description": "Brand",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sellerName",
+      "type": "string",
+      "required": false,
+      "description": "Seller name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sellerId",
+      "type": "integer",
+      "required": false,
+      "description": "Seller ID",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sellerIsBestSeller",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether the seller is a best seller",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].nicheName",
+      "type": "string",
+      "required": false,
+      "description": "Niche path (Russian, / separated)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].nicheId",
+      "type": "integer",
+      "required": false,
+      "description": "Niche ID",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].firstDate",
+      "type": "string",
+      "required": false,
+      "description": "Listing date (yyyy-MM-dd)",
+      "example": "2025-03-01",
+      "constraints": {}
+    },
+    {
+      "name": "products[].updated",
+      "type": "string",
+      "required": false,
+      "description": "Data update time (yyyy-MM-dd HH:mm:ss)",
+      "example": "2025-03-31 12:00:00",
+      "constraints": {}
+    },
+    {
+      "name": "products[].note",
+      "type": "string",
+      "required": false,
+      "description": "Notes",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sourceTool/sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Source tool / data source identifier",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Main image URL (first large image)",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].imageCount",
+      "type": "integer",
+      "required": false,
+      "description": "Total image count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].productImageUrls",
+      "type": "array",
+      "required": false,
+      "description": "Remaining large image URLs besides the main image",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].productPageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product page URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].price",
+      "type": "number",
+      "required": false,
+      "description": "Current selling price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].oldPrice",
+      "type": "number",
+      "required": false,
+      "description": "Original price before discount",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].ozonCardPrice",
+      "type": "number",
+      "required": false,
+      "description": "Ozon Card price (bank card discount price)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].discount",
+      "type": "integer",
+      "required": false,
+      "description": "Discount, integer percentage 0-100",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency symbol (₽ / $ / €)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].rating",
+      "type": "number",
+      "required": false,
+      "description": "Rating, 0-5",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].reviewCount",
+      "type": "integer",
+      "required": false,
+      "description": "Number of reviews",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].balance",
+      "type": "integer",
+      "required": false,
+      "description": "Current stock (units)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].deliveryScheme",
+      "type": "string",
+      "required": false,
+      "description": "Delivery scheme; FBO = Ozon fulfillment, FBS = seller self-delivery",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].salesPerDay",
+      "type": "number",
+      "required": false,
+      "description": "Average daily sales (units/day)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].salesPerDayWithStock",
+      "type": "number",
+      "required": false,
+      "description": "Average daily sales counting only days with stock",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].dailySalesRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Average daily sales revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].dailySalesRevenueWithStock",
+      "type": "number",
+      "required": false,
+      "description": "Average daily sales revenue counting only days with stock",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].monthlySalesUnits",
+      "type": "integer",
+      "required": false,
+      "description": "Sales volume during the statistics period (units)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].monthlySalesRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Sales revenue during the statistics period",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].previousSalesUnits",
+      "type": "integer",
+      "required": false,
+      "description": "Prior period sales volume (the same-length period before the current statistics period)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].previousRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Prior period sales revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].revenuePotential",
+      "type": "number",
+      "required": false,
+      "description": "Potential revenue (estimated based on full-period stock availability)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].lostProfit",
+      "type": "number",
+      "required": false,
+      "description": "Lost revenue (due to stockouts, etc.)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].lostProfitPercent",
+      "type": "number",
+      "required": false,
+      "description": "Lost revenue percentage (%)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "errcode": 200,
+    "total": 1,
+    "successCount": 1,
+    "failedCount": 0,
+    "failures": [],
+    "products": [
+      {
+        "productId": 1786874757,
+        "sellerId": 1,
+        "sellerIsBestSeller": false,
+        "nicheId": 1,
+        "firstDate": "2025-03-01",
+        "updated": "2025-03-31 12:00:00",
+        "imageUrl": "https://example.com/image.jpg",
+        "imageCount": 1,
+        "productImageUrls": [],
+        "productPageUrl": "https://example.com/image.jpg",
+        "price": 1,
+        "oldPrice": 1,
+        "ozonCardPrice": 1,
+        "discount": 1,
+        "rating": 1,
+        "reviewCount": 1,
+        "balance": 1,
+        "salesPerDay": 1,
+        "salesPerDayWithStock": 1,
+        "dailySalesRevenue": 1,
+        "dailySalesRevenueWithStock": 1,
+        "monthlySalesUnits": 1,
+        "monthlySalesRevenue": 1,
+        "previousSalesUnits": 1,
+        "previousRevenue": 1,
+        "revenuePotential": 1,
+        "lostProfit": 1,
+        "lostProfitPercent": 1
+      }
+    ],
+    "columns": [],
+    "costTime": 1,
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

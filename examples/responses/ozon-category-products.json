@@ -1,0 +1,38 @@
+{
+  "total": 1,
+  "products": [
+    {
+      "productId": 1,
+      "brandId": 1,
+      "sellerId": 1,
+      "nicheId": 1,
+      "firstDate": "2026-01-01",
+      "imageUrl": "https://example.com/image.jpg",
+      "productPageUrl": "https://example.com/image.jpg",
+      "price": 1,
+      "oldPrice": 1,
+      "ozonCardPrice": 1,
+      "minPrice/maxPrice/averagePrice": 1,
+      "rating": 1,
+      "reviewCount": 1,
+      "balance": 1,
+      "balanceFbs": 1,
+      "frozenStocks": 1,
+      "warehousesCount": 1,
+      "isFbs": false,
+      "salesPerDay": 1,
+      "monthlySalesUnits": 1,
+      "monthlySalesRevenue": 1,
+      "lostProfit": 1,
+      "daysInSite": 1,
+      "daysInStock": 1,
+      "turnoverDays": 1,
+      "position": 1,
+      "categoryPosition": 1,
+      "revenueSharePercent": 1
+    }
+  ],
+  "columns": [],
+  "costTime": 1,
+  "costToken": 1
+}

@@ -1,0 +1,40 @@
+{
+  "errcode": 1,
+  "costToken": 1,
+  "columns": [
+    {
+      "sellerId": "example-id",
+      "coverUrl": "https://example.com/image.jpg",
+      "region": "US",
+      "categoryId": "example-id",
+      "categoryL2Id": "example-id",
+      "categoryL3Id": "example-id",
+      "totalSaleCnt": 1,
+      "totalSale1dCnt": 1,
+      "totalSale7dCnt": 1,
+      "totalSale30dCnt": 1,
+      "totalSale90dCnt": 1,
+      "totalSaleGmvAmt": 1,
+      "totalSaleGmv1dAmt": 1,
+      "totalSaleGmv7dAmt": 1,
+      "totalSaleGmv30dAmt": 1,
+      "totalSaleGmv90dAmt": 1,
+      "followersCount": 1,
+      "rating": 1,
+      "reviewCount": 1,
+      "positiveFeedbackRate": 1,
+      "responseRate": 1,
+      "deliveryRate": 1,
+      "totalProductCnt": 1,
+      "totalCrawlProductCnt": 1,
+      "spuAvgPrice": 1,
+      "minPrice": 1,
+      "maxPrice": 1,
+      "totalIflCnt": 1,
+      "totalVideoCnt": 1,
+      "totalLiveCnt": 1,
+      "firstCrawlDt": 1,
+      "userId": "example-id"
+    }
+  ]
+}

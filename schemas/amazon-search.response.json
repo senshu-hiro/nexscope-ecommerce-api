@@ -1,0 +1,449 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Total rows",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": false,
+      "description": "Search keyword",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Rendered column definitions",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token consumption",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "required": false,
+      "description": "Search result list (see below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].asin",
+      "type": "string",
+      "required": false,
+      "description": "ASIN",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "products[].title",
+      "type": "string",
+      "required": false,
+      "description": "Title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].brand",
+      "type": "string",
+      "required": false,
+      "description": "Brand",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].price",
+      "type": "number",
+      "required": false,
+      "description": "Price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].extractedPrice",
+      "type": "number",
+      "required": false,
+      "description": "Parsed price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].oldPrice",
+      "type": "number",
+      "required": false,
+      "description": "Strikethrough price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].extractedOldPrice",
+      "type": "number",
+      "required": false,
+      "description": "Parsed strikethrough price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].priceUnit",
+      "type": "string",
+      "required": false,
+      "description": "Price unit",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].extractedPriceUnit",
+      "type": "number",
+      "required": false,
+      "description": "Parsed price unit",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].rating",
+      "type": "number",
+      "required": false,
+      "description": "Rating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].ratings",
+      "type": "integer",
+      "required": false,
+      "description": "Number of ratings",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].position",
+      "type": "integer",
+      "required": false,
+      "description": "Position",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sponsored",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether sponsored",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Thumbnail",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].asinUrl",
+      "type": "string",
+      "required": false,
+      "description": "Link",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "products[].delivery",
+      "type": "string",
+      "required": false,
+      "description": "Delivery information",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].fulfillment",
+      "type": "string",
+      "required": false,
+      "description": "Fulfillment information (e.g., FBA)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].availableDate",
+      "type": "string",
+      "required": false,
+      "description": "Listing time",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "products[].monthlySalesUnits",
+      "type": "integer",
+      "required": false,
+      "description": "Monthly sales units",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].monthlySalesRevenue",
+      "type": "string",
+      "required": false,
+      "description": "Monthly sales revenue",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sellerNation",
+      "type": "string",
+      "required": false,
+      "description": "Seller nationality",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].dimension",
+      "type": "string",
+      "required": false,
+      "description": "Dimensions",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].weight",
+      "type": "string",
+      "required": false,
+      "description": "Weight",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].options",
+      "type": "string",
+      "required": false,
+      "description": "Options",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].offers",
+      "type": "string",
+      "required": false,
+      "description": "Offer information",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].badges",
+      "type": "string",
+      "required": false,
+      "description": "Amazon frontend search badges",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].tags",
+      "type": "string",
+      "required": false,
+      "description": "Tags",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].snapEbtEligible",
+      "type": "boolean",
+      "required": false,
+      "description": "SNAP/EBT eligibility",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Source type: amazon",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Source tool",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].keyword",
+      "type": "string",
+      "required": false,
+      "description": "Keyword",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "keyword": "phone case",
+    "columns": [],
+    "costToken": 1,
+    "products": [
+      {
+        "asin": "B072MQ5BRX",
+        "price": 1,
+        "extractedPrice": 1,
+        "oldPrice": 1,
+        "extractedOldPrice": 1,
+        "extractedPriceUnit": 1,
+        "rating": 1,
+        "ratings": 1,
+        "position": 1,
+        "sponsored": false,
+        "imageUrl": "https://example.com/image.jpg",
+        "asinUrl": "B072MQ5BRX",
+        "availableDate": "2026-01-01",
+        "monthlySalesUnits": 1,
+        "snapEbtEligible": false,
+        "keyword": "phone case"
+      }
+    ]
+  },
+  "jsonSchema": null
+}

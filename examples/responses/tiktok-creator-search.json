@@ -1,0 +1,23 @@
+{
+  "data": [
+    {
+      "creator_id": "68616495085350913",
+      "creator_nickname": "Example creator",
+      "creator_handle": "@creator",
+      "creator_followers": "100000",
+      "content_views": "1000000",
+      "sales_volumn": 100,
+      "revenue": 1000,
+      "video_revenue": 600,
+      "live_revenue": 400,
+      "revenue_growth_rate": 12.5,
+      "creator_region": "US",
+      "creator_status": "active",
+      "new_followers": 1000,
+      "video_number": 20,
+      "live_number": 5,
+      "product_number": 10,
+      "shop_number": 3
+    }
+  ]
+}

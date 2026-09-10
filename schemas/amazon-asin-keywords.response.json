@@ -1,0 +1,444 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Response code",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Message",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of data records actually returned",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Data array (see below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Render columns",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "isParentAsin",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether it is a parent ASIN (pasin)",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "hasVaiants",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether it has variants",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "abaCreateDateWeek",
+      "type": "string",
+      "required": false,
+      "description": "Week date corresponding to the latest weekly ABA data",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Latency (ms)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Tokens consumed",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].keyword",
+      "type": "string",
+      "required": false,
+      "description": "Keyword",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "data[].translateKeyword",
+      "type": "string",
+      "required": false,
+      "description": "Keyword translation, localized translation for the site",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "data[].asin",
+      "type": "string",
+      "required": false,
+      "description": "Product ASIN",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "data[].productNaturalRank",
+      "type": "integer",
+      "required": false,
+      "description": "Product natural search rank. The position ranking of this product in natural search results for this keyword, e.g. 1 means ranked 1st (top position) in search results",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].naturalRankDisplay",
+      "type": "string",
+      "required": false,
+      "description": "Natural rank display text. String representation of natural search rank",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].productAdRank",
+      "type": "integer",
+      "required": false,
+      "description": "Product SP ad rank. The ranking position of this product in Sponsored Products ad placements for this keyword, e.g. 3 means ranked 3rd in ad placement",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].adRankDisplay",
+      "type": "string",
+      "required": false,
+      "description": "Ad rank display text. String representation of SP ad rank",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].weeklySearchVolume",
+      "type": "integer",
+      "required": false,
+      "description": "Weekly search volume. Estimated weekly search count for this keyword on Amazon",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].keywordPopularityRank",
+      "type": "integer",
+      "required": false,
+      "description": "Keyword search popularity rank. This keyword's monthly search volume ranking among all Amazon keywords; lower values indicate higher search volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].totalSearchResultProductCount",
+      "type": "integer",
+      "required": false,
+      "description": "Total search result product count for this keyword (active listings)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].trafficShare",
+      "type": "number",
+      "required": false,
+      "description": "Traffic share. Proportion of traffic this keyword brings to the product out of all keywords' total traffic, where 1 = 100%",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].naturalTrafficShare",
+      "type": "number",
+      "required": false,
+      "description": "Natural traffic score share. Natural search traffic score / total score",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].paidTrafficShare",
+      "type": "number",
+      "required": false,
+      "description": "Paid ad traffic score share. Ad traffic score / total score; ad total = sp + sb + sbv + recAd",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].naturalTrafficScore",
+      "type": "number",
+      "required": false,
+      "description": "Natural traffic score. Natural search exposure score this keyword brings to this ASIN; 0 = no natural traffic exposure",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sponsoredProductsScore",
+      "type": "number",
+      "required": false,
+      "description": "SP ad regular score. Traffic score for Sponsored Products regular placements (excluding SP recommendation placements)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].brandAdScore",
+      "type": "number",
+      "required": false,
+      "description": "SB brand ad score. Traffic score for Sponsored Brands brand ads (regular + video, combined)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].videoAdScore",
+      "type": "number",
+      "required": false,
+      "description": "SBV video ad score. Traffic score for Sponsored Brands Video video ads",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sponsoredRecommendationScore",
+      "type": "number",
+      "required": false,
+      "description": "SP recommendation placement score. Combined score for Trending now / Seen on social media / Customers frequently viewed / 4 stars and above, etc.",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sponsoredRecommendationBreakdown",
+      "type": "array",
+      "required": false,
+      "description": "SP recommendation placement score breakdown. Each entry {title, score, scoreRatio}",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].clickConcentrationShare",
+      "type": "number",
+      "required": false,
+      "description": "ABA TOP3 click concentration. Measures whether clicks are concentrated on top ASINs; note this is not conversion rate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].clickToPurchaseConversionRate",
+      "type": "number",
+      "required": false,
+      "description": "Click-to-purchase conversion rate (purchaseQty / clickQty)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].displayPositionTypes",
+      "type": "array",
+      "required": false,
+      "description": "Product display position type array. May contain: natural=natural search result position; ac=Amazon's Choice recommendation position; sp=Sponsored Products ad position; top=top-of-page brand ad position; bottom=bottom-of-page brand ad position; er=Editorial Recommendations position; vedio=video ad position; tr=Top Rated recommendation position; trfob=Top Rated Frequently Bought recommendation position",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].trafficCharacteristicMarkers",
+      "type": "array",
+      "required": false,
+      "description": "Keyword traffic characteristic marker array. May contain: isMainKw=main traffic keyword; isAccurateKw=precise traffic keyword; isAccurateAboveKw=precise broad keyword; isAccurateTailKw=precise long-tail keyword",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].conversionPerformanceMarkers",
+      "type": "array",
+      "required": false,
+      "description": "Conversion performance marker array. May contain: isPurchaseKw=converting keyword; isQualityKw=high-quality conversion keyword; isStableKw=stable conversion keyword; isLossKw=lost conversion keyword; isInvalidKw=invalid impression keyword",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].lastNaturalRankTime",
+      "type": "string",
+      "required": false,
+      "description": "Time of the most recent valid natural rank",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].lastAdRankTime",
+      "type": "string",
+      "required": false,
+      "description": "Time of the most recent valid SP ad rank",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].periodEndDate",
+      "type": "string",
+      "required": false,
+      "description": "Current period (weekly granularity) end date = start week + 7 days (site time)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "data[].updateTime",
+      "type": "string",
+      "required": false,
+      "description": "Keyword data update time",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "data": [
+      {
+        "keyword": "phone case",
+        "translateKeyword": "phone case",
+        "asin": "B072MQ5BRX",
+        "productNaturalRank": 1,
+        "productAdRank": 1,
+        "weeklySearchVolume": 1,
+        "keywordPopularityRank": 1,
+        "totalSearchResultProductCount": 1,
+        "trafficShare": 1,
+        "naturalTrafficShare": 1,
+        "paidTrafficShare": 1,
+        "naturalTrafficScore": 1,
+        "sponsoredProductsScore": 1,
+        "brandAdScore": 1,
+        "videoAdScore": 1,
+        "sponsoredRecommendationScore": 1,
+        "sponsoredRecommendationBreakdown": [],
+        "clickConcentrationShare": 1,
+        "clickToPurchaseConversionRate": 1,
+        "displayPositionTypes": [],
+        "trafficCharacteristicMarkers": [],
+        "conversionPerformanceMarkers": [],
+        "periodEndDate": "2026-01-01",
+        "updateTime": "2026-01-01"
+      }
+    ],
+    "columns": [],
+    "isParentAsin": false,
+    "hasVaiants": false,
+    "abaCreateDateWeek": "2026-01-01",
+    "costTime": 1,
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

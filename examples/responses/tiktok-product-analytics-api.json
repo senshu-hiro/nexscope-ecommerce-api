@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "product_id": "1732505564636812173",
+      "product_name": "Example product",
+      "unit_price": 12.99,
+      "sales_volumn": 100,
+      "revenue": 1000,
+      "video_revenue": 600,
+      "live_revenue": 300,
+      "showcase_revenue": 100,
+      "revenue_growth_rate": 12.5,
+      "commission_rate": 20,
+      "launch_date": "2026-01-01",
+      "product_region": "US",
+      "product_shop_id": "shop-id",
+      "min_price": 9.99,
+      "max_price": 19.99,
+      "product_review_count": 200,
+      "video_number": 25,
+      "live_number": 5,
+      "creator_number": 10
+    }
+  ]
+}

@@ -1,0 +1,484 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-opportunity-search-by-metrics.",
+  "fields": [
+    {
+      "name": "amazonDomain",
+      "type": "string",
+      "required": false,
+      "description": "Amazon site code (closed enum), currently only supports US. Defaults to US only if not specified",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "limit",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum number of results to return (1-200), default 25. No page parameter; returns the most recent N records sorted by collection time descending",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": false,
+      "description": "Search keyword text fragment (LIKE fuzzy match)",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "nicheName",
+      "type": "string",
+      "required": false,
+      "description": "Normalized niche name fragment (LIKE, snake_case lowercase), suitable for niche time-series comparison",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "nicheRevenue360dMinUsdAtLeastGte",
+      "type": "number",
+      "required": false,
+      "description": "Minimum 360-day market revenue lower bound (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheRevenue360dMinUsdAtLeastLte",
+      "type": "number",
+      "required": false,
+      "description": "Maximum 360-day market revenue lower bound (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheRevenue360dMaxUsdAtLeastGte",
+      "type": "number",
+      "required": false,
+      "description": "Minimum 360-day market revenue upper bound (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheRevenue360dMaxUsdAtLeastLte",
+      "type": "number",
+      "required": false,
+      "description": "Maximum 360-day market revenue upper bound (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nichePeakSearchVolumeAtLeastGte",
+      "type": "integer",
+      "required": false,
+      "description": "Peak monthly search volume minimum (non-negative integer)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nichePeakSearchVolumeAtLeastLte",
+      "type": "integer",
+      "required": false,
+      "description": "Peak monthly search volume maximum (non-negative integer)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheSearchVolumeYoyChangePctAtLeastGte",
+      "type": "number",
+      "required": false,
+      "description": "Search volume YoY change rate minimum (%, signed)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheSearchVolumeYoyChangePctAtLeastLte",
+      "type": "number",
+      "required": false,
+      "description": "Search volume YoY change rate maximum (%, signed)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nichePeakMonthGte",
+      "type": "integer",
+      "required": false,
+      "description": "Search peak month minimum (1-12)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nichePeakMonthLte",
+      "type": "integer",
+      "required": false,
+      "description": "Search peak month maximum (1-12)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheBrandCountGte",
+      "type": "integer",
+      "required": false,
+      "description": "Active brand count minimum",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheBrandCountLte",
+      "type": "integer",
+      "required": false,
+      "description": "Active brand count maximum",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheBrandCountYoyChangePctAtLeastGte",
+      "type": "number",
+      "required": false,
+      "description": "Brand count YoY change rate minimum (%, signed)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheBrandCountYoyChangePctAtLeastLte",
+      "type": "number",
+      "required": false,
+      "description": "Brand count YoY change rate maximum (%, signed)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheTop5ProductClickSharePctAtLeastGte",
+      "type": "number",
+      "required": false,
+      "description": "Top 5 product click share minimum (0-100)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "nicheTop5ProductClickSharePctAtLeastLte",
+      "type": "number",
+      "required": false,
+      "description": "Top 5 product click share maximum (0-100)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "featureTop5BrandSharePctAtLeastGte",
+      "type": "number",
+      "required": false,
+      "description": "Top 5 brand combined share minimum (0-100)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "featureTop5BrandSharePctAtLeastLte",
+      "type": "number",
+      "required": false,
+      "description": "Top 5 brand combined share maximum (0-100)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "featureTopBrandsContains",
+      "type": "string",
+      "required": false,
+      "description": "Top 3 brand name fragment (original text LIKE, case-sensitive)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "priceMinUsdGte",
+      "type": "number",
+      "required": false,
+      "description": "Niche minimum product price lower bound (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceMinUsdLte",
+      "type": "number",
+      "required": false,
+      "description": "Niche minimum product price upper bound (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceMaxUsdGte",
+      "type": "number",
+      "required": false,
+      "description": "Niche maximum product price lower bound (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceMaxUsdLte",
+      "type": "number",
+      "required": false,
+      "description": "Niche maximum product price upper bound (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceSweetSpotMinUsdGte",
+      "type": "number",
+      "required": false,
+      "description": "Sweet spot lower bound minimum (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceSweetSpotMinUsdLte",
+      "type": "number",
+      "required": false,
+      "description": "Sweet spot lower bound maximum (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceSweetSpotMaxUsdGte",
+      "type": "number",
+      "required": false,
+      "description": "Sweet spot upper bound minimum (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceSweetSpotMaxUsdLte",
+      "type": "number",
+      "required": false,
+      "description": "Sweet spot upper bound maximum (USD)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceEntryClickSharePctAtLeastGte",
+      "type": "number",
+      "required": false,
+      "description": "Entry tier click share minimum (0-100)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceEntryClickSharePctAtLeastLte",
+      "type": "number",
+      "required": false,
+      "description": "Entry tier click share maximum (0-100)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceMidClickSharePctAtLeastGte",
+      "type": "number",
+      "required": false,
+      "description": "Mid tier click share minimum (0-100)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceMidClickSharePctAtLeastLte",
+      "type": "number",
+      "required": false,
+      "description": "Mid tier click share maximum (0-100)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceHighClickSharePctAtLeastGte",
+      "type": "number",
+      "required": false,
+      "description": "High tier click share minimum (0-100)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "priceHighClickSharePctAtLeastLte",
+      "type": "number",
+      "required": false,
+      "description": "High tier click share maximum (0-100)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "demoPrimaryAgeMinGte",
+      "type": "integer",
+      "required": false,
+      "description": "Primary audience age lower bound minimum (0-120 years)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "demoPrimaryAgeMinLte",
+      "type": "integer",
+      "required": false,
+      "description": "Primary audience age lower bound maximum (0-120 years)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "demoPrimaryAgeMaxGte",
+      "type": "integer",
+      "required": false,
+      "description": "Primary audience age upper bound minimum (0-120 years)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "demoPrimaryAgeMaxLte",
+      "type": "integer",
+      "required": false,
+      "description": "Primary audience age upper bound maximum (0-120 years)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "demoGenderDominant",
+      "type": "string",
+      "required": false,
+      "description": "Dominant gender (closed enum): female / male / mixed / unspecified",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "demoPrimaryIncomeTier",
+      "type": "string",
+      "required": false,
+      "description": "Income tier (closed enum): low / middle_low / middle / middle_upper / upper_middle / high",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "demoLifeStageTagsContains",
+      "type": "string",
+      "required": false,
+      "description": "Life stage tag fragment (snake_case, LIKE): parent, student, retiree, athlete, etc.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "featureNewAvgReviewCountAtLeastGte",
+      "type": "integer",
+      "required": false,
+      "description": "New product average review count minimum (non-negative integer)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "featureNewAvgReviewCountAtLeastLte",
+      "type": "integer",
+      "required": false,
+      "description": "New product average review count maximum (non-negative integer)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "featureEstablishedAvgReviewCountAtLeastGte",
+      "type": "integer",
+      "required": false,
+      "description": "Established product average review count minimum (non-negative integer)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "featureEstablishedAvgReviewCountAtLeastLte",
+      "type": "integer",
+      "required": false,
+      "description": "Established product average review count maximum (non-negative integer)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "featureEmergingTrendTagsContains",
+      "type": "string",
+      "required": false,
+      "description": "Emerging trend feature tag fragment (snake_case, LIKE): cordless, portable, smart, etc.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "featureUncommonFeatureTagsContains",
+      "type": "string",
+      "required": false,
+      "description": "Rare differentiation feature tag fragment (snake_case, LIKE): hema_free, medical_grade_silicone, etc.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "searchTopCategory1Label",
+      "type": "string",
+      "required": false,
+      "description": "Search traffic top category 1 label fragment (snake_case, LIKE): core_product_terms, set_kit_configurations, etc.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "reviewPositiveTop1Topic",
+      "type": "string",
+      "required": false,
+      "description": "Positive review #1 topic fragment (snake_case, LIKE): comfort, quality_overall_generic, etc.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "reviewPositiveTop1PctAtLeastGte",
+      "type": "number",
+      "required": false,
+      "description": "Positive review #1 topic share minimum (0-100, share among positive reviews)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "reviewPositiveTop1PctAtLeastLte",
+      "type": "number",
+      "required": false,
+      "description": "Positive review #1 topic share maximum (0-100)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "reviewNegativeTop1Topic",
+      "type": "string",
+      "required": false,
+      "description": "Negative review #1 topic fragment (snake_case, LIKE): size, quality, durability, etc.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "reviewNegativeTop1PctAtLeastGte",
+      "type": "number",
+      "required": false,
+      "description": "Negative review #1 topic share minimum (0-100, share among negative reviews)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "reviewNegativeTop1PctAtLeastLte",
+      "type": "number",
+      "required": false,
+      "description": "Negative review #1 topic share maximum (0-100)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "reviewNegativeTop2Topic",
+      "type": "string",
+      "required": false,
+      "description": "Negative review #2 topic fragment (snake_case, LIKE)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "reviewStrategicInsightTagsContains",
+      "type": "string",
+      "required": false,
+      "description": "Review strategic insight tag fragment (snake_case, LIKE): sizing_clarity, material_transparency, etc.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "amazonDomain": "US",
+    "keyword": "phone case",
+    "limit": 10
+  },
+  "jsonSchema": null
+}

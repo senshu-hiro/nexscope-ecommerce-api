@@ -1,0 +1,212 @@
+{
+  "type": "object",
+  "description": "Returns authorization or safe connection metadata without provider credentials.",
+  "fields": [
+    {
+      "name": "authorizationUrl",
+      "type": "string",
+      "required": false,
+      "description": "OAuth URL to open in a browser.",
+      "example": "https://example.com/authorize",
+      "constraints": {}
+    },
+    {
+      "name": "state",
+      "type": "string",
+      "required": false,
+      "description": "Opaque OAuth state used only by the backend callback.",
+      "example": "opaque-state",
+      "constraints": {}
+    },
+    {
+      "name": "expiresAt",
+      "type": "integer",
+      "required": false,
+      "description": "Authorization state expiry timestamp in milliseconds.",
+      "example": "1760000000000",
+      "constraints": {}
+    },
+    {
+      "name": "connections",
+      "type": "array",
+      "required": false,
+      "description": "Safe owned Amazon Ads connection metadata.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "profiles",
+      "type": "array",
+      "required": false,
+      "description": "Safe Amazon Ads profiles for the selected connection.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "profiles[].profileId",
+      "type": "string",
+      "required": false,
+      "description": "Amazon Ads profile ID.",
+      "example": "123456789",
+      "constraints": {}
+    },
+    {
+      "name": "profiles[].countryCode",
+      "type": "string",
+      "required": false,
+      "description": "Profile country code.",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "profiles[].currencyCode",
+      "type": "string",
+      "required": false,
+      "description": "Profile currency code.",
+      "example": "USD",
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific render or payload type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token cost reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "authorizationUrl": "https://example.com/authorize",
+    "state": "opaque-state",
+    "expiresAt": "1760000000000",
+    "connections": [],
+    "profiles": [
+      {
+        "profileId": "123456789",
+        "countryCode": "US",
+        "currencyCode": "USD"
+      }
+    ]
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,521 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Total record count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pages",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size, min 10, max 100",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "ASIN product list (see product object fields below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Rendered columns",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token consumption",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].asin",
+      "type": "string",
+      "required": false,
+      "description": "Amazon product ASIN",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "data[].parentAsin",
+      "type": "string",
+      "required": false,
+      "description": "Amazon product parent ASIN",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "data[].title",
+      "type": "string",
+      "required": false,
+      "description": "Product title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].brand",
+      "type": "string",
+      "required": false,
+      "description": "Brand",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].price",
+      "type": "number",
+      "required": false,
+      "description": "Price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].currentPrice",
+      "type": "number",
+      "required": false,
+      "description": "Current price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].customerRating",
+      "type": "number",
+      "required": false,
+      "description": "Rating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].totalReviews",
+      "type": "integer",
+      "required": false,
+      "description": "Review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].launchDate",
+      "type": "string",
+      "required": false,
+      "description": "Listing time",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "data[].link",
+      "type": "string",
+      "required": false,
+      "description": "ASIN link",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].imagesUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product main image",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "data[].sellerName",
+      "type": "string",
+      "required": false,
+      "description": "Seller name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sellerId",
+      "type": "string",
+      "required": false,
+      "description": "Seller ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "data[].fbaFee",
+      "type": "number",
+      "required": false,
+      "description": "FBA fee",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].shippingFee",
+      "type": "number",
+      "required": false,
+      "description": "FBA shipping fee",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].gpm",
+      "type": "number",
+      "required": false,
+      "description": "Gross profit margin",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].clickConversionRate",
+      "type": "number",
+      "required": false,
+      "description": "Click conversion rate (original 7-day click conversion rate)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].clickConversionRateComposite",
+      "type": "number",
+      "required": false,
+      "description": "Composite click conversion rate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].clickConversionRateType",
+      "type": "string",
+      "required": false,
+      "description": "Conversion rate calculation type",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].clickConversionRateCompositeType",
+      "type": "string",
+      "required": false,
+      "description": "Composite conversion rate calculation type",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].clickCountT7",
+      "type": "integer",
+      "required": false,
+      "description": "7-day click count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].clickCountT30",
+      "type": "integer",
+      "required": false,
+      "description": "30-day click count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].clickCountT90",
+      "type": "integer",
+      "required": false,
+      "description": "90-day click count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].clickCountGrowthT7",
+      "type": "number",
+      "required": false,
+      "description": "Weekly click growth rate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].clickCountGrowthT30",
+      "type": "number",
+      "required": false,
+      "description": "Monthly click growth rate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].purchasedClicksT360",
+      "type": "integer",
+      "required": false,
+      "description": "360-day purchase clicks",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].salesVolumeT360",
+      "type": "integer",
+      "required": false,
+      "description": "Annual sales volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].nicheCount",
+      "type": "integer",
+      "required": false,
+      "description": "Number of niche markets the product belongs to",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].sameNicheTitle",
+      "type": "string",
+      "required": false,
+      "description": "Same niche title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].involvedNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of involved keywords",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].involvedFrequency",
+      "type": "integer",
+      "required": false,
+      "description": "Frequency of involved keywords",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data[].categoryNames",
+      "type": "array",
+      "required": false,
+      "description": "Category information",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].hasMetric",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether the product has metrics",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "data[].searchValueType",
+      "type": "string",
+      "required": false,
+      "description": "Search type: exact (exact match), sameNiche (same niche as reference ASIN), category (category)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "data[].niches",
+      "type": "array",
+      "required": false,
+      "description": "Top 3 niche markets, containing: nicheId, nicheTitle, demand (market score), image, marketplaceId",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].bestSellersRanking",
+      "type": "array",
+      "required": false,
+      "description": "Best seller rankings, containing: rank (ranking), category (category name)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].trends",
+      "type": "array",
+      "required": false,
+      "description": "90-day trend data, containing: day (date), clickCountT7 (weekly click count), reviewCount (review count), reviewRating (review rating), bestSellerRanking (BSR ranking), averagePriceT7 (weekly average price), totalOfferDepthT7 (7-day new offers)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "data[].lastUpdateTime",
+      "type": "string",
+      "required": false,
+      "description": "Last update time",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "pages": 1,
+    "page": 1,
+    "pageSize": 10,
+    "data": [
+      {
+        "asin": "B072MQ5BRX",
+        "parentAsin": "B072MQ5BRX",
+        "price": 1,
+        "currentPrice": 1,
+        "customerRating": 1,
+        "totalReviews": 1,
+        "launchDate": "2026-01-01",
+        "imagesUrl": "https://example.com/image.jpg",
+        "sellerId": "example-id",
+        "fbaFee": 1,
+        "shippingFee": 1,
+        "gpm": 1,
+        "clickConversionRate": 1,
+        "clickConversionRateComposite": 1,
+        "clickCountT7": 1,
+        "clickCountT30": 1,
+        "clickCountT90": 1,
+        "clickCountGrowthT7": 1,
+        "clickCountGrowthT30": 1,
+        "purchasedClicksT360": 1,
+        "salesVolumeT360": 1,
+        "nicheCount": 1,
+        "involvedNum": 1,
+        "involvedFrequency": 1,
+        "categoryNames": [],
+        "hasMetric": false,
+        "niches": [],
+        "bestSellersRanking": [],
+        "trends": [],
+        "lastUpdateTime": "2026-01-01"
+      }
+    ],
+    "columns": [],
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

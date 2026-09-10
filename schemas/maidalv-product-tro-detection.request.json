@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "description": "mainProductImage is required. API callers must provide HTTPS URLs; local file paths are not accepted by Run.",
+  "fields": [
+    {
+      "name": "mainProductImage",
+      "type": "string",
+      "required": true,
+      "description": "Public HTTPS URL of the main product image.",
+      "example": "https://example.com/product.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "referenceImages",
+      "type": "array",
+      "required": false,
+      "description": "Public reference image URLs.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "otherProductImages",
+      "type": "array",
+      "required": false,
+      "description": "Additional product image URLs.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "ipImages",
+      "type": "array",
+      "required": false,
+      "description": "Known intellectual-property evidence image URLs.",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "referenceText",
+      "type": "string",
+      "required": false,
+      "description": "Reference text associated with the product.",
+      "example": "Wireless speaker",
+      "constraints": {}
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "required": false,
+      "description": "Product description used as additional evidence.",
+      "example": "Portable wireless speaker",
+      "constraints": {}
+    },
+    {
+      "name": "ipKeywords",
+      "type": "array",
+      "required": false,
+      "description": "Intellectual-property keywords.",
+      "example": [
+        "speaker"
+      ],
+      "constraints": {}
+    },
+    {
+      "name": "language",
+      "type": "string",
+      "required": false,
+      "description": "Requested response language.",
+      "example": "en",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "language": "en",
+    "mainProductImage": "https://example.com/product.jpg"
+  },
+  "jsonSchema": null
+}

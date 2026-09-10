@@ -1,0 +1,64 @@
+{
+  "type": "object",
+  "description": "Recolor the requested subject using one or more target colors.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the product image. The image must be between 300 and 4096 pixels in both width and height.",
+      "example": "https://example.com/product.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "colors",
+      "type": "array",
+      "required": false,
+      "description": "Target colors, from 1 to 25 entries. Each value must use full HEX (#RRGGBB), HSB (hsb(H, S%, B%)), or RGB (rgb(R, G, B)) format. Provide colors or refImageUrls, but not both.",
+      "example": [
+        "#000000",
+        "#FFFFFF"
+      ],
+      "constraints": {
+        "conflictsWith": [
+          "refImageUrls"
+        ],
+        "minItems": 1,
+        "maxItems": 25
+      }
+    },
+    {
+      "name": "refImageUrls",
+      "type": "array",
+      "required": false,
+      "description": "Reference image URLs for reference-image recoloring, from 1 to 25 entries. Provide refImageUrls or colors, but not both.",
+      "example": [
+        "https://example.com/color-reference.jpg"
+      ],
+      "constraints": {
+        "conflictsWith": [
+          "colors"
+        ],
+        "minItems": 1,
+        "maxItems": 25
+      }
+    },
+    {
+      "name": "colorSubject",
+      "type": "string",
+      "required": true,
+      "description": "Subject to recolor.",
+      "example": "phone case",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/product.jpg",
+    "colors": [
+      "#000000",
+      "#FFFFFF"
+    ],
+    "colorSubject": "phone case"
+  },
+  "jsonSchema": null
+}

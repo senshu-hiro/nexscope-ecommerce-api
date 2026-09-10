@@ -1,0 +1,132 @@
+{
+  "type": "object",
+  "description": "Generate a compact Seedance 2.0 video using a primary image, up to 9 reference images, or a reference video.",
+  "fields": [
+    {
+      "name": "videoTime",
+      "type": "integer",
+      "required": true,
+      "description": "Video duration in seconds. Supported values: 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15.",
+      "example": 10,
+      "constraints": {
+        "allowedValues": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      }
+    },
+    {
+      "name": "prompt",
+      "type": "string",
+      "required": true,
+      "description": "Video generation prompt describing motion, subject consistency, camera movement, and the ecommerce scene. Maximum 2000 characters.",
+      "example": "Keep the product consistent while the camera slowly orbits and highlights material details.",
+      "constraints": {
+        "maxLength": 2000
+      }
+    },
+    {
+      "name": "promptOptimizer",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether Nexscope should optimize the video prompt before generation. Defaults to false.",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "isPro",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to use the model's professional generation mode when supported. Defaults to false.",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "resolution",
+      "type": "string",
+      "required": false,
+      "description": "Output resolution. Supported values: 480p, 720p.",
+      "example": "720p",
+      "constraints": {
+        "allowedValues": [
+          "480p",
+          "720p"
+        ]
+      }
+    },
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Public URL of a first-frame or primary reference image. Each image must be between 300 and 6000 pixels in both width and height.",
+      "example": "https://example.com/source-image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "imageList",
+      "type": "array",
+      "required": false,
+      "description": "Public reference image URLs. Provide 1 to 9 images. Each image must be between 300 and 6000 pixels in both width and height.",
+      "example": [
+        "https://example.com/product.jpg",
+        "https://example.com/ref-2.jpg"
+      ],
+      "constraints": {
+        "maxItems": 9,
+        "minItems": 1
+      }
+    },
+    {
+      "name": "video",
+      "type": "array",
+      "required": false,
+      "description": "Optional public reference-video URL list. Reference-video mode cannot be combined with image references or a final-frame image.",
+      "example": [
+        "https://example.com/reference-video.mp4"
+      ],
+      "constraints": {
+        "minItems": 1,
+        "conflictsWith": [
+          "imageUrl",
+          "imageList",
+          "lastFrameImageUrl"
+        ]
+      }
+    },
+    {
+      "name": "aspectRatio",
+      "type": "string",
+      "required": false,
+      "description": "Target video aspect ratio supported by this model. Supported values: 16:9, 4:3, 1:1, 3:4, 9:16, 21:9, adaptive.",
+      "example": "16:9",
+      "constraints": {
+        "allowedValues": [
+          "16:9",
+          "4:3",
+          "1:1",
+          "3:4",
+          "9:16",
+          "21:9",
+          "adaptive"
+        ]
+      }
+    }
+  ],
+  "example": {
+    "videoTime": 10,
+    "prompt": "Keep the product consistent while the camera slowly orbits and highlights material details.",
+    "imageUrl": "https://example.com/source-image.jpg",
+    "resolution": "720p"
+  },
+  "jsonSchema": null
+}

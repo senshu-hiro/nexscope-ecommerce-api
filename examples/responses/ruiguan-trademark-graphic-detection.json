@@ -1,0 +1,17 @@
+{
+  "boundingBoxCount": 1,
+  "total": 1,
+  "data": [
+    {
+      "image": "https://example.com/image.jpg",
+      "niceClass": [],
+      "similarity": 1,
+      "registrationDate": "2026-01-01",
+      "bid": "example-id",
+      "applicationDate": "2026-01-01"
+    }
+  ],
+  "detectId": "example-id",
+  "columns": [],
+  "costToken": 1
+}

@@ -1,0 +1,125 @@
+{
+  "properties": {
+    "errcode": {
+      "type": "integer"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "errmsg": {
+      "type": "string"
+    },
+    "data": {
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Related product identity: id.",
+                "nullable": true
+              },
+              "tiktok_product_detail_product_name": {
+                "type": "string",
+                "description": "Related product identity: tiktok product detail product name.",
+                "nullable": true
+              },
+              "tiktok_product_detail_floor_price": {
+                "type": "object",
+                "description": "Price with original unit and value: tiktok product detail floor price.",
+                "nullable": true
+              },
+              "tiktok_product_detail_ceiling_price": {
+                "type": "object",
+                "description": "Price with original unit and value: tiktok product detail ceiling price.",
+                "nullable": true
+              },
+              "tiktok_product_detail_product_rating": {
+                "type": "number",
+                "description": "Provider product rating: tiktok product detail product rating.",
+                "nullable": true
+              },
+              "tiktok_ads_detail_product_id": {
+                "type": "string",
+                "description": "Ad related product identity: tiktok ads detail product id.",
+                "nullable": true
+              },
+              "tiktok_ads_detail_video_id": {
+                "type": "string",
+                "description": "Ad related product identity: tiktok ads detail video id.",
+                "nullable": true
+              },
+              "tiktok_ads_detail_product_country_code": {
+                "type": "string",
+                "description": "Ad related product identity: tiktok ads detail product country code.",
+                "nullable": true
+              },
+              "tiktok_ads_detail_product_total_sold_count": {
+                "type": "integer",
+                "description": "Ad attributed sales count: tiktok ads detail product total sold count.",
+                "nullable": true
+              },
+              "tiktok_ads_detail_video_30d_sold_count": {
+                "type": "integer",
+                "description": "Ad attributed sales count: tiktok ads detail video 30d sold count.",
+                "nullable": true
+              },
+              "tiktok_ads_detail_product_total_gmv": {
+                "type": "object",
+                "description": "GMV preserving original unit and value: tiktok ads detail product total gmv.",
+                "nullable": true
+              },
+              "tiktok_ads_detail_video_30d_gmv": {
+                "type": "object",
+                "description": "GMV preserving original unit and value: tiktok ads detail video 30d gmv.",
+                "nullable": true
+              },
+              "tiktok_product_detail_l1_category": {
+                "description": "Provider tiktok product detail l1 category. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "tiktok_product_detail_commission_rate": {
+                "description": "Provider tiktok product detail commission rate. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "tiktok_product_detail_product_skus": {
+                "description": "Provider tiktok product detail product skus. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "tiktok_product_detail_region": {
+                "description": "Provider tiktok product detail region. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "tiktok_product_detail_product_sku_props": {
+                "description": "Provider tiktok product detail product sku props. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "tiktok_product_detail_product_images": {
+                "description": "Provider tiktok product detail product images. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "tiktok_product_detail_l3_category": {
+                "description": "Provider tiktok product detail l3 category. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "tiktok_ads_detail_product_launch_time": {
+                "description": "Provider tiktok ads detail product launch time. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "tiktok_product_detail_l2_category": {
+                "description": "Provider tiktok product detail l2 category. The source establishes this field name; preserve its runtime JSON type and missing values."
+              },
+              "tiktok_product_detail_product_status": {
+                "description": "Provider tiktok product detail product status. The source establishes this field name; preserve its runtime JSON type and missing values."
+              }
+            },
+            "type": "object",
+            "additionalProperties": true
+          },
+          "nullable": true
+        },
+        "total_count": {
+          "nullable": true,
+          "type": "integer"
+        }
+      },
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

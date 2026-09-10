@@ -1,0 +1,18 @@
+{
+  "required": [
+    "connectionId",
+    "reportId"
+  ],
+  "type": "object",
+  "properties": {
+    "connectionId": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "reportId": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

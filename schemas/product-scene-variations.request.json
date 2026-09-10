@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "description": "Generate multiple ecommerce scene variants from a product image, optional segmentation, and prompt guidance.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the product image. The image must be up to 20 MB and between 385 and 8192 pixels in both width and height.",
+      "example": "https://example.com/product.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "segImageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Optional segmentation mask URL.",
+      "example": "https://example.com/mask.png",
+      "constraints": {}
+    },
+    {
+      "name": "strength",
+      "type": "number",
+      "required": false,
+      "description": "Variation strength from 0.1 to 1. Defaults to 0.5.",
+      "example": 0.5,
+      "constraints": {}
+    },
+    {
+      "name": "prompt",
+      "type": "string",
+      "required": false,
+      "description": "Scene generation prompt, up to 600 characters.",
+      "example": "modern kitchen countertop",
+      "constraints": {}
+    },
+    {
+      "name": "imageOutputWidth",
+      "type": "integer",
+      "required": false,
+      "description": "Desired output width in pixels, from 32 to 2048.",
+      "example": 1024,
+      "constraints": {}
+    },
+    {
+      "name": "imageOutputHeight",
+      "type": "integer",
+      "required": false,
+      "description": "Desired output height in pixels, from 32 to 2048.",
+      "example": 1024,
+      "constraints": {}
+    },
+    {
+      "name": "outputNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of images to generate, from 1 to 4.",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/product.jpg",
+    "segImageUrl": "https://example.com/mask.png",
+    "strength": 0.5,
+    "prompt": "modern kitchen countertop",
+    "imageOutputWidth": 1024,
+    "imageOutputHeight": 1024,
+    "outputNum": 1
+  },
+  "jsonSchema": null
+}

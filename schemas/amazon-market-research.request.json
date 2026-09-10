@@ -1,0 +1,343 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-market-research.",
+  "fields": [
+    {
+      "name": "marketplace",
+      "type": "string",
+      "required": true,
+      "description": "Site code, see [marketplace](#marketplace-options)",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "nodeIdPath",
+      "type": "string",
+      "required": false,
+      "description": "Category node ID path, e.g. 172282:281407",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "departmentKeyword",
+      "type": "string",
+      "required": false,
+      "description": "Category keyword path, e.g. Electronics:Accessories & Supplies",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "sellerLocation",
+      "type": "string",
+      "required": false,
+      "description": "Seller location, multiple values comma-separated; see Seller Sprite table 1.3 for values",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "newProduct",
+      "type": "integer",
+      "required": false,
+      "description": "New product definition (months)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "topNum",
+      "type": "integer",
+      "required": false,
+      "description": "Top Listing count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "month",
+      "type": "string",
+      "required": false,
+      "description": "Filter date: nearly or yyyyMM",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, starting from 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "size",
+      "type": "integer",
+      "required": false,
+      "description": "Results per page",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "orderField",
+      "type": "string",
+      "required": false,
+      "description": "Sort field, see [orderField](#orderfield-options)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "orderDesc",
+      "type": "boolean",
+      "required": false,
+      "description": "true descending, false ascending",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "minAvgRevenue/maxAvgRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum average monthly sales revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minAvgUnits/maxAvgUnits",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum / maximum average monthly sales volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minGoodsCount/maxGoodsCount",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum / maximum product count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minSellers/maxSellers",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum / maximum seller count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minBrands/maxBrands",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum / maximum brand count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minAvgSellers/maxAvgSellers",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum average seller count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minGoodsCrn/maxGoodsCrn",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum product concentration (decimal 0-1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minSellerCrn/maxSellerCrn",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum seller concentration (decimal 0-1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minBrandCrn/maxBrandCrn",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum brand concentration (decimal 0-1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minAmazonSelfProportion/maxAmazonSelfProportion",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum Amazon self-operated share (decimal 0-1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minFbaProportion/maxFbaProportion",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum FBA share (decimal 0-1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minFbmProportion/maxFbmProportion",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum FBM share (decimal 0-1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minEbcProportion/maxEbcProportion",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum A+ share (decimal 0-1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minNewProportion/maxNewProportion",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum new product share (scale may differ from other ratio fields; refer to tool schema / actual network behavior)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minAvgPrice/maxAvgPrice",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum average price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minAvgRating/maxAvgRating",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum average rating value",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minAvgRatings/maxAvgRatings",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum / maximum average review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minAvgProfit/maxAvgProfit",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum average gross margin (input N means N%, 0-100)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minAvgBsr/maxAvgBsr",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum / maximum average BSR rank",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minNewCount/maxNewCount",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum / maximum new product count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minNewAvgPrice/maxNewAvgPrice",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum new product average price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minNewAvgRating/maxNewAvgRating",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum new product average star rating",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minNewAvgRatings/maxNewAvgRatings",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum / maximum new product average review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minNewAvgUnits/maxNewAvgUnits",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum new product average monthly sales",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minNewAvgRevenue/maxNewAvgRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum new product average monthly revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minTopAvgUnits/maxTopAvgUnits",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum / maximum top listing average monthly sales",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minTopAvgRevenue/maxTopAvgRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum top listing average monthly revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minTopAvgBsr/maxTopAvgBsr",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum / maximum top listing average BSR",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minWeight/maxWeight",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum weight",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minVolume/maxVolume",
+      "type": "number",
+      "required": false,
+      "description": "Minimum / maximum volume",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "page": 1,
+    "departmentKeyword": "phone case",
+    "newProduct": 1,
+    "size": 1,
+    "marketplace": "US",
+    "topNum": 1
+  },
+  "jsonSchema": null
+}

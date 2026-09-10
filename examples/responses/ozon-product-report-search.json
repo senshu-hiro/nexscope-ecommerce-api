@@ -1,0 +1,51 @@
+{
+  "errcode": 1,
+  "total": 1,
+  "data": [
+    {
+      "sku": 1,
+      "productId": 1,
+      "imageUrl": "https://example.com/image.jpg",
+      "productUrl": "https://example.com/image.jpg",
+      "productPageUrl": "https://example.com/image.jpg",
+      "sales": 1,
+      "monthlySalesUnits": 1,
+      "revenue": 1,
+      "monthlySalesRevenue": 1,
+      "missedRevenue": 1,
+      "price": 1,
+      "convToCartPdp": 1,
+      "orderConversionRate": 1,
+      "salesRate": 1,
+      "revenueRate": 1,
+      "drr": 1,
+      "grossMargin": 1,
+      "returnCancellationRate": 1,
+      "views": 1,
+      "reviewRating": 1,
+      "rating": 1,
+      "reviewCount": 1,
+      "questionsAndAnswers": 1,
+      "variants": 1,
+      "fulfillment": [],
+      "weight": 1,
+      "volume": 1,
+      "upTime": 1,
+      "upDays": 1,
+      "upMonths": 1,
+      "brandId": 1,
+      "brandUrl": "https://example.com/image.jpg",
+      "sellerId": 1,
+      "categoryInfo": {}
+    }
+  ],
+  "products": [],
+  "columns": [
+    {
+      "fullCategoryId": [],
+      "category": {}
+    }
+  ],
+  "costTime": 1,
+  "costToken": 1
+}

@@ -1,0 +1,93 @@
+{
+  "type": "object",
+  "unevaluatedProperties": false,
+  "required": [
+    "operation"
+  ],
+  "discriminator": {
+    "propertyName": "operation"
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "operation": {
+          "const": "searchByName"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pageIndex": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        }
+      },
+      "required": [
+        "operation",
+        "name"
+      ]
+    },
+    {
+      "properties": {
+        "operation": {
+          "const": "detail"
+        },
+        "productId": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "operation",
+        "productId"
+      ]
+    },
+    {
+      "properties": {
+        "operation": {
+          "const": "trend"
+        },
+        "productId": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "operation",
+        "productId"
+      ]
+    },
+    {
+      "properties": {
+        "operation": {
+          "const": "salesVolume"
+        },
+        "productId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "queryDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "queryEndDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "pageIndex": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        }
+      },
+      "required": [
+        "operation",
+        "productId"
+      ],
+      "x-relations": [
+        "queryDate <= queryEndDate; defaults to latest 30 days; start-only ends today"
+      ]
+    }
+  ]
+}

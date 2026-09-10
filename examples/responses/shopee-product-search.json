@@ -1,0 +1,39 @@
+{
+  "total": 1,
+  "totalSize": 1,
+  "columns": [],
+  "costToken": 1,
+  "products": [
+    {
+      "pid": "example-id",
+      "imageUrl": "https://example.com/image.jpg",
+      "productUrl": "https://example.com/image.jpg",
+      "price": 1,
+      "minPrice": 1,
+      "maxPrice": 1,
+      "sold": 1,
+      "estimateSold": 1,
+      "historicalSold": 1,
+      "payment": 1,
+      "rating": 1,
+      "ratings": 1,
+      "favorite": 1,
+      "viewCount": 1,
+      "stock": 1,
+      "skuNumber": 1,
+      "cid": "example-id",
+      "shopId": "example-id",
+      "shopUrl": "https://example.com/image.jpg",
+      "shopProductsCount": 1,
+      "approvedDate": "2026-01-01",
+      "isOfficialShop": 1,
+      "isShopeeVerified": 1,
+      "isHotSales": 1,
+      "shippingIconType": 1,
+      "cbOption": 1,
+      "estimatedDays": 1,
+      "status": 1,
+      "notExist": 1
+    }
+  ]
+}

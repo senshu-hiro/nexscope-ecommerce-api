@@ -1,0 +1,11 @@
+{
+  "costToken": 1,
+  "historicalSearchVolumeList": [
+    {
+      "id": "example-id",
+      "estimateStartDate": "2026-01-01",
+      "estimateEndDate": "2026-01-01",
+      "estimatedExactSearchVolume": 1
+    }
+  ]
+}

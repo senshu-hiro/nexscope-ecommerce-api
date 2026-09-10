@@ -1,0 +1,48 @@
+{
+  "required": [
+    "country",
+    "id"
+  ],
+  "type": "object",
+  "properties": {
+    "country": {
+      "enum": [
+        "br",
+        "de",
+        "es",
+        "fr",
+        "gb",
+        "id",
+        "it",
+        "jp",
+        "mx",
+        "my",
+        "ph",
+        "sg",
+        "th",
+        "us",
+        "vn"
+      ],
+      "type": "string",
+      "description": "Lowercase request market. Returned country_code may differ; preserve both."
+    },
+    "id": {
+      "minLength": 1,
+      "type": "string",
+      "description": "Video ID returned by its search operation. Keep identifiers as strings to avoid precision loss."
+    },
+    "page": {
+      "default": 1,
+      "minimum": 1,
+      "type": "integer",
+      "description": "Page number, starting at 1. No automatic pagination."
+    },
+    "pageSize": {
+      "maximum": 10,
+      "minimum": 1,
+      "type": "integer",
+      "description": "Items per page, from 1 to 10. Omission preserves the upstream default."
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,339 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Number of results returned on this page",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productNum",
+      "type": "integer",
+      "required": false,
+      "description": "Total number of matching products (upstream product_num)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "required": false,
+      "description": "Temu product list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Columns for rendering",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Title (Temu Product Query)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Source type: temu",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Tool type: ehunt",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style: tableListWorkbenches",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].productId",
+      "type": "string",
+      "required": false,
+      "description": "Product ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "products[].productName",
+      "type": "string",
+      "required": false,
+      "description": "Product name (English)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].productNameCn",
+      "type": "string",
+      "required": false,
+      "description": "Product name (Chinese)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].logoUrl",
+      "type": "string",
+      "required": false,
+      "description": "Main image URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].price",
+      "type": "string",
+      "required": false,
+      "description": "Price",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].orderTotal",
+      "type": "string",
+      "required": false,
+      "description": "Total sales",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].orderWeek",
+      "type": "string",
+      "required": false,
+      "description": "Weekly sales",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].orderDay",
+      "type": "string",
+      "required": false,
+      "description": "Daily sales",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].orderMonth",
+      "type": "string",
+      "required": false,
+      "description": "Monthly sales",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].rating",
+      "type": "string",
+      "required": false,
+      "description": "Rating",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].reviewNum",
+      "type": "string",
+      "required": false,
+      "description": "Review count",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].publishTime",
+      "type": "string",
+      "required": false,
+      "description": "Listing time",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].soldOut",
+      "type": "string",
+      "required": false,
+      "description": "Whether delisted",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].isLocal",
+      "type": "string",
+      "required": false,
+      "description": "Whether semi-managed: 0=Fully managed, 1=Semi-managed",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].localRegion",
+      "type": "string",
+      "required": false,
+      "description": "Semi-managed region list",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].storeId",
+      "type": "string",
+      "required": false,
+      "description": "Store ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "products[].tags",
+      "type": "string",
+      "required": false,
+      "description": "Tag list",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].customTags",
+      "type": "string",
+      "required": false,
+      "description": "Custom tags",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].categoryHome",
+      "type": "string",
+      "required": false,
+      "description": "Front-end category",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].categoryBackend",
+      "type": "string",
+      "required": false,
+      "description": "Back-end category",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token cost reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "productNum": 1,
+    "products": [
+      {
+        "productId": "example-id",
+        "logoUrl": "https://example.com/image.jpg",
+        "storeId": "example-id"
+      }
+    ],
+    "columns": []
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,401 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Total review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "data",
+      "type": "array",
+      "required": false,
+      "description": "Review list (see review object below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Rendered columns",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Total token consumption",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].reviewId",
+      "type": "string",
+      "required": false,
+      "description": "Review ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].asin",
+      "type": "string",
+      "required": false,
+      "description": "Product ASIN",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].title",
+      "type": "string",
+      "required": false,
+      "description": "Review title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].text",
+      "type": "string",
+      "required": false,
+      "description": "Review content",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].rating",
+      "type": "string",
+      "required": false,
+      "description": "Rating",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].date",
+      "type": "string",
+      "required": false,
+      "description": "Review date",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].userName",
+      "type": "string",
+      "required": false,
+      "description": "Reviewer name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].verified",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether verified purchase",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].vine",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether Vine Voice review",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].numberOfHelpful",
+      "type": "integer",
+      "required": false,
+      "description": "Helpful count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].imageUrlList",
+      "type": "array",
+      "required": false,
+      "description": "Review image list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns[].videoUrlList",
+      "type": "array",
+      "required": false,
+      "description": "Review video list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns[].domainCode",
+      "type": "string",
+      "required": false,
+      "description": "Country code",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].productTitle",
+      "type": "string",
+      "required": false,
+      "description": "Product title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].productRating",
+      "type": "string",
+      "required": false,
+      "description": "Product rating",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].countRatings",
+      "type": "integer",
+      "required": false,
+      "description": "Product rating count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].countReviews",
+      "type": "integer",
+      "required": false,
+      "description": "Product review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].variationId",
+      "type": "string",
+      "required": false,
+      "description": "Variation ID",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "columns[].variationList",
+      "type": "array",
+      "required": false,
+      "description": "Variation list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "columns[].profilePath",
+      "type": "string",
+      "required": false,
+      "description": "Reviewer profile path",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].currentPage",
+      "type": "integer",
+      "required": false,
+      "description": "Current page number",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].sortStrategy",
+      "type": "string",
+      "required": false,
+      "description": "Sort strategy",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].statusCode",
+      "type": "integer",
+      "required": false,
+      "description": "Status code",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].statusMessage",
+      "type": "string",
+      "required": false,
+      "description": "Status message",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns[].locale",
+      "type": "object",
+      "required": false,
+      "description": "Locale information",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "columns[].reviewSummary",
+      "type": "object",
+      "required": false,
+      "description": "Review summary data",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "columns[].filters",
+      "type": "object",
+      "required": false,
+      "description": "Applied filter conditions",
+      "example": {},
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific response title.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source platform type.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific source tool name.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "data": [],
+    "columns": [
+      {
+        "reviewId": "example-id",
+        "asin": "B072MQ5BRX",
+        "date": "2026-01-01",
+        "verified": false,
+        "vine": false,
+        "numberOfHelpful": 1,
+        "imageUrlList": [],
+        "videoUrlList": [],
+        "countRatings": 1,
+        "countReviews": 1,
+        "variationId": "example-id",
+        "variationList": [],
+        "currentPage": 1,
+        "statusCode": 1,
+        "locale": {},
+        "reviewSummary": {},
+        "filters": {}
+      }
+    ],
+    "costToken": 1
+  },
+  "jsonSchema": null
+}

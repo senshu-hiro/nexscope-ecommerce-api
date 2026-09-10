@@ -1,0 +1,269 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-product-database.",
+  "fields": [
+    {
+      "name": "marketplace",
+      "type": "string",
+      "required": true,
+      "description": "Target marketplace code. Options: us, uk, de, in, ca, fr, it, es, mx, jp",
+      "example": "us",
+      "constraints": {}
+    },
+    {
+      "name": "includeKeywords",
+      "type": "string",
+      "required": false,
+      "description": "Keywords to include in title/ASIN, comma-separated, up to 100 items, max 50 chars each",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "excludeKeywords",
+      "type": "string",
+      "required": false,
+      "description": "Keywords to exclude from title/ASIN, comma-separated, up to 100 items, max 50 chars each",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "categories",
+      "type": "string",
+      "required": false,
+      "description": "Primary category names, comma-separated, must match the standard category names for the corresponding site. US site examples: Appliances, Arts Crafts & Sewing, Automotive, Baby, Beauty & Personal Care, Books, CDs & Vinyl, Cell Phones & Accessories, Clothing Shoes & Jewelry, Collectibles & Fine Art, Computers, Digital Music, Electronics, Garden & Outdoor, Grocery & Gourmet Food, Handmade, Health Household & Baby Care, Home & Kitchen, Industrial & Scientific, Kindle Store, Kitchen & Dining, Movies & TV, Musical Instruments, Office Products, Pet Supplies, Sports & Outdoors, Tools & Home Improvement, Toys & Games, Video Games, etc. Other sites (uk, de, fr, it, es, mx, jp, ca, in) have their own localized category names",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "minPrice",
+      "type": "number",
+      "required": false,
+      "description": "Minimum price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxPrice",
+      "type": "number",
+      "required": false,
+      "description": "Maximum price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minSales",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum monthly sales",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxSales",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum monthly sales",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Minimum monthly revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxRevenue",
+      "type": "number",
+      "required": false,
+      "description": "Maximum monthly revenue",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minReviews",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum number of reviews",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxReviews",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum number of reviews",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minRating",
+      "type": "number",
+      "required": false,
+      "description": "Minimum rating (1.0-5.0)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxRating",
+      "type": "number",
+      "required": false,
+      "description": "Maximum rating (1.0-5.0)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minWeight",
+      "type": "number",
+      "required": false,
+      "description": "Minimum weight (lbs)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxWeight",
+      "type": "number",
+      "required": false,
+      "description": "Maximum weight (lbs)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minRank",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum BSR ranking",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxRank",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum BSR ranking",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minLqs",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum LQS score (1-10)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxLqs",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum LQS score (1-10)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minSellers",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum number of sellers",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxSellers",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum number of sellers",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minNet",
+      "type": "number",
+      "required": false,
+      "description": "Minimum net profit",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxNet",
+      "type": "number",
+      "required": false,
+      "description": "Maximum net profit",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "sellerTypes",
+      "type": "string",
+      "required": false,
+      "description": "Seller types, comma-separated. Options: amz (Amazon self-operated), fba, fbm",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "productTiers",
+      "type": "string",
+      "required": false,
+      "description": "Product size tiers, comma-separated. Options: oversize, standard",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "excludeTopBrands",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to exclude top brands",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "excludeUnavailableProducts",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to exclude unavailable products",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "minUpdatedAt",
+      "type": "string",
+      "required": false,
+      "description": "Data update start date (YYYY-MM-DD)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "maxUpdatedAt",
+      "type": "string",
+      "required": false,
+      "description": "Data update end date (YYYY-MM-DD)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "needCount",
+      "type": "integer",
+      "required": false,
+      "description": "Total number of results to return, API auto-paginates internally",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "sort",
+      "type": "string",
+      "required": false,
+      "description": "Sort field. Options: name, -name, category, -category, revenue, -revenue, sales, -sales, price, -price, rank, -rank, reviews, -reviews, lqs, -lqs, sellers, -sellers. Prefix - indicates descending. Default: name",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "needCount": 10,
+    "includeKeywords": "phone case",
+    "marketplace": "us",
+    "sort": "-sales"
+  },
+  "jsonSchema": null
+}

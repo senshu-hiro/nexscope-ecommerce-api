@@ -1,0 +1,119 @@
+{
+  "type": "object",
+  "description": "Generate a Kling 3 Omni video using first/last frames or up to 7 reference images.",
+  "fields": [
+    {
+      "name": "videoTime",
+      "type": "integer",
+      "required": true,
+      "description": "Video duration in seconds. Supported values: 5, 10, 15.",
+      "example": 10,
+      "constraints": {
+        "allowedValues": [
+          5,
+          10,
+          15
+        ]
+      }
+    },
+    {
+      "name": "prompt",
+      "type": "string",
+      "required": true,
+      "description": "Video generation prompt describing motion, subject consistency, camera movement, and the ecommerce scene. Maximum 2000 characters.",
+      "example": "Keep the product consistent while the camera slowly orbits and highlights material details.",
+      "constraints": {
+        "maxLength": 2000
+      }
+    },
+    {
+      "name": "promptOptimizer",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether Nexscope should optimize the video prompt before generation. Defaults to false.",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "isPro",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to use the model's professional generation mode when supported. Defaults to false.",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "resolution",
+      "type": "string",
+      "required": false,
+      "description": "Output resolution. Supported values: 720p, 1080p.",
+      "example": "1080p",
+      "constraints": {
+        "allowedValues": [
+          "720p",
+          "1080p"
+        ]
+      }
+    },
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Public URL of a first-frame or primary reference image.",
+      "example": "https://example.com/source-image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "imageList",
+      "type": "array",
+      "required": false,
+      "description": "Public reference image URLs. Provide 1 to 7 images.",
+      "example": [
+        "https://example.com/product.jpg",
+        "https://example.com/ref-2.jpg"
+      ],
+      "constraints": {
+        "maxItems": 7,
+        "minItems": 1
+      }
+    },
+    {
+      "name": "aspectRatio",
+      "type": "string",
+      "required": false,
+      "description": "Target video aspect ratio supported by this model. Supported values: 1:1, 9:16, 16:9.",
+      "example": "1:1",
+      "constraints": {
+        "allowedValues": [
+          "1:1",
+          "9:16",
+          "16:9"
+        ],
+        "requiredWhenPresent": [
+          "imageList"
+        ]
+      }
+    },
+    {
+      "name": "lastFrameImageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Optional public URL of the final-frame image. Requires 1080p.",
+      "example": "https://example.com/last-frame.jpg",
+      "constraints": {
+        "requires": {
+          "resolution": [
+            "1080p"
+          ]
+        }
+      }
+    }
+  ],
+  "example": {
+    "videoTime": 10,
+    "prompt": "Keep the product consistent while the camera slowly orbits and highlights material details.",
+    "imageUrl": "https://example.com/source-image.jpg",
+    "resolution": "1080p"
+  },
+  "jsonSchema": null
+}

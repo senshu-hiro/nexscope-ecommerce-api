@@ -1,0 +1,13 @@
+{
+  "errmsg": "ok",
+  "data": {
+    "items": [
+      {
+        "user_id": null,
+        "uid": null,
+        "unique_id": null
+      }
+    ]
+  },
+  "errcode": 200
+}

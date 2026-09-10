@@ -1,0 +1,52 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-keyword-overview.",
+  "fields": [
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": true,
+      "description": "Keyword, translate to the corresponding country's language whenever possible. Max length: 1000 characters",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "country",
+      "type": "string",
+      "required": false,
+      "description": "Country site, default US. Options (13 total): US, UK, DE, CA, JP, FR, ES, IT, MX, AU, AE, BR, SA",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "last7d",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to get last 7 days data, default true. When false, use startDate/endDate range",
+      "example": true,
+      "constraints": {}
+    },
+    {
+      "name": "startDate",
+      "type": "string",
+      "required": false,
+      "description": "Start date yyyy-MM-dd (effective when last7d=false)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "endDate",
+      "type": "string",
+      "required": false,
+      "description": "End date yyyy-MM-dd (paired with startDate)",
+      "example": "2026-01-01",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "last7d": true,
+    "country": "US",
+    "keyword": "phone case"
+  },
+  "jsonSchema": null
+}

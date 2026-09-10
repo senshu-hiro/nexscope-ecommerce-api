@@ -1,0 +1,67 @@
+{
+  "total": 1,
+  "marketplace": "US",
+  "asin": "B072MQ5BRX",
+  "data": [
+    {
+      "keyword": "phone case",
+      "keywordCn": "phone case",
+      "trafficKeywordType": "phone case",
+      "conversionKeywordType": "phone case",
+      "badges": [],
+      "rankPosition": {},
+      "adPosition": {},
+      "searches": 1,
+      "searchesRank": 1,
+      "searchesRankTimeFrom": 1,
+      "searchesRankTimeTo": 1,
+      "purchases": 1,
+      "purchaseRate": 1,
+      "products": 1,
+      "supplyDemandRatio": 1,
+      "trafficPercentage": 1,
+      "naturalRatio": 1,
+      "adRatio": 1,
+      "calculatedWeeklySearches": 1,
+      "impressions": 1,
+      "clicks": 1,
+      "bid": 1,
+      "bidMin": 1,
+      "bidMax": 1,
+      "latest1daysAds": 1,
+      "latest7daysAds": 1,
+      "latest30daysAds": 1,
+      "sprt": 1,
+      "monopolyClickRate": 1,
+      "top3ClickingRate": 1,
+      "top3ConversionRate": 1,
+      "titleDensity": 1,
+      "stats": [],
+      "updatedTime": 1
+    }
+  ],
+  "summaryList": [
+    {
+      "total": 1,
+      "keywords": "phone case"
+    }
+  ],
+  "columns": [
+    {
+      "updatedTime": 1,
+      "pageSize": 1,
+      "index": 1,
+      "page": 1,
+      "position": 1
+    }
+  ],
+  "costToken": 1,
+  "stats": [
+    {
+      "keywords": "phone case",
+      "total": 1,
+      "rankPosition": {},
+      "adPosition": {}
+    }
+  ]
+}

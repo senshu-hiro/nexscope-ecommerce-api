@@ -1,0 +1,27 @@
+{
+  "errcode": 1,
+  "total": 1,
+  "totalSales": 1,
+  "data": [
+    {
+      "productId": 1,
+      "sku": 1,
+      "rating": 1,
+      "reviewRating": 1,
+      "weight": 1,
+      "sales": 1,
+      "monthlySalesUnits": 1,
+      "upTime": 1,
+      "price": 1,
+      "imageUrl": "https://example.com/image.jpg",
+      "fulfillment": [],
+      "sellerType": 1,
+      "returnCancellationRate": 1
+    }
+  ],
+  "products": [],
+  "hasNextPage": false,
+  "columns": [],
+  "costTime": 1,
+  "costToken": 1
+}

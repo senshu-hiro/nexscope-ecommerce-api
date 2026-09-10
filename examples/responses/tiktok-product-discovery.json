@@ -1,0 +1,36 @@
+{
+  "total": 1,
+  "products": [
+    {
+      "productId": "example-id",
+      "region": "US",
+      "price": 1,
+      "minPrice": 1,
+      "maxPrice": 1,
+      "totalSaleCnt": 1,
+      "totalSale1dCnt": 1,
+      "totalSale7dCnt": 1,
+      "totalSale28dCnt": 1,
+      "totalSale90dCnt": 1,
+      "totalSaleGmvAmt": 1,
+      "totalSaleGmv7dAmt": 1,
+      "totalSaleGmv28dAmt": 1,
+      "totalVideoCnt": 1,
+      "totalLiveCnt": 1,
+      "totalIflCnt": 1,
+      "productCommissionRate": 1,
+      "productRating": 1,
+      "reviewCount": 1,
+      "skuCount": 1,
+      "shopSellerId": "example-id",
+      "shopTotalUnitsSold": 1,
+      "isCrossBorder": 1,
+      "availableDate": "2026-01-01",
+      "tiktokUrl": "https://example.com/image.jpg",
+      "fastmossUrl": "https://example.com/image.jpg",
+      "imageUrl": "https://example.com/image.jpg"
+    }
+  ],
+  "columns": [],
+  "costToken": 1
+}

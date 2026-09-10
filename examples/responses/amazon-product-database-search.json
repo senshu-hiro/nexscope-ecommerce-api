@@ -1,0 +1,54 @@
+{
+  "total": 1,
+  "perPage": 1,
+  "currentPage": 1,
+  "totalCount": 1,
+  "columns": [],
+  "costToken": 1,
+  "products": [
+    {
+      "asin": "B072MQ5BRX",
+      "price": 1,
+      "primePrice": 1,
+      "salesRank": 1,
+      "salesRank30": 1,
+      "salesRank90": 1,
+      "salesRank180": 1,
+      "monthlySalesUnits": 1,
+      "monthlySalesRevenue": 1,
+      "rating": 1,
+      "ratings": 1,
+      "reviewCount": 1,
+      "availableDate": "2026-01-01",
+      "lastUpdate": "2026-01-01",
+      "imageUrl": "https://example.com/image.jpg",
+      "productImageUrls": [],
+      "asinUrl": "B072MQ5BRX",
+      "categoryTreeId": "example-id",
+      "rootCategory": 1,
+      "subcategories": [],
+      "buyBoxSellerId": "example-id",
+      "sellerNum": 1,
+      "parentAsin": "B072MQ5BRX",
+      "variationNum": 1,
+      "packageLength": 1,
+      "packageWidth": 1,
+      "packageHeight": 1,
+      "packageQuantity": 1,
+      "itemLength": 1,
+      "itemWidth": 1,
+      "itemHeight": 1,
+      "isAdultProduct": false,
+      "isHazmat": false,
+      "referralFeePercentage": 1,
+      "fbaFees": 1,
+      "profit": 1,
+      "urlSlug": "https://example.com/image.jpg"
+    }
+  ],
+  "monthlySalesUnits1MonthAgo": {
+    "": {
+      "monthlySalesUnits12MonthsAgo": 1
+    }
+  }
+}

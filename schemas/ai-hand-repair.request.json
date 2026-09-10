@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "description": "Improve hand appearance in generated model or lifestyle images.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the image requiring hand repair. The image must be between 300 and 4096 pixels in both width and height, and its width-to-height ratio must be between 0.4 and 2.5.",
+      "example": "https://example.com/model-reference.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "personType",
+      "type": "integer",
+      "required": true,
+      "description": "Person type. Supported values: 0 (girl), 1 (boy), 2 (adult woman), 3 (adult man).",
+      "example": 2,
+      "constraints": {}
+    },
+    {
+      "name": "maskUrl",
+      "type": "string",
+      "required": false,
+      "description": "Optional mask URL for the hand repair area.",
+      "example": "https://example.com/mask.png",
+      "constraints": {}
+    },
+    {
+      "name": "outputNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of images to generate, from 1 to 4. Defaults to 1.",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/model-reference.jpg",
+    "personType": 2,
+    "maskUrl": "https://example.com/mask.png",
+    "outputNum": 1
+  },
+  "jsonSchema": null
+}

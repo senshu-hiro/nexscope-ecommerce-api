@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "productUrl"
+  ],
+  "properties": {
+    "productUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://(?:[A-Za-z0-9-]+\\.)*etsy\\.com(?::443)?/listing/\\d+(?:/[^/?#]+)?/?(?:[?#].*)?$"
+    }
+  }
+}

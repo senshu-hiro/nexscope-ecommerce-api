@@ -1,0 +1,79 @@
+{
+  "type": "object",
+  "description": "Generate scene variants for a model image using either a scene reference image or a text scene prompt.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the model image. The image must be up to 20 MB and between 385 and 8192 pixels in both width and height.",
+      "example": "https://example.com/model-reference.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "sceneImgUrl",
+      "type": "string",
+      "required": false,
+      "description": "Optional public URL of the target scene reference.",
+      "example": "https://example.com/scene.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "scenePrompt",
+      "type": "string",
+      "required": false,
+      "description": "Optional text prompt describing the target scene.",
+      "example": "bright studio showroom",
+      "constraints": {}
+    },
+    {
+      "name": "imageSegUrl",
+      "type": "string",
+      "required": false,
+      "description": "Optional model segmentation mask URL.",
+      "example": "https://example.com/mask.png",
+      "constraints": {}
+    },
+    {
+      "name": "sceneStrength",
+      "type": "number",
+      "required": false,
+      "description": "Scene reference strength from 0 to 1. Defaults to 0.7.",
+      "example": 0.7,
+      "constraints": {}
+    },
+    {
+      "name": "genOriRes",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to generate the original resolution. Defaults to false.",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "realModel",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to prefer realistic model rendering.",
+      "example": true,
+      "constraints": {}
+    },
+    {
+      "name": "outputNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of images to generate, from 1 to 4. Defaults to 1.",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/model-reference.jpg",
+    "scenePrompt": "bright studio showroom",
+    "sceneStrength": 0.7,
+    "genOriRes": false,
+    "realModel": true,
+    "outputNum": 1
+  },
+  "jsonSchema": null
+}

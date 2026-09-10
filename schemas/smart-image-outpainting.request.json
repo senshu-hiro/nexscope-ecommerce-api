@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "description": "Generate an expanded image around the original content using target width, height, and optional prompt.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the image to expand. The image must be between 300 and 4096 pixels in both width and height, and its width-to-height ratio must be between 0.4 and 2.5.",
+      "example": "https://example.com/product.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "width",
+      "type": "integer",
+      "required": true,
+      "description": "Target output width in pixels.",
+      "example": 1200,
+      "constraints": {}
+    },
+    {
+      "name": "height",
+      "type": "integer",
+      "required": true,
+      "description": "Target output height in pixels.",
+      "example": 900,
+      "constraints": {}
+    },
+    {
+      "name": "prompt",
+      "type": "string",
+      "required": false,
+      "description": "Optional prompt describing the extended scene.",
+      "example": "extend the clean studio background",
+      "constraints": {}
+    },
+    {
+      "name": "outputNum",
+      "type": "integer",
+      "required": false,
+      "description": "Number of images to generate, from 1 to 4. Defaults to 1.",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/product.jpg",
+    "width": 1200,
+    "height": 900,
+    "prompt": "extend the clean studio background",
+    "outputNum": 1
+  },
+  "jsonSchema": null
+}

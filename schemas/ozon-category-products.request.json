@@ -1,0 +1,104 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.ozon-category-products.",
+  "fields": [
+    {
+      "name": "categoryPath",
+      "type": "string",
+      "required": true,
+      "description": "Full Ozon Russian category path, levels separated by /, e.g., Одежда/Женская одежда/Футболки и топы женские",
+      "example": "Электроника/Телефоны и смарт-часы/Аксессуары для смартфонов и телефонов/Чехлы для смартфонов",
+      "constraints": {}
+    },
+    {
+      "name": "startDate",
+      "type": "string",
+      "required": false,
+      "description": "Statistics start date YYYY-MM-DD; latest is yesterday",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "endDate",
+      "type": "string",
+      "required": false,
+      "description": "Statistics end date YYYY-MM-DD; latest is yesterday",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number, starting from 1",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Rows per page 1-100, default 100",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "sortField",
+      "type": "string",
+      "required": false,
+      "description": "Sort column name (snake_case), e.g., sales, revenue, final_price, balance, rating",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sortDirection",
+      "type": "string",
+      "required": false,
+      "description": "asc / desc",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "currency",
+      "type": "string",
+      "required": false,
+      "description": "Currency code, default RUB, e.g., USD",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "currencyRate",
+      "type": "integer",
+      "required": false,
+      "description": "Custom exchange rate (for non-default currency)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "includeFbs",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to include FBS data",
+      "example": false,
+      "constraints": {}
+    },
+    {
+      "name": "filters",
+      "type": "array",
+      "required": false,
+      "description": "List of numeric filter conditions, each {field, op, value, value2?}, multiple conditions AND",
+      "example": [],
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "startDate": "2026-07-01",
+    "includeFbs": false,
+    "pageSize": 10,
+    "categoryPath": "Электроника/Телефоны и смарт-часы/Аксессуары для смартфонов и телефонов/Чехлы для смартфонов",
+    "endDate": "2026-07-31",
+    "page": 1,
+    "currencyRate": 1
+  },
+  "jsonSchema": null
+}

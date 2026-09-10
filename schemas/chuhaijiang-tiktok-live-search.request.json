@@ -1,0 +1,92 @@
+{
+  "required": [
+    "country"
+  ],
+  "type": "object",
+  "properties": {
+    "country": {
+      "enum": [
+        "br",
+        "de",
+        "es",
+        "fr",
+        "gb",
+        "id",
+        "it",
+        "jp",
+        "mx",
+        "my",
+        "ph",
+        "sg",
+        "th",
+        "us",
+        "vn"
+      ],
+      "type": "string",
+      "description": "Lowercase request market. Returned country_code may differ; preserve both."
+    },
+    "page": {
+      "default": 1,
+      "minimum": 1,
+      "type": "integer",
+      "description": "Page number, starting at 1. No automatic pagination."
+    },
+    "pageSize": {
+      "maximum": 10,
+      "minimum": 1,
+      "type": "integer",
+      "description": "Items per page, from 1 to 10. Omission preserves the upstream default."
+    },
+    "keyword": {
+      "type": "string",
+      "description": "Livestream keyword."
+    },
+    "category": {
+      "type": "string",
+      "description": "Provider-approved livestream category; no enum is published."
+    },
+    "productCategory": {
+      "type": "string",
+      "description": "Provider-approved product category."
+    },
+    "isLiving": {
+      "type": "boolean",
+      "description": "Filter currently live rooms."
+    },
+    "isCommercial": {
+      "type": "boolean",
+      "description": "Filter rooms promoting products."
+    },
+    "minSold": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "maxSold": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "minGmv": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "maxGmv": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "minAudience": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "maxAudience": {
+      "type": "number",
+      "description": "Provider filter value; retain the provider metric definition without unit conversion."
+    },
+    "sort": {
+      "pattern": "^[^:]+:(asc|desc)$",
+      "default": "gmv:desc",
+      "type": "string",
+      "description": "Provider-approved field followed by :asc or :desc. No complete field enum is published."
+    }
+  },
+  "additionalProperties": false
+}

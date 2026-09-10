@@ -1,0 +1,90 @@
+{
+  "type": "object",
+  "description": "Extract descriptive prompts or selling-point text from one or more images.",
+  "fields": [
+    {
+      "name": "type",
+      "type": "integer",
+      "required": true,
+      "description": "Analysis type. Supported values: 5 (similar-image prompt), 13 (scene prompt), 30 (image-to-video analysis), 69 (apparel selling points), 71 (product selling points), 73 (sales-video script), 89 (video-reclone prompt).",
+      "example": 71,
+      "constraints": {}
+    },
+    {
+      "name": "imageUrlList",
+      "type": "array",
+      "required": true,
+      "description": "Public image URLs used for analysis. Provide no more than 6 images for modes that accept multiple images.",
+      "example": [
+        "https://example.com/product.jpg"
+      ],
+      "constraints": {
+        "maxItems": 6,
+        "minItems": 1
+      }
+    },
+    {
+      "name": "keyword",
+      "type": "string",
+      "required": false,
+      "description": "Optional keyword context.",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "provider",
+      "type": "string",
+      "required": false,
+      "description": "Analysis provider. Supported values: API_PRE_POINT (default), API_LAYOUT_DESC.",
+      "example": "API_PRE_POINT",
+      "constraints": {}
+    },
+    {
+      "name": "refVideoUrl",
+      "type": "string",
+      "required": false,
+      "description": "Reference video URL. Required when type is 89.",
+      "example": "https://example.com/reference-video.mp4",
+      "constraints": {
+        "requiredWhen": {
+          "type": [
+            89
+          ]
+        }
+      }
+    },
+    {
+      "name": "saleCountry",
+      "type": "string",
+      "required": false,
+      "description": "Target sale country code.",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "targetLanguage",
+      "type": "string",
+      "required": false,
+      "description": "Target language for generated text. Used by video-reclone analysis.",
+      "example": "English",
+      "constraints": {}
+    },
+    {
+      "name": "duration",
+      "type": "integer",
+      "required": false,
+      "description": "Target duration in seconds. Used by video-reclone analysis.",
+      "example": 15,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "type": 71,
+    "imageUrlList": [
+      "https://example.com/product.jpg"
+    ],
+    "keyword": "phone case",
+    "provider": "API_PRE_POINT"
+  },
+  "jsonSchema": null
+}

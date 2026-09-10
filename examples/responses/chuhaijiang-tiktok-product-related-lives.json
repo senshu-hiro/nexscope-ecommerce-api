@@ -1,0 +1,11 @@
+{
+  "errmsg": "ok",
+  "data": {
+    "items": [
+      {
+        "room_id": null
+      }
+    ]
+  },
+  "errcode": 200
+}

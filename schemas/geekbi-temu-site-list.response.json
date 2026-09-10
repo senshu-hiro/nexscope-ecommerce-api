@@ -1,0 +1,117 @@
+{
+  "properties": {
+    "errcode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Provider business status code."
+    },
+    "errmsg": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Provider business status message."
+    },
+    "total": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Number of returned records."
+    },
+    "columns": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Provider render column metadata.",
+      "items": {}
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Provider render/source metadata."
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Provider render/source metadata."
+    },
+    "sourceType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Provider render/source metadata."
+    },
+    "sourceTool": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Provider render/source metadata."
+    },
+    "sites": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Supported Temu sites.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "regionId": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Provider identifier; searches use regionId and known category IDs."
+          },
+          "siteId": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Provider identifier; searches use regionId and known category IDs."
+          },
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Provider name."
+          },
+          "cnName": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Provider cnName."
+          },
+          "lang": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Provider lang."
+          },
+          "currency": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Provider currency."
+          }
+        }
+      }
+    }
+  },
+  "type": "object",
+  "additionalProperties": true
+}

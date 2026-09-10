@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "description": "Use an image mask to remove or edit text regions in an ecommerce image.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the base image.",
+      "example": "https://example.com/product.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "imageMaskUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the text mask image.",
+      "example": "https://example.com/mask.png",
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/product.jpg",
+    "imageMaskUrl": "https://example.com/mask.png"
+  },
+  "jsonSchema": null
+}

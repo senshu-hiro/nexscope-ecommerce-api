@@ -1,0 +1,342 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Record count (number of records returned on this page, for alignment with list length)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Tool type: ehunt",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Source type: etsy",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Rendered columns",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token consumption (estimated based on records returned on this page)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productNum",
+      "type": "integer",
+      "required": false,
+      "description": "Total number of matching products (upstream product_num)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "required": false,
+      "description": "Etsy product list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].category",
+      "type": "string",
+      "required": false,
+      "description": "Category name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].favorites",
+      "type": "integer",
+      "required": false,
+      "description": "Favorite count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].favoritesWeekly",
+      "type": "integer",
+      "required": false,
+      "description": "Weekly new favorites",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Main image URL",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].isBestsell",
+      "type": "integer",
+      "required": false,
+      "description": "Whether bestseller: 1=Yes",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].isPick",
+      "type": "integer",
+      "required": false,
+      "description": "Whether Pick: 1=Yes",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].isRaving",
+      "type": "integer",
+      "required": false,
+      "description": "Whether Raving: 1=Yes",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].price",
+      "type": "number",
+      "required": false,
+      "description": "Price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].productUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product link",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].releaseTime",
+      "type": "string",
+      "required": false,
+      "description": "Listing/release time",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].reviews",
+      "type": "integer",
+      "required": false,
+      "description": "Review count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].reviewsWeekly",
+      "type": "integer",
+      "required": false,
+      "description": "Weekly new reviews",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].salesTotal",
+      "type": "integer",
+      "required": false,
+      "description": "Total sales",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].salesWeekly",
+      "type": "integer",
+      "required": false,
+      "description": "Weekly sales",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].shipsFrom",
+      "type": "string",
+      "required": false,
+      "description": "Shipping country",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].status",
+      "type": "integer",
+      "required": false,
+      "description": "Product status: 1=active, 0=inactive",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].storeName",
+      "type": "string",
+      "required": false,
+      "description": "Store name",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].tags",
+      "type": "string",
+      "required": false,
+      "description": "Tags",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].title",
+      "type": "string",
+      "required": false,
+      "description": "Product title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "columns": [],
+    "costToken": 1,
+    "productNum": 1,
+    "products": [
+      {
+        "favorites": 1,
+        "favoritesWeekly": 1,
+        "imageUrl": "https://example.com/image.jpg",
+        "isBestsell": 1,
+        "isPick": 1,
+        "isRaving": 1,
+        "price": 1,
+        "productUrl": "https://example.com/image.jpg",
+        "reviews": 1,
+        "reviewsWeekly": 1,
+        "salesTotal": 1,
+        "salesWeekly": 1,
+        "status": 1
+      }
+    ]
+  },
+  "jsonSchema": null
+}

@@ -1,0 +1,46 @@
+{
+  "total": 1,
+  "marketplace": "US",
+  "data": [
+    {
+      "nodeId": "example-id",
+      "marketplace": "US",
+      "ranking": 1,
+      "totalProducts": 1,
+      "topProducts": 1,
+      "sellers": 1,
+      "brands": 1,
+      "avgSellers": 1,
+      "avgUnits": 1,
+      "totalUnits": 1,
+      "avgRevenue": 1,
+      "totalRevenue": 1,
+      "avgPrice": 1,
+      "avgRating": 1,
+      "avgRatings": 1,
+      "avgBsr": 1,
+      "avgProfit": 1,
+      "fbaProportion": 1,
+      "fbmProportion": 1,
+      "amazonSelfProportion": 1,
+      "ebcProportion": 1,
+      "returnRatio": 1,
+      "avgReturnRatio": 1,
+      "searchToPurchaseRatio": 1,
+      "sellerProportion": 1,
+      "avgWeight": 1,
+      "baseAvgWeight": 1,
+      "avgVolume": 1,
+      "baseAvgVolume": 1,
+      "top10Images": []
+    }
+  ],
+  "columns": [],
+  "costToken": 1,
+  "top10images": [
+    {
+      "image": "https://example.com/image.jpg",
+      "asin": "B072MQ5BRX"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "total": 1,
+  "columns": [],
+  "products": [
+    {
+      "asin": "B072MQ5BRX",
+      "price": 1,
+      "primePrice": 1,
+      "averagePrice": 1,
+      "monthlySalesUnits": 1,
+      "monthlySalesRevenue": 1,
+      "monthlySalesUnitsGrowthRate": 1,
+      "bsr": 1,
+      "bsrGrowthRate": 1,
+      "bsrGrowthCount": 1,
+      "rating": 1,
+      "ratings": 1,
+      "ratingsGrowth": 1,
+      "ratingsRate": 1,
+      "brandUrl": "https://example.com/image.jpg",
+      "sellerId": "example-id",
+      "sellerNum": 1,
+      "availableDate": "2026-01-01",
+      "availableDateString": "2026-01-01",
+      "profit": 1,
+      "fba": 1,
+      "deliveryPrice": 1,
+      "imageUrl": "https://example.com/image.jpg",
+      "variationNum": 1,
+      "variant30DayUnits": 1,
+      "variant30DayRevenue": 1,
+      "variant30DayUpdatedAt": "2026-01-01",
+      "amzUnitDateString": "2026-01-01",
+      "listingQualityScore": 1,
+      "nodeId": 1,
+      "keyword": "phone case",
+      "badge": {},
+      "subcategories": []
+    }
+  ],
+  "costToken": 1
+}

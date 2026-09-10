@@ -1,0 +1,27 @@
+{
+  "errcode": 1,
+  "data": [
+    {
+      "video_id": "example-id",
+      "views": 1,
+      "digg_count": 1,
+      "comment_count": 1,
+      "share_count": 1,
+      "revenue": 1,
+      "revenue_growth_rate": 1,
+      "ad": 1,
+      "ad_view_ratio": 1,
+      "ad_revenue_ratio": 1,
+      "ads_roas": 1,
+      "belonged_creator_id": "example-id",
+      "sales_volumn": 1,
+      "video_gpm": 1,
+      "ads_views": 1,
+      "ad_cpa": 1,
+      "ads_period": 1,
+      "duration": 1,
+      "product_number": 1
+    }
+  ],
+  "costToken": 1
+}

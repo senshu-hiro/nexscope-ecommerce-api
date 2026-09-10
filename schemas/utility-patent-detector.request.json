@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.utility-patent-detector.",
+  "fields": [
+    {
+      "name": "productTitle",
+      "type": "string",
+      "required": true,
+      "description": "Product title, max 1000 characters",
+      "example": "Magnetic phone case with ring stand",
+      "constraints": {}
+    },
+    {
+      "name": "productDescription",
+      "type": "string",
+      "required": true,
+      "description": "Product description, max 1000 characters",
+      "example": "A protective smartphone case with a magnetic ring stand and shockproof corners.",
+      "constraints": {}
+    },
+    {
+      "name": "region",
+      "type": "string",
+      "required": true,
+      "description": "Country/region code(s) where the product is intended for sale, multiple separated by commas. Currently supports US. Default US",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "topNumber",
+      "type": "integer",
+      "required": true,
+      "description": "Number of results to recall, range: 10--200, default 100",
+      "example": 10,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "productTitle": "Magnetic phone case with ring stand",
+    "region": "US",
+    "productDescription": "A protective smartphone case with a magnetic ring stand and shockproof corners.",
+    "topNumber": 10
+  },
+  "jsonSchema": null
+}

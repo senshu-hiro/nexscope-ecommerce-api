@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "operation",
+    "value",
+    "requestConsumed"
+  ],
+  "properties": {
+    "operation": {},
+    "value": {},
+    "requestConsumed": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "operation": {
+          "enum": [
+            "marketQuery",
+            "searchByName",
+            "searchProducts",
+            "productKeywords",
+            "relatedKeywords",
+            "favoriteList"
+          ]
+        },
+        "value": {
+          "type": "array"
+        }
+      }
+    },
+    {
+      "properties": {
+        "operation": {
+          "const": "detail"
+        },
+        "value": {
+          "type": "object"
+        }
+      }
+    }
+  ]
+}

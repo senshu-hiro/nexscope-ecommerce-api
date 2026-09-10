@@ -1,0 +1,108 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.amazon-keyword-expansion.",
+  "fields": [
+    {
+      "name": "marketplace",
+      "type": "string",
+      "required": true,
+      "description": "Target marketplace code. Options: us, uk, de, in, ca, fr, it, es, mx, jp. Default us",
+      "example": "us",
+      "constraints": {}
+    },
+    {
+      "name": "searchTerms",
+      "type": "string",
+      "required": true,
+      "description": "Seed keyword (single keyword string)",
+      "example": "phone case",
+      "constraints": {}
+    },
+    {
+      "name": "needCount",
+      "type": "integer",
+      "required": false,
+      "description": "Total number of results returned",
+      "example": 10,
+      "constraints": {}
+    },
+    {
+      "name": "sort",
+      "type": "string",
+      "required": false,
+      "description": "Sort field, default -monthly_search_volume_exact (exact search volume descending)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "minMonthlySearchVolumeExact",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum exact search volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxMonthlySearchVolumeExact",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum exact search volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minMonthlySearchVolumeBroad",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum broad search volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxMonthlySearchVolumeBroad",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum broad search volume",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minWordCount",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum word count for keywords (for filtering long-tail keywords)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxWordCount",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum word count for keywords",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "minOrganicProductCount",
+      "type": "integer",
+      "required": false,
+      "description": "Minimum organic product count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "maxOrganicProductCount",
+      "type": "integer",
+      "required": false,
+      "description": "Maximum organic product count",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "marketplace": "us",
+    "searchTerms": "phone case",
+    "needCount": 10
+  },
+  "jsonSchema": null
+}

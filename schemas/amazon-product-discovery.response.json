@@ -1,0 +1,371 @@
+{
+  "type": "object",
+  "description": "Returns the documented upstream API response directly without an additional wrapper.",
+  "fields": [
+    {
+      "name": "total",
+      "type": "integer",
+      "required": false,
+      "description": "Total count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Tool type: jiimore",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Source type: amazon",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": false,
+      "description": "Render style",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": false,
+      "description": "Title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costToken",
+      "type": "integer",
+      "required": false,
+      "description": "Token consumption",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": false,
+      "description": "Rendered columns",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products",
+      "type": "array",
+      "required": false,
+      "description": "Product list (see below)",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].asin",
+      "type": "string",
+      "required": false,
+      "description": "Amazon product ASIN",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "products[].parentAsin",
+      "type": "string",
+      "required": false,
+      "description": "Amazon product parent ASIN",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "products[].title",
+      "type": "string",
+      "required": false,
+      "description": "Product title",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].brand",
+      "type": "string",
+      "required": false,
+      "description": "Brand",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].price",
+      "type": "number",
+      "required": false,
+      "description": "Price",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].imageUrl",
+      "type": "string",
+      "required": false,
+      "description": "Product main image",
+      "example": "https://example.com/image.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "products[].productImageUrls",
+      "type": "array",
+      "required": false,
+      "description": "Product image URL list",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].asinUrl",
+      "type": "string",
+      "required": false,
+      "description": "ASIN link",
+      "example": "B072MQ5BRX",
+      "constraints": {}
+    },
+    {
+      "name": "products[].ratings",
+      "type": "integer",
+      "required": false,
+      "description": "Number of reviews",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].availableDate",
+      "type": "string",
+      "required": false,
+      "description": "Listing time (timestamp)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "products[].availableDateString",
+      "type": "string",
+      "required": false,
+      "description": "Listing date (string)",
+      "example": "2026-01-01",
+      "constraints": {}
+    },
+    {
+      "name": "products[].categoryNames",
+      "type": "array",
+      "required": false,
+      "description": "Category information",
+      "example": [],
+      "constraints": {}
+    },
+    {
+      "name": "products[].marketplaceId",
+      "type": "string",
+      "required": false,
+      "description": "Site ID",
+      "example": "US",
+      "constraints": {}
+    },
+    {
+      "name": "products[].clickCountT7",
+      "type": "integer",
+      "required": false,
+      "description": "Weekly click count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].clickCountT30",
+      "type": "integer",
+      "required": false,
+      "description": "Monthly click count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].clickCountT90",
+      "type": "integer",
+      "required": false,
+      "description": "Quarterly click count",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].clickConversionRate",
+      "type": "number",
+      "required": false,
+      "description": "Click-to-purchase conversion rate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].clickConversionRateComposite",
+      "type": "number",
+      "required": false,
+      "description": "Composite conversion rate",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].grossProfitMargin",
+      "type": "number",
+      "required": false,
+      "description": "Gross profit margin",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].fbaFee",
+      "type": "number",
+      "required": false,
+      "description": "Amazon fee",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].shippingFee",
+      "type": "number",
+      "required": false,
+      "description": "FBA shipping fee",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sourceTool",
+      "type": "string",
+      "required": false,
+      "description": "Tool type: jiimore",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "products[].sourceType",
+      "type": "string",
+      "required": false,
+      "description": "Source type: amazon",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errcode",
+      "type": "integer",
+      "required": false,
+      "description": "Upstream status code returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "errmsg",
+      "type": "string",
+      "required": false,
+      "description": "Upstream status message returned by the provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status code.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "msg",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific status message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": false,
+      "description": "Provider-specific message.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "costTime",
+      "type": "integer",
+      "required": false,
+      "description": "Execution time reported by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Page size returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "pageItemCount",
+      "type": "integer",
+      "required": false,
+      "description": "Item count on the current page returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "totalPage",
+      "type": "integer",
+      "required": false,
+      "description": "Total page count returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "dataSnapshotMonth",
+      "type": "string",
+      "required": false,
+      "description": "Data snapshot month returned by the upstream provider.",
+      "example": null,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "total": 1,
+    "costToken": 1,
+    "columns": [],
+    "products": [
+      {
+        "asin": "B072MQ5BRX",
+        "parentAsin": "B072MQ5BRX",
+        "price": 1,
+        "imageUrl": "https://example.com/image.jpg",
+        "productImageUrls": [],
+        "asinUrl": "B072MQ5BRX",
+        "ratings": 1,
+        "availableDate": "2026-01-01",
+        "availableDateString": "2026-01-01",
+        "categoryNames": [],
+        "marketplaceId": "US",
+        "clickCountT7": 1,
+        "clickCountT30": 1,
+        "clickCountT90": 1,
+        "clickConversionRate": 1,
+        "clickConversionRateComposite": 1,
+        "grossProfitMargin": 1,
+        "fbaFee": 1,
+        "shippingFee": 1
+      }
+    ]
+  },
+  "jsonSchema": null
+}

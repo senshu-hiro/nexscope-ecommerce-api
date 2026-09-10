@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "description": "Detect and optionally remove a specified brand logo from a product image.",
+  "fields": [
+    {
+      "name": "imageUrl",
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the product image. The image must be up to 20 MB.",
+      "example": "https://example.com/product.jpg",
+      "constraints": {}
+    },
+    {
+      "name": "brandName",
+      "type": "string",
+      "required": true,
+      "description": "Brand name to detect or remove.",
+      "example": "SampleBrand",
+      "constraints": {}
+    },
+    {
+      "name": "isDetect",
+      "type": "boolean",
+      "required": false,
+      "description": "Whether to only detect instead of removing.",
+      "example": false,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "imageUrl": "https://example.com/product.jpg",
+    "brandName": "SampleBrand",
+    "isDetect": false
+  },
+  "jsonSchema": null
+}

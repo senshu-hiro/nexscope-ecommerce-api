@@ -1,0 +1,13 @@
+{
+  "data": {
+    "record_count": 1,
+    "records": [
+      {
+        "taxonomy_name": "Cell Phones",
+        "taxonomy_code": "MLM1055"
+      }
+    ]
+  },
+  "operation": "search_categories",
+  "total": 1
+}

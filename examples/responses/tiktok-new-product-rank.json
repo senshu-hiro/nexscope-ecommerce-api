@@ -1,0 +1,28 @@
+{
+  "total": 1,
+  "products": [
+    {
+      "asin": "B072MQ5BRX",
+      "region": "US",
+      "price": 1,
+      "minPrice": 1,
+      "maxPrice": 1,
+      "totalSaleCnt": 1,
+      "totalSale30dCnt": 1,
+      "totalSaleGmvAmt": 1,
+      "totalSaleGmv30dAmt": 1,
+      "totalVideoCnt": 1,
+      "totalLiveCnt": 1,
+      "totalIflCnt": 1,
+      "productCommissionRate": 1,
+      "productRating": 1,
+      "reviewCount": 1,
+      "availableDate": "2026-01-01",
+      "categoryId": "example-id",
+      "imageUrl": "https://example.com/image.jpg",
+      "productImageUrls": []
+    }
+  ],
+  "columns": [],
+  "costToken": 1
+}

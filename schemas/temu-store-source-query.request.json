@@ -1,0 +1,244 @@
+{
+  "type": "object",
+  "description": "Request parameters documented by ecommerce.temu-store-source-query.",
+  "fields": [
+    {
+      "name": "searchKey",
+      "type": "string",
+      "required": false,
+      "description": "Store name or ID keyword",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "siteId",
+      "type": "string",
+      "required": false,
+      "description": "Country site ID, multiple separated by commas (e.g., 211=US, 76=UK)",
+      "example": "example-id",
+      "constraints": {}
+    },
+    {
+      "name": "category",
+      "type": "string",
+      "required": false,
+      "description": "Backend category ID, multiple separated by commas",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "isLocal",
+      "type": "string",
+      "required": false,
+      "description": "Whether semi-managed: 0=fully managed, 1=semi-managed",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "orderTotalMin",
+      "type": "integer",
+      "required": false,
+      "description": "Total sales range (start)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "orderTotalMax",
+      "type": "integer",
+      "required": false,
+      "description": "Total sales range (end)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "orderWeekMin",
+      "type": "integer",
+      "required": false,
+      "description": "Weekly sales range (start)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "orderWeekMax",
+      "type": "integer",
+      "required": false,
+      "description": "Weekly sales range (end)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "orderMonthMin",
+      "type": "integer",
+      "required": false,
+      "description": "Monthly sales range (start)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "orderMonthMax",
+      "type": "integer",
+      "required": false,
+      "description": "Monthly sales range (end)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "totalRevenueMin",
+      "type": "number",
+      "required": false,
+      "description": "Total revenue range (USD, start)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "totalRevenueMax",
+      "type": "number",
+      "required": false,
+      "description": "Total revenue range (USD, end)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "weekRevenueMin",
+      "type": "number",
+      "required": false,
+      "description": "Weekly revenue range (USD, start)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "weekRevenueMax",
+      "type": "number",
+      "required": false,
+      "description": "Weekly revenue range (USD, end)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "monthRevenueMin",
+      "type": "number",
+      "required": false,
+      "description": "Monthly revenue range (USD, start)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "monthRevenueMax",
+      "type": "number",
+      "required": false,
+      "description": "Monthly revenue range (USD, end)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "ratingMin",
+      "type": "number",
+      "required": false,
+      "description": "Rating range (start)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "ratingMax",
+      "type": "number",
+      "required": false,
+      "description": "Rating range (end)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "reviewNumMin",
+      "type": "integer",
+      "required": false,
+      "description": "Review count range (start)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "reviewNumMax",
+      "type": "integer",
+      "required": false,
+      "description": "Review count range (end)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "followerNumMin",
+      "type": "integer",
+      "required": false,
+      "description": "Follower count range (start)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "followerNumMax",
+      "type": "integer",
+      "required": false,
+      "description": "Follower count range (end)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productNumMin",
+      "type": "integer",
+      "required": false,
+      "description": "Product count range (start)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "productNumMax",
+      "type": "integer",
+      "required": false,
+      "description": "Product count range (end)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "listedTimeBegin",
+      "type": "string",
+      "required": false,
+      "description": "Store opening date range (start)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "listedTimeEnd",
+      "type": "string",
+      "required": false,
+      "description": "Store opening date range (end)",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "sortBy",
+      "type": "string",
+      "required": false,
+      "description": "Sort field+direction: order_week_count-0 (weekly sales descending, default), order_count-0, total_revenue-0, rating-0",
+      "example": null,
+      "constraints": {}
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "required": false,
+      "description": "Page number (starting from 1)",
+      "example": 1,
+      "constraints": {}
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "description": "Items per page, max 100",
+      "example": 1,
+      "constraints": {}
+    }
+  ],
+  "example": {
+    "page": 1,
+    "pageSize": 10,
+    "keyword": "phone case"
+  },
+  "jsonSchema": null
+}

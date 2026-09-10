@@ -1,0 +1,41 @@
+{
+  "errcode": 1,
+  "costToken": 1,
+  "nicheInfoVoList": [
+    {
+      "nicheId": "example-id",
+      "demand": 1,
+      "productCount": 1,
+      "avgPrice": 1,
+      "minimumPrice": 1,
+      "maximumPrice": 1,
+      "searchVolumeWeekly": 1,
+      "searchVolumeQuarterly": 1,
+      "searchVolumeGrowthWeekly": 1,
+      "searchVolumeGrowthQuarterly": 1,
+      "unitsSoldWeekly": 1,
+      "unitsSoldQuarterly": 1,
+      "clickCountWeekly": 1,
+      "clickCountQuarterly": 1,
+      "clickToSaleConversionWeekly": 1,
+      "clickConversionRateQuarterly": 1,
+      "searchConversionRateWeekly": 1,
+      "searchConversionRateQuarterly": 1,
+      "brandCount": 1,
+      "top5BrandsClickShare": 1,
+      "top5ProductsClickShare": 1,
+      "avgBrandAgeNow": 1,
+      "avgBrandAgeQuarterly": 1,
+      "newProductsLaunchedSemiannual": 1,
+      "successfulLaunchedSemiannual": 1,
+      "launchRateSemiannual": 1,
+      "returnRateAnnual": 1,
+      "acos": 1,
+      "profitMarginGt50PctSkuRatio": 1,
+      "breakEvenRatio": 1,
+      "cpc": {},
+      "categorieList": [],
+      "referenceAsinImageUrl": "B072MQ5BRX"
+    }
+  ]
+}
